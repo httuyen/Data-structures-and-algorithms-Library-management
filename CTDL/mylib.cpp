@@ -1,5 +1,14 @@
 #include "stdafx.h"
 #include "mylib.h"
+void DelScreen()
+{
+	HANDLE hOut;
+	COORD Position;
+	hOut = GetStdHandle(STD_OUTPUT_HANDLE);
+	Position.X = 0;
+	Position.Y = 0;
+	SetConsoleCursorPosition(hOut, Position);
+}
 void SetColor(WORD color)
 {
 	HANDLE hConsoleOutput;

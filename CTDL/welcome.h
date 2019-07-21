@@ -9,5 +9,9 @@
 void welcomeConsole();
 void menuFeature();
 void drawFrame();
-void menuFeature(int slFeature, int xStart, int yStart);
-void highLight();
+void menuFeature(int slFeature, int xStart, int yStart, int &flag);
+int selection(int &flag, std::string listMenu[], int slFeature, int xStart, int yStart);
+int index(std::string listMenu[], int i);
+void setDefaultColor();
+void setHighLightColor();
+void clearHighLight(int &flag, std::string listMenu[], int slFeature, int xStart, int yStartText, int keypress);

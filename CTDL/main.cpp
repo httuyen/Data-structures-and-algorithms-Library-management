@@ -8,8 +8,9 @@ using namespace std;
 
 void menu(int lc, LIST_DauSach &lds, dauSach dauS);
 int main() {
+	int flag = 0;
 	welcomeConsole();
-	menuFeature(4, 52, 20);
+	menuFeature(4, 52, 20, flag);
 	dauSach dauS;
 	LIST_DauSach lds;
 	int lc = 0;
