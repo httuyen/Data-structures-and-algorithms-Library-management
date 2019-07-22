@@ -24,6 +24,7 @@ void welcomeConsole() {
 	SetColor(WHITE);
 }
 void drawFrame() {
+	drawRow(0,20,0,1,1,1,NULL);
 	drawCell(10, 150, 0, 40, 1, NULL);
 	drawCell(11, 149, 1, 39, 1, NULL);
 }
