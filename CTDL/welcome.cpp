@@ -53,7 +53,7 @@ void menuFeature(int slFeature,int xStart,int yStart, int &flag) {
 		yStart += 4;
 	}
 	selection(flag,listMenu,slFeature,xStart,yStartConstant);
-	system("cls");
+	clrscr();
 	std::cout << flag;
 }
 

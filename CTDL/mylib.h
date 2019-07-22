@@ -110,4 +110,5 @@ template<class Type>
 bool stringToNumber(char* String, Type& number);
 void SetColor(WORD color);
 void SetBGColor(WORD color);
-void DelScreen();
+void clrscr();
+void cls(HANDLE hConsole);

@@ -13,12 +13,27 @@ int main() {
 	menuFeature(4, 52, 20, flag);
 	dauSach dauS;
 	LIST_DauSach lds;
-	int lc = 0;
+	//vong lap cua chuong trinh
 	while (true) {
-		SetColor(YELLOW);
-		/*gotoxy(5, 10);cout << "kiem thu nhap xuat dau sach";
-		cout << "nhap lc: "; cin >> lc;*/
-		menu(lc, lds, dauS);
+		switch (flag)
+		{
+		case 1:
+			break;
+		case 2:
+			break;
+		case 3:
+			break;
+		case 4:
+			//thoat chuong trinh
+			exit(0);
+			break;
+		default:
+			break;
+		}
+		/*SetColor(YELLOW);
+		gotoxy(5, 10); cout << "kiem thu nhap xuat dau sach";
+		cout << "nhap lc: "; cin >> lc;
+		menu(lc, lds, dauS);*/
 	}
 	system("pause");
 	return 0;
@@ -41,7 +56,8 @@ void menu(int lc, LIST_DauSach &lds, dauSach dauS) {
 
 			lds.nodesDauSach[i] = new DauSach;
 			lds.nodesDauSach[i]->info = dauS;
-			lds.nodesDauSach[i]->dms.pHeadDMS = lds.nodesDauSach[i]->dms.pHeadDMS = nullptr;
+			lds.nodesDauSach[i]->dms.pHeadDMS = nullptr;
+			lds.nodesDauSach[i]->dms.pTailDMS = nullptr;
 			//cout << "/////////////////////////////////////////////////////////////\n";
 			//cout << puts(dauS.ISBN);
 			//cout << dauS.namXuatBan << endl;

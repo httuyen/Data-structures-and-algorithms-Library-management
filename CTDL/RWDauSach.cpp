@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "RWDauSach.h"
+using namespace std;
 void SaveFile(dauSach ds, int n) {
 	FILE * f;
 	if ((f = fopen("DauSach.txt", "wb")) == NULL)
@@ -21,14 +22,14 @@ void OpenFile(LIST_DauSach &lds1) {
 	lds1.n = 0;
 	while (fread(&ds, sizeof(DauSach), 1, f) != 0) {
 		lds1.nodesDauSach[lds1.n] = new DauSach;
-		// file ch? này nè
-		lds1.nodesDauSach[lds1.n]->info = ds.info;
+		*lds1.nodesDauSach[lds1.n] = ds;
+		if (ds.dms.n < 0) {
+			ds.dms.pHeadDMS->pNext = ds.dms.pTailDMS->pNext = nullptr;
+		}
 		lds1.n++;
 	}
-	delete[] lds1.nodesDauSach;
 	fclose(f);
 	cout<<("Da load xong danh sach vao bo nho");
-
 }
 void SaveDS(LIST_DauSach lds) {
 	FILE * f;

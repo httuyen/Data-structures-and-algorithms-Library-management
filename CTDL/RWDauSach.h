@@ -1,5 +1,6 @@
 #pragma once
 #include "DauSach.h"
+#include <exception>
 void SaveFileDauSach(LIST_DauSach lds);
 void OpenFileDauSach(LIST_DauSach &lds);
 void SaveDS(LIST_DauSach lds);

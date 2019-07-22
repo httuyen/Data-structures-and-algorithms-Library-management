@@ -1,13 +1,41 @@
 #include "stdafx.h"
 #include "mylib.h"
-void DelScreen()
+void cls(HANDLE hConsole)
 {
-	HANDLE hOut;
-	COORD Position;
-	hOut = GetStdHandle(STD_OUTPUT_HANDLE);
-	Position.X = 0;
-	Position.Y = 0;
-	SetConsoleCursorPosition(hOut, Position);
+	COORD coordScreen = { 0, 0 };    // home for the cursor 
+	DWORD cCharsWritten;
+	CONSOLE_SCREEN_BUFFER_INFO csbi;
+	DWORD dwConSize;
+
+	// Get the number of character cells in the current buffer. 
+
+	if (!GetConsoleScreenBufferInfo(hConsole, &csbi))
+		return;
+	dwConSize = csbi.dwSize.X * csbi.dwSize.Y;
+
+	// Fill the entire screen with blanks.
+
+	if (!FillConsoleOutputCharacter(hConsole, (TCHAR) ' ',
+		dwConSize, coordScreen, &cCharsWritten))
+		return;
+
+	// Get the current text attribute.
+	if (!GetConsoleScreenBufferInfo(hConsole, &csbi))
+		return;
+
+	// Set the buffer's attributes accordingly.
+	if (!FillConsoleOutputAttribute(hConsole, csbi.wAttributes,
+		dwConSize, coordScreen, &cCharsWritten))
+		return;
+
+	// Put the cursor at its home coordinates.
+	SetConsoleCursorPosition(hConsole, coordScreen);
+}
+
+void clrscr()
+{
+	HANDLE hCon = GetStdHandle(STD_OUTPUT_HANDLE);
+	cls(hCon);
 }
 void SetColor(WORD color)
 {
