@@ -51,3 +51,4 @@ void initDS(dauSach &ds) {
 	ds.tenSach = "";
 	ds.theLoai = "";
 }
+

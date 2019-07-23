@@ -138,6 +138,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="constant.h" />
     <ClInclude Include="DauSach.h" />
     <ClInclude Include="mylib.h" />
     <ClInclude Include="RWDauSach.h" />

@@ -3,16 +3,19 @@
 #include "RWDauSach.h"
 #include "welcome.h"
 #include "mylib.h"
+#include "constant.h"
+#include "xuLyDS.h"
 using namespace std;
 
 
 void menu(int lc, LIST_DauSach &lds, dauSach dauS);
 int main() {
-	int flag = 0;
+	int flag = 5;
 	welcomeConsole();
-	menuFeature(4, 52, 20, flag);
+	//menuFeature(4, 52, 20, flag,listMenu);
 	dauSach dauS;
 	LIST_DauSach lds;
+
 	//vong lap cua chuong trinh
 	while (true) {
 		switch (flag)
@@ -20,6 +23,7 @@ int main() {
 		case 1:
 			break;
 		case 2:
+			drawTable();
 			break;
 		case 3:
 			break;
@@ -27,25 +31,29 @@ int main() {
 			//thoat chuong trinh
 			exit(0);
 			break;
+		case 5:
+			clrscr();
+			int lc;
+			gotoxy(5, 10); cout << "kiem thu nhap xuat dau sach";
+			cout << "nhap lc: "; cin >> lc;
+			menu(lc, lds, dauS);
+			break;
 		default:
 			break;
-		}
-		/*SetColor(YELLOW);
-		gotoxy(5, 10); cout << "kiem thu nhap xuat dau sach";
-		cout << "nhap lc: "; cin >> lc;
-		menu(lc, lds, dauS);*/
+		}	
 	}
 	system("pause");
 	return 0;
 }
 void menu(int lc, LIST_DauSach &lds, dauSach dauS) {
+	pDauSach pDS = nullptr;
 	switch (lc)
 	{
 	case 1:
 		cout << "So luong dau sach: "; cin >> lds.n;
 		cin.ignore();
 		for (int i = 0; i < lds.n; i++) {
-
+			cout << "Nhap vao Dau sach " + (i+1)<<endl;
 			cout << "ISBN: ";
 			gets_s(dauS.ISBN);
 			cout << "Nam XB: ";	cin >> dauS.namXuatBan;
@@ -53,11 +61,31 @@ void menu(int lc, LIST_DauSach &lds, dauSach dauS) {
 			cout << "tac gia: "; cin.ignore(); getline(cin, dauS.tacGia);
 			cout << "ten sach: "; getline(cin, dauS.tenSach);
 			cout << "the loai: "; getline(cin, dauS.theLoai);
-
+			cout << "Ban co muon nhap danh muc sach cho dau sach nay khong?";
 			lds.nodesDauSach[i] = new DauSach;
 			lds.nodesDauSach[i]->info = dauS;
-			lds.nodesDauSach[i]->dms.pHeadDMS = nullptr;
-			lds.nodesDauSach[i]->dms.pTailDMS = nullptr;
+			int YN; cin >> YN;
+			if (YN == 1)
+			{
+				//NODE_DMS *p = lds.nodesDauSach[i]->dms.pHeadDMS;
+				int slSach = 0;
+				//so luong sach
+				cout << "Nhap vao so luong dms: "; cin >> slSach;
+				lds.nodesDauSach[i]->dms.n = slSach;
+				DMS dataDMS;
+				LIST_DMS ldms;
+				for (int j = 0; j < slSach; j++) {
+					cout << "Nhap vao thong tin sach: " + (j+1) <<endl;
+					cout << "Ma sach: "; cin.ignore(); getline(cin, dataDMS.maSach);
+					cout << "Trang thai: "; cin >> dataDMS.trangThai;
+					cout << "Vi tri: "; cin.ignore(); getline(cin, dataDMS.viTri);
+					AddTailList_DMS(ldms, dataDMS);
+				}
+				pDS->dms = ldms;
+			}
+
+			/*lds.nodesDauSach[i]->dms.pHeadDMS = nullptr;
+			lds.nodesDauSach[i]->dms.pTailDMS = nullptr;*/
 			//cout << "/////////////////////////////////////////////////////////////\n";
 			//cout << puts(dauS.ISBN);
 			//cout << dauS.namXuatBan << endl;
@@ -67,6 +95,7 @@ void menu(int lc, LIST_DauSach &lds, dauSach dauS) {
 			//cout << dauS.theLoai << endl;
 		}
 		SaveDS(lds);
+		delete pDS;
 		break;
 	case 2:
 		OpenFile(lds);

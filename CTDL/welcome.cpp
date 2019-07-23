@@ -24,7 +24,6 @@ void welcomeConsole() {
 	SetColor(WHITE);
 }
 void drawFrame() {
-	drawRow(0,20,0,1,1,1,NULL);
 	drawCell(10, 150, 0, 40, 1, NULL);
 	drawCell(11, 149, 1, 39, 1, NULL);
 }
@@ -33,12 +32,8 @@ int index(std::string listMenu[], int i) {
 	int index = (42 - listMenu[i - 1].length()) / 2;
 	return index;
 }
-void menuFeature(int slFeature,int xStart,int yStart, int &flag) {
+void menuFeature(int slFeature,int xStart,int yStart, int &flag,std::string listMenu[]) {
 	int yStartConstant = yStart;
-	std::string listMenu[4] = { "QUAN LY DOC GIA",
-								"QUAN LY DAU SACH",
-								"QUAN LY SACH",
-								"THOAT"};
 	for (int i = 1; i <= slFeature; i++) {
 		drawCell(xStart, xStart + 40, yStart, yStart + 2, 1, NULL);
 		if (i == 1) {
@@ -53,8 +48,6 @@ void menuFeature(int slFeature,int xStart,int yStart, int &flag) {
 		yStart += 4;
 	}
 	selection(flag,listMenu,slFeature,xStart,yStartConstant);
-	clrscr();
-	std::cout << flag;
 }
 
 int selection(int &flag, std::string listMenu[],int slFeature,int xStart, int yStart) {
@@ -77,6 +70,7 @@ int selection(int &flag, std::string listMenu[],int slFeature,int xStart, int yS
 			}
 		}
 	} while (key_press != 13);
+	setDefaultColor();
 	return flag;
 }
 void setDefaultColor() {
