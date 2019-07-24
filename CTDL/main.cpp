@@ -56,6 +56,7 @@ void menu(int lc, LIST_DauSach &lds, dauSach dauS, DMS dataDMS, LIST_DMS ldms) {
 		for (int i = 0; i < lds.n; i++) {
 			cout << "Nhap vao Dau sach " + (i+1)<<endl;
 			cout << "ISBN: ";
+			cin.ignore();
 			gets_s(dauS.ISBN);
 			cout << "Nam XB: ";	cin >> dauS.namXuatBan;
 			cout << "so trang: "; cin >> dauS.soTrang;
@@ -65,7 +66,6 @@ void menu(int lc, LIST_DauSach &lds, dauSach dauS, DMS dataDMS, LIST_DMS ldms) {
 			cout << "Ban co muon nhap danh muc sach cho dau sach nay khong?";
 			lds.nodesDauSach[i] = new DauSach;
 			lds.nodesDauSach[i]->info = dauS;
-			
 			int YN; cin >> YN;
 			if (YN == 1)
 			{
@@ -83,27 +83,23 @@ void menu(int lc, LIST_DauSach &lds, dauSach dauS, DMS dataDMS, LIST_DMS ldms) {
 				}
 				lds.nodesDauSach[i]->dms.pHeadDMS= ldms.pHeadDMS;
 			}
+			else if (YN == 2) {
+				lds.nodesDauSach[i]->dms.pHeadDMS = lds.nodesDauSach[i]->dms.pTailDMS = nullptr;
+			}
 		}
 		SaveDS(lds);
 		break;
 	case 2:
-		/*try {
-			
-		}
-		catch (const std::exception& e) {
-			std::cout << e.what() << std::endl;
-		}*/
-		LIST_DauSach lds1;
-		OpenFile(lds1);
-		for (int i = 0; i < lds1.n; i++) {
-			cout << puts(lds1.nodesDauSach[i]->info.ISBN) << endl;
-			cout << lds1.nodesDauSach[i]->info.namXuatBan << endl;
-			cout << lds1.nodesDauSach[i]->info.soTrang << endl;
-			cout << lds1.nodesDauSach[i]->info.tacGia << endl;
-			cout << lds1.nodesDauSach[i]->info.tenSach << endl;
-			cout << lds1.nodesDauSach[i]->info.theLoai << endl;
-			if (lds1.nodesDauSach[i]->dms.n > 0) {
-				for (NODE_DMS *p = lds1.nodesDauSach[i]->dms.pHeadDMS; p != NULL; p = p->pNext) {
+		OpenFile(lds);
+		for (int i = 0; i < lds.n; i++) {
+			cout << puts(lds.nodesDauSach[i]->info.ISBN) << endl;
+			cout << lds.nodesDauSach[i]->info.namXuatBan << endl;
+			cout << lds.nodesDauSach[i]->info.soTrang << endl;
+			cout << lds.nodesDauSach[i]->info.tacGia << endl;
+			cout << lds.nodesDauSach[i]->info.tenSach << endl;
+			cout << lds.nodesDauSach[i]->info.theLoai << endl;
+			if (lds.nodesDauSach[i]->dms.n > 0) {
+				for (NODE_DMS *p = lds.nodesDauSach[i]->dms.pHeadDMS; p != NULL; p = p->pNext) {
 					cout << "Ma sach: " + p->data.maSach << endl;
 					cout << "Trang thai: " + p->data.trangThai << endl;
 					cout << "Vi tri: " + p->data.viTri << endl;

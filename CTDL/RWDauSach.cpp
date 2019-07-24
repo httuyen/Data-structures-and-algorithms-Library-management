@@ -16,7 +16,7 @@ void OpenFile(LIST_DauSach &lds1) {
 		lds1.nodesDauSach[lds1.n] = new DauSach;
 		*lds1.nodesDauSach[lds1.n] = ds;
 		if (lds1.nodesDauSach[lds1.n]->dms.n < 0) {
-			ds.dms.pHeadDMS->pNext = ds.dms.pTailDMS->pNext = nullptr;
+			lds1.nodesDauSach[lds1.n]->dms.pHeadDMS = lds1.nodesDauSach[lds1.n]->dms.pTailDMS = nullptr;
 		}
 		else {
 			initList_DMS(ldms);
