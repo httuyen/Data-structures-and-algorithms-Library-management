@@ -2,4 +2,4 @@
 #include "DauSach.h"
 #include <exception>
 void SaveDS(LIST_DauSach lds);
-void OpenFile(LIST_DauSach &lds1);
+void OpenFile(LIST_DauSach &lds,pDauSach &pDS);

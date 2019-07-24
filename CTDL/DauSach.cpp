@@ -20,15 +20,7 @@ void AddTailList_DMS(LIST_DMS &l, DMS data)
 	}
 	l.n++;
 }
-int Insert_DauSach(LIST_DauSach &l, DauSach* &pDS)
-{
-	if (Full_DauSach(l))
-	{
-		return 0;
-	}
-	l.nodesDauSach[++l.n] = pDS;
-	return 1;
-}
+
 NODE_DMS* GetNode_DMS(DMS DATA)
 {
 	NODE_DMS *p = new NODE_DMS;
@@ -51,4 +43,28 @@ void initDS(dauSach &ds) {
 	ds.tenSach = "";
 	ds.theLoai = "";
 }
-
+void initListDS(LIST_DauSach &lds) {
+	
+	lds.n = 0;
+	initList_DMS(lds.nodesDauSach[0]->dms);
+	lds.nodesDauSach[0]->dms.pHeadDMS = lds.nodesDauSach[0]->dms.pTailDMS = nullptr;
+}
+pDauSach searchTen_DS(LIST_DauSach lds, string theLoai){
+	pDauSach temp = NULL;
+	for (int i = 0; i <= lds.n; i++)
+	{
+		temp = lds.nodesDauSach[i];
+		if (temp->info.tenSach == theLoai)
+			return temp;
+	}
+	return NULL;
+}
+int Insert_DauSach(LIST_DauSach &lds, pDauSach &pDS)
+{
+	if (Full_DauSach(lds))
+	{
+		return 0;
+	}
+	lds.nodesDauSach[lds.n++] = pDS;
+	return 1;
+}

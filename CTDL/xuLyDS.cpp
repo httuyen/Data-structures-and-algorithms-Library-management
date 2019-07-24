@@ -26,6 +26,7 @@ void drawTable() {
 	gotoxy(86, 4); cout << "SO TR";
 	gotoxy(94, 4); cout << "NAM XB";
 	drawEditDS(110,3);
+	drawNoti(110, 24);
 	system("pause");
 }
 void drawEditDS(int x, int y) {
@@ -53,9 +54,22 @@ void drawEditDS(int x, int y) {
 	gotoxy(x + 1, y + 14); cout << "SO TRANG:";
 	gotoxy(x + 1, y + 17); cout << "NAM XB:";
 }
+void drawNoti(int x, int y) {
+	gotoxy(x + 15, y); cout << "NOTIFICATION";
+	setHighLightColor();
+	drawCell(x, x + 40,y+1,y+12);
+	setDefaultColor();
+	gotoxy(x + 1, y + 2); cout << "ISBN khong the thay doi!\n";
+	gotoxy(x + 1, y + 3); cout << "THE LOAI toi da 15 ky tu\n";
+	gotoxy(x + 1, y + 4); cout << "TEN SACH toi da 15 ky tu\n";
+	gotoxy(x + 1, y + 5); cout << "TAC GIA toi da 15 ky tu\n";
+	gotoxy(x + 1, y + 6); cout << "SO TRANG toi da 10 ky tu\n";
+	gotoxy(x + 1, y + 7); cout << "Nam XB toi da 4 ky tu";
+}
 void showListDS() {
 
 }
-void getEventKey() {
-
+string getEventKey(string strKey) {
+	
+	return strKey;
 }
