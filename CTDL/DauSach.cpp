@@ -4,13 +4,13 @@
 void initList_DMS(LIST_DMS &l)
 {
 	l.n = 0;
-	l.pHeadDMS = l.pTailDMS = NULL;
+	l.pHeadDMS = l.pTailDMS = nullptr;
 }
 void AddTailList_DMS(LIST_DMS &l, DMS data)
 {
 	// tao Node
 	NODE_DMS *p = GetNode_DMS(data);
-	if (l.pHeadDMS == NULL) {
+	if (l.pHeadDMS == nullptr) {
 		l.pHeadDMS = l.pTailDMS = p;
 	}
 	else
@@ -32,11 +32,11 @@ int Insert_DauSach(LIST_DauSach &l, DauSach* &pDS)
 NODE_DMS* GetNode_DMS(DMS DATA)
 {
 	NODE_DMS *p = new NODE_DMS;
-	if (p == NULL) {
-		return NULL;
+	if (p == nullptr) {
+		return nullptr;
 	}
 	p->data = DATA;
-	p->pNext = NULL;
+	p->pNext = nullptr;
 	return (p);
 }
 int Full_DauSach(LIST_DauSach  l)
