@@ -57,13 +57,12 @@ void menu(int lc, LIST_DauSach &lds, dauSach dauS, DMS dataDMS, LIST_DMS ldms,pD
 		for (int i = 0; i < lds.n; i++) {
 			cout << "Nhap vao Dau sach " + (i+1)<<endl;
 			cout << "ISBN: ";
-			cin.ignore();
-			gets_s(dauS.ISBN);
+			cin.getline(dauS.ISBN, 6);
 			cout << "Nam XB: ";	cin >> dauS.namXuatBan;
-			cout << "so trang: "; cin >> dauS.soTrang;
-			cout << "tac gia: "; cin.ignore(); getline(cin, dauS.tacGia);
-			cout << "ten sach: "; getline(cin, dauS.tenSach);
-			cout << "the loai: "; getline(cin, dauS.theLoai);
+			cout << "so trang: "; cin >> dauS.soTrang; cin.ignore();
+			cout << "tac gia: ";  cin.getline(dauS.tacGia,6);
+			cout << "ten sach: "; cin.getline( dauS.tenSach,6);
+			cout << "the loai: "; cin.getline( dauS.theLoai,6);
 			cout << "Ban co muon nhap danh muc sach cho dau sach nay khong?";
 			lds.nodesDauSach[i] = new DauSach;
 			lds.nodesDauSach[i]->info = dauS;
@@ -73,13 +72,13 @@ void menu(int lc, LIST_DauSach &lds, dauSach dauS, DMS dataDMS, LIST_DMS ldms,pD
 				initList_DMS(ldms);
 				//so luong sach
 				int slSach = 0;
-				cout << "Nhap vao so luong dms: "; cin >> slSach;
+				cout << "Nhap vao so luong dms: "; cin >> slSach; cin.ignore();
 				lds.nodesDauSach[i]->dms.n = slSach;
 				for (int j = 0; j < slSach; j++) {
 					cout << "Nhap vao thong tin sach: " + (j+1) <<endl;
-					cout << "Ma sach: "; cin.ignore(); getline(cin, dataDMS.maSach);
-					cout << "Trang thai: "; cin >> dataDMS.trangThai;
-					cout << "Vi tri: "; cin.ignore(); getline(cin, dataDMS.viTri);
+					cout << "Ma sach: ";  cin.getline(dataDMS.maSach,6);
+					cout << "Trang thai: "; cin >> dataDMS.trangThai; cin.ignore();
+					cout << "Vi tri: ";  cin.getline(dataDMS.viTri,6);
 					AddTailList_DMS(ldms, dataDMS);
 				}
 				lds.nodesDauSach[i]->dms.pHeadDMS= ldms.pHeadDMS;
@@ -104,9 +103,9 @@ void menu(int lc, LIST_DauSach &lds, dauSach dauS, DMS dataDMS, LIST_DMS ldms,pD
 			cout << lds1.nodesDauSach[i]->info.theLoai << endl;
 			if (lds1.nodesDauSach[i]->dms.n > 0) {
 				for (NODE_DMS *p = lds1.nodesDauSach[i]->dms.pHeadDMS; p != NULL; p = p->pNext) {
-					cout << "Ma sach: " + p->data.maSach << endl;
-					cout << "Trang thai: " + p->data.trangThai << endl;
-					cout << "Vi tri: " + p->data.viTri << endl;
+					cout << "Ma sach: " << p->data.maSach << endl;
+					cout << "Trang thai: " << p->data.trangThai << endl;
+					cout << "Vi tri: " << p->data.viTri << endl;
 				}
 			}
 		}

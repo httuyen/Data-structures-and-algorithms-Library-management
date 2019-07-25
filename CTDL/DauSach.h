@@ -12,9 +12,9 @@ using namespace std;
 
 typedef struct DanhMucSach
 {
-	string maSach;
-	int trangThai;//0:cho muon dc//1:da cho muon//2:sach da thanh li
-	string viTri;
+	char maSach[6] = "";
+	int trangThai= 0;//0:cho muon dc//1:da cho muon//2:sach da thanh li
+	char viTri[6] = "";
 }DMS;
 
 struct NODE_DMS
@@ -32,12 +32,12 @@ typedef struct listDMS
 ///////////////////////
 struct dauSach
 {
-	char ISBN[6];
-	string tenSach;
-	int soTrang;
-	string tacGia;
-	int namXuatBan;
-	string theLoai;
+	char ISBN[6] = "";
+	char tenSach[6]="";
+	int soTrang=0;
+	char tacGia[6]="";
+	int namXuatBan=0;
+	char theLoai[6]="";
 };
 struct DauSach {
 	dauSach info;
@@ -101,7 +101,7 @@ void initList_DMS(LIST_DMS& l);
 void AddTailList_DMS(LIST_DMS &l, DMS data);
 NODE_DMS* GetNode_DMS(DMS DATA);
 int Full_DauSach(LIST_DauSach  l);
-void initDS(dauSach &ds);
+
 void initListDS(LIST_DauSach &lds);
 pDauSach searchTen_DS(LIST_DauSach lds, string theLoai);
 int Insert_DauSach(LIST_DauSach &lds, pDauSach &pDS);

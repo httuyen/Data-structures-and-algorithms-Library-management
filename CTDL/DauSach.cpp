@@ -35,14 +35,7 @@ int Full_DauSach(LIST_DauSach  l)
 {
 	return l.n == MAX_DAUSACH;
 }
-void initDS(dauSach &ds) {
-	ds.ISBN[6] = {};
-	ds.namXuatBan = NULL;
-	ds.soTrang = NULL;
-	ds.tacGia = "";
-	ds.tenSach = "";
-	ds.theLoai = "";
-}
+
 void initListDS(LIST_DauSach &lds) {
 	
 	lds.n = 0;
