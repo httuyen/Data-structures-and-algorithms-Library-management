@@ -31,6 +31,53 @@ NODE_DMS* GetNode_DMS(DMS DATA)
 	p->pNext = nullptr;
 	return (p);
 }
+
+void initList_MT(ListMT &l)
+{
+	l.n = 0;
+	l.pHeadMT = l.pTailMT = NULL;
+}
+
+void AddTailList_MT(ListMT &l, MuonTra data)
+{
+	NODE_MT *p = GetNode_MT(data);
+	if (l.pHeadMT == nullptr) {
+		l.pHeadMT = l.pTailMT = p;
+	}
+	else {
+		l.pTailMT->pNext = p;
+		p->pPrev = l.pTailMT;
+		l.pTailMT = p;
+	}
+	l.n++;
+}
+
+void AddHeadList_MT(ListMT &l, MuonTra data)
+{
+	NODE_MT *p = GetNode_MT(data);
+	if (l.pHeadMT == NULL) {
+		l.pHeadMT = l.pTailMT = p;
+	}
+	else
+	{
+		p->pNext = l.pHeadMT;
+		l.pHeadMT->pPrev = p;
+		l.pHeadMT = p;
+	}
+	++l.n;
+}
+
+NODE_MT* GetNode_MT(MuonTra data)
+{
+	NODE_MT *p = new NODE_MT;
+	if (p == nullptr) {
+		return nullptr;
+	}
+	p->data = data;
+	p->pNext = p->pPrev = nullptr;
+	return (p);
+}
+
 int Full_DauSach(LIST_DauSach  l)
 {
 	return l.n == MAX_DAUSACH;

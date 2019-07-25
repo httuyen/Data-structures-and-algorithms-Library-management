@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "DauSach.h"
 #include "RWDauSach.h"
+#include "RWDocGia.h"
 #include "welcome.h"
 #include "mylib.h"
 #include "constant.h"
@@ -9,8 +10,9 @@ using namespace std;
 
 
 void menu(int lc, LIST_DauSach &lds, dauSach dauS, DMS dataDMS, LIST_DMS ldms, pDauSach &pDS);
+void menuDG(int lc);
 int main() {
-	int flag = 5;
+	int flag = 1;
 	welcomeConsole();
 	//menuFeature(4, 52, 20, flag,listMenu);
 	dauSach dauS;
@@ -22,8 +24,15 @@ int main() {
 	while (true) {
 		switch (flag)
 		{
-		case 1:
+		case 1: {
+			clrscr();
+			int lc;
+			gotoxy(5, 10); cout << "kiem thu nhap xuat doc gia";
+			cout << "nhap lc: "; cin >> lc;
+			menuDG(lc);
 			break;
+		}
+			
 		case 2:
 			drawTable();
 			break;
@@ -33,13 +42,15 @@ int main() {
 			//thoat chuong trinh
 			exit(0);
 			break;
-		case 5:
+		case 5: {
 			clrscr();
 			int lc;
 			gotoxy(5, 10); cout << "kiem thu nhap xuat dau sach";
 			cout << "nhap lc: "; cin >> lc;
-			menu(lc, lds, dauS,dataDMS,ldms,pDS);
+			menu(lc, lds, dauS, dataDMS, ldms, pDS);
 			break;
+		}
+			
 		default:
 			break;
 		}	
@@ -111,5 +122,76 @@ void menu(int lc, LIST_DauSach &lds, dauSach dauS, DMS dataDMS, LIST_DMS ldms,pD
 		}
 		system("pause");
 		break;
+	}
+}
+
+void menuDG(int lc)
+{
+	switch (lc)
+	{
+	case 1: {
+		MuonTra dataMT;
+		ListMT lmt;
+		theDocGia tDG;
+		Tree t;
+		int n;
+		cout << "So luong doc gia: "; cin >> n;
+		cin.ignore();
+		for (int i = 0; i < n; i++) {
+			cout << "Nhap vao Doc gia " + (i + 1) << endl;
+			cout << "Ma the: "; cin >> tDG.maThe; cin.ignore();
+			cout << "Ho: ";	getline(cin, tDG.ho);
+			cout << "Ten: "; getline(cin, tDG.ten);
+			cout << "Phai: "; getline(cin, tDG.phai);
+			cout << "Trang thai: "; cin >> tDG.trangThai; cin.ignore();
+			cout << "Cho doc gia muon sach?";
+			t = new NODE_TREE;
+			t->data.info = tDG;
+			int YN; cin >> YN;
+			if (YN == 1)
+			{
+				initList_MT(lmt);
+				//so luong sach
+				//int slSach = 0;
+				cout << "Ma sach: "; getline(cin,dataMT.maSach); cin.ignore();
+				cout << "Ngay muon: ";  cin >> dataMT.ngayMuon.Ngay; 
+				cout << "Thang muon: ";  cin >> dataMT.ngayMuon.Thang;
+				cout << "Nam muon: ";  cin >> dataMT.ngayMuon.Nam;
+				cout << "Ngay tra: "; cin >> dataMT.ngayTra.Ngay;
+				cout << "Thang tra: ";  cin >> dataMT.ngayTra.Thang;
+				cout << "Nam tra: ";  cin >> dataMT.ngayTra.Nam;
+				cout << "Trang thai: ";  cin >> dataMT.trangThai;
+				AddTailList_MT(lmt, dataMT);
+				
+				t->data.listMT.pHeadMT = lmt.pHeadMT;
+			}
+			//else if (YN == 2) {
+				//lds.nodesDauSach[i]->dms.pHeadDMS = lds.nodesDauSach[i]->dms.pTailDMS = nullptr;
+			//}
+		}
+		saveDG(t);
+
+		break; }
+	/*case 2:
+		//initListDS(lds);
+		LIST_DauSach lds1;
+		OpenFile(lds1, pDS);
+		for (int i = 0; i < lds1.n; i++) {
+			cout << puts(lds1.nodesDauSach[i]->info.ISBN) << endl;
+			cout << lds1.nodesDauSach[i]->info.namXuatBan << endl;
+			cout << lds1.nodesDauSach[i]->info.soTrang << endl;
+			cout << lds1.nodesDauSach[i]->info.tacGia << endl;
+			cout << lds1.nodesDauSach[i]->info.tenSach << endl;
+			cout << lds1.nodesDauSach[i]->info.theLoai << endl;
+			if (lds1.nodesDauSach[i]->dms.n > 0) {
+				for (NODE_DMS *p = lds1.nodesDauSach[i]->dms.pHeadDMS; p != NULL; p = p->pNext) {
+					cout << "Ma sach: " << p->data.maSach << endl;
+					cout << "Trang thai: " << p->data.trangThai << endl;
+					cout << "Vi tri: " << p->data.viTri << endl;
+				}
+			}
+		}
+		system("pause");
+		break;*/
 	}
 }

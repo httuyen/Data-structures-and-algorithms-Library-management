@@ -68,27 +68,34 @@ struct LIST_DauSach
 };
 
 
-struct NODE_DOUBLELIST
+struct NODE_MT
 {
 	MuonTra data;
-	struct NODE_DOUBLELIST *pNext;
-	struct NODE_DOUBLELIST *pPrev;
-
+	struct NODE_MT *pNext;
+	struct NODE_MT *pPrev;
 };
-struct DOUBLELIST
+struct ListMT
 {
-	NODE_DOUBLELIST *pHeadMT;
-	NODE_DOUBLELIST *pTailMT;
+	int n = -1;
+	NODE_MT *pHeadMT;
+	NODE_MT *pTailMT;
 };
-struct TheDocGia
+
+struct theDocGia
 {
 	int maThe;
 	string ho;
 	string ten;
 	string phai;//0:nu//1:nam
 	int trangThai;//trang thai the:0:bi khoa//1:hoat dong
-	DOUBLELIST doubleList_MuonTra;
 };
+struct TheDocGia
+{
+	theDocGia info;
+	ListMT listMT;
+};
+typedef struct TheDocGia *pTheDocGia;
+
 struct NODE_TREE
 {
 	TheDocGia data;
@@ -105,3 +112,8 @@ int Full_DauSach(LIST_DauSach  l);
 void initListDS(LIST_DauSach &lds);
 pDauSach searchTen_DS(LIST_DauSach lds, string theLoai);
 int Insert_DauSach(LIST_DauSach &lds, pDauSach &pDS);
+
+void initList_MT(ListMT &l);
+void AddTailList_MT(ListMT &l, MuonTra data);
+void AddHeadList_MT(ListMT &l, MuonTra data);
+NODE_MT* GetNode_MT(MuonTra data);
