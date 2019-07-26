@@ -108,3 +108,19 @@ int Insert_DauSach(LIST_DauSach &lds, pDauSach &pDS)
 	lds.nodesDauSach[lds.n++] = pDS;
 	return 1;
 }
+void getTheLoai(LIST_DauSach lds, string listTL[]) {
+	int temp = 0;
+	for (int i = 0; i < lds.n; i++) {
+		for (int j = 0;j<=temp; j++) {
+			if (lds.nodesDauSach[i]->info.theLoai == listTL[j]) {
+				break;
+			}
+			else if(j==temp) {
+				listTL[temp] = lds.nodesDauSach[i]->info.theLoai;
+				temp++;
+				break;
+			}
+		}
+	}
+
+}

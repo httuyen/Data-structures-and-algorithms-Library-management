@@ -1,7 +1,10 @@
 #include "stdafx.h"
 #include "xuLyDS.h"
 using namespace std;
-void drawTable() {
+#define xD 6
+#define yD 6
+
+void drawTable(LIST_DauSach &lds, pDauSach &pDS) {
 	clrscr();
 	gotoxy(7,2); cout << "DANH SACH CAC DAU SACH TRONG THU VIEN THEO THE LOAI, TEN SACH TANG DAN THEO THE LOAI";
 	setHighLightColor();
@@ -27,6 +30,8 @@ void drawTable() {
 	gotoxy(94, 4); cout << "NAM XB";
 	drawEditDS(110,3);
 	drawNoti(110, 24);
+	//clrscr();
+	showListDS(lds,pDS);
 	system("pause");
 }
 void drawEditDS(int x, int y) {
@@ -66,8 +71,16 @@ void drawNoti(int x, int y) {
 	gotoxy(x + 1, y + 6); cout << "SO TRANG toi da 10 ky tu\n";
 	gotoxy(x + 1, y + 7); cout << "Nam XB toi da 4 ky tu";
 }
-void showListDS() {
-
+void showListDS(LIST_DauSach &lds, pDauSach &pDS) {
+	OpenFile(lds, pDS);
+	string listTL[100] = {};
+	getTheLoai(lds, listTL);
+	for (int i = 0;; i++) {
+		gotoxy(xD, yD+i);
+		cout << listTL[i]<<endl;
+		if(listTL[i] == "") break;
+	}
+	system("pause");
 }
 string getEventKey(string strKey) {
 	

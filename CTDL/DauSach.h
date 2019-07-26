@@ -6,15 +6,15 @@
 #include<conio.h>
 #include<string>
 #include<iomanip>
+
 using namespace std;
 #define MaxNodes 10000
 #define MAX_DAUSACH  100
-
 typedef struct DanhMucSach
 {
-	char maSach[6] = "";
+	char maSach[9] = "";
 	int trangThai= 0;//0:cho muon dc//1:da cho muon//2:sach da thanh li
-	char viTri[6] = "";
+	char viTri[20] = "";
 }DMS;
 
 struct NODE_DMS
@@ -33,11 +33,11 @@ typedef struct listDMS
 struct dauSach
 {
 	char ISBN[6] = "";
-	char tenSach[6]="";
+	char tenSach[20]="";
 	int soTrang=0;
-	char tacGia[6]="";
+	char tacGia[20]="";
 	int namXuatBan=0;
-	char theLoai[6]="";
+	char theLoai[20]="";
 };
 struct DauSach {
 	dauSach info;
@@ -117,3 +117,4 @@ void initList_MT(ListMT &l);
 void AddTailList_MT(ListMT &l, MuonTra data);
 void AddHeadList_MT(ListMT &l, MuonTra data);
 NODE_MT* GetNode_MT(MuonTra data);
+void getTheLoai(LIST_DauSach lds, string listTL[]);
