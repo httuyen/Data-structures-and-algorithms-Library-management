@@ -140,6 +140,7 @@
   <ItemGroup>
     <ClInclude Include="constant.h" />
     <ClInclude Include="DauSach.h" />
+    <ClInclude Include="GlobalVariable.h" />
     <ClInclude Include="mylib.h" />
     <ClInclude Include="RWDauSach.h" />
     <ClInclude Include="RWDocGia.h" />
@@ -150,6 +151,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DauSach.cpp" />
+    <ClCompile Include="GlobalVariable.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mylib.cpp" />
     <ClCompile Include="RWDauSach.cpp" />

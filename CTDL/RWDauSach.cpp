@@ -56,7 +56,7 @@ void OpenFile(LIST_DauSach &lds, pDauSach &pDS) {
 			initList_DMS(pDS->dms);
 			while (fread(&dataDMS, sizeof(DMS), 1, f) != 0) {
 				AddTailList_DMS(pDS->dms, dataDMS);
-				if (pDS->dms.n == ds.dms.n) break;
+				if (pDS->dms.n == ds.dms.n) break; //co ve khong can dong code nay
 			}
 		}
 		Insert_DauSach(lds, pDS);

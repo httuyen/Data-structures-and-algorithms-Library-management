@@ -133,7 +133,7 @@ void menuDG(int lc)
 		MuonTra dataMT;
 		ListMT lmt;
 		theDocGia tDG;
-		Tree t;
+		Tree t = NULL;
 		int n;
 		cout << "So luong doc gia: "; cin >> n;
 		cin.ignore();
@@ -145,25 +145,28 @@ void menuDG(int lc)
 			cout << "Phai: "; getline(cin, tDG.phai);
 			cout << "Trang thai: "; cin >> tDG.trangThai; cin.ignore();
 			cout << "Cho doc gia muon sach?";
-			t = new NODE_TREE;
-			t->data.info = tDG;
+			//t = new NODE_TREE;
+			//t->data.info = tDG;
+			InsertDGtoTree(t, tDG);
 			int YN; cin >> YN;
 			if (YN == 1)
 			{
-				initList_MT(lmt);
+				//initList_MT(lmt);
 				//so luong sach
-				//int slSach = 0;
-				cout << "Ma sach: "; getline(cin,dataMT.maSach); cin.ignore();
-				cout << "Ngay muon: ";  cin >> dataMT.ngayMuon.Ngay; 
-				cout << "Thang muon: ";  cin >> dataMT.ngayMuon.Thang;
-				cout << "Nam muon: ";  cin >> dataMT.ngayMuon.Nam;
-				cout << "Ngay tra: "; cin >> dataMT.ngayTra.Ngay;
-				cout << "Thang tra: ";  cin >> dataMT.ngayTra.Thang;
-				cout << "Nam tra: ";  cin >> dataMT.ngayTra.Nam;
-				cout << "Trang thai: ";  cin >> dataMT.trangThai;
-				AddTailList_MT(lmt, dataMT);
-				
-				t->data.listMT.pHeadMT = lmt.pHeadMT;
+				int slSach = 0;
+				cout << "Nhap vao so luong mt: "; cin >> slSach; cin.ignore();
+				for (int j = 0; j < slSach; j++) {
+					cout << "Ma sach: "; getline(cin, dataMT.maSach); cin.ignore();
+					cout << "Ngay muon: ";  cin >> dataMT.ngayMuon.Ngay;
+					cout << "Thang muon: ";  cin >> dataMT.ngayMuon.Thang;
+					cout << "Nam muon: ";  cin >> dataMT.ngayMuon.Nam;
+					cout << "Ngay tra: "; cin >> dataMT.ngayTra.Ngay;
+					cout << "Thang tra: ";  cin >> dataMT.ngayTra.Thang;
+					cout << "Nam tra: ";  cin >> dataMT.ngayTra.Nam;
+					cout << "Trang thai: ";  cin >> dataMT.trangThai;
+					AddHeadList_MT(t->data.listMT, dataMT);
+				}
+				//t->data.listMT.pHeadMT = lmt.pHeadMT;
 			}
 			//else if (YN == 2) {
 				//lds.nodesDauSach[i]->dms.pHeadDMS = lds.nodesDauSach[i]->dms.pTailDMS = nullptr;
@@ -172,26 +175,14 @@ void menuDG(int lc)
 		saveDG(t);
 
 		break; }
-	/*case 2:
-		//initListDS(lds);
-		LIST_DauSach lds1;
-		OpenFile(lds1, pDS);
-		for (int i = 0; i < lds1.n; i++) {
-			cout << puts(lds1.nodesDauSach[i]->info.ISBN) << endl;
-			cout << lds1.nodesDauSach[i]->info.namXuatBan << endl;
-			cout << lds1.nodesDauSach[i]->info.soTrang << endl;
-			cout << lds1.nodesDauSach[i]->info.tacGia << endl;
-			cout << lds1.nodesDauSach[i]->info.tenSach << endl;
-			cout << lds1.nodesDauSach[i]->info.theLoai << endl;
-			if (lds1.nodesDauSach[i]->dms.n > 0) {
-				for (NODE_DMS *p = lds1.nodesDauSach[i]->dms.pHeadDMS; p != NULL; p = p->pNext) {
-					cout << "Ma sach: " << p->data.maSach << endl;
-					cout << "Trang thai: " << p->data.trangThai << endl;
-					cout << "Vi tri: " << p->data.viTri << endl;
-				}
-			}
-		}
+	case 2: {
+		MuonTra dataMT;
+		ListMT lmt;
+		theDocGia tDG;
+		Tree t = NULL;
+		loadDG(t);
+		scanTreeDG(t);
 		system("pause");
-		break;*/
+		break; }
 	}
 }

@@ -6,6 +6,7 @@
 #include<conio.h>
 #include<string>
 #include<iomanip>
+
 using namespace std;
 #define MaxNodes 10000
 #define MAX_DAUSACH  100
@@ -117,3 +118,15 @@ void initList_MT(ListMT &l);
 void AddTailList_MT(ListMT &l, MuonTra data);
 void AddHeadList_MT(ListMT &l, MuonTra data);
 NODE_MT* GetNode_MT(MuonTra data);
+
+void InsertDGtoTree(Tree &t, theDocGia dg);
+NODE_TREE* GetNode_DG(theDocGia dg);
+void initTREE_DG(Tree &t);
+NODE_TREE* Find_DG(Tree t, int maThe);
+int countDG(Tree t);
+void scanTreeDG(Tree t);
+
+unsigned Random_MaThe(Tree t);
+unsigned Random();
+bool Check_MaThe(Tree t, unsigned maThe);
+void Update_DG(Tree &t, theDocGia &dg, bool isEdited);
