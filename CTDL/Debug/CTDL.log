@@ -1,3 +1,25 @@
+<<<<<<< HEAD
+﻿Build started 26/07/2019 11:09:59 AM.
+     1>Project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"Debug\CTDL.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         main.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\CTDLGT2019\CTDL\Debug\CTDL.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"D:\CTDLGT2019\CTDL\Debug\CTDL.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\CTDLGT2019\CTDL\Debug\CTDL.lib" /MACHINE:X86 Debug\DauSach.obj
+         Debug\main.obj
+         Debug\mylib.obj
+         Debug\RWDauSach.obj
+         Debug\RWDocGia.obj
+         Debug\stdafx.obj
+         Debug\welcome.obj
+         Debug\xuLyDS.obj
+         CTDL.vcxproj -> D:\CTDLGT2019\CTDL\Debug\CTDL.exe
+     1>Done Building Project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.80
+=======
 ﻿Build started 7/26/2019 10:57:46 PM.
 Environment at start of build:
 ALLUSERSPROFILE = C:\ProgramData
@@ -5011,3 +5033,4 @@ Build succeeded.
     0 Error(s)
 
 Time Elapsed 00:00:18.31
+>>>>>>> ced80bf8d9b149e44c235b0f7aad143fab7f340c

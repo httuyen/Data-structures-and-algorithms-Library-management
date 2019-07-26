@@ -108,6 +108,23 @@ int Insert_DauSach(LIST_DauSach &lds, pDauSach &pDS)
 	lds.nodesDauSach[lds.n++] = pDS;
 	return 1;
 }
+<<<<<<< HEAD
+void getTheLoai(LIST_DauSach lds, string listTL[]) {
+	int temp = 0;
+	for (int i = 0; i < lds.n; i++) {
+		for (int j = 0;j<=temp; j++) {
+			if (lds.nodesDauSach[i]->info.theLoai == listTL[j]) {
+				break;
+			}
+			else if(j==temp) {
+				listTL[temp] = lds.nodesDauSach[i]->info.theLoai;
+				temp++;
+				break;
+			}
+		}
+	}
+
+=======
 
 NODE_TREE* GetNode_DG(theDocGia dg)
 {
@@ -273,4 +290,5 @@ void Update_DG(Tree &t, theDocGia &dg, bool isEdited)
 		
 
 	}
+>>>>>>> ced80bf8d9b149e44c235b0f7aad143fab7f340c
 }
