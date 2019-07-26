@@ -47,16 +47,16 @@ typedef struct DauSach* pDauSach;
 
 struct Date
 {
-	int Ngay;
-	int Thang;
-	int Nam;
+	int Ngay = 0;
+	int Thang = 0;
+	int Nam = 0;
 };
 struct MuonTra
 {
-	string maSach;
+	char maSach[10] = "";
 	Date ngayMuon;
 	Date ngayTra;
-	int trangThai;//0:dang muon//1:da tra//2:lam mat
+	int trangThai = 0;//0:dang muon//1:da tra//2:lam mat
 
 };
 
@@ -83,11 +83,11 @@ struct ListMT
 
 struct theDocGia
 {
-	int maThe;
-	string ho;
-	string ten;
-	string phai;//0:nu//1:nam
-	int trangThai;//trang thai the:0:bi khoa//1:hoat dong
+	int maThe = 0;
+	char ho[10] = "";
+	char ten[10] = "";
+	char phai[3] = "";//0:nu//1:nam
+	int trangThai = 0;//trang thai the:0:bi khoa//1:hoat dong
 };
 struct TheDocGia
 {
@@ -117,9 +117,8 @@ void initList_MT(ListMT &l);
 void AddTailList_MT(ListMT &l, MuonTra data);
 void AddHeadList_MT(ListMT &l, MuonTra data);
 NODE_MT* GetNode_MT(MuonTra data);
-<<<<<<< HEAD
+
 void getTheLoai(LIST_DauSach lds, string listTL[]);
-=======
 
 void InsertDGtoTree(Tree &t, theDocGia dg);
 NODE_TREE* GetNode_DG(theDocGia dg);
@@ -132,4 +131,3 @@ unsigned Random_MaThe(Tree t);
 unsigned Random();
 bool Check_MaThe(Tree t, unsigned maThe);
 void Update_DG(Tree &t, theDocGia &dg, bool isEdited);
->>>>>>> ced80bf8d9b149e44c235b0f7aad143fab7f340c

@@ -17,7 +17,7 @@ std::string listMenu[4] = { "QUAN LY DOC GIA",
 void menu(int lc, LIST_DauSach &lds, dauSach dauS, DMS dataDMS, LIST_DMS ldms, pDauSach &pDS);
 void menuDG(int lc);
 int main() {
-	int flag = 2;
+	int flag = 1;
 	welcomeConsole();
 	//menuFeature(4, 52, 20, flag,listMenu);
 	dauSach dauS;
@@ -25,6 +25,7 @@ int main() {
 	DMS dataDMS;
 	LIST_DMS ldms;
 	pDauSach pDS;
+	
 	//vong lap cua chuong trinh
 	while (true) {
 		switch (flag)
@@ -140,44 +141,38 @@ void menuDG(int lc)
 		MuonTra dataMT;
 		ListMT lmt;
 		theDocGia tDG;
-		Tree t = NULL;
+		
 		int n;
-		cout << "So luong doc gia: "; cin >> n;
-		cin.ignore();
+		cout << "So luong doc gia: "; cin >> n; cin.ignore();
+		Tree t = NULL;
 		for (int i = 0; i < n; i++) {
-			cout << "Nhap vao Doc gia " + (i + 1) << endl;
+			cout << "Nhap vao Doc gia "<<i+1 << endl;
 			cout << "Ma the: "; cin >> tDG.maThe; cin.ignore();
-			cout << "Ho: ";	getline(cin, tDG.ho);
-			cout << "Ten: "; getline(cin, tDG.ten);
-			cout << "Phai: "; getline(cin, tDG.phai);
+			cout << "Ho: ";	cin.getline(tDG.ho,11);
+			cout << "Ten: "; cin.getline(tDG.ten,11);
+			cout << "Phai: "; cin.getline(tDG.phai,4);
 			cout << "Trang thai: "; cin >> tDG.trangThai; cin.ignore();
-			cout << "Cho doc gia muon sach?";
-			//t = new NODE_TREE;
-			//t->data.info = tDG;
 			InsertDGtoTree(t, tDG);
-			int YN; cin >> YN;
+			cout << "Cho doc gia muon sach?";
+			int YN; cin >> YN; cin.ignore();
 			if (YN == 1)
 			{
-				//initList_MT(lmt);
-				//so luong sach
 				int slSach = 0;
 				cout << "Nhap vao so luong mt: "; cin >> slSach; cin.ignore();
+				//t->data.listMT.n = slSach;
 				for (int j = 0; j < slSach; j++) {
-					cout << "Ma sach: "; getline(cin, dataMT.maSach); cin.ignore();
-					cout << "Ngay muon: ";  cin >> dataMT.ngayMuon.Ngay;
-					cout << "Thang muon: ";  cin >> dataMT.ngayMuon.Thang;
-					cout << "Nam muon: ";  cin >> dataMT.ngayMuon.Nam;
-					cout << "Ngay tra: "; cin >> dataMT.ngayTra.Ngay;
-					cout << "Thang tra: ";  cin >> dataMT.ngayTra.Thang;
-					cout << "Nam tra: ";  cin >> dataMT.ngayTra.Nam;
-					cout << "Trang thai: ";  cin >> dataMT.trangThai;
-					AddHeadList_MT(t->data.listMT, dataMT);
+					cout << "Ma sach: "; cin.getline(dataMT.maSach,11);
+					cout << "Ngay muon: ";  cin >> dataMT.ngayMuon.Ngay; cin.ignore();
+					cout << "Thang muon: ";  cin >> dataMT.ngayMuon.Thang; cin.ignore();
+					cout << "Nam muon: ";  cin >> dataMT.ngayMuon.Nam; cin.ignore();
+					cout << "Ngay tra: "; cin >> dataMT.ngayTra.Ngay; cin.ignore();
+					cout << "Thang tra: ";  cin >> dataMT.ngayTra.Thang; cin.ignore();
+					cout << "Nam tra: ";  cin >> dataMT.ngayTra.Nam; cin.ignore();
+					cout << "Trang thai: ";  cin >> dataMT.trangThai; cin.ignore();
+					AddHeadList_MT(lmt, dataMT); 
+					
 				}
-				//t->data.listMT.pHeadMT = lmt.pHeadMT;
 			}
-			//else if (YN == 2) {
-				//lds.nodesDauSach[i]->dms.pHeadDMS = lds.nodesDauSach[i]->dms.pTailDMS = nullptr;
-			//}
 		}
 		saveDG(t);
 
