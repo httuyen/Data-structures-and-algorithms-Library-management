@@ -33,7 +33,7 @@ int main() {
 		case 1: {
 			clrscr();
 			int lc;
-			gotoxy(5, 10); cout << "kiem thu nhap xuat doc gia";
+			cout << "kiem thu nhap xuat doc gia\n";
 			cout << "nhap lc: "; cin >> lc; cin.ignore();
 			menuDG(lc);
 			break;
@@ -169,7 +169,7 @@ void menuDG(int lc)
 					cout << "Thang tra: ";  cin >> dataMT.ngayTra.Thang; cin.ignore();
 					cout << "Nam tra: ";  cin >> dataMT.ngayTra.Nam; cin.ignore();
 					cout << "Trang thai: ";  cin >> dataMT.trangThai; cin.ignore();
-					AddHeadList_MT(lmt, dataMT); 
+					AddTailList_MT(t->data.listMT, dataMT); 
 					
 				}
 			}
