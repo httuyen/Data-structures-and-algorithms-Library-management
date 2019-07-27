@@ -172,12 +172,8 @@ void menuDG(int lc)
 					cout << "Thang tra: ";  cin >> dataMT.ngayTra.Thang; cin.ignore();
 					cout << "Nam tra: ";  cin >> dataMT.ngayTra.Nam; cin.ignore();
 					cout << "Trang thai: ";  cin >> dataMT.trangThai; cin.ignore();
-<<<<<<< HEAD
-					AddTailList_MT(t->data.listMT, dataMT); 
-					
-=======
 					AddHeadList_MT(temp->data.listMT, dataMT); 				
->>>>>>> 17d98e93e8a94e054562a291375f741530c9ac90
+
 				}
 				//t->data.listMT.pHeadMT = lmt.pHeadMT;
 			}

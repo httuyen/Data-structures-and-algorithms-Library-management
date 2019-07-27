@@ -36,22 +36,26 @@ void loadDG(Tree &t)
 {
 	initTREE_DG(t);
 	FILE * f;
-	NODE_TREE* pDG = NULL;
-	theDocGia dg;
+	NODE_TREE* pDG = nullptr;
+	TheDocGia dg;
 	MuonTra mt;
 	if ((f = fopen("DocGia.txt", "rb")) == NULL)
 	{
 		cout << ("Loi mo file de doc"); return;
 	}
 	//lds.n = 0;
-	while (fread(&dg, sizeof(theDocGia), 1, f) != 0) {
-		InsertDGtoTree(t, dg);
-		pDG = Find_DG(t, dg.maThe);
-		while (fread(&mt, sizeof(MuonTra), 1, f) != 0) {
-			AddHeadList_MT(pDG->data.listMT, mt);
-			//if (pDS->dms.n == ds.dms.n) break;
+	while (fread(&dg, sizeof(TheDocGia), 1, f) != 0) {
+		InsertDGtoTree(t, dg.info);
+		pDG = Find_DG(t, dg.info.maThe);
+		if (dg.listMT.n <= 0) {
+			pDG->data.listMT.pHeadMT = pDG->data.listMT.pHeadMT = nullptr;
 		}
-
+		else {
+			while (fread(&mt, sizeof(MuonTra), 1, f) != 0) {
+				AddHeadList_MT(pDG->data.listMT, mt);
+				if (pDG->data.listMT.n == dg.listMT.n) break;
+			}
+		}
 	}
 	fclose(f);
 }

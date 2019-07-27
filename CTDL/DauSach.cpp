@@ -192,10 +192,10 @@ void scanTreeDG(Tree t)
 { 
 	if (t != NULL)
 	{
-		cout << countDG(t);
-		cout << "Ho: " << t->data.info.ho << endl;
+		cout << countDG(t)<<endl;
+		cout << "Ma the: " << t->data.info.maThe << endl;
 		int nMT = t->data.listMT.n;
-		cout << nMT;
+		cout <<"so luong sach mt:"<< nMT<<endl;
 		if (nMT > 0) {
 			for (NODE_MT *p = t->data.listMT.pHeadMT; p != NULL; p = p->pNext) {
 				cout << "Ma sach: " << p->data.maSach << endl;

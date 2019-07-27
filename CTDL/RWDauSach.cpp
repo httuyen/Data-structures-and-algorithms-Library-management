@@ -53,7 +53,7 @@ void OpenFile(LIST_DauSach &lds, pDauSach &pDS) {
 			pDS->dms.pHeadDMS = pDS->dms.pTailDMS = nullptr;
 		}
 		else {
-			initList_DMS(pDS->dms);
+			//initList_DMS(pDS->dms);
 			while (fread(&dataDMS, sizeof(DMS), 1, f) != 0) {
 				AddTailList_DMS(pDS->dms, dataDMS);
 				if (pDS->dms.n == ds.dms.n) break; //co ve khong can dong code nay
@@ -72,7 +72,7 @@ void SaveDS(LIST_DauSach lds) {
 	for (int i = 0; i < lds.n; i++){
 		fwrite(lds.nodesDauSach[i], sizeof(DauSach), 1, f);
 		for (NODE_DMS *p = lds.nodesDauSach[i]->dms.pHeadDMS; p != nullptr; p = p->pNext) {
-			fwrite(p, sizeof(DMS), 1, f)
+			fwrite(p, sizeof(DMS), 1, f);
 		}
 	}
 	fclose(f);
