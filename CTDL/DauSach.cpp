@@ -41,7 +41,7 @@ void initList_MT(ListMT &l)
 void AddTailList_MT(ListMT &l, MuonTra data)
 {
 	NODE_MT *p = GetNode_MT(data);
-	if (l.pHeadMT == nullptr) {
+	if (l.pHeadMT == NULL) {
 		l.pHeadMT = l.pTailMT = p;
 	}
 	else {
@@ -192,8 +192,10 @@ void scanTreeDG(Tree t)
 { 
 	if (t != NULL)
 	{
+		cout << countDG(t);
 		cout << "Ho: " << t->data.info.ho << endl;
 		int nMT = t->data.listMT.n;
+		cout << nMT;
 		if (nMT > 0) {
 			for (NODE_MT *p = t->data.listMT.pHeadMT; p != NULL; p = p->pNext) {
 				cout << "Ma sach: " << p->data.maSach << endl;
