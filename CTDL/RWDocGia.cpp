@@ -5,7 +5,7 @@ using namespace std;
 void save(Tree t, FILE *f)
 {
 	fwrite(&t->data.info, sizeof(TheDocGia), 1, f);
-	for (NODE_MT *p = t->data.listMT.pHeadMT; p != nullptr; p = p->pNext) {
+	for (NODE_MT *p = t->data.listMT.pHeadMT; p != NULL; p = p->pNext) {
 		fwrite(p, sizeof(MuonTra), 1, f);
 	}
 }
