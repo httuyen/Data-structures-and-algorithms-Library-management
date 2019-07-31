@@ -53,7 +53,7 @@ void OpenFile(LIST_DauSach &lds, pDauSach &pDS) {
 			pDS->dms.pHeadDMS = pDS->dms.pTailDMS = nullptr;
 		}
 		else {
-			initList_DMS(pDS->dms);
+			//initList_DMS(pDS->dms);
 			while (fread(&dataDMS, sizeof(DMS), 1, f) != 0) {
 				AddTailList_DMS(pDS->dms, dataDMS);
 				if (pDS->dms.n == ds.dms.n) break; //co ve khong can dong code nay

@@ -34,7 +34,7 @@ int main() {
 		case 1: {
 			clrscr();
 			int lc;
-			gotoxy(5, 10); cout << "kiem thu nhap xuat doc gia";
+			cout << "kiem thu nhap xuat doc gia\n";
 			cout << "nhap lc: "; cin >> lc; cin.ignore();
 			menuDG(lc);
 			break;
@@ -186,6 +186,7 @@ void menuDG(int lc)
 					cout << "Nam tra: ";  cin >> dataMT.ngayTra.Nam; cin.ignore();
 					cout << "Trang thai: ";  cin >> dataMT.trangThai; cin.ignore();
 					AddHeadList_MT(temp->data.listMT, dataMT); 				
+
 				}
 				//t->data.listMT.pHeadMT = lmt.pHeadMT;
 			}
