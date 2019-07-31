@@ -5,6 +5,7 @@
 #include "welcome.h"
 #include "mylib.h"
 #include "xuLyDS.h"
+#include "xuLyDG.h"
 #include "constant.h"
 using namespace std;
 
@@ -17,7 +18,7 @@ std::string listMenu[4] = { "QUAN LY DOC GIA",
 void menu(int lc, LIST_DauSach &lds, dauSach dauS, DMS dataDMS, LIST_DMS ldms, pDauSach &pDS);
 void menuDG(int lc);
 int main() {
-	int flag = 1;
+	int flag = 6;
 	welcomeConsole();
 	//menuFeature(4, 52, 20, flag,listMenu);
 	dauSach dauS;
@@ -43,12 +44,19 @@ int main() {
 			
 			drawTable(lds,pDS);
 			break;
-		case 3:
-			break;
-		case 4:
+		case 3: {
+			Tree t = NULL;
+			theDocGia dg;
+			clrscr();
+			Update_DG(t, dg, false);
+			break; }
+		case 4: {
+			Tree t = NULL;
 			//thoat chuong trinh
-			exit(0);
-			break;
+			//drawTableDG(t);
+			loadDG(t);
+			Menu_DocGia(t);
+			break; }
 		case 5: {
 			clrscr();
 			int lc;
@@ -57,7 +65,12 @@ int main() {
 			menu(lc, lds, dauS, dataDMS, ldms, pDS);
 			break;
 		}
-			
+		case 6: {
+			Tree t = NULL;
+			loadDG(t);
+			InDocGia(t);
+			break;
+		}
 		default:
 			break;
 		}	

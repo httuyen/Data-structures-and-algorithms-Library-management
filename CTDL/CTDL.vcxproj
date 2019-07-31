@@ -142,15 +142,19 @@
     <ClInclude Include="constant.h" />
     <ClInclude Include="DauSach.h" />
     <ClInclude Include="GlobalVariable.h" />
+    <ClInclude Include="Macro.h" />
     <ClInclude Include="mylib.h" />
     <ClInclude Include="RWDauSach.h" />
     <ClInclude Include="RWDocGia.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="TempDG.h" />
     <ClInclude Include="welcome.h" />
+    <ClInclude Include="xulyDG.h" />
     <ClInclude Include="xuLyDS.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Check_Input.cpp" />
     <ClCompile Include="DauSach.cpp" />
     <ClCompile Include="GlobalVariable.cpp" />
     <ClCompile Include="main.cpp" />
@@ -163,7 +167,9 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="TempDG.cpp" />
     <ClCompile Include="welcome.cpp" />
+    <ClCompile Include="xulyDG.cpp" />
     <ClCompile Include="xuLyDS.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

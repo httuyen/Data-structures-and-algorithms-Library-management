@@ -72,7 +72,7 @@ void SaveDS(LIST_DauSach lds) {
 	for (int i = 0; i < lds.n; i++){
 		fwrite(lds.nodesDauSach[i], sizeof(DauSach), 1, f);
 		for (NODE_DMS *p = lds.nodesDauSach[i]->dms.pHeadDMS; p != nullptr; p = p->pNext) {
-			fwrite(p, sizeof(DMS), 1, f)
+			fwrite(p, sizeof(DMS), 1, f);
 		}
 	}
 	fclose(f);

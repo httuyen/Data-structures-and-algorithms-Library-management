@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "DauSach.h"
+#include "Check_Input.h"
 
 void initList_DMS(LIST_DMS &l)
 {
@@ -253,9 +254,9 @@ void Update_DG(Tree &t, theDocGia &dg, bool isEdited)
 	bool isSave = false;
 	bool isEscape = false;
 
-	string ho = "";
-	string ten = "";
-	string phai = "";
+	char* ho = new char[10];
+	char* ten = new char[10];
+	char* phai = new char[3];
 	int ttthe = 3;
 	int maThe;
 
@@ -286,12 +287,96 @@ void Update_DG(Tree &t, theDocGia &dg, bool isEdited)
 	}
 
 	while (true) {
-		cout << "Ho: "; getline(cin, ho);
-		cout << "Ten: "; getline(cin, ten);
-		cout << "Phai: "; getline(cin, phai);
+		cout << "Ho: "; cin.getline(ho, 11);
+		cout << "Ten: "; cin.getline(ten, 11);
+		cout << "Phai: "; cin.getline(phai, 4);
 		cout << "Trang thai the: "; cin >> ttthe; cin.ignore();
 		
+		if (strlen(ho) == 0) {
+			gotoxy(10, 10); cout << "Loi"; 
+			continue;
+		}
+		char* d = "dff";
+		dg.maThe = maThe;
+		//dg.ho = ChuanHoaString(ho);
+		std::strncpy(dg.ho, ChuanHoaString(ho), sizeof(theDocGia::ho));
+		//dg.ten = ChuanHoaString(ten);
+		std::strncpy(dg.ten, ChuanHoaString(ten), sizeof(theDocGia::ten));
+		//dg.phai = phai;
+		std::strncpy(dg.phai, ChuanHoaString(phai), sizeof(theDocGia::phai));
+		dg.trangThai = ttthe;
 
+		if (isEdited)
+		{
+			NODE_TREE* p;
+
+			// ma doc gia khong doi
+			p = Find_DG(t, maThe);
+			p->data.info = dg;
+		}
+		else
+		{
+			InsertDGtoTree(t, dg);
+		}
+
+		// In dong thong bao .
+		cout << "           SUCCESSFULLY !!! " <<endl;
+		//scanTreeDG(t);
+		
+		//normalBGColor();
+		//XoaMotVung(xDisplayDG[5] + 7, yDisplay, 30, 60);
+		return;
 	}
+}
 
+NODE_TREE* FindMin(Tree t)
+{
+	while (t->pLeft != NULL) t = t->pLeft;
+	return (t);
+}
+
+bool IsDeleted_DG(Tree &t, theDocGia dg)
+{
+	if (t == NULL)
+		return false;
+	else
+	{
+		if (dg.maThe > t->data.info.maThe)
+			return IsDeleted_DG(t->pRight, dg);
+		else if (dg.maThe < t->data.info.maThe)
+			return IsDeleted_DG(t->pLeft, dg);
+		else // Wohoo... I found you, Get ready to be deleted
+		{
+			//case 1: No child
+			if (t->pLeft == NULL && t->pRight == NULL)
+			{
+				delete t; // dangling pointer
+				t = NULL;
+				//nDG--;
+			}
+			else if (t->pLeft == NULL)// case 2: One child
+			{
+				NODE_TREE* temp = t;
+				t = t->pRight;
+				delete temp;
+				//nDG--;
+			}
+			else if (t->pRight == NULL)
+			{
+				NODE_TREE* temp = t;
+				t = t->pLeft;
+				delete temp;
+				//nDG--;
+			}// Case 3: 2 children
+			else {
+				NODE_TREE* temp = FindMin(t->pRight);
+
+				// copy du lieu vao .
+				t->data.info = temp->data.info;
+				t->data.listMT = temp->data.listMT;
+				return IsDeleted_DG(t->pRight, temp->data.info);
+			}
+			return true;
+		}
+	}
 }

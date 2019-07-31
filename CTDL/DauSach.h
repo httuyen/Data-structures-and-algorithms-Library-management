@@ -6,6 +6,8 @@
 #include<conio.h>
 #include<string>
 #include<iomanip>
+#include "mylib.h"
+#include "Macro.h"
 
 using namespace std;
 #define MaxNodes 10000
@@ -89,6 +91,7 @@ struct theDocGia
 	char phai[3] = "";//0:nu//1:nam
 	int trangThai = 0;//trang thai the:0:bi khoa//1:hoat dong
 };
+//typedef struct theDocGia theDocGia;
 struct TheDocGia
 {
 	theDocGia info;
@@ -131,3 +134,5 @@ unsigned Random_MaThe(Tree t);
 unsigned Random();
 bool Check_MaThe(Tree t, unsigned maThe);
 void Update_DG(Tree &t, theDocGia &dg, bool isEdited);
+bool IsDeleted_DG(Tree &t, theDocGia dg);
+NODE_TREE* FindMin(Tree t);

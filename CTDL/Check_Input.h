@@ -1,7 +1,6 @@
 #pragma once
-#include <iostream>
-#include <string>
-#include <iomanip>
-#include <conio.h>
-#include "mylib.h"
+#include "DauSach.h"
 
+char* ChuanHoaString(char* result);
+string ChuanHoaString(string result);
+void xoa(char* s, int vitrixoa);
