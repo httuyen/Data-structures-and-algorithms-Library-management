@@ -42,3 +42,10 @@
 
 #define xORDER_DG 80
 #define yORDER_DG 20
+
+#define MAX_ISBN 6
+#define MAX_THELOAISACH 20
+#define MAX_TENSACH 20
+#define MAX_TENTG 20
+#define XTB 111
+#define YTB 26
