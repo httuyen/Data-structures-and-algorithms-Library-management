@@ -18,7 +18,7 @@ std::string listMenu[4] = { "QUAN LY DOC GIA",
 void menu(int lc, LIST_DauSach &lds, dauSach dauS, DMS dataDMS, LIST_DMS ldms, pDauSach &pDS);
 void menuDG(int lc);
 int main() {
-	int flag = 6;
+	int flag = 8;
 	welcomeConsole();
 	//menuFeature(4, 52, 20, flag,listMenu);
 	dauSach dauS;
@@ -71,6 +71,22 @@ int main() {
 			InDocGia(t);
 			break;
 		}
+		case 7: {
+			Tree t = NULL;
+			LIST_DauSach lDS;
+			pDauSach pDS;
+			OpenFile(lDS, pDS);
+			loadDG(t);
+			DanhSachQuaHan(t, lDS);
+			break;
+		}
+		case 8: {
+			LIST_DauSach lDS;
+			pDauSach pDS;
+			OpenFile(lDS, pDS);
+			Top10Sach(lDS);
+			break;
+		}
 		default:
 			break;
 		}	
@@ -87,20 +103,21 @@ void menu(int lc, LIST_DauSach &lds, dauSach dauS, DMS dataDMS, LIST_DMS ldms,pD
 		for (int i = 0; i < lds.n; i++) {
 			cout << "nhap vao Dau sach "<<i+1<<endl;
 			cout << "ISBN: ";
-			cin.getline(dauS.ISBN, 7); cin.ignore();
+			cin.getline(dauS.ISBN, 7);
 			//gets();
 			cout << "Nam XB: ";	cin >> dauS.namXuatBan; cin.ignore();
 			cout << "so trang: "; cin >> dauS.soTrang; cin.ignore();
 			cout << "tac gia: ";  cin.getline(dauS.tacGia,21);
 			cout << "ten sach: "; cin.getline( dauS.tenSach,21);
 			cout << "the loai: "; cin.getline( dauS.theLoai,21);
+			initList_DMS(ldms);
 			cout << "Ban co muon nhap danh muc sach cho dau sach nay khong?";
 			lds.nodesDauSach[i] = new DauSach;
 			lds.nodesDauSach[i]->info = dauS;
 			int YN; cin >> YN; cin.ignore();
 			if (YN == 1)
 			{
-				initList_DMS(ldms);
+				//initList_DMS(ldms);
 				//so luong sach
 				int slSach = 0;
 				cout << "Nhap vao so luong dms: "; cin >> slSach; cin.ignore();

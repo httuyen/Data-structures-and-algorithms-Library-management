@@ -42,3 +42,22 @@
 
 #define xORDER_DG 80
 #define yORDER_DG 20
+
+#define xEDIT_DG 71
+#define yEDIT_DG 3
+
+#define xNOTI_DG 71
+#define yNOTI_DG 21
+
+#define MAX_HO 10
+#define MAX_TEN 10
+#define MAX_PHAI 3
+
+#define INPUT_HO 0
+#define INPUT_TEN 1
+#define INPUT_PHAI 2
+#define INPUT_TT 3
+
+
+ 
+

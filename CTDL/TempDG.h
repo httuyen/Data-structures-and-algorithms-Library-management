@@ -26,10 +26,28 @@ struct NodeTempDG
 
 struct ListTempDG
 {
-	//so phan tu
-	// int n;
 	NodeTempDG *pHead;
 	NodeTempDG *pTail;
+};
+
+struct SachQuaHan
+{
+	string maSach = "";
+	string tenSach = "";
+	Date ngayMuon;
+	int soNgayQuaHan = 0;
+};
+
+struct QuaHan
+{
+	TenHo docGia;
+	SachQuaHan sachQuaHan;
+};
+
+struct  TopSach
+{
+	string tensach;
+	int sosachmuon;
 };
 
 // ..... khoi tao........
@@ -41,9 +59,6 @@ NodeTempDG* GetNode_TempDG(int index, int MADG);
 //...... add tail link list........
 void AddTailList_TempDG(ListTempDG &l, int index, int MADG);
 
-// function to find out middle element
-NodeTempDG * Middle(NodeTempDG * start, NodeTempDG * last);
-
 // Function for implementing the Binary Search on linked list
 NodeTempDG * Search_TempDG(ListTempDG l, int index);
 
@@ -51,3 +66,14 @@ NodeTempDG * Search_TempDG(ListTempDG l, int index);
 void ClearAll_TempDG(ListTempDG &l);
 
 void CreateList_TempDG(Tree t, ListTempDG &l, int &index);
+string Get_TenHo(theDocGia dg);
+void Create_ArrTenHo(Tree t, TenHo* arr, int &index);
+void Swap_TenHo(TenHo &a, TenHo &b);
+void QuicKsort_ARRTenHo(TenHo *th, int left, int right);
+
+void Sort_QuaHan(QuaHan *ArrQuaHan, int left, int right);
+SachQuaHan TimSachQuaHan(ListMT lMT, LIST_DauSach lDS);
+string getTenSach(char* maSach, LIST_DauSach lDS);
+
+int soSachMuon(LIST_DMS dms);
+void Sort_Top10(TopSach *top10, int left, int right);
