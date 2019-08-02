@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "DauSach.h"
 #include "Check_Input.h"
+#include "TempDG.h"
 
 void initList_DMS(LIST_DMS &l)
 {
@@ -250,13 +251,14 @@ bool Check_MaThe(Tree t, unsigned maThe)
 
 void Update_DG(Tree &t, theDocGia &dg, bool isEdited)
 {
+	hienConTro();
 	int ordinal = 0;
 	bool isSave = false;
 	bool isEscape = false;
 
-	char* ho = new char[10];
-	char* ten = new char[10];
-	char* phai = new char[3];
+	string ho = "";
+	string ten = "";
+	string phai = "3";
 	int ttthe = 3;
 	int maThe;
 
@@ -267,65 +269,121 @@ void Update_DG(Tree &t, theDocGia &dg, bool isEdited)
 		phai = dg.phai;
 		ttthe = dg.trangThai;
 		maThe = dg.maThe;
-		//gotoxy((xDisplayDG[5] + 7 + nngang / 2), yDisplay + 3);
+		gotoxy(xEDIT_DG + 17, yEDIT_DG + 2);
 		cout << maThe << endl;
-		//gotoxy((xDisplayDG[5] + 7 + nngang / 2), yDisplay + 5);
+		gotoxy(xEDIT_DG + 17, yEDIT_DG + 5);
 		cout << ho << endl;
-		//gotoxy((xDisplayDG[5] + 7 + nngang / 2), yDisplay + 7);
+		gotoxy(xEDIT_DG + 17, yEDIT_DG + 8);
 		cout << ten << endl;
-		//gotoxy((xDisplayDG[5] + 7 + nngang / 2), yDisplay + 9);
-		cout << phai << endl;
-		//gotoxy((xDisplayDG[5] + 7 + nngang / 2), yDisplay + 11);
+		gotoxy(xEDIT_DG + 17, yEDIT_DG + 11);
+		(phai == "NU") ? cout << "0" << ":  NU" : cout << "1" << ":  NAM";
+		gotoxy(xEDIT_DG + 17, yEDIT_DG + 14);
 		(ttthe == 0) ? cout << ttthe << ":  KHOA" : cout << ttthe << ":  HOAT DONG";
 	}
 
 	if (!isEdited)
 	{
-		//gotoxy((xDisplayDG[5] + 7 + nngang / 2), yDisplay + 3);
+		gotoxy(xEDIT_DG + 17, yEDIT_DG + 2);
 		maThe = Random_MaThe(t);
 		cout << maThe;
 	}
 
 	while (true) {
-		cout << "Ho: "; cin.getline(ho, 11);
-		cout << "Ten: "; cin.getline(ten, 11);
-		cout << "Phai: "; cin.getline(phai, 4);
-		cout << "Trang thai the: "; cin >> ttthe; cin.ignore();
-		
-		if (strlen(ho) == 0) {
-			gotoxy(10, 10); cout << "Loi"; 
-			continue;
-		}
-		char* d = "dff";
-		dg.maThe = maThe;
-		//dg.ho = ChuanHoaString(ho);
-		std::strncpy(dg.ho, ChuanHoaString(ho), sizeof(theDocGia::ho));
-		//dg.ten = ChuanHoaString(ten);
-		std::strncpy(dg.ten, ChuanHoaString(ten), sizeof(theDocGia::ten));
-		//dg.phai = phai;
-		std::strncpy(dg.phai, ChuanHoaString(phai), sizeof(theDocGia::phai));
-		dg.trangThai = ttthe;
-
-		if (isEdited)
+		switch (ordinal)
 		{
-			NODE_TREE* p;
-
-			// ma doc gia khong doi
-			p = Find_DG(t, maThe);
-			p->data.info = dg;
+			case 0: {
+				gotoxy(xEDIT_DG + 17, yEDIT_DG + 5);
+				Input(INPUT_HO, ho, ordinal, isSave, isEscape);
+				break; 
+			}
+			case 1: {
+				gotoxy(xEDIT_DG + 17, yEDIT_DG + 8);
+				Input(INPUT_TEN, ten, ordinal, isSave, isEscape);
+				break;
+			}
+			case 2: {
+				gotoxy(xEDIT_DG + 17, yEDIT_DG + 11);
+				Input(INPUT_PHAI, phai, ordinal, isSave, isEscape);
+				break;
+			}
+			case 3: {
+				gotoxy(xEDIT_DG + 17, yEDIT_DG + 14);
+				Input(INPUT_TT, ttthe, ordinal, isSave, isEscape);
+				break;
+			}
 		}
-		else
+
+		if(isSave)
 		{
-			InsertDGtoTree(t, dg);
+			// cap nhat lai flag
+			isSave = false;
+
+			// check rong;
+			if (ho.length() == 0)
+			{
+				gotoxy(xNOTI_DG + 2, yNOTI_DG + 2);
+				cout << "(X) HO KHONG DUOC DE TRONG !!! ";
+
+				// quay lai va dien vao truong du lieu do
+				ordinal = 0;
+				continue;
+			}
+			else if (ten.length() == 0)
+			{
+				gotoxy(xNOTI_DG + 2, yNOTI_DG + 2);
+				cout << "(X) TEN KHONG DUOC DE TRONG !!! ";
+
+				// quay lai va dien vao truong du lieu do
+				ordinal = 1;
+				continue;
+			}
+			else if (phai == "3")
+			{
+				gotoxy(xNOTI_DG + 2, yNOTI_DG + 2);
+				cout << "(X) PHAI KHONG DUOC DE TRONG !!! ";
+
+				// quay lai va dien vao truong du lieu do
+				ordinal = 2;
+				continue;
+			}
+			else if (ttthe == 3)
+			{
+				gotoxy(xNOTI_DG + 2, yNOTI_DG + 2);
+				cout << "(X) T.THAI THE KHONG DUOC DE TRONG !!! ";
+				
+				ordinal = 3;
+				continue;
+			}
+			dg.maThe = maThe;
+			//dg.ho = toCharArray(ChuanHoaString(strHo));
+			std::strncpy(dg.ho, toCharArray(ChuanHoaString(ho)), sizeof(theDocGia::ho));
+			//dg.ten = ChuanHoaString(ten);
+			std::strncpy(dg.ten, toCharArray(ChuanHoaString(ten)), sizeof(theDocGia::ten));
+			//dg.phai = phai;
+			std::strncpy(dg.phai, toCharArray(ChuanHoaString(phai)), sizeof(theDocGia::phai));
+			dg.trangThai = ttthe;
+
+			if (isEdited)
+			{
+				NODE_TREE* p;
+				// ma doc gia khong doi
+				p = Find_DG(t, maThe);
+				p->data.info = dg;
+			}
+			else
+			{
+				InsertDGtoTree(t, dg);
+			}
+
+			// In dong thong bao .
+			anConTro();
+			gotoxy(xNOTI_DG + 2, yNOTI_DG + 2);
+			cout << "          LUU THANH CONG !!! " <<endl;
+			Sleep(800);
+			return;
 		}
 
-		// In dong thong bao .
-		cout << "           SUCCESSFULLY !!! " <<endl;
-		//scanTreeDG(t);
-		
-		//normalBGColor();
-		//XoaMotVung(xDisplayDG[5] + 7, yDisplay, 30, 60);
-		return;
+		if (isEscape) return;
 	}
 }
 
@@ -379,4 +437,19 @@ bool IsDeleted_DG(Tree &t, theDocGia dg)
 			return true;
 		}
 	}
+}
+
+
+// so sach doc gia dang muon hoac lam mat
+int SoSachDangMuon(ListMT lMT)
+{
+	int i = 0;
+	for (NODE_MT * p = lMT.pHeadMT; p != NULL; p = p->pNext)
+	{
+		if (p->data.trangThai == 0 || p->data.trangThai == 2)
+		{
+			i++;
+		}
+	}
+	return i;
 }

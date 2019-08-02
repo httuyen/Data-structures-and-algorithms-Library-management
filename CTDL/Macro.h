@@ -43,9 +43,30 @@
 #define xORDER_DG 80
 #define yORDER_DG 20
 
+<<<<<<< HEAD
+#define xEDIT_DG 71
+#define yEDIT_DG 3
+
+#define xNOTI_DG 71
+#define yNOTI_DG 21
+
+#define MAX_HO 10
+#define MAX_TEN 10
+#define MAX_PHAI 3
+
+#define INPUT_HO 0
+#define INPUT_TEN 1
+#define INPUT_PHAI 2
+#define INPUT_TT 3
+
+
+ 
+
+=======
 #define MAX_ISBN 6
 #define MAX_THELOAISACH 20
 #define MAX_TENSACH 20
 #define MAX_TENTG 20
 #define XTB 111
 #define YTB 26
+>>>>>>> 7cd80612712b513702bce0a2114f67c028eec7e5

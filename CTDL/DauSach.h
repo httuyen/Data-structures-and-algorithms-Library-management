@@ -8,6 +8,7 @@
 #include<iomanip>
 #include "mylib.h"
 #include "Macro.h"
+#include "Date.h"
 
 using namespace std;
 #define MaxNodes 10000
@@ -47,12 +48,12 @@ struct DauSach {
 };
 typedef struct DauSach* pDauSach;
 
-struct Date
+/*struct Date
 {
 	int Ngay = 0;
 	int Thang = 0;
 	int Nam = 0;
-};
+};*/
 struct MuonTra
 {
 	char maSach[10] = "";
@@ -60,6 +61,7 @@ struct MuonTra
 	Date ngayTra;
 	int trangThai = 0;//0:dang muon//1:da tra//2:lam mat
 
+	//string tenSach = "";
 };
 
 struct LIST_DauSach
@@ -86,9 +88,9 @@ struct ListMT
 struct theDocGia
 {
 	int maThe = 0;
-	char ho[10] = "";
-	char ten[10] = "";
-	char phai[3] = "";//0:nu//1:nam
+	char ho[11] = "";
+	char ten[11] = "";
+	char phai[4] = "";//0:nu//1:nam
 	int trangThai = 0;//trang thai the:0:bi khoa//1:hoat dong
 };
 //typedef struct theDocGia theDocGia;
@@ -136,3 +138,4 @@ bool Check_MaThe(Tree t, unsigned maThe);
 void Update_DG(Tree &t, theDocGia &dg, bool isEdited);
 bool IsDeleted_DG(Tree &t, theDocGia dg);
 NODE_TREE* FindMin(Tree t);
+int SoSachDangMuon(ListMT lMT);
