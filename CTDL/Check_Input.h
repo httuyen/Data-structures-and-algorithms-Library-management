@@ -9,3 +9,4 @@ void xoa(char* s, int vitrixoa);
 
 void Input(int type, string &result, int &ordinal, bool &isSave, bool &isEscape);
 void Input(int type, int &result, int &ordinal, bool &isSave, bool &isEscape);
+int InputMaThe(int &maThe);

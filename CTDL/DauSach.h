@@ -3,7 +3,6 @@
 #include<fstream>
 #include<Windows.h>
 #include<time.h>
-#include<conio.h>
 #include<string>
 #include<iomanip>
 #include "mylib.h"

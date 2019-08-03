@@ -153,6 +153,7 @@
     <ClInclude Include="welcome.h" />
     <ClInclude Include="xulyDG.h" />
     <ClInclude Include="xuLyDS.h" />
+    <ClInclude Include="xulyMT.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Check_Input.cpp" />
@@ -173,6 +174,7 @@
     <ClCompile Include="welcome.cpp" />
     <ClCompile Include="xulyDG.cpp" />
     <ClCompile Include="xuLyDS.cpp" />
+    <ClCompile Include="xulyMT.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

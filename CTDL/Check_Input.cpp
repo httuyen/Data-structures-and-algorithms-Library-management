@@ -396,3 +396,54 @@ void Input(int type, int &result, int &ordinal, bool &isSave, bool &isEscape)
 		}
 	}
 }
+
+int InputMaThe(int &maThe)
+{
+	hienConTro();
+
+	int temp = maThe;
+	int count = 0;
+
+	while (temp != 0)
+	{
+		count++;
+		temp /= 10;
+	}
+
+	if (count)
+	{
+		cout << maThe;
+	}
+	while (true)
+	{
+		while (_kbhit())
+		{
+			int kb_hit = _getch();
+
+			if ((kb_hit >= 48 && kb_hit <= 57) && (count <= 9 && count >= 0))
+			{
+
+				int f = kb_hit - 48;
+				cout << f;
+				maThe = maThe * 10 + (f);
+				count++;
+			}
+			else if (kb_hit == ENTER)
+			{
+				return 1;
+			}
+			else if (kb_hit == BACKSPACE && count > 0)
+			{
+
+				cout << "\b" << " " << "\b";
+				count--;
+				maThe /= 10;
+
+			}
+			else if (kb_hit == ESC)
+			{
+				return  -1;
+			}
+		}
+	}
+}

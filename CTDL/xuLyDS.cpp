@@ -28,11 +28,11 @@ void drawTable(LIST_DauSach &lds, pDauSach &pDS) {
 	gotoxy(55, 4); cout << "TAC GIA";
 	gotoxy(86, 4); cout << "SO TR";
 	gotoxy(94, 4); cout << "NAM XB";
-	drawEditDS(110,3);
+	/*drawEditDS(110,3);
 	drawNoti(110, 24);
 	inputDS(110, 3, lds);
 	showListDS(lds,pDS);
-	system("pause");
+	system("pause");*/
 }
 void drawEditDS(int x, int y) {
 	gotoxy(x+10, y - 1); cout << "CAP NHAT DAU SACH";

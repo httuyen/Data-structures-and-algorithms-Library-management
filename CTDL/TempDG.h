@@ -72,6 +72,7 @@ void Swap_TenHo(TenHo &a, TenHo &b);
 void QuicKsort_ARRTenHo(TenHo *th, int left, int right);
 
 void Sort_QuaHan(QuaHan *ArrQuaHan, int left, int right);
+int SoNgayMuon_Max(ListMT lMT);
 SachQuaHan TimSachQuaHan(ListMT lMT, LIST_DauSach lDS);
 string getTenSach(char* maSach, LIST_DauSach lDS);
 

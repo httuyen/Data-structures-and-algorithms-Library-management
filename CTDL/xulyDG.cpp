@@ -1,7 +1,8 @@
 #include "stdafx.h"
 #include "xulyDG.h"
 
-int xDisplayDG[6] = {7,18,33, 48, 56, 70};
+int xDisplayDG[6] = { 7,18,33, 48, 56, 70 };
+int xDisplayTop10[4] = { 7,21,46, 62 };
 
 void drawTableDG()
 {
@@ -28,7 +29,6 @@ void drawTableDG()
 	gotoxy(xDisplayDG[2], yDisplayDG); cout << "TEN DG";
 	gotoxy(xDisplayDG[3], yDisplayDG); cout << "PHAI";
 	gotoxy(xDisplayDG[4], yDisplayDG); cout << "TT THE";
-
 	//drawEditDG(xEDIT_DG, yEDIT_DG);
 	//drawNotiDG(xNOTI_DG, yNOTI_DG);
 	//clrscr();
@@ -43,18 +43,24 @@ void drawTableTop10()
 	gotoxy(15, 2); cout << "TOP 10 DAU SACH CO SO LUOT MUON NHIEU NHAT";
 	setHighLightColor();
 	// so thu tu
-	drawCell(5, 19, 3, 17);
+	drawCell(5, 19, 3, 27);
 	// ten sach
-	drawCell(19, 44, 3, 17);
+	drawCell(19, 44, 3, 27);
 	// so luot muon
-	drawCell(44, 61, 3, 17);
+	drawCell(44, 61, 3, 27);
 
 	drawCell(5, 61, 3, 5);
 	setDefaultColor();
 	//gotoxy(5, 38); cout << "ESC-Thoat, F2 - Them, F3 - Sua, F4 - Xoa, F10 - Luu, PgUP, PgDn";
-	gotoxy(xDisplayDG[0], yDisplayDG); cout << "SO THU TU";
-	gotoxy(xDisplayDG[1], yDisplayDG); cout << "TEN SACH";
-	gotoxy(xDisplayDG[2], yDisplayDG); cout << "SO LUOT MUON";
+	gotoxy(xDisplayTop10[0], yDisplayDG); cout << "SO THU TU";
+	gotoxy(xDisplayTop10[1], yDisplayDG); cout << "TEN SACH";
+	gotoxy(xDisplayTop10[2], yDisplayDG); cout << "SO LUOT MUON";
+
+	/*for (int i = 0; i < 19; i = i+2)
+	{
+		gotoxy(xDisplayTop10[0], yDisplayDG + 3 + i);
+		cout << "hoa";
+	}*/
 }
 
 void drawEditDG(int x, int y)
@@ -722,37 +728,30 @@ void DanhSachQuaHan(Tree t, LIST_DauSach lDS)
 void Top10Sach(LIST_DauSach lDS)
 {
 	clrscr();
-	int count = 0;
 	TopSach *top10 = new TopSach[lDS.n + 1];
 
 	// nhap thong tin vao mang.
-	for (int i = 0; i <= lDS.n; i++)
+	for (int i = 0; i < lDS.n; i++)
 	{
 		top10[i].tensach = lDS.nodesDauSach[i]->info.tenSach;
-		top10[i].sosachmuon = soSachMuon(lDS.nodesDauSach[i]->dms);//Loi cho nay ne
+		top10[i].sosachmuon = soSachMuon(lDS.nodesDauSach[i]->dms);
 	}
 
 	Sort_Top10(top10, 0, lDS.n);
-	// in thong tin ra  console
-	//gotoxy(50, 2);
-	//SetBGColor(GREEN);
-	//cout << "TOP 10 DAU SACH CO SO LUOC MUON NHIEU NHAT ";
-	//normalBGColor();
-	int j = 0;
-	/*while (top10[j].sosachmuon != 0 && j < 10 || top10[j].sosachmuon == top10[j + 1].sosachmuon  && top10[j].sosachmuon != 0)
-	{
-		SetColor(WHITE);
-		gotoxy(xDisplayTop10[1] + 3, yDisplayTop10 + 2 + j);
-		cout << top10[j].tensach;
-		gotoxy(xDisplayTop10[2] + 16, yDisplayTop10 + 2 + j);
-		cout << top10[j].sosachmuon;
-		gotoxy(xDisplayTop10[0] + 7, yDisplayTop10 + 2 + j);
-		j++;
-		cout << j;
-	}*/
+	
 	drawTableTop10();
-	//DisplayTop10(keyDisplayTop10, 3, xDisplayTop10, j + 2);
+	int i = 0, j = 0;
+	while (top10[i].sosachmuon != 0 && i < 10)
+	{
+		gotoxy(xDisplayTop10[1], yDisplayDG + 3 + j);
+		cout << top10[i].tensach;
+		gotoxy(xDisplayTop10[2], yDisplayDG + 3 + j);
+		cout << top10[i].sosachmuon;
+		gotoxy(xDisplayTop10[0], yDisplayDG + 3 + j);
+		i++;
+		j = j + 2;
+		cout << i;
+	}
 	_getch();
-	// xoa vung nho....
 	delete[] top10;
 }
