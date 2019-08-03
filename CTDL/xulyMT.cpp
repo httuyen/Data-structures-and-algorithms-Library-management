@@ -3,6 +3,8 @@
 #include "Check_Input.h"
 #include "TempDG.h"
 
+int xDisplayDMS[3] = { 7,22,42 };
+
 void drawNhapMaThe()
 {
 	setDefaultColor();
@@ -65,6 +67,31 @@ void drawListSachMuon()
 	}*/
 }
 
+void DrawTableDMS()
+{
+	setDefaultColor();
+	clrscr();
+	gotoxy(15, 2); cout << "CHON SACH DE MUON";
+	setHighLightColor();
+	drawCell(5, 60, 3, 5);
+	// ma sach
+	drawCell(5, 20, 3, 36);
+	//trang thai
+	drawCell(20, 40, 3, 36);
+	//vi tri
+	drawCell(40, 60, 3, 36);
+	
+	setDefaultColor();
+	gotoxy(xDisplayDMS[0], yDisplayDG); cout << "MA SACH";
+	gotoxy(xDisplayDMS[1], yDisplayDG); cout << "TRANG THAI";
+	gotoxy(xDisplayDMS[2], yDisplayDG); cout << "VI TRI";
+
+	for (int i = 0; i < 29; i++) {
+		gotoxy(xDisplayDMS[0], yDisplayDG + 3 + i);
+		cout << "hoa";
+	}
+}
+
 bool MatSach(ListMT lMT)
 {
 	for (NODE_MT * p = lMT.pHeadMT; p != NULL; p = p->pNext)
@@ -75,6 +102,161 @@ bool MatSach(ListMT lMT)
 		}
 	}
 	return false;
+}
+
+bool CheckTenSach_MT(LIST_DauSach lDS, ListMT lMT, string tenSach)
+{
+	for (NODE_MT * p = lMT.pHeadMT; p != NULL; p = p->pNext)
+	{
+		if ((getTenSach(p->data.maSach, lDS) == tenSach && p->data.trangThai == 0) 
+			|| (getTenSach(p->data.maSach, lDS) == tenSach && p->data.trangThai == 2))
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+int TacVuMuonSach(LIST_DauSach lDS , NODE_TREE* dg)
+{
+	int choose1 = 0, choose2 = 0;
+	bool check;
+	char thongbao1[] = "            Sach da co DOC GIA muon. Moi ban chon cuon sach khac!";
+	char thongbao2[] = "              Sach da duoc THANH LY. Moi ban chon cuon sach khac!";
+	char thongbao3[] = "                 DOC GIA da muon sach thuoc Dau Sach nay!     ";
+
+	// nDs : so luong dau sach.
+	int nDS = lDS.n;
+	int tttrang, tongtrang;
+	pDauSach pDS = NULL;
+	tttrang = 1;
+	tongtrang = (nDS / NUMBER_LINES) + 1;
+	int temp = 1;
+
+label:
+	do
+	{
+		// hien thi bang chua thong tin dau sach
+		drawTable(lDS, pDS);
+
+		//OutputDS_PerPage(lDS, tttrang);
+
+		gotoxy(23, 1);
+		SetBGColor(GREEN);
+		cout << "CHON 1 DAU SACH DE TIEN HANH MUON SACH ";
+
+		// chon dau sach muon nhap sach vao
+		//choose1 = ChooseItems(lDS, tttrang, tongtrang);
+
+		// check cac truong hop ...
+		if (choose1 == -1)
+		{
+			return -1;
+		}
+		else if (choose1 > lDS.n)
+		{
+			//gotoxy(2, yDisplay + 3 + choose1 % NUMBER_LINES);
+			cout << setw(27) << setfill(' ') << ' ';
+			continue;
+		}
+
+		pDS = lDS.nodesDauSach[choose1];
+
+		// lay ten sach.
+		//tensach = pDS->info.tenSach;
+
+		check = CheckTenSach_MT(lDS, dg->data.listMT, pDS->info.tenSach);
+
+		// check cac truong hop
+		if (check == true)
+		{
+			nhapNhay("DOC GIA DA MUON SACH THUOC DAU SACH NAY", 90, 24);
+			_getch();
+			gotoxy(90, 24);
+			cout << "                                                       ";
+		}
+		else
+		{
+			//XoaMotVung(1, 1, 35, 79);
+			// thoat vong lap
+			temp = 2;
+		}
+
+	} while (temp == 1);
+
+
+label1:
+
+	temp = 1;
+	tttrang = 1;
+	tongtrang = (pDS->dms.n / NUMBER_LINES) + 1;
+
+	gotoxy(15, 1);
+	//SetBGColor(GREEN);
+	cout << "CHON 1 CUON SACH DE TIEN HANH MUON SACH";
+	DrawTableDMS();
+	//do
+	//{
+
+		// hien thi bang chua thong tin danh muc sach
+		//();
+		//OutputDMS_PerPage(pDS, tttrang);
+		//choose2 = ChooseItems1(pDS, tttrang, tongtrang);
+		//if (choose2 == -1)
+		//{
+		//	temp = 1;
+		//	tttrang = 1;
+		//	gotoxy(15, 1);
+		//	cout << "                                       ";
+		//	goto label;
+		//}
+		//else if (choose2 + 1 > pDS->dms.n)
+		//{
+
+		
+		//	gotoxy(2, yDisplay + 3 + choose2 % NUMBER_LINES);
+		//	cout << setw(12) << setfill(' ') << ' ';
+		//	continue;
+		//}
+		//else
+		//{
+		//	NODE_DMS* dms = Search_DMS2(pDS->dms.pHead, choose2);
+
+		//	// trang thai sach = 1, sach da co nguoi muon, nen se khong muon sach nay duoc.
+		//	if (dms->data.ttSach == 1)
+		//	{
+		//		chuChay(thongbao1, 88, 24);
+		//		_getch();
+		//		gotoxy(88, 24);
+		//		cout << "                                                                     ";
+		//		goto label1;
+		//	}
+		//	// trang thai sach = 2 , sach da thanh ly, nen se khong muon sach duoc
+		//	else if (dms->data.ttSach == 2)
+		//	{
+		//		chuChay(thongbao2, 88, 24);
+		//		_getch();
+		//		gotoxy(88, 24);
+		//		cout << "                                                                      ";
+		//		goto label1;
+		//	}
+		//	// trang thai sach = 0 cho muon duoc, nen se tien hanh muon sach.
+		//	else if (dms->data.ttSach == 0)
+		//	{
+		//		// lay ma sach va vi tri sach... cap nhap trang thai sach da duoc muon.
+		//		masach = dms->data.maSach;
+		//		vitrisach = dms->data.viTri;
+		//		dms->data.ttSach = 1;
+
+		//	}
+
+		//	// xoa dong tieu de di.
+		//	gotoxy(15, 1);
+		//	cout << "                                       ";
+		//	temp = 0;
+		//}
+	//} while (temp);
+	return 1;
 }
 
 void MuonSach(Tree &t, LIST_DauSach &lDS)
@@ -196,6 +378,7 @@ label:
 			gotoxy(111, 35);
 			cout << "                                 ";
 			setDefaultColor();
+			TacVuMuonSach(lDS, temp);
 			// xu ly thao tac muon tra.
 			/*check2 = Menu_MuonSach(lDS, temp);
 
