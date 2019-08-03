@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 ﻿Build started 8/3/2019 3:53:50 PM.
+=======
+<<<<<<< HEAD
+﻿Build started 02/08/2019 10:51:17 PM.
+=======
+<<<<<<< HEAD
+﻿Build started 8/2/2019 5:59:49 PM.
+>>>>>>> cf1fd9289cf62e8f8ed7f93a170d81e9f7f67a72
 Environment at start of build:
 ALLUSERSPROFILE = C:\ProgramData
 APPDATA = C:\Users\Admin\AppData\Roaming
@@ -5978,12 +5986,47 @@ Task Performance Summary:
 
 Build succeeded.
 
+<<<<<<< HEAD
                    "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (Build target) (1) ->
                    (ClCompile target) -> 
                      d:\ctdlgt2019\ctdl\xulymt.cpp(116): warning C4102: 'label1': unreferenced label
                      d:\ctdlgt2019\ctdl\xulymt.cpp(84): warning C4101: 'check2': unreferenced local variable
+=======
+Time Elapsed 00:00:02.29
+=======
+﻿Build started 02/08/2019 2:09:59 AM.
+>>>>>>> a45163810a05bc349605c5b13d65a3b09187da32
+     1>Project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"Debug\CTDL.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt xuLyDS.cpp
+         xuLyDS.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\CTDLGT2019\CTDL\Debug\CTDL.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"D:\CTDLGT2019\CTDL\Debug\CTDL.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\CTDLGT2019\CTDL\Debug\CTDL.lib" /MACHINE:X86 Debug\Check_Input.obj
+         Debug\DauSach.obj
+         Debug\GlobalVariable.obj
+         Debug\main.obj
+         Debug\mylib.obj
+         Debug\RWDauSach.obj
+         Debug\RWDocGia.obj
+         Debug\stdafx.obj
+         Debug\TempDG.obj
+         Debug\welcome.obj
+         Debug\xulyDG.obj
+         Debug\xuLyDS.obj
+         CTDL.vcxproj -> D:\CTDLGT2019\CTDL\Debug\CTDL.exe
+     1>Done Building Project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (Build target(s)).
+>>>>>>> cf1fd9289cf62e8f8ed7f93a170d81e9f7f67a72
 
     2 Warning(s)
     0 Error(s)
 
+<<<<<<< HEAD
 Time Elapsed 00:00:02.31
+=======
+<<<<<<< HEAD
+Time Elapsed 00:00:02.27
+=======
+Time Elapsed 00:00:01.61
+>>>>>>> 7cd80612712b513702bce0a2114f67c028eec7e5
+>>>>>>> a45163810a05bc349605c5b13d65a3b09187da32
+>>>>>>> cf1fd9289cf62e8f8ed7f93a170d81e9f7f67a72
