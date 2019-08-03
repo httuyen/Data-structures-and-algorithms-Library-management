@@ -6,6 +6,7 @@
 #include "mylib.h"
 #include "xuLyDS.h"
 #include "xuLyDG.h"
+#include "xuLyMT.h"
 #include "constant.h"
 using namespace std;
 
@@ -19,10 +20,14 @@ void menu(int lc, LIST_DauSach &lds, dauSach dauS, DMS dataDMS, LIST_DMS ldms, p
 void menuDG(int lc);
 int main() {
 
+<<<<<<< HEAD
 	//int flag = 8;
 
 	int flag = 2;
 
+=======
+	int flag = 9;
+>>>>>>> c4bc09c5d0e8aac5131dca0c7b81d17067d00b77
 	welcomeConsole();
 	//menuFeature(4, 52, 20, flag,listMenu);
 	dauSach dauS;
@@ -89,6 +94,21 @@ int main() {
 			pDauSach pDS;
 			OpenFile(lDS, pDS);
 			Top10Sach(lDS);
+			break;
+		}
+		case 9: {
+			LIST_DauSach lDS;
+			pDauSach pDS;
+			Tree t = NULL;
+			loadDG(t);
+			OpenFile(lDS, pDS);
+			//drawTable(lDS, pDS);
+			MuonSach(t, lDS);
+			system("pause");
+			break;
+		}
+		case 10: {
+
 			break;
 		}
 		default:

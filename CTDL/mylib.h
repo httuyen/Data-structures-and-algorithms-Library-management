@@ -112,3 +112,4 @@ void SetColor(WORD color);
 void SetBGColor(WORD color);
 void clrscr();
 void cls(HANDLE hConsole);
+void nhapNhay(char* str, int x, int y);

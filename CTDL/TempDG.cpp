@@ -152,12 +152,33 @@ string getTenSach(char* maSach, LIST_DauSach lDS)
 	{
 		maDS += maSach[i++];
 	}
-	for (int j = 0; j <= lDS.n; j++)
+	for (int j = 0; j < lDS.n; j++)
 	{
 		if(lDS.nodesDauSach[j]->info.ISBN == maDS)
 			return lDS.nodesDauSach[j]->info.tenSach;
 	}
 	return NULL;
+}
+
+int SoNgayMuon_Max(ListMT lMT)
+{
+	int max = 0;
+	int ngay;
+	Date today;
+	Today(today);
+	for (NODE_MT * p = lMT.pHeadMT; p != NULL; p = p->pNext)
+	{
+		if ((p->data.trangThai == 0) || (p->data.trangThai == 2))
+		{
+			ngay = DateToDate(p->data.ngayMuon, today);
+			if (max < ngay)
+			{
+				max = ngay;
+			}
+		}
+	}
+	return max;
+
 }
 
 SachQuaHan TimSachQuaHan(ListMT lMT, LIST_DauSach lDS)
@@ -178,7 +199,7 @@ SachQuaHan TimSachQuaHan(ListMT lMT, LIST_DauSach lDS)
 				max = ngay;
 				sQH.maSach = p->data.maSach;
 				sQH.ngayMuon = p->data.ngayMuon;
-				sQH.soNgayQuaHan = max - 15; // qua han 15 ngay
+				sQH.soNgayQuaHan = max - 7; // qua han 7 ngay
 				//sQH.tenSach = p->data.tenSach;
 				//sQH.tenSach = getTenSach(p->data.maSach, lDS);
 				sQH.tenSach = "hoa";

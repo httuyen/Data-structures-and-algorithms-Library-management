@@ -1324,3 +1324,15 @@ bool stringToNumber(char* String, Type& number) {
 	}
 	return true;
 }
+
+void nhapNhay(char* str, int x, int y)
+{
+	int i = 0;
+	do
+	{
+		SetColor(i++);
+		gotoxy(x, y);
+		cprintf(str);
+		Sleep(500);
+	} while (!kbhit());
+}
