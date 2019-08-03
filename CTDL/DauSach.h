@@ -139,3 +139,8 @@ void Update_DG(Tree &t, theDocGia &dg, bool isEdited);
 bool IsDeleted_DG(Tree &t, theDocGia dg);
 NODE_TREE* FindMin(Tree t);
 int SoSachDangMuon(ListMT lMT);
+bool SearchISBN_DS(LIST_DauSach lds, string ISBN);
+LIST_DauSach getDSByTL(LIST_DauSach &lds, string theLoai);
+void QuicKsortTS(LIST_DauSach &lds, int left, int right);
+void testDS(LIST_DauSach &lds, string theLoai);
+void SwapTS(LIST_DauSach &a, LIST_DauSach &b);

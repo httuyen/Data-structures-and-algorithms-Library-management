@@ -453,3 +453,68 @@ int SoSachDangMuon(ListMT lMT)
 	}
 	return i;
 }
+
+bool SearchISBN_DS(LIST_DauSach lds, string ISBN)
+{
+	for (int i = 0; i <= lds.n; i++)
+	{
+		if (lds.nodesDauSach[i]->info.ISBN == ISBN)
+			return true;
+	}
+	return false;
+}
+
+LIST_DauSach getDSByTL(LIST_DauSach &lds, string theLoai) {
+	LIST_DauSach ldsTemp;
+	ldsTemp.n = 0;
+	for (int i = 0; i < lds.n; i++) {
+		if (lds.nodesDauSach[i]->info.theLoai == theLoai) {
+			ldsTemp.nodesDauSach[ldsTemp.n] = lds.nodesDauSach[i];
+			ldsTemp.n++;
+		}
+	}
+	return ldsTemp;
+}
+void QuicKsortTS(LIST_DauSach &lds, int left, int right) {
+	//ldsTemp.nodesDauSach[1]
+	dauSach key =  lds.nodesDauSach[(left + right) / 2]->info;
+	dauSach tempDS;
+	pDauSach pDSTemp = nullptr;
+	
+	int i = left, j = right;
+	do {
+		while (lds.nodesDauSach[i]->info.tenSach < key.tenSach)
+			i++;
+		while (lds.nodesDauSach[j]->info.tenSach == key.tenSach)
+			j--;
+		if (i <= j) {
+			if (i < j) {
+			//	SwapTS(ldsTemp.nodesDauSach[i], ldsTemp.nodesDauSach[j]);
+				tempDS = lds.nodesDauSach[i]->info;
+				lds.nodesDauSach[i]->info = lds.nodesDauSach[j]->info;
+				lds.nodesDauSach[j]->info = tempDS;
+
+				pDSTemp->dms= lds.nodesDauSach[i]->dms;
+				//pDSTemp->dms.pHeadDMS = lds.nodesDauSach[i]->dms.pHeadDMS;
+				//pDSTemp->dms.pTailDMS = lds.nodesDauSach[i]->dms.pTailDMS;
+				lds.nodesDauSach[i]->dms = lds.nodesDauSach[j]->dms;
+				lds.nodesDauSach[j]->dms = pDSTemp->dms;
+			}
+			i++;
+			j--;
+		}
+	} while (i <= j);
+	if (left < j) QuicKsortTS(lds, left, j);
+	if (right > i) QuicKsortTS(lds, i, right);
+	delete[] pDSTemp;
+}
+void testDS(LIST_DauSach &lds, string theLoai) {
+	LIST_DauSach ldsTemp = getDSByTL(lds, theLoai);
+	QuicKsortTS(ldsTemp, 0, ldsTemp.n - 1);
+}
+void SwapTS(LIST_DauSach &a, LIST_DauSach &b) {
+	LIST_DauSach temp;
+	temp = a;
+	a = b;
+	b = temp;
+}
