@@ -137,7 +137,7 @@ label:
 	do
 	{
 		// hien thi bang chua thong tin dau sach
-		drawTable(lDS, pDS);
+		drawTable();
 
 		//OutputDS_PerPage(lDS, tttrang);
 

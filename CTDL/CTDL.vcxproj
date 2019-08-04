@@ -151,6 +151,7 @@
     <ClInclude Include="targetver.h" />
     <ClInclude Include="TempDG.h" />
     <ClInclude Include="welcome.h" />
+    <ClInclude Include="XuLy.h" />
     <ClInclude Include="xulyDG.h" />
     <ClInclude Include="xuLyDS.h" />
     <ClInclude Include="xulyMT.h" />
@@ -172,6 +173,7 @@
     </ClCompile>
     <ClCompile Include="TempDG.cpp" />
     <ClCompile Include="welcome.cpp" />
+    <ClCompile Include="XuLy.cpp" />
     <ClCompile Include="xulyDG.cpp" />
     <ClCompile Include="xuLyDS.cpp" />
     <ClCompile Include="xulyMT.cpp" />

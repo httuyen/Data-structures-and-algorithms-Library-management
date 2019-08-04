@@ -456,9 +456,9 @@ int SoSachDangMuon(ListMT lMT)
 
 bool SearchISBN_DS(LIST_DauSach lds, string ISBN)
 {
-	for (int i = 0; i <= lds.n; i++)
+	for (int i = 0; i < lds.n; i++)
 	{
-		if (lds.nodesDauSach[i]->info.ISBN == ISBN)
+		if ((string)lds.nodesDauSach[i]->info.ISBN == (string)ISBN)
 			return true;
 	}
 	return false;
@@ -479,13 +479,13 @@ void QuicKsortTS(LIST_DauSach &lds, int left, int right) {
 	//ldsTemp.nodesDauSach[1]
 	dauSach key =  lds.nodesDauSach[(left + right) / 2]->info;
 	dauSach tempDS;
-	pDauSach pDSTemp = nullptr;
+	LIST_DMS l;
 	
 	int i = left, j = right;
 	do {
-		while (lds.nodesDauSach[i]->info.tenSach < key.tenSach)
+		while ((string)lds.nodesDauSach[i]->info.tenSach < (string)key.tenSach)
 			i++;
-		while (lds.nodesDauSach[j]->info.tenSach == key.tenSach)
+		while ((string)lds.nodesDauSach[j]->info.tenSach > (string)key.tenSach)
 			j--;
 		if (i <= j) {
 			if (i < j) {
@@ -493,12 +493,14 @@ void QuicKsortTS(LIST_DauSach &lds, int left, int right) {
 				tempDS = lds.nodesDauSach[i]->info;
 				lds.nodesDauSach[i]->info = lds.nodesDauSach[j]->info;
 				lds.nodesDauSach[j]->info = tempDS;
-
-				pDSTemp->dms= lds.nodesDauSach[i]->dms;
-				//pDSTemp->dms.pHeadDMS = lds.nodesDauSach[i]->dms.pHeadDMS;
-				//pDSTemp->dms.pTailDMS = lds.nodesDauSach[i]->dms.pTailDMS;
+				initList_DMS(l);
+				l.n = lds.nodesDauSach[i]->dms.n;
+				l.pHeadDMS = lds.nodesDauSach[i]->dms.pHeadDMS;
+				l.pTailDMS = lds.nodesDauSach[i]->dms.pTailDMS;
 				lds.nodesDauSach[i]->dms = lds.nodesDauSach[j]->dms;
-				lds.nodesDauSach[j]->dms = pDSTemp->dms;
+				lds.nodesDauSach[j]->dms.n = l.n;
+				lds.nodesDauSach[j]->dms.pHeadDMS = l.pHeadDMS;
+				lds.nodesDauSach[j]->dms.pTailDMS = l.pTailDMS;
 			}
 			i++;
 			j--;
@@ -506,7 +508,6 @@ void QuicKsortTS(LIST_DauSach &lds, int left, int right) {
 	} while (i <= j);
 	if (left < j) QuicKsortTS(lds, left, j);
 	if (right > i) QuicKsortTS(lds, i, right);
-	delete[] pDSTemp;
 }
 void testDS(LIST_DauSach &lds, string theLoai) {
 	LIST_DauSach ldsTemp = getDSByTL(lds, theLoai);

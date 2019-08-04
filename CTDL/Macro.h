@@ -61,23 +61,22 @@
 
 
  
-<<<<<<< HEAD
+
 #define xD 6
 #define yD 6
-=======
 
 
->>>>>>> c4bc09c5d0e8aac5131dca0c7b81d17067d00b77
+
+
 #define MAX_ISBN 6
 #define MAX_THELOAISACH 20
 #define MAX_TENSACH 20
 #define MAX_TENTG 20
 #define XTB 111
 #define YTB 26
-<<<<<<< HEAD
+
 #define yHotkey 37
 #define XINPUT 110
 #define YINPUT 3
-=======
->>>>>>> c4bc09c5d0e8aac5131dca0c7b81d17067d00b77
+
 
