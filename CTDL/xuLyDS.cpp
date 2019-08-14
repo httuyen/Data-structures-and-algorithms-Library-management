@@ -86,7 +86,7 @@ string getEventKey(string strKey) {
 void clearNoti() {
 	gotoxy(XTB, YTB);
 	SetColor(WHITE);
-	cout << setw(38) << setfill(' ') << " ";
+	cout << setw(28) << setfill(' ') << " ";
 	setDefaultColor();
 }
 void inputDS(LIST_DauSach &lds,pDauSach &pDS, bool isEdited) {
@@ -247,9 +247,9 @@ void inputDS(LIST_DauSach &lds,pDauSach &pDS, bool isEdited) {
 
 			// import data vao info
 			ChuanHoaString(ISBN).copy(ds.ISBN, ISBN.size() + 1);
-			ChuanHoaString(theLoai).copy(ds.theLoai, ISBN.size() + 1);
-			ChuanHoaString(tenSach).copy(ds.tenSach, ISBN.size() + 1);
-			ChuanHoaString(tacGia).copy(ds.tacGia, ISBN.size() + 1);
+			ChuanHoaString(theLoai).copy(ds.theLoai, theLoai.size() + 1);
+			ChuanHoaString(tenSach).copy(ds.tenSach, tenSach.size() + 1);
+			ChuanHoaString(tacGia).copy(ds.tacGia, tacGia.size() + 1);
 			ds.namXuatBan = soTrang;
 			ds.soTrang = namXB;
 
@@ -279,7 +279,7 @@ void inputDS(LIST_DauSach &lds,pDauSach &pDS, bool isEdited) {
 					gotoxy(XTB, YTB);
 					Sleep(100);
 					cout << "SUCCESSFULLY !!! ";
-					//SaveDS(lds);
+					clearInput();
 				}
 				setDefaultColor();
 				return;
@@ -294,94 +294,109 @@ void inputDS(LIST_DauSach &lds,pDauSach &pDS, bool isEdited) {
 		anConTro();
 	}
 }
+void clearInput() {
+	SetColor(WHITE);
+	gotoxy(XINPUT + 11, YINPUT + 2);
+	cout << setw(28) << setfill(' ') << " ";
+	gotoxy(XINPUT + 11, YINPUT + 5);
+	cout << setw(28) << setfill(' ') << " ";
+	gotoxy(XINPUT + 11, YINPUT + 8);
+	cout << setw(28) << setfill(' ') << " ";
+	gotoxy(XINPUT + 11, YINPUT + 11);
+	cout << setw(28) << setfill(' ') << " ";
+	gotoxy(XINPUT + 11, YINPUT + 14);
+	cout << setw(28) << setfill(' ') << " ";
+	gotoxy(XINPUT + 11, YINPUT + 17);
+	cout << setw(28) << setfill(' ') << " ";
+	setDefaultColor();
+}
 void menuDS(LIST_DauSach &lds, pDauSach &pDS, Tree &t) {
 	drawTable();
 	//showListTL(lds, pDS);
 	//show hot key
 	gotoxy(7, yHotkey);
 	SetColor(WHITE);
-	cout << "HotKey:  ESC - Thoat, F2 - Them, F3 - Sua, F4 - Xoa, F10 - Luu, PgUP, PgDn";
+	cout << "HotKey:  ESC - Thoat, F2 - Them, F3 - Sua, F4 - Xoa, F5 - Luu File, F10 - Luu, PgUP, PgDn";
 	setDefaultColor();
 	//==============
 	
 	// thu tu trang
-	int choose;
+	string listTL[100] = {};
+	int sizeTL = getTheLoai(lds, listTL);
+	int choose,chooseTL;
 	int tttrang, tongtrang;
 	tttrang = 1;
 	tongtrang = (lds.n / NUMBER_LINES) + 1;
 loop:
-	
 	showListTL(lds);
 	int kb_hit;
 	do
 	{
-		if (_kbhit())
-		{
-			kb_hit = _getch();
-			if (kb_hit == 224 || kb_hit == 0)
-				kb_hit = _getch();
-			switch (kb_hit)
-			{
-			case PAGE_UP:
-				if (tttrang > 1) {
-					tttrang--;
-				}
-				else tttrang = tongtrang;
-				OutputDS_PerPage(lds, tttrang);
-				break;
-			case PAGE_DOWN:
-				if (tttrang < tongtrang) {
-					tttrang++;
-				}
-				else tttrang = 1;
-				OutputDS_PerPage(lds, tttrang);
-				break;
-			case KEY_F2:
-				pDS = new DauSach;
-				//pDS = nullptr;
-				if (pDS == NULL)
-					goto loop;
-				inputDS(lds,pDS,false);
-				goto loop;
+		chooseTL = ChooseItemsTL(lds, tttrang, tongtrang, sizeTL);
+		choose = ChooseItems_DS(lds, tttrang, tongtrang,listTL[chooseTL]);
+		//if (_kbhit())
+		//{
+		//	kb_hit = _getch();
+		//	if (kb_hit == 224 || kb_hit == 0)
+		//		kb_hit = _getch();
+		//	switch (kb_hit)
+		//	{
+		//	case PAGE_UP:
+		//		if (tttrang > 1) {
+		//			tttrang--;
+		//		}
+		//		else tttrang = tongtrang;
+		//		OutputDS_PerPage(lds, tttrang);
+		//		break;
+		//	case PAGE_DOWN:
+		//		if (tttrang < tongtrang) {
+		//			tttrang++;
+		//		}
+		//		else tttrang = 1;
+		//		OutputDS_PerPage(lds, tttrang);
+		//		break;
 
-			case  KEY_F3:
-				choose = (lds, tttrang, tongtrang);
-				if (choose > lds.n)
-					goto loop;
-				inputDS(lds, lds.nodesDauSach[choose], true);
-				goto loop;
+		//	case KEY_F2:
+		//		pDS = new DauSach;
+		//		//pDS = nullptr;
+		//		if (pDS == NULL)
+		//			goto loop;
+		//		inputDS(lds,pDS,false);
+		//		goto loop;
 
-			//case KEY_F4:
-			//	choose = ChooseItems_DS(lds, tttrang, tongtrang);
-			//	if (choose > lds.n)
-			//		goto loop;
+		//	case  KEY_F3:
+		//		choose = ChooseItemsTL(lds, tttrang, tongtrang);
+		//		if (choose > lds.n)
+		//			goto loop;
+		//		inputDS(lds, lds.nodesDauSach[choose], true);
+		//		goto loop;
 
-			//	// neu co nguoi muon thi se khong duoc phep xoa .
-			//	if (check_dms(lds.nodesDauSach[choose]->dms.pHeadDMS))
-			//	{
-			//		gotoxy(79, 20);
-			//		cout << "sach dang duoc muon, khong duoc xoa!";
-			//		_getch();
-			//		gotoxy(79, 20);
-			//		cout << "                                                      ";
+		//	case KEY_F4:
+		//		choose = ChooseItems_DS(lds, tttrang, tongtrang);
+		//		if (choose > lds.n)
+		//			goto loop;
+		//		if (CheckDMS(lds.nodesDauSach[choose]->dms.pHeadDMS))
+		//		{
+		//			gotoxy(XTB, YTB);
+		//			SetColor(RED);
+		//			cout << "sach dang duoc muon, khong duoc xoa!";
+		//			_getch();
+		//			gotoxy(XTB, YTB);
+		//			setDefaultColor();
+		//			cout << "                                                      ";
+		//			goto loop;
+		//		}
 
-			//		goto loop;
-			//	}
-
-			//	delete_dausach(lds, choose);
-			//	goto loop;
-
-				// thoat
-			case KEY_F4:
-				SaveDS(lds);
-				goto loop;
-			case ESC:
-				xuLy(lds, t);
-				break;
-			}
-			
-
-		}
+		//		Delete_DauSach(lds, choose);
+		//		goto loop;
+		//	case KEY_F5:
+		//		SaveDS(lds);
+		//		goto loop;
+		//	case ESC:
+		//		xuLy(lds, t);
+		//		break;
+		//	}
+		//}
 		anConTro();
 		gotoxy(33, 36);
 		cout << "trang " << tttrang << " / " << tongtrang;
@@ -391,34 +406,31 @@ loop:
 
 }
 
-void OutputDS_PerPage(LIST_DauSach &lDS, int index)
+void OutputDS_PerPage(LIST_DauSach list)
 {
+	//LIST_DauSach ldsTemp = getDSByTL(lDS, theLoai);
 	//Xoa_OutDS_29lines();
-	//SetColor(WHITE);
-	//viTri = 0;
-	//index--;
-	//if (lDS.n == -1)
-	//	return;
-	//for (int i = NUMBER_LINES * index; i < NUMBER_LINES*(1 + index) && i <= lDS.n; i++)
-	//{
-	//	Output_DS(lDS.nodesDauSach[i]->info);
-	//}
+	SetColor(WHITE);
+	if (list.n == -1)
+		return;
+	for (int i = 0; i < list.n; i++)
+	{
+		Output_DS(list.nodesDauSach[i]->info,i);
+	}
 }
-void Output_DS(dauSach ds)
+void Output_DS(dauSach ds, int viTri)
 {
-	/*anConTro();
-	Xoa1lineDS(viTri);
-	gotoxy(xDisplayDS[0] + 3, yD + 3 + locate);
-	cout << ds.tensach;
-	gotoxy(xDisplayDS[1] + 1, yD + 3 + locate);
+	anConTro();
+	gotoxy(xDisplayDS[1], yD + viTri);
+	cout << ds.tenSach;
+	gotoxy(xDisplayDS[2], yD + viTri);
 	cout << ds.ISBN;
-	gotoxy(xDisplayDS[2] + 1, yD + 3 + locate);
-	cout << ds.tacgia;
-	gotoxy(xDisplayDS[4] + 1, yD + 3 + locate);
-	cout << ds.sotrang;
-	gotoxy(xDisplayDS[5] + 1, yD + 3 + locate);
-	cout << ds.namSB;
-	viTri++;*/
+	gotoxy(xDisplayDS[3], yD + viTri);
+	cout << ds.tacGia;
+	gotoxy(xDisplayDS[4], yD + viTri);
+	cout << ds.soTrang;
+	gotoxy(xDisplayDS[5], yD + viTri);
+	cout << ds.namXuatBan;
 }
 void XoaMotVung(int x, int y, int ndoc, int width)
 {
@@ -435,18 +447,18 @@ void XoaMotDong(int width)
 }
 void Xoa1lineDS(int viTri)
 {
-	//gotoxy(xDisplayDS[0] + 1, yDisplay + 3 + locate);
-	//cout << setw(27) << setfill(' ') << ' ';
-	//gotoxy(xDisplayDS[1] + 1, yDisplay + 3 + locate);
-	//cout << setw(4) << setfill(' ') << ' ';
-	//gotoxy(xDisplayDS[2] + 1, yDisplay + 3 + locate);
-	//cout << setw(18) << setfill(' ') << ' ';
-	//gotoxy(xDisplayDS[3] + 1, yDisplay + 3 + locate);
-	//cout << setw(11) << setfill(' ') << ' ';
-	//gotoxy(xDisplayDS[4] + 1, yDisplay + 3 + locate);
-	//cout << setw(6) << setfill(' ') << ' ';
-	//gotoxy(xDisplayDS[5] + 1, yDisplay + 3 + locate);
-	//cout << setw(4) << setfill(' ') << ' ';
+	gotoxy(xDisplayDS[0] + 1, yD+viTri);
+	cout << setw(13) << setfill(' ') << ' ';
+	gotoxy(xDisplayDS[1] + 1, yD + viTri);
+	cout << setw(25) << setfill(' ') << ' ';
+	gotoxy(xDisplayDS[2] + 1, yD + viTri);
+	cout << setw(6) << setfill(' ') << ' ';
+	gotoxy(xDisplayDS[3] + 1, yD + viTri);
+	cout << setw(29) << setfill(' ') << ' ';
+	gotoxy(xDisplayDS[4] + 1, yD + viTri);
+	cout << setw(6) << setfill(' ') << ' ';
+	gotoxy(xDisplayDS[5] + 1, yD + viTri);
+	cout << setw(6) << setfill(' ') << ' ';
 }
 
 void Xoa_OutDS_29lines()
@@ -1000,13 +1012,16 @@ void NhapNamXuatBan(int &namXB, int &flag, bool &isSave, bool &isEsc)
 		}
 	}
 }
-int ChooseItems_DS(LIST_DauSach &lDS, int &tttrang, int tongtrang)
+int ChooseItems_DS(LIST_DauSach &lDS, int &tttrang, int tongtrang,string theLoai)
 {
+	Xoa_OutDS_29lines();
+	LIST_DauSach list = getDSByTL(lDS, theLoai);
+	OutputDS_PerPage(list);
 	int pos = 0;
 	int kb_hit;
 	pos = 0;
 	SetColor(YELLOW);
-	gotoxy(xD - 2, yD + 1 + pos);
+	gotoxy(xD + 15, yD + pos);
 	cout << "<<";
 	while (true)
 	{
@@ -1020,23 +1035,23 @@ int ChooseItems_DS(LIST_DauSach &lDS, int &tttrang, int tongtrang)
 			{
 			case KEY_UP:
 				// xoa muc truoc
-				gotoxy(xD - 2, yD + 1 + pos);
+				gotoxy(xD - 2, yD + pos);
 				cout << "  ";
-				(pos > 0) ? pos-- : pos = 28;
+				(pos > 0) ? pos-- : pos = 29;
 
 				// to mau muc moi
-				gotoxy(xD - 2, yD + 1 + pos);
+				gotoxy(xD - 2, yD + pos);
 				cout << "<<";
 				break;
 
 			case KEY_DOWN:
 				// xoa muc truoc
-				gotoxy(xD - 2, yD + 1 + pos);
+				gotoxy(xD - 2, yD + pos);
 				cout << "  ";
-				(pos < 28) ? pos++ : pos = 0;
+				(pos < 29) ? pos++ : pos = 0;
 
 				// to mau muc moi
-				gotoxy(xD - 2, yD + 1 + pos);
+				gotoxy(xD - 2, yD  + pos);
 				cout << "<<";
 				break;
 
@@ -1050,10 +1065,10 @@ int ChooseItems_DS(LIST_DauSach &lDS, int &tttrang, int tongtrang)
 					tttrang = tongtrang;
 				}
 				Xoa_OutDS_29lines();
-				OutputDS_PerPage(lDS, tttrang);
+				OutputDS_PerPage(lDS);
 				pos = 0;
 				SetColor(YELLOW);
-				gotoxy(xD - 2, yD + 1 + pos);
+				gotoxy(xD - 2, yD  + pos);
 				cout << "<<";
 				break;
 
@@ -1067,15 +1082,104 @@ int ChooseItems_DS(LIST_DauSach &lDS, int &tttrang, int tongtrang)
 					tttrang = 1;
 				}
 				Xoa_OutDS_29lines();
-				OutputDS_PerPage(lDS, tttrang);
+				OutputDS_PerPage(lDS);
 				pos = 0;
 				SetColor(YELLOW);
-				gotoxy(xD - 2, yD + 1 + pos);
+				gotoxy(xD - 2, yD + pos);
 				cout << "<<";
 				break;
 
 			case ENTER:
 				return (pos == 0 && tttrang == 1) ? pos : pos + (tttrang - 1)* NUMBER_LINES;
+			case ESC:
+				return -1;
+			}
+		}
+		anConTro();
+		SetColor(WHITE);
+		gotoxy(33, 36);
+		cout << "Trang " << tttrang << " / " << tongtrang;
+		setDefaultColor();
+	}
+}
+int ChooseItemsTL(LIST_DauSach LTL, int &tttrang, int tongtrang,int sizeTL)
+{
+	int sizeOfList = sizeTL;
+	int pos = 0;
+	int kb_hit;
+	SetColor(YELLOW);
+	gotoxy(xD - 3, yD + pos);
+	cout << "<<";
+	while (true)
+	{
+		if (_kbhit())
+		{
+			kb_hit = _getch();
+			if (kb_hit == 224 || kb_hit == 0)
+				kb_hit = _getch();
+
+			switch (kb_hit)
+			{
+			case KEY_UP:
+				// xoa muc truoc
+				gotoxy(xD - 3, yD + pos);
+				cout << "  ";
+				(pos > 0) ? pos-- : pos = sizeOfList - 1;
+
+				// to mau muc moi
+				gotoxy(xD - 3, yD + pos);
+				cout << "<<";
+				break;
+
+			case KEY_DOWN:
+				// xoa muc truoc
+				gotoxy(xD - 3, yD + pos);
+				cout << "  ";
+				(pos < sizeOfList - 1) ? pos++ : pos = 0;
+
+				// to mau muc moi
+				gotoxy(xD - 3, yD + pos);
+				cout << "<<";
+				break;
+
+			case PAGE_UP:
+				if (tttrang > 1)
+				{
+					tttrang--;
+				}
+				else
+				{
+					tttrang = tongtrang;
+				}
+				Xoa_OutDS_29lines();
+//				OutputDS_PerPage(lds,);
+				pos = 0;
+				SetColor(YELLOW);
+				gotoxy(xD - 3, yD + pos);
+				cout << "<<";
+				break;
+
+			case PAGE_DOWN:
+				if (tttrang < tongtrang)
+				{
+					tttrang++;
+				}
+				else
+				{
+					tttrang = 1;
+				}
+				Xoa_OutDS_29lines();
+	//			OutputDS_PerPage(lds, tttrang);
+				pos = 0;
+				SetColor(YELLOW);
+				gotoxy(xD - 3, yD + pos);
+				cout << "<<";
+				break;
+
+			case ENTER:
+				return (pos == 0 && tttrang == 1) ? pos : pos + (tttrang - 1)* NUMBER_LINES;
+			case ESC:
+				return sizeOfList;
 			}
 		}
 		anConTro();

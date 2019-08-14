@@ -21,6 +21,8 @@
 #define KEY_F3 61
 // Hieu chinh
 #define KEY_F4 62
+
+#define KEY_F5 63
 // Save
 #define KEY_F10 68
 // Cuon page xuong duoi

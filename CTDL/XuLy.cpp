@@ -24,7 +24,8 @@ void xuLy(LIST_DauSach &lds, Tree &t)
 	
 	clrscr();
 	welcomeConsole();
-	menuFeature(4, 52, 20, flag, listMenu);
+	//menuFeature(4, 52, 20, flag, listMenu);
+	
 	while (true) {
 		switch (flag)
 		{

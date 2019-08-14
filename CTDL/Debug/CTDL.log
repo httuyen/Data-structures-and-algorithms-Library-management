@@ -1,6 +1,10 @@
-﻿Build started 04/08/2019 4:23:10 PM.
+﻿Build started 12/08/2019 4:36:44 PM.
      1>Project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" on node 2 (Build target(s)).
-     1>Link:
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"Debug\CTDL.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt XuLy.cpp
+         XuLy.cpp
+     1>d:\ctdlgt2019\ctdl\xuly.cpp(22): warning C4101: 'temp': unreferenced local variable
+       Link:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\CTDLGT2019\CTDL\Debug\CTDL.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"D:\CTDLGT2019\CTDL\Debug\CTDL.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\CTDLGT2019\CTDL\Debug\CTDL.lib" /MACHINE:X86 Debug\Check_Input.obj
          Debug\DauSach.obj
          Debug\GlobalVariable.obj
@@ -16,10 +20,9 @@
          Debug\xulyDG.obj
          Debug\xuLyDS.obj
          Debug\xulyMT.obj
-         LINK : D:\CTDLGT2019\CTDL\Debug\CTDL.exe not found or not built by the last incremental link; performing full link
          CTDL.vcxproj -> D:\CTDLGT2019\CTDL\Debug\CTDL.exe
      1>Done Building Project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.53
+Time Elapsed 00:00:01.95

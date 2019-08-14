@@ -111,22 +111,22 @@ int Insert_DauSach(LIST_DauSach &lds, pDauSach &pDS)
 	return 1;
 }
 
-void getTheLoai(LIST_DauSach lds, string listTL[]) {
+int getTheLoai(LIST_DauSach lds, string listTL[]) {
 	int temp = 0;
 	for (int i = 0; i < lds.n; i++) {
 		for (int j = 0; j <= temp; j++) {
-			if (lds.nodesDauSach[i]->info.theLoai == listTL[j]) {
+			if ((string)lds.nodesDauSach[i]->info.theLoai == listTL[j]) {
 				break;
 			}
 			else if (j == temp) {
-				listTL[temp] = lds.nodesDauSach[i]->info.theLoai;
+				listTL[temp] = (string)lds.nodesDauSach[i]->info.theLoai;
 				temp++;
 				break;
 			}
 		}
 	}
+	return temp;
 }
-
 
 
 NODE_TREE* GetNode_DG(theDocGia dg)
@@ -518,4 +518,43 @@ void SwapTS(LIST_DauSach &a, LIST_DauSach &b) {
 	temp = a;
 	a = b;
 	b = temp;
+}
+bool CheckDMS(NODE_DMS* nodeDMS){
+	for (NODE_DMS* p = nodeDMS; p != NULL; p = p->pNext)
+	{
+		// sach da co nguoi muon.
+		if (p->data.trangThai == 1)
+		{
+			return true;
+		}
+	}
+	return false;
+}
+void Delete_DauSach(LIST_DauSach &lds, int viTriNode)
+{
+	if (viTriNode > lds.n || lds.n == -1 || lds.n == 0)
+	{
+		return;
+	}
+
+	// xoa vi tri cuoi mang
+	if (viTriNode == lds.n)
+	{
+		delete lds.nodesDauSach[lds.n];
+		// tranh tinh trang con tro bi treo...
+		lds.nodesDauSach[lds.n--] = NULL;
+		return;
+	}
+	// cho này quan tr?ng .
+	delete lds.nodesDauSach[viTriNode];
+
+	for (int temp = viTriNode + 1; temp <= lds.n; temp++)
+	{
+		lds.nodesDauSach[temp - 1] = lds.nodesDauSach[temp];
+	}
+	delete lds.nodesDauSach[lds.n--];
+
+	// tranh tinh trang con tro bi treo...
+	lds.nodesDauSach[lds.n--] = NULL;
+	return;
 }

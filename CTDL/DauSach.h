@@ -122,7 +122,7 @@ void AddTailList_MT(ListMT &l, MuonTra data);
 void AddHeadList_MT(ListMT &l, MuonTra data);
 NODE_MT* GetNode_MT(MuonTra data);
 
-void getTheLoai(LIST_DauSach lds, string listTL[]);
+int getTheLoai(LIST_DauSach lds, string listTL[]);
 
 void InsertDGtoTree(Tree &t, theDocGia dg);
 NODE_TREE* GetNode_DG(theDocGia dg);
@@ -143,3 +143,5 @@ LIST_DauSach getDSByTL(LIST_DauSach &lds, string theLoai);
 void QuicKsortTS(LIST_DauSach &lds, int left, int right);
 void testDS(LIST_DauSach &lds, string theLoai);
 void SwapTS(LIST_DauSach &a, LIST_DauSach &b);
+bool CheckDMS(NODE_DMS* nodeDMS);
+void Delete_DauSach(LIST_DauSach &lds, int viTriNode);
