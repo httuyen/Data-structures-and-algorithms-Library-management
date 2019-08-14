@@ -34,21 +34,6 @@ NODE_DMS* GetNode_DMS(DMS DATA)
 	return (p);
 }
 
-NODE_DMS* Search_DMS_Pos(NODE_DMS* dms, int pos)
-{
-	int count = -1;
-
-	for (NODE_DMS* temp = dms; temp != NULL; temp = temp->pNext)
-	{
-		count++;
-		if (pos == count)
-		{
-			return temp;
-		}
-	}
-	return NULL;
-}
-
 void initList_MT(ListMT &l)
 {
 	l.n = 0;
@@ -126,22 +111,22 @@ int Insert_DauSach(LIST_DauSach &lds, pDauSach &pDS)
 	return 1;
 }
 
-int getTheLoai(LIST_DauSach lds, string listTL[]) {
+void getTheLoai(LIST_DauSach lds, string listTL[]) {
 	int temp = 0;
 	for (int i = 0; i < lds.n; i++) {
 		for (int j = 0; j <= temp; j++) {
-			if ((string)lds.nodesDauSach[i]->info.theLoai == listTL[j]) {
+			if (lds.nodesDauSach[i]->info.theLoai == listTL[j]) {
 				break;
 			}
 			else if (j == temp) {
-				listTL[temp] = (string)lds.nodesDauSach[i]->info.theLoai;
+				listTL[temp] = lds.nodesDauSach[i]->info.theLoai;
 				temp++;
 				break;
 			}
 		}
 	}
-	return temp;
 }
+
 
 
 NODE_TREE* GetNode_DG(theDocGia dg)
@@ -471,9 +456,9 @@ int SoSachDangMuon(ListMT lMT)
 
 bool SearchISBN_DS(LIST_DauSach lds, string ISBN)
 {
-	for (int i = 0; i <= lds.n; i++)
+	for (int i = 0; i < lds.n; i++)
 	{
-		if (lds.nodesDauSach[i]->info.ISBN == ISBN)
+		if ((string)lds.nodesDauSach[i]->info.ISBN == (string)ISBN)
 			return true;
 	}
 	return false;
@@ -494,26 +479,28 @@ void QuicKsortTS(LIST_DauSach &lds, int left, int right) {
 	//ldsTemp.nodesDauSach[1]
 	dauSach key =  lds.nodesDauSach[(left + right) / 2]->info;
 	dauSach tempDS;
-	pDauSach pDSTemp = nullptr;
+	LIST_DMS l;
 	
 	int i = left, j = right;
 	do {
-		while (lds.nodesDauSach[i]->info.tenSach < key.tenSach)
+		while ((string)lds.nodesDauSach[i]->info.tenSach < (string)key.tenSach)
 			i++;
-		while (lds.nodesDauSach[j]->info.tenSach > key.tenSach)
+		while ((string)lds.nodesDauSach[j]->info.tenSach > (string)key.tenSach)
 			j--;
 		if (i <= j) {
 			if (i < j) {
-				SwapNodeDS(lds.nodesDauSach[i], lds.nodesDauSach[j]);
-				/*tempDS = lds.nodesDauSach[i]->info;
+			//	SwapTS(ldsTemp.nodesDauSach[i], ldsTemp.nodesDauSach[j]);
+				tempDS = lds.nodesDauSach[i]->info;
 				lds.nodesDauSach[i]->info = lds.nodesDauSach[j]->info;
 				lds.nodesDauSach[j]->info = tempDS;
-
-				pDSTemp->dms= lds.nodesDauSach[i]->dms;
-				//pDSTemp->dms.pHeadDMS = lds.nodesDauSach[i]->dms.pHeadDMS;
-				//pDSTemp->dms.pTailDMS = lds.nodesDauSach[i]->dms.pTailDMS;
+				initList_DMS(l);
+				l.n = lds.nodesDauSach[i]->dms.n;
+				l.pHeadDMS = lds.nodesDauSach[i]->dms.pHeadDMS;
+				l.pTailDMS = lds.nodesDauSach[i]->dms.pTailDMS;
 				lds.nodesDauSach[i]->dms = lds.nodesDauSach[j]->dms;
-				lds.nodesDauSach[j]->dms = pDSTemp->dms;*/
+				lds.nodesDauSach[j]->dms.n = l.n;
+				lds.nodesDauSach[j]->dms.pHeadDMS = l.pHeadDMS;
+				lds.nodesDauSach[j]->dms.pTailDMS = l.pTailDMS;
 			}
 			i++;
 			j--;
@@ -521,7 +508,6 @@ void QuicKsortTS(LIST_DauSach &lds, int left, int right) {
 	} while (i <= j);
 	if (left < j) QuicKsortTS(lds, left, j);
 	if (right > i) QuicKsortTS(lds, i, right);
-	delete[] pDSTemp;
 }
 void testDS(LIST_DauSach &lds, string theLoai) {
 	LIST_DauSach ldsTemp = getDSByTL(lds, theLoai);
@@ -532,52 +518,4 @@ void SwapTS(LIST_DauSach &a, LIST_DauSach &b) {
 	temp = a;
 	a = b;
 	b = temp;
-}
-<<<<<<< HEAD
-bool CheckDMS(NODE_DMS* nodeDMS){
-	for (NODE_DMS* p = nodeDMS; p != NULL; p = p->pNext)
-	{
-		// sach da co nguoi muon.
-		if (p->data.trangThai == 1)
-		{
-			return true;
-		}
-	}
-	return false;
-}
-void Delete_DauSach(LIST_DauSach &lds, int viTriNode)
-{
-	if (viTriNode > lds.n || lds.n == -1 || lds.n == 0)
-	{
-		return;
-	}
-
-	// xoa vi tri cuoi mang
-	if (viTriNode == lds.n)
-	{
-		delete lds.nodesDauSach[lds.n];
-		// tranh tinh trang con tro bi treo...
-		lds.nodesDauSach[lds.n--] = NULL;
-		return;
-	}
-	// cho này quan tr?ng .
-	delete lds.nodesDauSach[viTriNode];
-
-	for (int temp = viTriNode + 1; temp <= lds.n; temp++)
-	{
-		lds.nodesDauSach[temp - 1] = lds.nodesDauSach[temp];
-	}
-	delete lds.nodesDauSach[lds.n--];
-
-	// tranh tinh trang con tro bi treo...
-	lds.nodesDauSach[lds.n--] = NULL;
-	return;
-=======
-
-void SwapNodeDS(DauSach* ds1, DauSach* ds2)
-{
-	DauSach temp = *ds1;
-	*ds1 = *ds2;
-	*ds2 = temp;
->>>>>>> e1cb598b30d14bad7b92d0d64e77e0f4a744196d
 }

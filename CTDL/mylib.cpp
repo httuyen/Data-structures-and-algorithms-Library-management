@@ -1336,18 +1336,3 @@ void nhapNhay(char* str, int x, int y)
 		Sleep(500);
 	} while (!kbhit());
 }
-
-void writing(int x, int y)
-{
-	int i = 15;
-	while (true)
-	{
-		SetColor(i); 
-		gotoxy(x, y);
-		cprintf("...");
-		if (i == 15)
-			i = 0;
-		else i = 15;
-		Sleep(500);
-	}
-}

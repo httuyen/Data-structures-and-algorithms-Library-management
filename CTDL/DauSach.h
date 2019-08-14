@@ -111,9 +111,8 @@ typedef NODE_TREE *Tree;
 void initList_DMS(LIST_DMS& l);
 void AddTailList_DMS(LIST_DMS &l, DMS data);
 NODE_DMS* GetNode_DMS(DMS DATA);
-NODE_DMS* Search_DMS_Pos(NODE_DMS* dms, int pos);
-
 int Full_DauSach(LIST_DauSach  l);
+
 void initListDS(LIST_DauSach &lds);
 pDauSach searchTen_DS(LIST_DauSach lds, string theLoai);
 int Insert_DauSach(LIST_DauSach &lds, pDauSach &pDS);
@@ -123,7 +122,7 @@ void AddTailList_MT(ListMT &l, MuonTra data);
 void AddHeadList_MT(ListMT &l, MuonTra data);
 NODE_MT* GetNode_MT(MuonTra data);
 
-int getTheLoai(LIST_DauSach lds, string listTL[]);
+void getTheLoai(LIST_DauSach lds, string listTL[]);
 
 void InsertDGtoTree(Tree &t, theDocGia dg);
 NODE_TREE* GetNode_DG(theDocGia dg);
@@ -144,9 +143,3 @@ LIST_DauSach getDSByTL(LIST_DauSach &lds, string theLoai);
 void QuicKsortTS(LIST_DauSach &lds, int left, int right);
 void testDS(LIST_DauSach &lds, string theLoai);
 void SwapTS(LIST_DauSach &a, LIST_DauSach &b);
-<<<<<<< HEAD
-bool CheckDMS(NODE_DMS* nodeDMS);
-void Delete_DauSach(LIST_DauSach &lds, int viTriNode);
-=======
-void SwapNodeDS(DauSach* ds1, DauSach* ds2);
->>>>>>> e1cb598b30d14bad7b92d0d64e77e0f4a744196d
