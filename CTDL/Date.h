@@ -22,3 +22,6 @@ int DateToDate(Date date1, Date date2);
 
 // lay ngay hien tai
 void Today(Date &date);
+
+// kiem tra ngay hop le
+int ValidDate(Date date);

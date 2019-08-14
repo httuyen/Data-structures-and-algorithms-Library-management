@@ -34,6 +34,21 @@ NODE_DMS* GetNode_DMS(DMS DATA)
 	return (p);
 }
 
+NODE_DMS* Search_DMS_Pos(NODE_DMS* dms, int pos)
+{
+	int count = -1;
+
+	for (NODE_DMS* temp = dms; temp != NULL; temp = temp->pNext)
+	{
+		count++;
+		if (pos == count)
+		{
+			return temp;
+		}
+	}
+	return NULL;
+}
+
 void initList_MT(ListMT &l)
 {
 	l.n = 0;
@@ -456,9 +471,9 @@ int SoSachDangMuon(ListMT lMT)
 
 bool SearchISBN_DS(LIST_DauSach lds, string ISBN)
 {
-	for (int i = 0; i < lds.n; i++)
+	for (int i = 0; i <= lds.n; i++)
 	{
-		if ((string)lds.nodesDauSach[i]->info.ISBN == (string)ISBN)
+		if (lds.nodesDauSach[i]->info.ISBN == ISBN)
 			return true;
 	}
 	return false;
@@ -479,28 +494,26 @@ void QuicKsortTS(LIST_DauSach &lds, int left, int right) {
 	//ldsTemp.nodesDauSach[1]
 	dauSach key =  lds.nodesDauSach[(left + right) / 2]->info;
 	dauSach tempDS;
-	LIST_DMS l;
+	pDauSach pDSTemp = nullptr;
 	
 	int i = left, j = right;
 	do {
-		while ((string)lds.nodesDauSach[i]->info.tenSach < (string)key.tenSach)
+		while (lds.nodesDauSach[i]->info.tenSach < key.tenSach)
 			i++;
-		while ((string)lds.nodesDauSach[j]->info.tenSach > (string)key.tenSach)
+		while (lds.nodesDauSach[j]->info.tenSach > key.tenSach)
 			j--;
 		if (i <= j) {
 			if (i < j) {
-			//	SwapTS(ldsTemp.nodesDauSach[i], ldsTemp.nodesDauSach[j]);
-				tempDS = lds.nodesDauSach[i]->info;
+				SwapNodeDS(lds.nodesDauSach[i], lds.nodesDauSach[j]);
+				/*tempDS = lds.nodesDauSach[i]->info;
 				lds.nodesDauSach[i]->info = lds.nodesDauSach[j]->info;
 				lds.nodesDauSach[j]->info = tempDS;
-				initList_DMS(l);
-				l.n = lds.nodesDauSach[i]->dms.n;
-				l.pHeadDMS = lds.nodesDauSach[i]->dms.pHeadDMS;
-				l.pTailDMS = lds.nodesDauSach[i]->dms.pTailDMS;
+
+				pDSTemp->dms= lds.nodesDauSach[i]->dms;
+				//pDSTemp->dms.pHeadDMS = lds.nodesDauSach[i]->dms.pHeadDMS;
+				//pDSTemp->dms.pTailDMS = lds.nodesDauSach[i]->dms.pTailDMS;
 				lds.nodesDauSach[i]->dms = lds.nodesDauSach[j]->dms;
-				lds.nodesDauSach[j]->dms.n = l.n;
-				lds.nodesDauSach[j]->dms.pHeadDMS = l.pHeadDMS;
-				lds.nodesDauSach[j]->dms.pTailDMS = l.pTailDMS;
+				lds.nodesDauSach[j]->dms = pDSTemp->dms;*/
 			}
 			i++;
 			j--;
@@ -508,6 +521,7 @@ void QuicKsortTS(LIST_DauSach &lds, int left, int right) {
 	} while (i <= j);
 	if (left < j) QuicKsortTS(lds, left, j);
 	if (right > i) QuicKsortTS(lds, i, right);
+	delete[] pDSTemp;
 }
 void testDS(LIST_DauSach &lds, string theLoai) {
 	LIST_DauSach ldsTemp = getDSByTL(lds, theLoai);
@@ -519,6 +533,7 @@ void SwapTS(LIST_DauSach &a, LIST_DauSach &b) {
 	a = b;
 	b = temp;
 }
+<<<<<<< HEAD
 bool CheckDMS(NODE_DMS* nodeDMS){
 	for (NODE_DMS* p = nodeDMS; p != NULL; p = p->pNext)
 	{
@@ -557,4 +572,12 @@ void Delete_DauSach(LIST_DauSach &lds, int viTriNode)
 	// tranh tinh trang con tro bi treo...
 	lds.nodesDauSach[lds.n--] = NULL;
 	return;
+=======
+
+void SwapNodeDS(DauSach* ds1, DauSach* ds2)
+{
+	DauSach temp = *ds1;
+	*ds1 = *ds2;
+	*ds2 = temp;
+>>>>>>> e1cb598b30d14bad7b92d0d64e77e0f4a744196d
 }

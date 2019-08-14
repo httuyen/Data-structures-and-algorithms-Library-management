@@ -34,11 +34,10 @@ using namespace std;
 //	fclose(f);
 //	cout<<("Da load xong danh sach vao bo nho");
 //}
-void OpenFile(LIST_DauSach &lds) {
+void OpenFile(LIST_DauSach &lds, pDauSach &pDS) {
 	FILE * f;
 	DauSach ds;
 	DMS dataDMS;
-	pDauSach pDS;
 	if ((f = fopen("DauSach.txt", "rb")) == NULL)
 	{
 		cout << ("Loi mo file de doc"); return;
@@ -49,7 +48,7 @@ void OpenFile(LIST_DauSach &lds) {
 		pDS->info = ds.info;
 		pDS->dms.n = ds.dms.n;
 		initList_DMS(pDS->dms);
-		if (ds.dms.n <= 0) {
+		if (ds.dms.n < 0) {
 			//lds.nodesDauSach[lds.n]->dms.pHeadDMS = lds.nodesDauSach[lds.n]->dms.pTailDMS = nullptr;
 			pDS->dms.pHeadDMS = pDS->dms.pTailDMS = nullptr;
 		}
@@ -72,10 +71,8 @@ void SaveDS(LIST_DauSach lds) {
 	}
 	for (int i = 0; i < lds.n; i++){
 		fwrite(lds.nodesDauSach[i], sizeof(DauSach), 1, f);
-		if (lds.nodesDauSach[i]->dms.n > 0) {
-			for (NODE_DMS *p = lds.nodesDauSach[i]->dms.pHeadDMS; p != nullptr; p = p->pNext) {
-				fwrite(p, sizeof(DMS), 1, f);
-			}
+		for (NODE_DMS *p = lds.nodesDauSach[i]->dms.pHeadDMS; p != nullptr; p = p->pNext) {
+			fwrite(p, sizeof(DMS), 1, f);
 		}
 	}
 	fclose(f);
