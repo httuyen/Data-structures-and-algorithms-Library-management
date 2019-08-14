@@ -447,3 +447,181 @@ int InputMaThe(int &maThe)
 		}
 	}
 }
+
+int InputNgayThang(Date &date)
+{
+	hienConTro();
+	int flag = 2;
+
+	Today(date);
+	Date tempDate;
+	tempDate.Ngay = date.Ngay;
+	tempDate.Thang = date.Thang;
+	tempDate.Nam = date.Nam;
+
+	gotoxy(123, 37);
+	cout << date.Ngay << " /" << date.Thang << " /" << date.Nam;
+
+	while (true)
+	{
+
+		while (_kbhit())
+		{
+			int kb_hit = _getch();
+			if (kb_hit >= 48 && kb_hit <= 57)
+			{
+				if (flag == 0)
+				{
+
+					int f = kb_hit - 48;
+					tempDate.Ngay = tempDate.Ngay * 10 + (f);
+					if (tempDate.Ngay > 31)
+					{
+						tempDate.Ngay /= 10;
+						continue;
+					}
+					gotoxy(123, 37);
+					cout << tempDate.Ngay;
+
+				}
+				else if (flag == 1)
+				{
+
+					int f = kb_hit - 48;
+					tempDate.Thang = tempDate.Thang * 10 + (f);
+					if (tempDate.Thang > 12)
+					{
+						tempDate.Thang /= 10;
+						continue;
+					}
+					gotoxy(127, 37);
+					cout << tempDate.Thang;
+				}
+				else if (flag == 2)
+				{
+
+					int f = kb_hit - 48;
+					tempDate.Nam = tempDate.Nam * 10 + (f);
+					if (tempDate.Nam > 9999)
+					{
+						tempDate.Nam /= 10;
+						continue;
+					}
+					gotoxy(131, 37);
+					cout << tempDate.Nam;
+				}
+
+			}
+
+			else if (kb_hit == ENTER)
+			{
+				if (flag == 0)
+				{
+
+					gotoxy(127, 37);
+					cout << tempDate.Thang;
+					flag = 1;
+				}
+				else if (flag == 1)
+				{
+
+					gotoxy(130, 37);
+					cout << tempDate.Nam;
+					flag = 2;
+				}
+				else if (flag == 2)
+				{
+
+					gotoxy(123, 37);
+					cout << tempDate.Ngay;
+					flag = 0;
+				}
+			}
+			else if (kb_hit == BACKSPACE && tempDate.Ngay > 0 && tempDate.Thang > 0 && tempDate.Nam > 0)
+			{
+				cout << "\b" << " " << "\b";
+				if (flag == 0)
+				{
+					tempDate.Ngay /= 10;
+				}
+
+				else if (flag == 1)
+				{
+					tempDate.Thang /= 10;
+				}
+				else if (flag == 2)
+				{
+					tempDate.Nam /= 10;
+				}
+			}
+			else if (kb_hit == 0)
+			{
+				kb_hit = _getch();
+				if (kb_hit == KEY_F10)
+				{
+
+					flag = ValidDate(tempDate);
+					if (flag == 3)
+					{
+						// xoa nhung noi dung khong duoc su dung
+						gotoxy(104, 35);
+						cout << "                                                  ";
+						gotoxy(111, 37);
+						cout << "                        ";
+						gotoxy(109, 39);
+						cout << "                     ";
+
+						// kiem tra ngay nhap lon hon ngay hien tai
+						if (DateToNum(tempDate) < 0)
+						{
+							return 1;
+						}
+						else
+						{
+							date = tempDate;
+							return 2;
+						}
+					}
+					else if (flag == 0)
+					{
+						gotoxy(119, 39);
+						cout << "Sai ngay. Nhap lai!";
+						gotoxy(123, 37);
+						cout << tempDate.Ngay;
+						continue;
+					}
+					else if (flag == 1)
+					{
+						gotoxy(119, 39);
+						cout << "Sai thang. Nhap lai!";
+						gotoxy(127, 37);
+						cout << tempDate.Thang;
+						continue;
+					}
+					else if (flag == 2)
+					{
+						gotoxy(119, 39);
+						cout << "Sai nam. Nhap lai!";
+						gotoxy(131, 37);
+						cout << tempDate.Nam;
+						continue;
+					}
+
+				}
+			}
+			else if (kb_hit == ESC)
+			{
+
+				// xoa nhung noi dung khong duoc su dung
+				gotoxy(104, 35);
+				cout << "                                                  ";
+				gotoxy(123, 37);
+				cout << "                 ";
+				gotoxy(119, 39);
+				cout << "                     ";
+				return -1;
+			}
+
+		}
+	}
+}

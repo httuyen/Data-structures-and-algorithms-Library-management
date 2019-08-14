@@ -34,6 +34,21 @@ NODE_DMS* GetNode_DMS(DMS DATA)
 	return (p);
 }
 
+NODE_DMS* Search_DMS_Pos(NODE_DMS* dms, int pos)
+{
+	int count = -1;
+
+	for (NODE_DMS* temp = dms; temp != NULL; temp = temp->pNext)
+	{
+		count++;
+		if (pos == count)
+		{
+			return temp;
+		}
+	}
+	return NULL;
+}
+
 void initList_MT(ListMT &l)
 {
 	l.n = 0;

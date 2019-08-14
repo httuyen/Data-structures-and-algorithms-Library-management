@@ -111,8 +111,9 @@ typedef NODE_TREE *Tree;
 void initList_DMS(LIST_DMS& l);
 void AddTailList_DMS(LIST_DMS &l, DMS data);
 NODE_DMS* GetNode_DMS(DMS DATA);
-int Full_DauSach(LIST_DauSach  l);
+NODE_DMS* Search_DMS_Pos(NODE_DMS* dms, int pos);
 
+int Full_DauSach(LIST_DauSach  l);
 void initListDS(LIST_DauSach &lds);
 pDauSach searchTen_DS(LIST_DauSach lds, string theLoai);
 int Insert_DauSach(LIST_DauSach &lds, pDauSach &pDS);

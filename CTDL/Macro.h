@@ -78,4 +78,12 @@
 #define XINPUT 110
 #define YINPUT 3
 
+#define MIN_YEAR 2000
+#define MAX_YEAR 9999
+#define MIN_MONTH 1
+#define MAX_MONTH 12
+#define MIN_DAY 1
+#define MAX_DAY 31
+
+
 
