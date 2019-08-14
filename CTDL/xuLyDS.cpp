@@ -31,18 +31,15 @@ void drawTable(LIST_DauSach &lds, pDauSach &pDS) {
 	gotoxy(55, 4); cout << "TAC GIA";
 	gotoxy(86, 4); cout << "SO TR";
 	gotoxy(94, 4); cout << "NAM XB";
-<<<<<<< HEAD
 	drawEditDS(110, 3);
 	drawNoti(110, 24);
 	/*showListTL(lds, pDS);*/
 	system("pause");
-=======
 	/*drawEditDS(110,3);
 	drawNoti(110, 24);
 	inputDS(110, 3, lds);
 	showListDS(lds,pDS);
 	system("pause");*/
->>>>>>> c4bc09c5d0e8aac5131dca0c7b81d17067d00b77
 }
 void drawEditDS(int x, int y) {
 	gotoxy(x + 10, y - 1); cout << "CAP NHAT DAU SACH";

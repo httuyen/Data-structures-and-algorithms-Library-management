@@ -1,19 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-﻿Build started 03/08/2019 7:51:53 PM.
-=======
-<<<<<<< HEAD
-﻿Build started 8/3/2019 3:53:50 PM.
-=======
-<<<<<<< HEAD
-﻿Build started 02/08/2019 10:51:17 PM.
-=======
-<<<<<<< HEAD
-﻿Build started 8/2/2019 5:59:49 PM.
->>>>>>> cf1fd9289cf62e8f8ed7f93a170d81e9f7f67a72
-=======
-﻿Build started 8/3/2019 7:47:56 PM.
->>>>>>> 8d2667cd772bd719eedd1ce7c30e5505081eb965
+﻿Build started 8/4/2019 2:00:57 AM.
 Environment at start of build:
 ALLUSERSPROFILE = C:\ProgramData
 APPDATA = C:\Users\Admin\AppData\Roaming
@@ -73,8 +58,8 @@ VSLANG = 1033
 VSSKUEDITION = Enterprise
 windir = C:\WINDOWS
 
-19:47:56.431     1>Project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" on node 2 (Build target(s)).
-19:47:56.431     1>Initial Properties:
+02:00:57.394     1>Project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" on node 2 (Build target(s)).
+02:00:57.394     1>Initial Properties:
                    _AfterCompileWinFXInternalDependsOn = 
                            PrepareResourcesForSatelliteAssemblies;
                            MergeLocalizationDirectives;
@@ -103,6 +88,7 @@ windir = C:\WINDOWS
                    _DirectoryBuildTargetsBasePath = 
                    _DirectoryBuildTargetsFile = Directory.Build.targets
                    _DocumentationFileProduced = false
+                   _FindDependencies = false
                    _FullFrameworkReferenceAssemblyPaths = C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0
                    _GenerateAppxManifestDependsOn = ;_FixVCLibs120References
                    _GenerateBindingRedirectsIntermediateAppConfig = Debug\CTDL.exe.config
@@ -196,7 +182,7 @@ windir = C:\WINDOWS
                    _VCToolsVersionProps = C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Auxiliary\Build\Microsoft.VCToolsVersion.default.props
                    AddAdditionalExplicitAssemblyReferences = true
                    AddAppConfigToBuildOutputs = true
-                   AdditionalExplicitAssemblyReferences = System.Core;
+                   AdditionalExplicitAssemblyReferences = 
                    AfterBuildCompileTargets = 
                          ;
                          AfterBuildCompileEvent;
@@ -394,6 +380,7 @@ windir = C:\WINDOWS
                        
                    BuildSystem = MSBuild
                    BuildTaskAssembly = PresentationBuildTasks, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+                   BuildType = Build
                    BuiltProjectOutputGroupDependenciesDependsOn = 
                          ;
                          
@@ -1094,6 +1081,7 @@ windir = C:\WINDOWS
                        
                        
                    ReferencePath = C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\atlmfc\lib\x86;;C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\lib\x86;
+                   ReferringTargetFrameworkForProjectReferences = .NETFramework,Version=v4.0
                    RemoteDebuggerAttach = False
                    RemoteDebuggerConnection = RemoteWithAuthentication
                    RemoteDebuggerDebuggerType = Auto
@@ -1102,6 +1090,7 @@ windir = C:\WINDOWS
                    RemoteDebuggerSQLDebugging = False
                    RemoteDebuggerWorkingDirectory = D:\CTDLGT2019\CTDL\
                    RemoteGPUDebuggerTargetType = {F4453496-1DB8-47F8-A7D5-31EBDDC2EC96}
+                   RemoveAssemblyFoldersIfNoTargetFramework = true
                    ReportingServicesTargets = C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\Microsoft\VisualStudio\v15.0\ReportingServices\Microsoft.ReportingServices.targets
                    RequiredBundles = Microsoft.VisualStudio.Component.VC.Tools.x86.x64;
                    ResGenDependsOn = ResolveAssemblyReferences;SplitResourcesByCulture;BeforeResGen;CoreResGen;AfterResGen
@@ -1190,6 +1179,7 @@ windir = C:\WINDOWS
                    SGenUseKeep = false
                    SGenUseProxyTypes = true
                    ShouldMarkCertainSDKReferencesAsRuntimeOnly = true
+                   ShouldUnsetParentConfigurationAndPlatform = true
                    ShowAllFiles = false
                    SkipCopyBuildProduct = true
                    SkipCopyUnchangedFiles = true
@@ -1215,10 +1205,12 @@ windir = C:\WINDOWS
                    TargetExt = .exe
                    TargetFileName = CTDL.exe
                    TargetFrameworkAsMSBuildRuntime = CLR4
+                   TargetFrameworkDirectory = C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0;;;C:\Program Files (x86)\Windows Kits\10\References
                    TargetFrameworkIdentifier = .NETFramework
-                   TargetFrameworkMoniker = .NETFramework,Version=v4.0
+                   TargetFrameworkMoniker = 
                    TargetFrameworkMonikerAssemblyAttributesPath = C:\Users\Admin\AppData\Local\Temp\.NETFramework,Version=v4.0.AssemblyAttributes.cpp
                    TargetFrameworkMonikerDisplayName = .NET Framework 4
+                   TargetFrameworkSDKDirectory = C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\
                    TargetFrameworkSDKToolsDirectory = C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools\
                    TargetFrameworkVersion = v4.0
                    TargetName = CTDL
@@ -1366,8 +1358,9 @@ windir = C:\WINDOWS
                    VsInstallRoot = C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise
                    VSLANG = 1033
                    VSSKUEDITION = Enterprise
-                   VSTEL_CurrentSolutionBuildID = 299086328
-                   VSTEL_SolutionSessionID = {92EABE6A-E476-426E-BB8C-5A614732DEE5}
+                   VSTEL_CurrentSolutionBuildID = 321467109
+                   VSTEL_ProjectID = {113D63C7-4658-4FDD-9AD7-36B0ABFFF2B3}
+                   VSTEL_SolutionSessionID = {BCDE71C4-B911-45CA-89B7-83FE12A46D0C}
                    VSVersion = $(VisualStudioVersion)
                    WDKBinRoot = C:\Program Files (x86)\Windows Kits\10\bin\10.0.17763.0
                    WebBrowserDebuggerDebuggerType = Auto
@@ -1426,9 +1419,9 @@ windir = C:\WINDOWS
                    XamlTemporaryAssemblyName = CTDL
                    YieldDuringToolExecution = true
 
-19:47:56.431     1>Building with tools version "15.0".
+02:00:57.394     1>Building with tools version "15.0".
                    Target "EnableIntermediateOutputPathMismatchWarning" skipped, due to false condition; ('$(RestoreProjectStyle)' == 'PackageReference') was evaluated as ('' == 'PackageReference').
-19:47:56.433     1>Target "_CheckForInvalidConfigurationAndPlatform: (TargetId:2)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "SetTelemetryEnvironmentVariables" depends on it):
+02:00:57.394     1>Target "_CheckForInvalidConfigurationAndPlatform: (TargetId:2)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "SetTelemetryEnvironmentVariables" depends on it):
                    Set Property: _InvalidConfigurationMessageText=The OutputPath property is not set for project 'CTDL.vcxproj'.  Please check to make sure that you have specified a valid combination of Configuration and Platform for this project.  Configuration='Debug'  Platform='Win32'.
                    Set Property: _InvalidConfigurationMessageText=The OutputPath property is not set for project 'CTDL.vcxproj'.  Please check to make sure that you have specified a valid combination of Configuration and Platform for this project.  Configuration='Debug'  Platform='Win32'.  This error may also appear if some other project is trying to follow a project-to-project reference to this project, this project has been unloaded or is not included in the solution, and the referencing project does not build using the same or an equivalent Configuration or Platform.
                    Task "Error" skipped, due to false condition; ( '$(_InvalidConfigurationError)' == 'true' ) was evaluated as ( '' == 'true' ).
@@ -1449,21 +1442,21 @@ windir = C:\WINDOWS
                    Task "Error" skipped, due to false condition; ('$(IntermediateOutputPath)' != '' and !HasTrailingSlash('$(IntermediateOutputPath)')) was evaluated as ('Debug\' != '' and !HasTrailingSlash('Debug\')).
                    Task "Error" skipped, due to false condition; ( '$(_InitialMSBuildProjectExtensionsPath)' != '' And '$(MSBuildProjectExtensionsPath)' != '$(_InitialMSBuildProjectExtensionsPath)' ) was evaluated as ( 'D:\CTDLGT2019\CTDL\obj\' != '' And 'D:\CTDLGT2019\CTDL\obj\' != 'D:\CTDLGT2019\CTDL\obj\' ).
                    Task "Warning" skipped, due to false condition; ( '$(EnableBaseIntermediateOutputPathMismatchWarning)' == 'true' And '$(_InitialBaseIntermediateOutputPath)' != '$(BaseIntermediateOutputPath)' And '$(BaseIntermediateOutputPath)' != '$(MSBuildProjectExtensionsPath)' ) was evaluated as ( '' == 'true' And 'obj\' != 'obj\' And 'obj\' != 'D:\CTDLGT2019\CTDL\obj\' ).
-19:47:56.436     1>Done building target "_CheckForInvalidConfigurationAndPlatform" in project "CTDL.vcxproj".: (TargetId:2)
+02:00:57.397     1>Done building target "_CheckForInvalidConfigurationAndPlatform" in project "CTDL.vcxproj".: (TargetId:2)
                    Target "_CheckForInvalidConfigurationAndPlatform" skipped. Previously built successfully.
-19:47:56.436     1>Target "SetTelemetryEnvironmentVariables: (TargetId:3)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.Cpp.DesignTime.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "Build" depends on it):
+02:00:57.397     1>Target "SetTelemetryEnvironmentVariables: (TargetId:3)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.Cpp.DesignTime.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "Build" depends on it):
                    Using "SetEnv" task from assembly "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.Build.CppTasks.Common.dll".
                    Task "SetEnv" (TaskId:4)
                      Task Parameter:Name=VSTEL_SolutionSessionID (TaskId:4)
-                     Task Parameter:Value={92EABE6A-E476-426E-BB8C-5A614732DEE5} (TaskId:4)
+                     Task Parameter:Value={BCDE71C4-B911-45CA-89B7-83FE12A46D0C} (TaskId:4)
                      Task Parameter:Prefix=False (TaskId:4)
-                     VSTEL_SolutionSessionID={92EABE6A-E476-426E-BB8C-5A614732DEE5} (TaskId:4)
+                     VSTEL_SolutionSessionID={BCDE71C4-B911-45CA-89B7-83FE12A46D0C} (TaskId:4)
                    Done executing task "SetEnv". (TaskId:4)
                    Task "SetEnv" (TaskId:5)
                      Task Parameter:Name=VSTEL_CurrentSolutionBuildID (TaskId:5)
-                     Task Parameter:Value=299086328 (TaskId:5)
+                     Task Parameter:Value=321467109 (TaskId:5)
                      Task Parameter:Prefix=False (TaskId:5)
-                     VSTEL_CurrentSolutionBuildID=299086328 (TaskId:5)
+                     VSTEL_CurrentSolutionBuildID=321467109 (TaskId:5)
                    Done executing task "SetEnv". (TaskId:5)
                    Task "SetEnv" (TaskId:6)
                      Task Parameter:Name=VSTEL_ProjectID (TaskId:6)
@@ -1472,8 +1465,8 @@ windir = C:\WINDOWS
                      VSTEL_ProjectID={113D63C7-4658-4FDD-9AD7-36B0ABFFF2B3} (TaskId:6)
                      Output Property: VSTEL_ProjectID={113D63C7-4658-4FDD-9AD7-36B0ABFFF2B3} (TaskId:6)
                    Done executing task "SetEnv". (TaskId:6)
-19:47:56.438     1>Done building target "SetTelemetryEnvironmentVariables" in project "CTDL.vcxproj".: (TargetId:3)
-19:47:56.438     1>Target "_PrepareForBuild: (TargetId:4)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.BuildSteps.Targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "Build" depends on it):
+02:00:57.398     1>Done building target "SetTelemetryEnvironmentVariables" in project "CTDL.vcxproj".: (TargetId:3)
+02:00:57.398     1>Target "_PrepareForBuild: (TargetId:4)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.BuildSteps.Targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "Build" depends on it):
                    Set Property: BuildType=Build
                    Set Property: _BuildActionType=Build
                    Task "CreateItem" skipped, due to false condition; ('%(CustomBuild.IncludeFileToTool)'!='') was evaluated as (''!='').
@@ -1481,17 +1474,17 @@ windir = C:\WINDOWS
                        CustomBuildStep=
                            CTDL
                                    Message=Performing Custom Build Step
-19:47:56.438     1>Done building target "_PrepareForBuild" in project "CTDL.vcxproj".: (TargetId:4)
-19:47:56.439     1>Target "_PrepareForReferenceResolution: (TargetId:5)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "ResolveReferences" depends on it):
+02:00:57.398     1>Done building target "_PrepareForBuild" in project "CTDL.vcxproj".: (TargetId:4)
+02:00:57.398     1>Target "_PrepareForReferenceResolution: (TargetId:5)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "ResolveReferences" depends on it):
                    Set Property: TargetFrameworkMoniker=
                    Set Property: _FindDependencies=false
                    Set Property: AdditionalExplicitAssemblyReferences=
                    Task "Message" skipped, due to false condition; ('$(_REFERENCE_DEBUG)'=='true') was evaluated as (''=='true').
-19:47:56.439     1>Done building target "_PrepareForReferenceResolution" in project "CTDL.vcxproj".: (TargetId:5)
+02:00:57.399     1>Done building target "_PrepareForReferenceResolution" in project "CTDL.vcxproj".: (TargetId:5)
                    Target "ComputeCrtSDKReference" skipped, due to false condition; ('@(ClCompile)'!='' and '$(WindowsAppContainer)'=='true' and '$(UseCrtSDKReference)' != 'false') was evaluated as ('Check_Input.cpp;DauSach.cpp;GlobalVariable.cpp;main.cpp;mylib.cpp;Date.cpp;RWDauSach.cpp;RWDocGia.cpp;stdafx.cpp;TempDG.cpp;welcome.cpp;xulyDG.cpp;xuLyDS.cpp;xulyMT.cpp'!='' and 'false'=='true' and '' != 'false').
-19:47:56.439     1>Target "BeforeResolveReferences: (TargetId:6)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "ResolveReferences" depends on it):
-19:47:56.439     1>Done building target "BeforeResolveReferences" in project "CTDL.vcxproj".: (TargetId:6)
-19:47:56.439     1>Target "AssignProjectConfiguration: (TargetId:7)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "ResolveReferences" depends on it):
+02:00:57.399     1>Target "BeforeResolveReferences: (TargetId:6)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "ResolveReferences" depends on it):
+02:00:57.399     1>Done building target "BeforeResolveReferences" in project "CTDL.vcxproj".: (TargetId:6)
+02:00:57.399     1>Target "AssignProjectConfiguration: (TargetId:7)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "ResolveReferences" depends on it):
                    Set Property: ShouldUnsetParentConfigurationAndPlatform=true
                    Using "AssignProjectConfiguration" task from assembly "Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
                    Task "AssignProjectConfiguration" (TaskId:7)
@@ -1506,12 +1499,12 @@ windir = C:\WINDOWS
                      Task Parameter:OnlyReferenceAndBuildProjectsEnabledInSolutionConfiguration=True (TaskId:7)
                      Task Parameter:ShouldUnsetParentConfigurationAndPlatform=True (TaskId:7)
                    Done executing task "AssignProjectConfiguration". (TaskId:7)
-19:47:56.440     1>Done building target "AssignProjectConfiguration" in project "CTDL.vcxproj".: (TargetId:7)
+02:00:57.399     1>Done building target "AssignProjectConfiguration" in project "CTDL.vcxproj".: (TargetId:7)
                    Target "AssignProjectConfiguration" skipped. Previously built successfully.
-19:47:56.440     1>Target "_SplitProjectReferencesByFileExistence: (TargetId:8)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "PrepareProjectReferences" depends on it):
+02:00:57.399     1>Target "_SplitProjectReferencesByFileExistence: (TargetId:8)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "PrepareProjectReferences" depends on it):
                    Task "ResolveNonMSBuildProjectOutput" skipped, due to false condition; ('$(BuildingInsideVisualStudio)'=='true' and '@(ProjectReferenceWithConfiguration)'!='') was evaluated as ('true'=='true' and ''!='').
-19:47:56.440     1>Done building target "_SplitProjectReferencesByFileExistence" in project "CTDL.vcxproj".: (TargetId:8)
-19:47:56.440     1>Target "_GetProjectReferenceTargetFrameworkProperties: (TargetId:9)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "PrepareProjectReferences" depends on it):
+02:00:57.399     1>Done building target "_SplitProjectReferencesByFileExistence" in project "CTDL.vcxproj".: (TargetId:8)
+02:00:57.400     1>Target "_GetProjectReferenceTargetFrameworkProperties: (TargetId:9)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "PrepareProjectReferences" depends on it):
                    Set Property: ReferringTargetFrameworkForProjectReferences=.NETFramework,Version=v4.0
                    Using "MSBuild" task from assembly "Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
                    Task "MSBuild" (TaskId:8)
@@ -1521,23 +1514,23 @@ windir = C:\WINDOWS
                      Task Parameter:SkipNonexistentTargets=True (TaskId:8)
                    Done executing task "MSBuild". (TaskId:8)
                    Task "GetReferenceNearestTargetFrameworkTask" skipped, due to false condition; ('@(_ProjectReferenceTargetFrameworkPossibilities->Count())' != '0' and '$(ReferringTargetFrameworkForProjectReferences)' != '') was evaluated as ('0' != '0' and '.NETFramework,Version=v4.0' != '').
-19:47:56.443     1>Done building target "_GetProjectReferenceTargetFrameworkProperties" in project "CTDL.vcxproj".: (TargetId:9)
-19:47:56.443     1>Target "PrepareProjectReferences: (TargetId:10)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "ResolveProjectReferences" depends on it):
-19:47:56.443     1>Done building target "PrepareProjectReferences" in project "CTDL.vcxproj".: (TargetId:10)
+02:00:57.401     1>Done building target "_GetProjectReferenceTargetFrameworkProperties" in project "CTDL.vcxproj".: (TargetId:9)
+02:00:57.401     1>Target "PrepareProjectReferences: (TargetId:10)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "ResolveProjectReferences" depends on it):
+02:00:57.401     1>Done building target "PrepareProjectReferences" in project "CTDL.vcxproj".: (TargetId:10)
                    Target "_RemoveNameMetadataFromProjectReferenceItems" skipped, due to false condition; ('@(ProjectReference)'!='') was evaluated as (''!='').
-19:47:56.443     1>Target "ResolveProjectReferences: (TargetId:11)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "ResolveReferences" depends on it):
+02:00:57.401     1>Target "ResolveProjectReferences: (TargetId:11)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "ResolveReferences" depends on it):
                    Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and ('$(BuildingInsideVisualStudio)' == 'true' or '$(BuildProjectReferences)' != 'true') and '$(VisualStudioVersion)' != '10.0' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('' == 'true' and '' != '' and ('true' == 'true' or 'true' != 'true') and '15.0' != '10.0' and '' != '').
                    Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and ('$(BuildingInsideVisualStudio)' == 'true' or '$(BuildProjectReferences)' != 'true') and '$(VisualStudioVersion)' == '10.0' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('' == 'true' and '' != '' and ('true' == 'true' or 'true' != 'true') and '15.0' == '10.0' and '' != '').
                    Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '$(BuildingInsideVisualStudio)' != 'true' and '$(BuildProjectReferences)' == 'true' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('' == 'true' and '' != '' and 'true' != 'true' and 'true' == 'true' and '' != '').
                    Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '$(BuildingProject)' == 'true' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('' == 'true' and '' != '' and 'true' == 'true' and '' != '').
                    Task "Warning" skipped, due to false condition; ('@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceNonexistent)' != '') was evaluated as ('' != '' and '' != '').
-19:47:56.444     1>Done building target "ResolveProjectReferences" in project "CTDL.vcxproj".: (TargetId:11)
+02:00:57.405     1>Done building target "ResolveProjectReferences" in project "CTDL.vcxproj".: (TargetId:11)
                    Target "FindInvalidProjectReferences" skipped, due to false condition; ('$(FindInvalidProjectReferences)' == 'true') was evaluated as ('' == 'true').
                    Target "ResolveNativeReferences" skipped, due to false condition; ('@(NativeReference)'!='') was evaluated as (''!='').
                    Target "_PrepareForReferenceResolution" skipped. Previously built successfully.
                    Target "ResolveProjectReferences" skipped. Previously built successfully.
                    Target "FindInvalidProjectReferences" skipped, due to false condition; ('$(FindInvalidProjectReferences)' == 'true') was evaluated as ('' == 'true').
-19:47:56.444     1>Target "GetFrameworkPaths: (TargetId:12)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.NETFramework.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "ResolveAssemblyReferences" depends on it):
+02:00:57.405     1>Target "GetFrameworkPaths: (TargetId:12)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.NETFramework.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "ResolveAssemblyReferences" depends on it):
                    Added Item(s): _TargetFramework40DirectoryItem=C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319
                    Added Item(s): _TargetFramework35DirectoryItem=C:\WINDOWS\Microsoft.NET\Framework\v3.5
                    Added Item(s): _TargetFramework30DirectoryItem=C:\WINDOWS\Microsoft.NET\Framework\v3.0
@@ -1547,18 +1540,18 @@ windir = C:\WINDOWS
                    Set Property: TargetFrameworkDirectory=C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319
                    Set Property: TargetFrameworkSDKDirectory=C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\
                    Added Item(s): _TargetFrameworkSDKDirectoryItem=C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\
-19:47:56.445     1>Done building target "GetFrameworkPaths" in project "CTDL.vcxproj".: (TargetId:12)
+02:00:57.405     1>Done building target "GetFrameworkPaths" in project "CTDL.vcxproj".: (TargetId:12)
                    Target "_PrepareForReferenceResolution" skipped. Previously built successfully.
                    Target "GetWinFXPath" skipped, due to false condition; (('@(Page)' != '' or '@(ApplicationDefinition)' != '' or '@(Resource)' != '') and ('$(GetWinFXNativePath)' != '' or '$(GetWinFXWoWPath)' != '' )) was evaluated as (('' != '' or '' != '' or '' != '') and ('' != '' or '' != '' )).
                    Target "GetFrameworkPaths" skipped. Previously built successfully.
-19:47:56.445     1>Target "GetReferenceAssemblyPaths: (TargetId:13)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "ResolveAssemblyReferences" depends on it):
+02:00:57.405     1>Target "GetReferenceAssemblyPaths: (TargetId:13)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "ResolveAssemblyReferences" depends on it):
                    Set Property: TargetFrameworkDirectory=
                    Task "GetReferenceAssemblyPaths" skipped, due to false condition; ('$(TargetFrameworkMoniker)' != '' and ('$(_TargetFrameworkDirectories)' == '' or '$(_FullFrameworkReferenceAssemblyPaths)' == '')) was evaluated as ('' != '' and ('C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0' == '' or 'C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0' == '')).
                    Set Property: TargetFrameworkDirectory=C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0;;
                    Set Property: TargetFrameworkDirectory=C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0;;;C:\Program Files (x86)\Windows Kits\10\References
                    Set Property: RemoveAssemblyFoldersIfNoTargetFramework=true
-19:47:56.445     1>Done building target "GetReferenceAssemblyPaths" in project "CTDL.vcxproj".: (TargetId:13)
-19:47:56.446     1>Target "SetBuildDefaultEnvironmentVariables: (TargetId:14)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.Cpp.Current.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "PrepareForBuild" depends on it):
+02:00:57.406     1>Done building target "GetReferenceAssemblyPaths" in project "CTDL.vcxproj".: (TargetId:13)
+02:00:57.406     1>Target "SetBuildDefaultEnvironmentVariables: (TargetId:14)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.Cpp.Current.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "PrepareForBuild" depends on it):
                    Task "SetEnv" (TaskId:9)
                      Task Parameter:Name=PATH (TaskId:9)
                      Task Parameter:Value=C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\bin\HostX86\x86;C:\Program Files (x86)\Windows Kits\10\bin\10.0.17763.0\x86;;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools;C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\tools;C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\ide;C:\Program Files (x86)\HTML Help Workshop;;C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin;C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\;C:\WINDOWS\SysWow64;;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files\Java\jdk1.8.0_161\bin;C:\WINDOWS\System32\OpenSSH\;D:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\MongoDB\Server\4.0\bin;C:\WINDOWS\system32\config\systemprofile\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Users\Admin\AppData\Local\Microsoft\WindowsApps;C:\Users\Admin\AppData\Local\GitHubDesktop\bin;C:\Program Files\MongoDB\Server\4.0\bin;; (TaskId:9)
@@ -1587,10 +1580,10 @@ windir = C:\WINDOWS
                      INCLUDE=C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include;;C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\atlmfc\include;;C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Auxiliary\VS\include;;C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\ucrt;;;C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Auxiliary\VS\UnitTest\include;C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\shared;C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\winrt;C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\cppwinrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\Include\um;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\Include\um; (TaskId:12)
                      Output Property: INCLUDE=C:\Program Files %28x86%29\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include%3b%3bC:\Program Files %28x86%29\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\atlmfc\include%3b%3bC:\Program Files %28x86%29\Microsoft Visual Studio\2017\Enterprise\VC\Auxiliary\VS\include%3b%3bC:\Program Files %28x86%29\Windows Kits\10\Include\10.0.17763.0\ucrt%3b%3b%3bC:\Program Files %28x86%29\Microsoft Visual Studio\2017\Enterprise\VC\Auxiliary\VS\UnitTest\include%3bC:\Program Files %28x86%29\Windows Kits\10\Include\10.0.17763.0\um%3bC:\Program Files %28x86%29\Windows Kits\10\Include\10.0.17763.0\shared%3bC:\Program Files %28x86%29\Windows Kits\10\Include\10.0.17763.0\winrt%3bC:\Program Files %28x86%29\Windows Kits\10\Include\10.0.17763.0\cppwinrt%3bC:\Program Files %28x86%29\Windows Kits\NETFXSDK\4.6.1\Include\um%3bC:\Program Files %28x86%29\Windows Kits\NETFXSDK\4.6.1\Include\um%3b (TaskId:12)
                    Done executing task "SetEnv". (TaskId:12)
-19:47:56.451     1>Done building target "SetBuildDefaultEnvironmentVariables" in project "CTDL.vcxproj".: (TargetId:14)
+02:00:57.416     1>Done building target "SetBuildDefaultEnvironmentVariables" in project "CTDL.vcxproj".: (TargetId:14)
                    Target "SetUserMacroEnvironmentVariables" skipped, due to false condition; ('@(BuildMacro)' != '' and '$(DesignTimeBuild)' != 'true') was evaluated as ('' != '' and '' != 'true').
                    Target "_PrepareForReferenceResolution" skipped. Previously built successfully.
-19:47:56.451     1>Target "GetResolvedWinMD: (TargetId:15)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "PrepareForBuild" depends on it):
+02:00:57.416     1>Target "GetResolvedWinMD: (TargetId:15)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "PrepareForBuild" depends on it):
                    Added Item(s): 
                        Link=
                            tmp
@@ -1673,8 +1666,8 @@ windir = C:\WINDOWS
                                    TypeLibraryResourceID=1
                                    UACExecutionLevel=AsInvoker
                                    UACUIAccess=false
-19:47:56.453     1>Done building target "GetResolvedWinMD" in project "CTDL.vcxproj".: (TargetId:15)
-19:47:56.453     1>Target "PlatformPrepareForBuild: (TargetId:16)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.Cpp.Platform.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "PrepareForBuild" depends on it):
+02:00:57.425     1>Done building target "GetResolvedWinMD" in project "CTDL.vcxproj".: (TargetId:15)
+02:00:57.425     1>Target "PlatformPrepareForBuild: (TargetId:16)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.Cpp.Platform.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "PrepareForBuild" depends on it):
                    Set Property: ConfigurationPlatformExists=true
                    Set Property: _CurrentPlatformToolsetShortName=v141
                    Task "VCMessage" skipped, due to false condition; ('$(_Error64bitToolsNotInstalled)' == 'true') was evaluated as ('' == 'true').
@@ -1683,8 +1676,8 @@ windir = C:\WINDOWS
                    Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(_ToolsetFound)' != 'true' and '$(PlatformToolset)' == 'v100') was evaluated as (''!='true' and 'true' != 'true' and 'v141' == 'v100').
                    Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(_ToolsetFound)' != 'true' and '$(PlatformToolset)' == 'v90') was evaluated as (''!='true' and 'true' != 'true' and 'v141' == 'v90').
                    Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(_ToolsetFound)' != 'true' and '$(PlatformToolset)' != 'v90' and '$(PlatformToolset)' != 'v100' and '$(PlatformToolset)' != 'v110') was evaluated as (''!='true' and 'true' != 'true' and 'v141' != 'v90' and 'v141' != 'v100' and 'v141' != 'v110').
-19:47:56.454     1>Done building target "PlatformPrepareForBuild" in project "CTDL.vcxproj".: (TargetId:16)
-19:47:56.454     1>Target "_CheckWindowsSDKInstalled: (TargetId:17)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.Cpp.WindowsSDK.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "PrepareForBuild" depends on it):
+02:00:57.425     1>Done building target "PlatformPrepareForBuild" in project "CTDL.vcxproj".: (TargetId:16)
+02:00:57.425     1>Target "_CheckWindowsSDKInstalled: (TargetId:17)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.Cpp.WindowsSDK.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "PrepareForBuild" depends on it):
                    Set Property: WindowsSDKInstalled=false
                    Set Property: WindowsSDK_UAP_Support=false
                    Set Property: WindowsSDK_Desktop_Support=false
@@ -1693,19 +1686,19 @@ windir = C:\WINDOWS
                    Set Property: WindowsSDK_Desktop_Support=true
                    Task "VCMessage" skipped, due to false condition; ('$(WindowsSDKInstalled)' != 'true') was evaluated as ('true' != 'true').
                    Task "VCMessage" skipped, due to false condition; ('$(WindowsAppContainer)' != 'true' and '$(WindowsSDK_Desktop_Support)' != true) was evaluated as ('false' != 'true' and 'true' != true).
-19:47:56.455     1>Done building target "_CheckWindowsSDKInstalled" in project "CTDL.vcxproj".: (TargetId:17)
+02:00:57.426     1>Done building target "_CheckWindowsSDKInstalled" in project "CTDL.vcxproj".: (TargetId:17)
                    Target "GetFrameworkPaths" skipped. Previously built successfully.
                    Target "GetReferenceAssemblyPaths" skipped. Previously built successfully.
                    Target "AssignLinkMetadata" skipped, due to false condition; ( '$(SynthesizeLinkMetadata)' == 'true' ) was evaluated as ( '' == 'true' ).
-19:47:56.456     1>Target "SetCABuildNativeEnvironmentVariables: (TargetId:18)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\Microsoft\VisualStudio\v15.0\CodeAnalysis\Microsoft.CodeAnalysis.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "PrepareForBuild" depends on it):
+02:00:57.426     1>Target "SetCABuildNativeEnvironmentVariables: (TargetId:18)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\Microsoft\VisualStudio\v15.0\CodeAnalysis\Microsoft.CodeAnalysis.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "PrepareForBuild" depends on it):
                    Task "SetEnv" (TaskId:13)
                      Task Parameter:Value=C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\atlmfc\include;C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include;C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\ucrt;;C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\shared;C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\winrt;C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\cppwinrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\Include\um;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\Include\um; (TaskId:13)
                      Task Parameter:Name=CAExcludePath (TaskId:13)
                      Task Parameter:Prefix=False (TaskId:13)
                      CAExcludePath=C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\atlmfc\include;C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include;C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\ucrt;;C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\shared;C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\winrt;C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\cppwinrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\Include\um;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\Include\um; (TaskId:13)
                    Done executing task "SetEnv". (TaskId:13)
-19:47:56.456     1>Done building target "SetCABuildNativeEnvironmentVariables" in project "CTDL.vcxproj".: (TargetId:18)
-19:47:56.456     1>Target "PrepareForBuild: (TargetId:19)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "ResolveAssemblyReferences" depends on it):
+02:00:57.426     1>Done building target "SetCABuildNativeEnvironmentVariables" in project "CTDL.vcxproj".: (TargetId:18)
+02:00:57.426     1>Target "PrepareForBuild: (TargetId:19)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "ResolveAssemblyReferences" depends on it):
                    Set Property: TargetDir=D:\CTDLGT2019\CTDL\Debug\
                    Set Property: LocalDebuggerCommand=D:\CTDLGT2019\CTDL\Debug\CTDL.exe
                    Set Property: BuildProjectReferences=false
@@ -1735,23 +1728,23 @@ windir = C:\WINDOWS
                              D:\CTDLGT2019\CTDL\Debug\
                              Debug\CTDL.tlog\ (TaskId:15)
                    Done executing task "MakeDir". (TaskId:15)
-19:47:56.460     1>Done building target "PrepareForBuild" in project "CTDL.vcxproj".: (TargetId:19)
+02:00:57.430     1>Done building target "PrepareForBuild" in project "CTDL.vcxproj".: (TargetId:19)
                    Target "_PrepareForReferenceResolution" skipped. Previously built successfully.
                    Target "ComputeCrtSDKReference" skipped, due to false condition; ('@(ClCompile)'!='' and '$(WindowsAppContainer)'=='true' and '$(UseCrtSDKReference)' != 'false') was evaluated as ('Check_Input.cpp;DauSach.cpp;GlobalVariable.cpp;main.cpp;mylib.cpp;Date.cpp;RWDauSach.cpp;RWDocGia.cpp;stdafx.cpp;TempDG.cpp;welcome.cpp;xulyDG.cpp;xuLyDS.cpp;xulyMT.cpp'!='' and 'false'=='true' and '' != 'false').
                    Target "GetInstalledSDKLocations" skipped, due to false condition; ('@(SDKReference)' != '') was evaluated as ('' != '').
-19:47:56.460     1>Target "ResolveSDKReferences: (TargetId:20)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "ResolveAssemblyReferences" depends on it):
+02:00:57.430     1>Target "ResolveSDKReferences: (TargetId:20)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "ResolveAssemblyReferences" depends on it):
                    Task "ResolveSDKReference" skipped, due to false condition; ('@(SDKReference)'!='') was evaluated as (''!='').
-19:47:56.460     1>Done building target "ResolveSDKReferences" in project "CTDL.vcxproj".: (TargetId:20)
+02:00:57.430     1>Done building target "ResolveSDKReferences" in project "CTDL.vcxproj".: (TargetId:20)
                    Target "ResolveSDKReferences" skipped. Previously built successfully.
-19:47:56.461     1>Target "ExpandSDKReferences: (TargetId:21)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "ResolveAssemblyReferences" depends on it):
+02:00:57.430     1>Target "ExpandSDKReferences: (TargetId:21)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "ResolveAssemblyReferences" depends on it):
                    Task "GetSDKReferenceFiles" skipped, due to false condition; ('@(ResolvedSDKReference)'!='') was evaluated as (''!='').
-19:47:56.461     1>Done building target "ExpandSDKReferences" in project "CTDL.vcxproj".: (TargetId:21)
+02:00:57.430     1>Done building target "ExpandSDKReferences" in project "CTDL.vcxproj".: (TargetId:21)
                    Target "ResolveNuGetPackageAssets" skipped, due to false condition; ('$(ResolveNuGetPackages)' == 'true' and exists('$(ProjectLockFile)')) was evaluated as ('true' == 'true' and exists('obj\project.assets.json')).
                    Target "FakesGenerateBeforeBuild" skipped, due to false condition; (@(Fakes) != '' AND $(BuildingProject)) was evaluated as ( != '' AND true).
                    Target "ImplicitlyExpandNETStandardFacades" skipped, due to false condition; ('$(ImplicitlyExpandNETStandardFacades)' == 'true') was evaluated as ('' == 'true').
                    Target "GetReferenceAssemblyPaths" skipped. Previously built successfully.
                    Target "ImplicitlyExpandNETStandardFacades" skipped, due to false condition; ('$(ImplicitlyExpandNETStandardFacades)' == 'true') was evaluated as ('' == 'true').
-19:47:56.461     1>Target "_HandlePackageFileConflicts: (TargetId:22)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\Microsoft\Microsoft.NET.Build.Extensions\Microsoft.NET.Build.Extensions.ConflictResolution.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "ResolveAssemblyReferences" depends on it):
+02:00:57.430     1>Target "_HandlePackageFileConflicts: (TargetId:22)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\Microsoft\Microsoft.NET.Build.Extensions\Microsoft.NET.Build.Extensions.ConflictResolution.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "ResolveAssemblyReferences" depends on it):
                    Using "ResolvePackageFileConflicts" task from assembly "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\Microsoft\Microsoft.NET.Build.Extensions\\tools\net46\Microsoft.NET.Build.Extensions.Tasks.dll".
                    Task "ResolvePackageFileConflicts" (TaskId:16)
                      Task Parameter:
@@ -1977,8 +1970,8 @@ windir = C:\WINDOWS
                             (TaskId:16)
                      Output Item(s): _ReferenceCopyLocalPathsWithoutConflicts= (TaskId:16)
                    Done executing task "ResolvePackageFileConflicts". (TaskId:16)
-19:47:56.462     1>Done building target "_HandlePackageFileConflicts" in project "CTDL.vcxproj".: (TargetId:22)
-19:47:56.462     1>Target "ResolveAssemblyReferences: (TargetId:23)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "ResolveReferences" depends on it):
+02:00:57.431     1>Done building target "_HandlePackageFileConflicts" in project "CTDL.vcxproj".: (TargetId:22)
+02:00:57.431     1>Target "ResolveAssemblyReferences: (TargetId:23)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "ResolveReferences" depends on it):
                    Added Item(s): 
                        _ReferenceInstalledAssemblyDirectory=
                            C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0
@@ -1988,20 +1981,20 @@ windir = C:\WINDOWS
                    Set Property: ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch=Warning
                    Set Property: FindDependenciesOfExternallyResolvedReferences=false
                    Task "ResolveAssemblyReference" skipped, due to false condition; ('@(Reference)'!='' or '@(_ResolvedProjectReferencePaths)'!='' or '@(_ExplicitReference)' != '') was evaluated as (''!='' or ''!='' or '' != '').
-19:47:56.466     1>Done building target "ResolveAssemblyReferences" in project "CTDL.vcxproj".: (TargetId:23)
+02:00:57.431     1>Done building target "ResolveAssemblyReferences" in project "CTDL.vcxproj".: (TargetId:23)
                    Target "GenerateBindingRedirects" skipped, due to false condition; ('$(AutoGenerateBindingRedirects)' == 'true' and '$(GenerateBindingRedirectsOutputType)' == 'true') was evaluated as ('' == 'true' and 'true' == 'true').
                    Target "_RemoveZipFileSuggestedRedirect" skipped, due to false condition; ('$(_TargetFrameworkVersionWithoutV)' >= '4.7.1' And '$(AllowZipFileRedirect)' != 'true') was evaluated as ('4.0' >= '4.7.1' And '' != 'true').
                    Target "GenerateBindingRedirectsUpdateAppConfig" skipped, due to false condition; ('$(AutoGenerateBindingRedirects)' == 'true' and '$(GenerateBindingRedirectsOutputType)' == 'true' and Exists('$(_GenerateBindingRedirectsIntermediateAppConfig)')) was evaluated as ('' == 'true' and 'true' == 'true' and Exists('Debug\CTDL.exe.config')).
                    Target "ResolveComReferences" skipped, due to false condition; ('@(COMReference)'!='' or '@(COMFileReference)'!='') was evaluated as (''!='' or ''!='').
-19:47:56.466     1>Target "AfterResolveReferences: (TargetId:24)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "ResolveReferences" depends on it):
-19:47:56.466     1>Done building target "AfterResolveReferences" in project "CTDL.vcxproj".: (TargetId:24)
+02:00:57.431     1>Target "AfterResolveReferences: (TargetId:24)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "ResolveReferences" depends on it):
+02:00:57.431     1>Done building target "AfterResolveReferences" in project "CTDL.vcxproj".: (TargetId:24)
                    Target "ImplicitlyExpandDesignTimeFacades" skipped, due to false condition; ('$(ImplicitlyExpandDesignTimeFacades)' == 'true') was evaluated as ('' == 'true').
                    Target "ResolveTestReferences" skipped, due to false condition; ('@(Shadow)'!='') was evaluated as (''!='').
-19:47:56.466     1>Target "ResolveReferences: (TargetId:25)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "Build" depends on it):
-19:47:56.466     1>Done building target "ResolveReferences" in project "CTDL.vcxproj".: (TargetId:25)
+02:00:57.432     1>Target "ResolveReferences: (TargetId:25)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "Build" depends on it):
+02:00:57.432     1>Done building target "ResolveReferences" in project "CTDL.vcxproj".: (TargetId:25)
                    Target "PrepareForBuild" skipped. Previously built successfully.
                    Target "PrepareForBuild" skipped. Previously built successfully.
-19:47:56.466     1>Target "InitializeBuildStatus: (TargetId:26)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "Build" depends on it):
+02:00:57.432     1>Target "InitializeBuildStatus: (TargetId:26)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "Build" depends on it):
                    Using "ReadLinesFromFile" task from assembly "Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
                    Task "ReadLinesFromFile" (TaskId:17)
                      Task Parameter:File=Debug\CTDL.tlog\CTDL.lastbuildstate (TaskId:17)
@@ -2027,19 +2020,19 @@ windir = C:\WINDOWS
                      Task Parameter:Files=Debug\CTDL.tlog\unsuccessfulbuild (TaskId:19)
                      Creating "Debug\CTDL.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified. (TaskId:19)
                    Done executing task "Touch". (TaskId:19)
-19:47:56.475     1>Done building target "InitializeBuildStatus" in project "CTDL.vcxproj".: (TargetId:26)
+02:00:57.435     1>Done building target "InitializeBuildStatus" in project "CTDL.vcxproj".: (TargetId:26)
                    Target "PrepareProjectReferences" skipped. Previously built successfully.
-19:47:56.476     1>Target "BuildGenerateSourcesTraverse: (TargetId:27)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "BuildGenerateSources" depends on it):
+02:00:57.435     1>Target "BuildGenerateSourcesTraverse: (TargetId:27)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "BuildGenerateSources" depends on it):
                    Task "MSBuild" skipped, due to false condition; ('$(BuildPassReferences)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceExistent)' != '' and '%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true') was evaluated as ('' == 'true' and '' != '' and '' != '' and '' == 'true').
-19:47:56.476     1>Done building target "BuildGenerateSourcesTraverse" in project "CTDL.vcxproj".: (TargetId:27)
+02:00:57.435     1>Done building target "BuildGenerateSourcesTraverse" in project "CTDL.vcxproj".: (TargetId:27)
                    Target "PrepareForBuild" skipped. Previously built successfully.
                    Target "ResolveReferences" skipped. Previously built successfully.
-19:47:56.476     1>Target "BeforeBuildGenerateSources: (TargetId:28)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.BuildSteps.Targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
-19:47:56.476     1>Done building target "BeforeBuildGenerateSources" in project "CTDL.vcxproj".: (TargetId:28)
-19:47:56.476     1>Target "PreBuildEvent: (TargetId:29)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
+02:00:57.435     1>Target "BeforeBuildGenerateSources: (TargetId:28)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.BuildSteps.Targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
+02:00:57.435     1>Done building target "BeforeBuildGenerateSources" in project "CTDL.vcxproj".: (TargetId:28)
+02:00:57.435     1>Target "PreBuildEvent: (TargetId:29)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
                    Task "Message" skipped, due to false condition; ('%(PreBuildEvent.Message)' != '' and '%(PreBuildEvent.Command)' != '') was evaluated as ('' != '' and '' != '').
                    Task "Exec" skipped, due to false condition; ('%(PreBuildEvent.Command)' != '') was evaluated as ('' != '').
-19:47:56.476     1>Done building target "PreBuildEvent" in project "CTDL.vcxproj".: (TargetId:29)
+02:00:57.435     1>Done building target "PreBuildEvent" in project "CTDL.vcxproj".: (TargetId:29)
                    Target "CustomBuild" skipped, due to false condition; ('@(CustomBuild)' != '') was evaluated as ('' != '').
                    Target "FxExport" skipped, due to false condition; ('@(FxCompile)' != '') was evaluated as ('' != '').
                    Target "FxCompile" skipped, due to false condition; ('@(FxCompile)' != '') was evaluated as ('' != '').
@@ -2048,9 +2041,9 @@ windir = C:\WINDOWS
                    Target "InitializeBuildStatus" skipped. Previously built successfully.
                    Target "SetBuildDefaultEnvironmentVariables" skipped. Previously built successfully.
                    Target "SetUserMacroEnvironmentVariables" skipped, due to false condition; ('@(BuildMacro)' != '' and '$(DesignTimeBuild)' != 'true') was evaluated as ('' != '' and '' != 'true').
-19:47:56.476     1>Target "_SelectedFiles: (TargetId:30)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "CopyFileToFolders" depends on it):
-19:47:56.476     1>Done building target "_SelectedFiles" in project "CTDL.vcxproj".: (TargetId:30)
-19:47:56.476     1>Target "CopyFileToFolders: (TargetId:31)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
+02:00:57.435     1>Target "_SelectedFiles: (TargetId:30)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "CopyFileToFolders" depends on it):
+02:00:57.435     1>Done building target "_SelectedFiles" in project "CTDL.vcxproj".: (TargetId:30)
+02:00:57.435     1>Target "CopyFileToFolders: (TargetId:31)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
                    Using "GetOutOfDateItems" task from assembly "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.Build.CppTasks.Common.dll".
                    Task "GetOutOfDateItems" (TaskId:20)
                      Task Parameter:OutputsMetadataName=FullDestinationPath (TaskId:20)
@@ -2059,51 +2052,51 @@ windir = C:\WINDOWS
                      Task Parameter:TLogNamePrefix=CopyFile (TaskId:20)
                    Done executing task "GetOutOfDateItems". (TaskId:20)
                    Task "Copy" skipped, due to false condition; ('@(_OutOfDateCopyFile)' != '') was evaluated as ('' != '').
-19:47:56.477     1>Done building target "CopyFileToFolders" in project "CTDL.vcxproj".: (TargetId:31)
+02:00:57.436     1>Done building target "CopyFileToFolders" in project "CTDL.vcxproj".: (TargetId:31)
                    Target "Xsd" skipped, due to false condition; ('@(Xsd)' != '') was evaluated as ('' != '').
-19:47:56.477     1>Target "_Xsd: (TargetId:32)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
-19:47:56.477     1>Done building target "_Xsd" in project "CTDL.vcxproj".: (TargetId:32)
-19:47:56.477     1>Target "MakeDirsForMidl: (TargetId:33)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_Midl" depends on it):
+02:00:57.436     1>Target "_Xsd: (TargetId:32)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
+02:00:57.436     1>Done building target "_Xsd" in project "CTDL.vcxproj".: (TargetId:32)
+02:00:57.437     1>Target "MakeDirsForMidl: (TargetId:33)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_Midl" depends on it):
                    Set Property: Midl_OutputDir=
                    Task "Makedir" (TaskId:21)
                    Done executing task "Makedir". (TaskId:21)
-19:47:56.477     1>Done building target "MakeDirsForMidl" in project "CTDL.vcxproj".: (TargetId:33)
+02:00:57.437     1>Done building target "MakeDirsForMidl" in project "CTDL.vcxproj".: (TargetId:33)
                    Target "Midl" skipped, due to false condition; ('@(Midl)' != '') was evaluated as ('' != '').
                    Target "CustomBuild" skipped, due to false condition; ('@(CustomBuild)' != '') was evaluated as ('' != '').
                    Target "FxExport" skipped, due to false condition; ('@(FxCompile)' != '') was evaluated as ('' != '').
                    Target "FxCompile" skipped, due to false condition; ('@(FxCompile)' != '') was evaluated as ('' != '').
-19:47:56.477     1>Target "ComputeMIDLGeneratedCompileInputs: (TargetId:34)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_Midl" depends on it):
+02:00:57.437     1>Target "ComputeMIDLGeneratedCompileInputs: (TargetId:34)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_Midl" depends on it):
                    Set Property: Midl_OutputDir=
-19:47:56.477     1>Done building target "ComputeMIDLGeneratedCompileInputs" in project "CTDL.vcxproj".: (TargetId:34)
-19:47:56.477     1>Target "AfterMidl: (TargetId:35)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_Midl" depends on it):
-19:47:56.477     1>Done building target "AfterMidl" in project "CTDL.vcxproj".: (TargetId:35)
-19:47:56.477     1>Target "_Midl: (TargetId:36)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
-19:47:56.477     1>Done building target "_Midl" in project "CTDL.vcxproj".: (TargetId:36)
-19:47:56.477     1>Target "AfterBuildGenerateSources: (TargetId:37)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.BuildSteps.Targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
-19:47:56.477     1>Done building target "AfterBuildGenerateSources" in project "CTDL.vcxproj".: (TargetId:37)
-19:47:56.477     1>Target "AfterBuildGenerateSourcesEvent: (TargetId:38)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
-19:47:56.477     1>Done building target "AfterBuildGenerateSourcesEvent" in project "CTDL.vcxproj".: (TargetId:38)
-19:47:56.478     1>Target "_BuildGenerateSourcesAction: (TargetId:39)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "BuildGenerateSources" depends on it):
-19:47:56.478     1>Done building target "_BuildGenerateSourcesAction" in project "CTDL.vcxproj".: (TargetId:39)
-19:47:56.478     1>Target "BuildGenerateSources: (TargetId:40)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "Build" depends on it):
-19:47:56.478     1>Done building target "BuildGenerateSources" in project "CTDL.vcxproj".: (TargetId:40)
+02:00:57.437     1>Done building target "ComputeMIDLGeneratedCompileInputs" in project "CTDL.vcxproj".: (TargetId:34)
+02:00:57.437     1>Target "AfterMidl: (TargetId:35)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_Midl" depends on it):
+02:00:57.437     1>Done building target "AfterMidl" in project "CTDL.vcxproj".: (TargetId:35)
+02:00:57.437     1>Target "_Midl: (TargetId:36)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
+02:00:57.437     1>Done building target "_Midl" in project "CTDL.vcxproj".: (TargetId:36)
+02:00:57.437     1>Target "AfterBuildGenerateSources: (TargetId:37)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.BuildSteps.Targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
+02:00:57.437     1>Done building target "AfterBuildGenerateSources" in project "CTDL.vcxproj".: (TargetId:37)
+02:00:57.437     1>Target "AfterBuildGenerateSourcesEvent: (TargetId:38)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
+02:00:57.437     1>Done building target "AfterBuildGenerateSourcesEvent" in project "CTDL.vcxproj".: (TargetId:38)
+02:00:57.437     1>Target "_BuildGenerateSourcesAction: (TargetId:39)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "BuildGenerateSources" depends on it):
+02:00:57.437     1>Done building target "_BuildGenerateSourcesAction" in project "CTDL.vcxproj".: (TargetId:39)
+02:00:57.437     1>Target "BuildGenerateSources: (TargetId:40)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "Build" depends on it):
+02:00:57.437     1>Done building target "BuildGenerateSources" in project "CTDL.vcxproj".: (TargetId:40)
                    Target "PrepareProjectReferences" skipped. Previously built successfully.
-19:47:56.478     1>Target "BuildCompileTraverse: (TargetId:41)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "BuildCompile" depends on it):
+02:00:57.437     1>Target "BuildCompileTraverse: (TargetId:41)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "BuildCompile" depends on it):
                    Task "MSBuild" skipped, due to false condition; ('$(BuildPassReferences)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceExistent)' != ''  and '%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true') was evaluated as ('' == 'true' and '' != '' and '' != ''  and '' == 'true').
-19:47:56.478     1>Done building target "BuildCompileTraverse" in project "CTDL.vcxproj".: (TargetId:41)
+02:00:57.437     1>Done building target "BuildCompileTraverse" in project "CTDL.vcxproj".: (TargetId:41)
                    Target "PrepareForBuild" skipped. Previously built successfully.
                    Target "ResolveReferences" skipped. Previously built successfully.
-19:47:56.478     1>Target "BeforeClCompile: (TargetId:42)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_ClCompile" depends on it):
-19:47:56.478     1>Done building target "BeforeClCompile" in project "CTDL.vcxproj".: (TargetId:42)
+02:00:57.437     1>Target "BeforeClCompile: (TargetId:42)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_ClCompile" depends on it):
+02:00:57.437     1>Done building target "BeforeClCompile" in project "CTDL.vcxproj".: (TargetId:42)
                    Target "ComputeMIDLGeneratedCompileInputs" skipped. Previously built successfully.
-19:47:56.478     1>Target "ComputeCLInputPDBName: (TargetId:43)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_ClCompile" depends on it):
-19:47:56.488     1>Done building target "ComputeCLInputPDBName" in project "CTDL.vcxproj".: (TargetId:43)
+02:00:57.437     1>Target "ComputeCLInputPDBName: (TargetId:43)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_ClCompile" depends on it):
+02:00:57.437     1>Done building target "ComputeCLInputPDBName" in project "CTDL.vcxproj".: (TargetId:43)
                    Target "ResolveReferences" skipped. Previously built successfully.
-19:47:56.488     1>Target "ComputeReferenceCLInput: (TargetId:44)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_ClCompile" depends on it):
+02:00:57.437     1>Target "ComputeReferenceCLInput: (TargetId:44)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_ClCompile" depends on it):
                    Task "WriteLinesToFile" skipped, due to false condition; (('@(_ReferenceCopyLocalPaths)'!='') and '$(DesignTimeBuild)' != 'true') was evaluated as ((''!='') and '' != 'true').
                    Task "Message" skipped, due to false condition; ('$(_REFERENCE_DEBUG)'=='true') was evaluated as (''=='true').
-19:47:56.488     1>Done building target "ComputeReferenceCLInput" in project "CTDL.vcxproj".: (TargetId:44)
-19:47:56.488     1>Target "WarnCompileDuplicatedFilename: (TargetId:45)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_ClCompile" depends on it):
+02:00:57.438     1>Done building target "ComputeReferenceCLInput" in project "CTDL.vcxproj".: (TargetId:44)
+02:00:57.438     1>Target "WarnCompileDuplicatedFilename: (TargetId:45)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_ClCompile" depends on it):
                    Task "VCMessage" skipped, due to false condition; ('%(ClCompile.ExcludedFromBuild)' != 'true' and '%(Filename)%(Extension)' != '@(ClCompile->'%(Filename)%(Extension)')' and '%(ObjectFileName)' == '@(ClCompile->Metadata(ObjectFileName)->Distinct())') was evaluated as ('' != 'true' and 'Check_Input.cpp' != 'Check_Input.cpp' and 'Debug\' == 'Debug\').
                    Task "VCMessage" skipped, due to false condition; ('%(ClCompile.ExcludedFromBuild)' != 'true' and '%(Filename)%(Extension)' != '@(ClCompile->'%(Filename)%(Extension)')' and '%(ObjectFileName)' == '@(ClCompile->Metadata(ObjectFileName)->Distinct())') was evaluated as ('' != 'true' and 'DauSach.cpp' != 'DauSach.cpp' and 'Debug\' == 'Debug\').
                    Task "VCMessage" skipped, due to false condition; ('%(ClCompile.ExcludedFromBuild)' != 'true' and '%(Filename)%(Extension)' != '@(ClCompile->'%(Filename)%(Extension)')' and '%(ObjectFileName)' == '@(ClCompile->Metadata(ObjectFileName)->Distinct())') was evaluated as ('' != 'true' and 'GlobalVariable.cpp' != 'GlobalVariable.cpp' and 'Debug\' == 'Debug\').
@@ -2118,10 +2111,10 @@ windir = C:\WINDOWS
                    Task "VCMessage" skipped, due to false condition; ('%(ClCompile.ExcludedFromBuild)' != 'true' and '%(Filename)%(Extension)' != '@(ClCompile->'%(Filename)%(Extension)')' and '%(ObjectFileName)' == '@(ClCompile->Metadata(ObjectFileName)->Distinct())') was evaluated as ('' != 'true' and 'xulyDG.cpp' != 'xulyDG.cpp' and 'Debug\' == 'Debug\').
                    Task "VCMessage" skipped, due to false condition; ('%(ClCompile.ExcludedFromBuild)' != 'true' and '%(Filename)%(Extension)' != '@(ClCompile->'%(Filename)%(Extension)')' and '%(ObjectFileName)' == '@(ClCompile->Metadata(ObjectFileName)->Distinct())') was evaluated as ('' != 'true' and 'xuLyDS.cpp' != 'xuLyDS.cpp' and 'Debug\' == 'Debug\').
                    Task "VCMessage" skipped, due to false condition; ('%(ClCompile.ExcludedFromBuild)' != 'true' and '%(Filename)%(Extension)' != '@(ClCompile->'%(Filename)%(Extension)')' and '%(ObjectFileName)' == '@(ClCompile->Metadata(ObjectFileName)->Distinct())') was evaluated as ('' != 'true' and 'xulyMT.cpp' != 'xulyMT.cpp' and 'Debug\' == 'Debug\').
-19:47:56.496     1>Done building target "WarnCompileDuplicatedFilename" in project "CTDL.vcxproj".: (TargetId:45)
-19:47:56.496     1>Target "FixupCLCompileOptions: (TargetId:46)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_ClCompile" depends on it):
-19:47:56.497     1>Done building target "FixupCLCompileOptions" in project "CTDL.vcxproj".: (TargetId:46)
-19:47:56.497     1>Target "MakeDirsForCl: (TargetId:47)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_ClCompile" depends on it):
+02:00:57.442     1>Done building target "WarnCompileDuplicatedFilename" in project "CTDL.vcxproj".: (TargetId:45)
+02:00:57.442     1>Target "FixupCLCompileOptions: (TargetId:46)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_ClCompile" depends on it):
+02:00:57.443     1>Done building target "FixupCLCompileOptions" in project "CTDL.vcxproj".: (TargetId:46)
+02:00:57.443     1>Target "MakeDirsForCl: (TargetId:47)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_ClCompile" depends on it):
                    Added Item(s): ClDirsToMake=D:\CTDLGT2019\CTDL\Debug
                    Added Item(s): ClDirsToMake=D:\CTDLGT2019\CTDL\Debug
                    Added Item(s): ClDirsToMake=D:\CTDLGT2019\CTDL\Debug
@@ -2143,7 +2136,7 @@ windir = C:\WINDOWS
                            D:\CTDLGT2019\CTDL\Debug
                            D:\CTDLGT2019\CTDL\Debug
                            D:\CTDLGT2019\CTDL\Debug
-19:47:56.498     1>Done building target "MakeDirsForCl" in project "CTDL.vcxproj".: (TargetId:47)
+02:00:57.444     1>Done building target "MakeDirsForCl" in project "CTDL.vcxproj".: (TargetId:47)
                    Target "_SelectedFiles" skipped. Previously built successfully.
                    Target "ComputeMIDLGeneratedCompileInputs" skipped. Previously built successfully.
                    Target "ComputeCLInputPDBName" skipped. Previously built successfully.
@@ -2151,13 +2144,13 @@ windir = C:\WINDOWS
                    Target "WarnCompileDuplicatedFilename" skipped. Previously built successfully.
                    Target "FixupCLCompileOptions" skipped. Previously built successfully.
                    Target "_SelectedFiles" skipped. Previously built successfully.
-19:47:56.498     1>Target "SelectCustomBuild: (TargetId:48)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "SelectClCompile" depends on it):
-19:47:56.498     1>Done building target "SelectCustomBuild" in project "CTDL.vcxproj".: (TargetId:48)
-19:47:56.498     1>Target "SelectClCompile: (TargetId:49)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "ClCompile" depends on it):
-19:47:56.499     1>Done building target "SelectClCompile" in project "CTDL.vcxproj".: (TargetId:49)
+02:00:57.444     1>Target "SelectCustomBuild: (TargetId:48)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "SelectClCompile" depends on it):
+02:00:57.444     1>Done building target "SelectCustomBuild" in project "CTDL.vcxproj".: (TargetId:48)
+02:00:57.444     1>Target "SelectClCompile: (TargetId:49)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "ClCompile" depends on it):
+02:00:57.444     1>Done building target "SelectClCompile" in project "CTDL.vcxproj".: (TargetId:49)
                    Target "GenerateTargetFrameworkMonikerAttribute" skipped, due to false condition; ('$(GenerateTargetFrameworkAttribute)' == 'true') was evaluated as ('false' == 'true').
                    Target "ManagedIncrementalBuildPreProcessDependencyGraph" skipped, due to false condition; ('@(ClCompile)' != '' and '$(EnableManagedIncrementalBuild)' == 'True') was evaluated as ('Check_Input.cpp;DauSach.cpp;GlobalVariable.cpp;main.cpp;mylib.cpp;Date.cpp;RWDauSach.cpp;RWDocGia.cpp;stdafx.cpp;TempDG.cpp;welcome.cpp;xulyDG.cpp;xuLyDS.cpp;xulyMT.cpp' != '' and 'false' == 'True').
-19:47:56.499     1>Target "ClCompile: (TargetId:50)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_ClCompile" depends on it):
+02:00:57.444     1>Target "ClCompile: (TargetId:50)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_ClCompile" depends on it):
                    Set Property: CLToolArchitecture=Native32Bit
                    Set Property: CLDeleteOutputOnExecute=true
                    Task "Delete" skipped, due to false condition; ('%(ClCompile.DebugInformationFormat)' != '' and '%(ClCompile.DebugInformationFormat)' != 'None' and '%(ClCompile.DebugInformationFormat)' != 'OldStyle' and '%(ClCompile.ProgramDataBaseFileName)' != '' and !Exists(%(ClCompile.ProgramDataBaseFileName))) was evaluated as ('EditAndContinue' != '' and 'EditAndContinue' != 'None' and 'EditAndContinue' != 'OldStyle' and 'Debug\vc141.pdb' != '' and !Exists(Debug\vc141.pdb)).
@@ -3274,60 +3267,60 @@ windir = C:\WINDOWS
                      	D:\CTDLGT2019\CTDL\DEBUG\XULYDG.OBJ (TaskId:24)
                      	D:\CTDLGT2019\CTDL\DEBUG\XULYDS.OBJ (TaskId:24)
                      	D:\CTDLGT2019\CTDL\DEBUG\XULYMT.OBJ (TaskId:24)
-                     xulyMT.cpp will be compiled because D:\CTDLGT2019\CTDL\xulyMT.cpp was modified at 8/3/2019 7:47:54 PM. (TaskId:24)
+                     xulyMT.cpp will be compiled because D:\CTDLGT2019\CTDL\xulyMT.cpp was modified at 8/4/2019 2:00:54 AM. (TaskId:24)
                      Outputs for D:\CTDLGT2019\CTDL\XULYMT.CPP: (TaskId:24)
                      	D:\CTDLGT2019\CTDL\DEBUG\XULYMT.OBJ (TaskId:24)
                      Write Tracking Logs: (TaskId:24)
                      	Debug\CTDL.tlog\CL.write.1.tlog (TaskId:24)
                      Environment Variables passed to tool: (TaskId:24)
-                       VS_UNICODE_OUTPUT=1528 (TaskId:24)
+                       VS_UNICODE_OUTPUT=2332 (TaskId:24)
                      C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\bin\HostX86\x86\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:classic /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"Debug\CTDL.pch" /Fo"Debug\\" /Fd"Debug\vc141.pdb" /Gd /TP /analyze- /FC /errorReport:prompt xulyMT.cpp (TaskId:24)
                      Tracking command: (TaskId:24)
-                     C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Tracker.exe /d "C:\Program Files (x86)\MSBuild\15.0\FileTracker\FileTracker32.dll" /i D:\CTDLGT2019\CTDL\Debug\CTDL.tlog /r D:\CTDLGT2019\CTDL\XULYMT.CPP /b MSBuildConsole_CancelEventc00e5bd43fb742b0a8a4d7b6f89f929e  /c "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\bin\HostX86\x86\CL.exe"  /c /ZI /JMC /nologo /W3 /WX- /diagnostics:classic /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"Debug\CTDL.pch" /Fo"Debug\\" /Fd"Debug\vc141.pdb" /Gd /TP /analyze- /FC /errorReport:prompt xulyMT.cpp (TaskId:24)
+                     C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Tracker.exe /d "C:\Program Files (x86)\MSBuild\15.0\FileTracker\FileTracker32.dll" /i D:\CTDLGT2019\CTDL\Debug\CTDL.tlog /r D:\CTDLGT2019\CTDL\XULYMT.CPP /b MSBuildConsole_CancelEvent945cbcee55fb4e179c341e3b55b69a91  /c "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\bin\HostX86\x86\CL.exe"  /c /ZI /JMC /nologo /W3 /WX- /diagnostics:classic /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"Debug\CTDL.pch" /Fo"Debug\\" /Fd"Debug\vc141.pdb" /Gd /TP /analyze- /FC /errorReport:prompt xulyMT.cpp (TaskId:24)
                      xulyMT.cpp (TaskId:24)
-19:47:57.720     1>d:\ctdlgt2019\ctdl\xulymt.cpp(136): warning C4102: 'label': unreferenced label
-19:47:57.720     1>d:\ctdlgt2019\ctdl\xulymt.cpp(188): warning C4102: 'label1': unreferenced label
-19:47:57.726     1>d:\ctdlgt2019\ctdl\xulymt.cpp(298): warning C4102: 'label1': unreferenced label
-19:47:57.726     1>d:\ctdlgt2019\ctdl\xulymt.cpp(266): warning C4101: 'check2': unreferenced local variable
+02:00:59.063     1>d:\ctdlgt2019\ctdl\xulymt.cpp(303): warning C4102: 'label': unreferenced label
+02:00:59.063     1>d:\ctdlgt2019\ctdl\xulymt.cpp(356): warning C4102: 'label1': unreferenced label
+02:00:59.073     1>d:\ctdlgt2019\ctdl\xulymt.cpp(466): warning C4102: 'label1': unreferenced label
+02:00:59.073     1>d:\ctdlgt2019\ctdl\xulymt.cpp(434): warning C4101: 'check2': unreferenced local variable
                    Done executing task "CL". (TaskId:24)
                    Task "CL" skipped, due to false condition; ('%(ClCompile.PrecompiledHeader)' != 'Create' and '%(ClCompile.ExcludedFromBuild)'!='true' and '%(ClCompile.CompilerIteration)' == '' and @(ClCompile) != '') was evaluated as ('Create' != 'Create' and ''!='true' and '' == '' and stdafx.cpp != '').
-19:47:58.452     1>Done building target "ClCompile" in project "CTDL.vcxproj".: (TargetId:50)
+02:01:00.149     1>Done building target "ClCompile" in project "CTDL.vcxproj".: (TargetId:50)
                    Target "RunSelectedFileNativeCodeAnalysis" skipped, due to false condition; ('$(RunCppAnalysis)'=='true' and '$(SelectedFiles)'!='') was evaluated as ('false'=='true' and ''!='').
                    Target "ManagedIncrementalBuildPostProcessDependencyGraph" skipped, due to false condition; ('@(ClCompile)' != '' and '$(EnableManagedIncrementalBuild)' == 'True') was evaluated as ('Check_Input.cpp;DauSach.cpp;GlobalVariable.cpp;main.cpp;mylib.cpp;Date.cpp;RWDauSach.cpp;RWDocGia.cpp;stdafx.cpp;TempDG.cpp;welcome.cpp;xulyDG.cpp;xuLyDS.cpp;xulyMT.cpp' != '' and 'false' == 'True').
-19:47:58.452     1>Target "AfterClCompile: (TargetId:51)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_ClCompile" depends on it):
-19:47:58.452     1>Done building target "AfterClCompile" in project "CTDL.vcxproj".: (TargetId:51)
-19:47:58.452     1>Target "_ClCompile: (TargetId:52)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_BuildCompileAction" depends on it):
-19:47:58.452     1>Done building target "_ClCompile" in project "CTDL.vcxproj".: (TargetId:52)
+02:01:00.149     1>Target "AfterClCompile: (TargetId:51)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_ClCompile" depends on it):
+02:01:00.149     1>Done building target "AfterClCompile" in project "CTDL.vcxproj".: (TargetId:51)
+02:01:00.149     1>Target "_ClCompile: (TargetId:52)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_BuildCompileAction" depends on it):
+02:01:00.149     1>Done building target "_ClCompile" in project "CTDL.vcxproj".: (TargetId:52)
                    Target "_ResGen" skipped, due to false condition; ('@(EmbeddedResource)'!='') was evaluated as (''!='').
-19:47:58.452     1>Target "BeforeResourceCompile: (TargetId:53)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_ResourceCompile" depends on it):
-19:47:58.452     1>Done building target "BeforeResourceCompile" in project "CTDL.vcxproj".: (TargetId:53)
-19:47:58.452     1>Target "MakeDirsForResourceCompile: (TargetId:54)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_ResourceCompile" depends on it):
+02:01:00.149     1>Target "BeforeResourceCompile: (TargetId:53)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_ResourceCompile" depends on it):
+02:01:00.149     1>Done building target "BeforeResourceCompile" in project "CTDL.vcxproj".: (TargetId:53)
+02:01:00.149     1>Target "MakeDirsForResourceCompile: (TargetId:54)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_ResourceCompile" depends on it):
                    Added Item(s): RcDirsToMake=D:\CTDLGT2019\CTDL\Debug
                    Task "MakeDir" (TaskId:25)
                      Task Parameter:Directories=D:\CTDLGT2019\CTDL\Debug (TaskId:25)
                    Done executing task "MakeDir". (TaskId:25)
                    Removed Item(s): RcDirsToMake=D:\CTDLGT2019\CTDL\Debug
-19:47:58.453     1>Done building target "MakeDirsForResourceCompile" in project "CTDL.vcxproj".: (TargetId:54)
+02:01:00.149     1>Done building target "MakeDirsForResourceCompile" in project "CTDL.vcxproj".: (TargetId:54)
                    Target "ResourceCompile" skipped, due to false condition; ('@(ResourceCompile)' != '') was evaluated as ('' != '').
-19:47:58.453     1>Target "AfterResourceCompile: (TargetId:55)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_ResourceCompile" depends on it):
-19:47:58.453     1>Done building target "AfterResourceCompile" in project "CTDL.vcxproj".: (TargetId:55)
-19:47:58.453     1>Target "_ResourceCompile: (TargetId:56)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_BuildCompileAction" depends on it):
-19:47:58.453     1>Done building target "_ResourceCompile" in project "CTDL.vcxproj".: (TargetId:56)
+02:01:00.149     1>Target "AfterResourceCompile: (TargetId:55)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_ResourceCompile" depends on it):
+02:01:00.149     1>Done building target "AfterResourceCompile" in project "CTDL.vcxproj".: (TargetId:55)
+02:01:00.149     1>Target "_ResourceCompile: (TargetId:56)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_BuildCompileAction" depends on it):
+02:01:00.149     1>Done building target "_ResourceCompile" in project "CTDL.vcxproj".: (TargetId:56)
                    Target "_ImpLib" skipped, due to false condition; ('$(ImpLibCompiled)' == 'true') was evaluated as ('' == 'true').
                    Target "_Lib" skipped, due to false condition; ('$(LibCompiled)' == 'true') was evaluated as ('' == 'true').
-19:47:58.453     1>Target "AfterBuildCompileEvent: (TargetId:57)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_BuildCompileAction" depends on it):
-19:47:58.453     1>Done building target "AfterBuildCompileEvent" in project "CTDL.vcxproj".: (TargetId:57)
-19:47:58.453     1>Target "_BuildCompileAction: (TargetId:58)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "BuildCompile" depends on it):
-19:47:58.453     1>Done building target "_BuildCompileAction" in project "CTDL.vcxproj".: (TargetId:58)
-19:47:58.453     1>Target "BuildCompile: (TargetId:59)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "Build" depends on it):
-19:47:58.453     1>Done building target "BuildCompile" in project "CTDL.vcxproj".: (TargetId:59)
+02:01:00.150     1>Target "AfterBuildCompileEvent: (TargetId:57)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_BuildCompileAction" depends on it):
+02:01:00.150     1>Done building target "AfterBuildCompileEvent" in project "CTDL.vcxproj".: (TargetId:57)
+02:01:00.150     1>Target "_BuildCompileAction: (TargetId:58)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "BuildCompile" depends on it):
+02:01:00.150     1>Done building target "_BuildCompileAction" in project "CTDL.vcxproj".: (TargetId:58)
+02:01:00.150     1>Target "BuildCompile: (TargetId:59)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "Build" depends on it):
+02:01:00.150     1>Done building target "BuildCompile" in project "CTDL.vcxproj".: (TargetId:59)
                    Target "PrepareProjectReferences" skipped. Previously built successfully.
-19:47:58.453     1>Target "BuildLinkTraverse: (TargetId:60)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "BuildLink" depends on it):
+02:01:00.150     1>Target "BuildLinkTraverse: (TargetId:60)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "BuildLink" depends on it):
                    Task "MSBuild" skipped, due to false condition; ('$(BuildPassReferences)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceExistent)' != ''  and '%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true') was evaluated as ('' == 'true' and '' != '' and '' != ''  and '' == 'true').
-19:47:58.453     1>Done building target "BuildLinkTraverse" in project "CTDL.vcxproj".: (TargetId:60)
+02:01:00.150     1>Done building target "BuildLinkTraverse" in project "CTDL.vcxproj".: (TargetId:60)
                    Target "PrepareForBuild" skipped. Previously built successfully.
                    Target "ResolveReferences" skipped. Previously built successfully.
-19:47:58.453     1>Target "ComputeLegacyManifestEmbedding: (TargetId:61)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_BuildLinkAction" depends on it):
+02:01:00.150     1>Target "ComputeLegacyManifestEmbedding: (TargetId:61)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_BuildLinkAction" depends on it):
                    Added Item(s): 
                        Manifest=
                            temp
@@ -3357,26 +3350,26 @@ windir = C:\WINDOWS
                                    TrackerLogDirectory=Debug\CTDL.tlog\
                                    UpdateFileHashes=false
                                    VerboseOutput=true
-19:47:58.454     1>Done building target "ComputeLegacyManifestEmbedding" in project "CTDL.vcxproj".: (TargetId:61)
-19:47:58.454     1>Target "BeforeLink: (TargetId:62)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_Link" depends on it):
-19:47:58.454     1>Done building target "BeforeLink" in project "CTDL.vcxproj".: (TargetId:62)
-19:47:58.454     1>Target "ComputeRCOutputs: (TargetId:63)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "ComputeRCGeneratedLinkInputs" depends on it):
-19:47:58.454     1>Done building target "ComputeRCOutputs" in project "CTDL.vcxproj".: (TargetId:63)
-19:47:58.454     1>Target "ComputeRCGeneratedLinkInputs: (TargetId:64)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_Link" depends on it):
-19:47:58.454     1>Done building target "ComputeRCGeneratedLinkInputs" in project "CTDL.vcxproj".: (TargetId:64)
-19:47:58.454     1>Target "ComputeManifestGeneratedLinkerInputs: (TargetId:65)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_Link" depends on it):
-19:47:58.454     1>Done building target "ComputeManifestGeneratedLinkerInputs" in project "CTDL.vcxproj".: (TargetId:65)
-19:47:58.454     1>Target "ComputeCustomBuildOutput: (TargetId:66)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_Link" depends on it):
+02:01:00.150     1>Done building target "ComputeLegacyManifestEmbedding" in project "CTDL.vcxproj".: (TargetId:61)
+02:01:00.151     1>Target "BeforeLink: (TargetId:62)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_Link" depends on it):
+02:01:00.151     1>Done building target "BeforeLink" in project "CTDL.vcxproj".: (TargetId:62)
+02:01:00.151     1>Target "ComputeRCOutputs: (TargetId:63)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "ComputeRCGeneratedLinkInputs" depends on it):
+02:01:00.151     1>Done building target "ComputeRCOutputs" in project "CTDL.vcxproj".: (TargetId:63)
+02:01:00.151     1>Target "ComputeRCGeneratedLinkInputs: (TargetId:64)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_Link" depends on it):
+02:01:00.151     1>Done building target "ComputeRCGeneratedLinkInputs" in project "CTDL.vcxproj".: (TargetId:64)
+02:01:00.151     1>Target "ComputeManifestGeneratedLinkerInputs: (TargetId:65)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_Link" depends on it):
+02:01:00.151     1>Done building target "ComputeManifestGeneratedLinkerInputs" in project "CTDL.vcxproj".: (TargetId:65)
+02:01:00.151     1>Target "ComputeCustomBuildOutput: (TargetId:66)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_Link" depends on it):
                    Task "CreateItem" skipped, due to false condition; ('%(CustomBuildOutputs.OutputItemType)'!='') was evaluated as (''!='').
                    Task "MakeDir" (TaskId:26)
                    Done executing task "MakeDir". (TaskId:26)
-19:47:58.454     1>Done building target "ComputeCustomBuildOutput" in project "CTDL.vcxproj".: (TargetId:66)
+02:01:00.151     1>Done building target "ComputeCustomBuildOutput" in project "CTDL.vcxproj".: (TargetId:66)
                    Target "ComputeMIDLGeneratedCompileInputs" skipped. Previously built successfully.
                    Target "ComputeCLInputPDBName" skipped. Previously built successfully.
                    Target "ComputeReferenceCLInput" skipped. Previously built successfully.
                    Target "WarnCompileDuplicatedFilename" skipped. Previously built successfully.
                    Target "FixupCLCompileOptions" skipped. Previously built successfully.
-19:47:58.454     1>Target "ComputeCLOutputs: (TargetId:67)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "ComputeCLGeneratedLinkInputs" depends on it):
+02:01:00.151     1>Target "ComputeCLOutputs: (TargetId:67)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "ComputeCLGeneratedLinkInputs" depends on it):
                    Added Item(s): 
                        Obj=
                            Debug\Check_Input.obj
@@ -4275,8 +4268,8 @@ windir = C:\WINDOWS
                                    WholeProgramOptimization=false
                                    WinRTNoStdLib=false
                                    XMLDocumentationFileName=Debug\
-19:47:58.464     1>Done building target "ComputeCLOutputs" in project "CTDL.vcxproj".: (TargetId:67)
-19:47:58.464     1>Target "ComputeCLGeneratedLinkInputs: (TargetId:68)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_Link" depends on it):
+02:01:00.161     1>Done building target "ComputeCLOutputs" in project "CTDL.vcxproj".: (TargetId:67)
+02:01:00.161     1>Target "ComputeCLGeneratedLinkInputs: (TargetId:68)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_Link" depends on it):
                    Added Item(s): 
                        Link=
                            Debug\Check_Input.obj
@@ -4811,11 +4804,11 @@ windir = C:\WINDOWS
                                    TypeLibraryResourceID=1
                                    UACExecutionLevel=AsInvoker
                                    UACUIAccess=false
-19:47:58.469     1>Done building target "ComputeCLGeneratedLinkInputs" in project "CTDL.vcxproj".: (TargetId:68)
-19:47:58.469     1>Target "ComputeLinkInputsFromProject: (TargetId:69)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_Link" depends on it):
-19:47:58.470     1>Done building target "ComputeLinkInputsFromProject" in project "CTDL.vcxproj".: (TargetId:69)
+02:01:00.172     1>Done building target "ComputeCLGeneratedLinkInputs" in project "CTDL.vcxproj".: (TargetId:68)
+02:01:00.173     1>Target "ComputeLinkInputsFromProject: (TargetId:69)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_Link" depends on it):
+02:01:00.173     1>Done building target "ComputeLinkInputsFromProject" in project "CTDL.vcxproj".: (TargetId:69)
                    Target "ComputeReferenceLinkInputs" skipped, due to false condition; (@(ProjectReference) != '') was evaluated as ( != '').
-19:47:58.470     1>Target "ComputeManifestInputsTargets: (TargetId:70)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_Link" depends on it):
+02:01:00.173     1>Target "ComputeManifestInputsTargets: (TargetId:70)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_Link" depends on it):
                    Added Item(s): 
                        Manifest=
                            temp
@@ -4846,10 +4839,10 @@ windir = C:\WINDOWS
                                    TrackerLogDirectory=Debug\CTDL.tlog\
                                    UpdateFileHashes=false
                                    VerboseOutput=true
-19:47:58.470     1>Done building target "ComputeManifestInputsTargets" in project "CTDL.vcxproj".: (TargetId:70)
+02:01:00.174     1>Done building target "ComputeManifestInputsTargets" in project "CTDL.vcxproj".: (TargetId:70)
                    Target "ManifestResourceCompile" skipped, due to false condition; ('$(EmbedManifestBy)' == 'LINK' and '@(Manifest)' != '') was evaluated as ('LINK' == 'LINK' and '' != '').
                    Target "AssignWinFXEmbeddedResource" skipped, due to false condition; ('@(WinFXEmbeddedResource)' != '') was evaluated as ('' != '').
-19:47:58.470     1>Target "AssignTargetPaths: (TargetId:71)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "PrepareResourceNames" depends on it):
+02:01:00.175     1>Target "AssignTargetPaths: (TargetId:71)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "PrepareResourceNames" depends on it):
                    Using "AssignTargetPath" task from assembly "Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
                    Task "AssignTargetPath" (TaskId:27)
                      Task Parameter:RootFolder=D:\CTDLGT2019\CTDL (TaskId:27)
@@ -4864,9 +4857,9 @@ windir = C:\WINDOWS
                      Task Parameter:RootFolder=D:\CTDLGT2019\CTDL (TaskId:30)
                    Done executing task "AssignTargetPath". (TaskId:30)
                    Task "AssignTargetPath" skipped, due to false condition; ('@(_DeploymentBaseManifestWithTargetPath)'=='' and '%(None.Extension)'=='.manifest') was evaluated as (''=='' and ''=='.manifest').
-19:47:58.471     1>Done building target "AssignTargetPaths" in project "CTDL.vcxproj".: (TargetId:71)
+02:01:00.176     1>Done building target "AssignTargetPaths" in project "CTDL.vcxproj".: (TargetId:71)
                    Target "AssignTargetPaths" skipped. Previously built successfully.
-19:47:58.471     1>Target "SplitResourcesByCulture: (TargetId:72)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "PrepareResourceNames" depends on it):
+02:01:00.176     1>Target "SplitResourcesByCulture: (TargetId:72)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "PrepareResourceNames" depends on it):
                    Task "Warning" skipped, due to false condition; ('@(ResxWithNoCulture)'!='') was evaluated as (''!='').
                    Task "Warning" skipped, due to false condition; ('@(ResxWithCulture)'!='') was evaluated as (''!='').
                    Task "Warning" skipped, due to false condition; ('@(NonResxWithCulture)'!='') was evaluated as (''!='').
@@ -4874,13 +4867,13 @@ windir = C:\WINDOWS
                    Using "AssignCulture" task from assembly "Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
                    Task "AssignCulture" (TaskId:31)
                    Done executing task "AssignCulture". (TaskId:31)
-19:47:58.472     1>Done building target "SplitResourcesByCulture" in project "CTDL.vcxproj".: (TargetId:72)
+02:01:00.177     1>Done building target "SplitResourcesByCulture" in project "CTDL.vcxproj".: (TargetId:72)
                    Target "CreateManifestResourceNames" skipped, due to false condition; ('@(EmbeddedResource)' != '') was evaluated as ('' != '').
-19:47:58.472     1>Target "CreateCustomManifestResourceNames: (TargetId:73)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "PrepareResourceNames" depends on it):
-19:47:58.472     1>Done building target "CreateCustomManifestResourceNames" in project "CTDL.vcxproj".: (TargetId:73)
-19:47:58.472     1>Target "PrepareResourceNames: (TargetId:74)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_Link" depends on it):
-19:47:58.472     1>Done building target "PrepareResourceNames" in project "CTDL.vcxproj".: (TargetId:74)
-19:47:58.472     1>Target "MakeDirsForLink: (TargetId:75)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_Link" depends on it):
+02:01:00.177     1>Target "CreateCustomManifestResourceNames: (TargetId:73)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "PrepareResourceNames" depends on it):
+02:01:00.177     1>Done building target "CreateCustomManifestResourceNames" in project "CTDL.vcxproj".: (TargetId:73)
+02:01:00.177     1>Target "PrepareResourceNames: (TargetId:74)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_Link" depends on it):
+02:01:00.177     1>Done building target "PrepareResourceNames" in project "CTDL.vcxproj".: (TargetId:74)
+02:01:00.177     1>Target "MakeDirsForLink: (TargetId:75)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_Link" depends on it):
                    Set Property: _LinkImportLibrary=D:\CTDLGT2019\CTDL\Debug\CTDL.lib
                    Added Item(s): _LinkImportLibraryFile=D:\CTDLGT2019\CTDL\Debug\CTDL.lib
                    Added Item(s): LinkDirsToMake=D:\CTDLGT2019\CTDL\Debug
@@ -4902,25 +4895,25 @@ windir = C:\WINDOWS
                            D:\CTDLGT2019\CTDL\Debug
                            D:\CTDLGT2019\CTDL\Debug\
                    Removed Item(s): _LinkImportLibraryFile=D:\CTDLGT2019\CTDL\Debug\CTDL.lib
-19:47:58.474     1>Done building target "MakeDirsForLink" in project "CTDL.vcxproj".: (TargetId:75)
-19:47:58.474     1>Target "DoLinkOutputFilesMatch: (TargetId:76)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_Link" depends on it):
+02:01:00.178     1>Done building target "MakeDirsForLink" in project "CTDL.vcxproj".: (TargetId:75)
+02:01:00.178     1>Target "DoLinkOutputFilesMatch: (TargetId:76)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_Link" depends on it):
                    Added Item(s): _OutputFileFromLink=D:\CTDLGT2019\CTDL\Debug\CTDL.exe
                    Task "VCMessage" skipped, due to false condition; ('@(_OutputFileFromLink)' == '') was evaluated as ('D:\CTDLGT2019\CTDL\Debug\CTDL.exe' == '').
                    Task "VCMessage" skipped, due to false condition; ('@(_OutputFileFromLink)' != '' and '%(_OutputFileFromLink.FullPath)' != '$([System.IO.Path]::GetFullPath($(TargetPath)))') was evaluated as ('D:\CTDLGT2019\CTDL\Debug\CTDL.exe' != '' and 'D:\CTDLGT2019\CTDL\Debug\CTDL.exe' != 'D:\CTDLGT2019\CTDL\Debug\CTDL.exe').
                    Task "VCMessage" skipped, due to false condition; ('@(_OutputFileFromLink)' != '' and '%(_OutputFileFromLink.Extension)' != '' and '%(_OutputFileFromLink.Extension)' != '$(TargetExt)') was evaluated as ('D:\CTDLGT2019\CTDL\Debug\CTDL.exe' != '' and '.exe' != '' and '.exe' != '.exe').
                    Task "VCMessage" skipped, due to false condition; ('@(_OutputFileFromLink)' != '' and '%(_OutputFileFromLink.Filename)' != '' and '%(_OutputFileFromLink.Filename)' != '$(TargetName)') was evaluated as ('D:\CTDLGT2019\CTDL\Debug\CTDL.exe' != '' and 'CTDL' != '' and 'CTDL' != 'CTDL').
                    Task "VCMessage" skipped, due to false condition; ('%(Link.MinimumRequiredVersion)' != '' and ('%(Link.Subsystem)' == '' or '%(Link.Subsystem)' == 'NotSet')) was evaluated as ('' != '' and ('Console' == '' or 'Console' == 'NotSet')).
-19:47:58.475     1>Done building target "DoLinkOutputFilesMatch" in project "CTDL.vcxproj".: (TargetId:76)
-19:47:58.475     1>Target "PreLinkEvent: (TargetId:77)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_Link" depends on it):
+02:01:00.179     1>Done building target "DoLinkOutputFilesMatch" in project "CTDL.vcxproj".: (TargetId:76)
+02:01:00.179     1>Target "PreLinkEvent: (TargetId:77)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_Link" depends on it):
                    Task "Message" skipped, due to false condition; ('%(PreLinkEvent.Message)' != '' and '%(PreLinkEvent.Command)' != '') was evaluated as ('' != '' and '' != '').
                    Task "Exec" skipped, due to false condition; ('%(PreLinkEvent.Command)' != '') was evaluated as ('' != '').
-19:47:58.475     1>Done building target "PreLinkEvent" in project "CTDL.vcxproj".: (TargetId:77)
-19:47:58.475     1>Target "ComputeLinkSwitches: (TargetId:78)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "Link" depends on it):
+02:01:00.179     1>Done building target "PreLinkEvent" in project "CTDL.vcxproj".: (TargetId:77)
+02:01:00.179     1>Target "ComputeLinkSwitches: (TargetId:78)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "Link" depends on it):
                    Set Property: Link_MinimalRebuildFromTracking=true
                    Set Property: LinkToolArchitecture=Native32Bit
                    Set Property: _GenerateWindowsMetadata=
-19:47:58.487     1>Done building target "ComputeLinkSwitches" in project "CTDL.vcxproj".: (TargetId:78)
-19:47:58.487     1>Target "Link: (TargetId:79)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_Link" depends on it):
+02:01:00.179     1>Done building target "ComputeLinkSwitches" in project "CTDL.vcxproj".: (TargetId:78)
+02:01:00.179     1>Target "Link: (TargetId:79)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_Link" depends on it):
                    Using "Link" task from assembly "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.Build.CppTasks.Common.dll".
                    Task "Link" (TaskId:33)
                      Task Parameter:BuildingInIde=True (TaskId:33)
@@ -5647,9 +5640,9 @@ windir = C:\WINDOWS
                      	C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO\2017\ENTERPRISE\VC\TOOLS\MSVC\14.16.27023\LIB\X86\OLDNAMES.LIB (TaskId:33)
                      	C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO\2017\ENTERPRISE\VC\TOOLS\MSVC\14.16.27023\LIB\X86\VCRUNTIMED.LIB (TaskId:33)
                      	C:\PROGRAM FILES (X86)\WINDOWS KITS\10\LIB\10.0.17763.0\UCRT\X86\UCRTD.LIB (TaskId:33)
-                     Source compilation required: input D:\CTDLGT2019\CTDL\DEBUG\XULYMT.OBJ is newer than output D:\CTDLGT2019\CTDL\DEBUG\CTDL.EXE. (TaskId:33)
+                     Source compilation required: input D:\CTDLGT2019\CTDL\DEBUG\XULYMT.OBJ is newer than output D:\CTDLGT2019\CTDL\DEBUG\CTDL.PDB. (TaskId:33)
                      Environment Variables passed to tool: (TaskId:33)
-                       VS_UNICODE_OUTPUT=1892 (TaskId:33)
+                       VS_UNICODE_OUTPUT=2148 (TaskId:33)
                      C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\bin\HostX86\x86\link.exe /ERRORREPORT:PROMPT /OUT:"D:\CTDLGT2019\CTDL\Debug\CTDL.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG:FASTLINK /PDB:"D:\CTDLGT2019\CTDL\Debug\CTDL.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\CTDLGT2019\CTDL\Debug\CTDL.lib" /MACHINE:X86 Debug\Check_Input.obj
                      Debug\DauSach.obj
                      Debug\GlobalVariable.obj
@@ -5665,7 +5658,7 @@ windir = C:\WINDOWS
                      Debug\xuLyDS.obj
                      Debug\xulyMT.obj (TaskId:33)
                      Tracking command: (TaskId:33)
-                     C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Tracker.exe /a /d "C:\Program Files (x86)\MSBuild\15.0\FileTracker\FileTracker32.dll" /i D:\CTDLGT2019\CTDL\Debug\CTDL.tlog /r "D:\CTDLGT2019\CTDL\DEBUG\CHECK_INPUT.OBJ|D:\CTDLGT2019\CTDL\DEBUG\DATE.OBJ|D:\CTDLGT2019\CTDL\DEBUG\DAUSACH.OBJ|D:\CTDLGT2019\CTDL\DEBUG\GLOBALVARIABLE.OBJ|D:\CTDLGT2019\CTDL\DEBUG\MAIN.OBJ|D:\CTDLGT2019\CTDL\DEBUG\MYLIB.OBJ|D:\CTDLGT2019\CTDL\DEBUG\RWDAUSACH.OBJ|D:\CTDLGT2019\CTDL\DEBUG\RWDOCGIA.OBJ|D:\CTDLGT2019\CTDL\DEBUG\STDAFX.OBJ|D:\CTDLGT2019\CTDL\DEBUG\TEMPDG.OBJ|D:\CTDLGT2019\CTDL\DEBUG\WELCOME.OBJ|D:\CTDLGT2019\CTDL\DEBUG\XULYDG.OBJ|D:\CTDLGT2019\CTDL\DEBUG\XULYDS.OBJ|D:\CTDLGT2019\CTDL\DEBUG\XULYMT.OBJ" /b MSBuildConsole_CancelEvent5d009756972641a39ffbe15f7fc608cb  /c "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\bin\HostX86\x86\link.exe"  /ERRORREPORT:PROMPT /OUT:"D:\CTDLGT2019\CTDL\Debug\CTDL.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG:FASTLINK /PDB:"D:\CTDLGT2019\CTDL\Debug\CTDL.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\CTDLGT2019\CTDL\Debug\CTDL.lib" /MACHINE:X86 Debug\Check_Input.obj
+                     C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Tracker.exe /a /d "C:\Program Files (x86)\MSBuild\15.0\FileTracker\FileTracker32.dll" /i D:\CTDLGT2019\CTDL\Debug\CTDL.tlog /r "D:\CTDLGT2019\CTDL\DEBUG\CHECK_INPUT.OBJ|D:\CTDLGT2019\CTDL\DEBUG\DATE.OBJ|D:\CTDLGT2019\CTDL\DEBUG\DAUSACH.OBJ|D:\CTDLGT2019\CTDL\DEBUG\GLOBALVARIABLE.OBJ|D:\CTDLGT2019\CTDL\DEBUG\MAIN.OBJ|D:\CTDLGT2019\CTDL\DEBUG\MYLIB.OBJ|D:\CTDLGT2019\CTDL\DEBUG\RWDAUSACH.OBJ|D:\CTDLGT2019\CTDL\DEBUG\RWDOCGIA.OBJ|D:\CTDLGT2019\CTDL\DEBUG\STDAFX.OBJ|D:\CTDLGT2019\CTDL\DEBUG\TEMPDG.OBJ|D:\CTDLGT2019\CTDL\DEBUG\WELCOME.OBJ|D:\CTDLGT2019\CTDL\DEBUG\XULYDG.OBJ|D:\CTDLGT2019\CTDL\DEBUG\XULYDS.OBJ|D:\CTDLGT2019\CTDL\DEBUG\XULYMT.OBJ" /b MSBuildConsole_CancelEvent57849b04960c473dbf9a4479de56cc80  /c "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\bin\HostX86\x86\link.exe"  /ERRORREPORT:PROMPT /OUT:"D:\CTDLGT2019\CTDL\Debug\CTDL.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG:FASTLINK /PDB:"D:\CTDLGT2019\CTDL\Debug\CTDL.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\CTDLGT2019\CTDL\Debug\CTDL.lib" /MACHINE:X86 Debug\Check_Input.obj
                      Debug\DauSach.obj
                      Debug\GlobalVariable.obj
                      Debug\main.obj
@@ -5692,36 +5685,36 @@ windir = C:\WINDOWS
                    Task "VCMessage" skipped, due to false condition; (('$(EmbedManifestBy)' != 'LINK' or '$(LegacyManifestEmbedding)' != 'true' or '$(LinkSkippedExecution)' == 'true') and
                                 %(Link.GenerateDebugInformation) == 'true' and %(Link.ProgramDataBaseFileName) != '') was evaluated as (('LINK' != 'LINK' or '' != 'true' or 'False' == 'true') and
                                 DebugFastLink == 'true' and  != '').
-19:47:58.777     1>Done building target "Link" in project "CTDL.vcxproj".: (TargetId:79)
+02:01:00.744     1>Done building target "Link" in project "CTDL.vcxproj".: (TargetId:79)
                    Target "MetaGenInputsOutputs" skipped, due to false condition; ('$(EnableManagedIncrementalBuild)' == 'True') was evaluated as ('false' == 'True').
                    Target "ComputeMetaGenInputs" skipped, due to false condition; ('$(CLRSupport)'!='' and '$(CLRSupport)'!='false') was evaluated as ('false'!='' and 'false'!='false').
                    Target "MetaGen" skipped, due to false condition; ('@(MetaGen)' != '') was evaluated as ('' != '').
-19:47:58.777     1>Target "ComputeLinkImportLibraryOutputsForClean: (TargetId:80)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_Link" depends on it):
+02:01:00.744     1>Target "ComputeLinkImportLibraryOutputsForClean: (TargetId:80)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_Link" depends on it):
                    Task "WriteLinesToFile" skipped, due to false condition; ('@(_LinkSecondaryOutput)' != '') was evaluated as ('' != '').
-19:47:58.778     1>Done building target "ComputeLinkImportLibraryOutputsForClean" in project "CTDL.vcxproj".: (TargetId:80)
-19:47:58.778     1>Target "AfterLink: (TargetId:81)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_Link" depends on it):
-19:47:58.778     1>Done building target "AfterLink" in project "CTDL.vcxproj".: (TargetId:81)
-19:47:58.778     1>Target "_Link: (TargetId:82)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_BuildLinkAction" depends on it):
-19:47:58.778     1>Done building target "_Link" in project "CTDL.vcxproj".: (TargetId:82)
-19:47:58.778     1>Target "_ALink: (TargetId:83)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_BuildLinkAction" depends on it):
-19:47:58.778     1>Done building target "_ALink" in project "CTDL.vcxproj".: (TargetId:83)
+02:01:00.744     1>Done building target "ComputeLinkImportLibraryOutputsForClean" in project "CTDL.vcxproj".: (TargetId:80)
+02:01:00.745     1>Target "AfterLink: (TargetId:81)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_Link" depends on it):
+02:01:00.745     1>Done building target "AfterLink" in project "CTDL.vcxproj".: (TargetId:81)
+02:01:00.745     1>Target "_Link: (TargetId:82)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_BuildLinkAction" depends on it):
+02:01:00.745     1>Done building target "_Link" in project "CTDL.vcxproj".: (TargetId:82)
+02:01:00.745     1>Target "_ALink: (TargetId:83)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_BuildLinkAction" depends on it):
+02:01:00.745     1>Done building target "_ALink" in project "CTDL.vcxproj".: (TargetId:83)
                    Target "ComputeLegacyManifestEmbedding" skipped. Previously built successfully.
-19:47:58.778     1>Target "_Manifest: (TargetId:84)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_BuildLinkAction" depends on it):
+02:01:00.745     1>Target "_Manifest: (TargetId:84)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_BuildLinkAction" depends on it):
                    Task "CallTarget" skipped, due to false condition; ('$(LegacyManifestEmbedding)' == 'true') was evaluated as ('' == 'true').
-19:47:58.778     1>Done building target "_Manifest" in project "CTDL.vcxproj".: (TargetId:84)
-19:47:58.778     1>Target "RegisterOutput: (TargetId:85)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_BuildLinkAction" depends on it):
+02:01:00.745     1>Done building target "_Manifest" in project "CTDL.vcxproj".: (TargetId:84)
+02:01:00.745     1>Target "RegisterOutput: (TargetId:85)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_BuildLinkAction" depends on it):
                    Task "Exec" skipped, due to false condition; ('$(ConfigurationType)'=='DynamicLibrary' and '%(Link.RegisterOutput)'=='true' and '%(Link.PerUserRedirection)'!='true') was evaluated as ('Application'=='DynamicLibrary' and 'false'=='true' and 'false'!='true').
                    Task "Exec" skipped, due to false condition; ('$(ConfigurationType)'=='DynamicLibrary' and '%(Link.RegisterOutput)'=='true' and '%(Link.PerUserRedirection)'=='true') was evaluated as ('Application'=='DynamicLibrary' and 'false'=='true' and 'false'=='true').
                    Task "Exec" skipped, due to false condition; ('$(ConfigurationType)'=='Application' and '%(Link.RegisterOutput)'=='true' and '%(Link.PerUserRedirection)'!='true') was evaluated as ('Application'=='Application' and 'false'=='true' and 'false'!='true').
                    Task "Exec" skipped, due to false condition; ('$(ConfigurationType)'=='Application' and '%(Link.RegisterOutput)'=='true' and '%(Link.PerUserRedirection)'=='true') was evaluated as ('Application'=='Application' and 'false'=='true' and 'false'=='true').
                    Task "VCMessage" skipped, due to false condition; ('$(_RegisterOutputExitCode)' != '' and '$(_RegisterOutputExitCode)' != '0') was evaluated as ('' != '' and '' != '0').
-19:47:58.778     1>Done building target "RegisterOutput" in project "CTDL.vcxproj".: (TargetId:85)
+02:01:00.745     1>Done building target "RegisterOutput" in project "CTDL.vcxproj".: (TargetId:85)
                    Target "PrepareForBuild" skipped. Previously built successfully.
                    Target "ResolveReferences" skipped. Previously built successfully.
-19:47:58.778     1>Target "ResolvedXDCMake: (TargetId:86)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_XdcMake" depends on it):
+02:01:00.745     1>Target "ResolvedXDCMake: (TargetId:86)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_XdcMake" depends on it):
                    Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.Extension)' == '.vcxproj' and '@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceExistent)' != '' and '$(_ClCompileGenerateXMLDocumentationFiles)' == 'true') was evaluated as ('' == '.vcxproj' and '' != '' and '' != '' and '' == 'true').
-19:47:58.779     1>Done building target "ResolvedXDCMake" in project "CTDL.vcxproj".: (TargetId:86)
-19:47:58.779     1>Target "ComputeCLCompileGeneratedXDCFiles: (TargetId:87)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_XdcMake" depends on it):
+02:01:00.746     1>Done building target "ResolvedXDCMake" in project "CTDL.vcxproj".: (TargetId:86)
+02:01:00.746     1>Target "ComputeCLCompileGeneratedXDCFiles: (TargetId:87)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_XdcMake" depends on it):
                    Added Item(s): 
                        XdcMake=
                            temp
@@ -5744,67 +5737,67 @@ windir = C:\WINDOWS
                                    OutputFile=D:\CTDLGT2019\CTDL\Debug\CTDL.xml
                                    SuppressStartupBanner=true
                                    TrackerLogDirectory=Debug\CTDL.tlog\
-19:47:58.779     1>Done building target "ComputeCLCompileGeneratedXDCFiles" in project "CTDL.vcxproj".: (TargetId:87)
-19:47:58.779     1>Target "MakeDirsForXdcMake: (TargetId:88)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_XdcMake" depends on it):
+02:01:00.746     1>Done building target "ComputeCLCompileGeneratedXDCFiles" in project "CTDL.vcxproj".: (TargetId:87)
+02:01:00.746     1>Target "MakeDirsForXdcMake: (TargetId:88)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_XdcMake" depends on it):
                    Task "MakeDir" (TaskId:35)
                    Done executing task "MakeDir". (TaskId:35)
-19:47:58.779     1>Done building target "MakeDirsForXdcMake" in project "CTDL.vcxproj".: (TargetId:88)
+02:01:00.746     1>Done building target "MakeDirsForXdcMake" in project "CTDL.vcxproj".: (TargetId:88)
                    Target "XdcMake" skipped, due to false condition; ('@(XdcMake)' != '') was evaluated as ('' != '').
-19:47:58.779     1>Target "_XdcMake: (TargetId:89)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_BuildLinkAction" depends on it):
-19:47:58.779     1>Done building target "_XdcMake" in project "CTDL.vcxproj".: (TargetId:89)
-19:47:58.780     1>Target "ComputeCLCompileGeneratedSbrFiles: (TargetId:90)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_BscMake" depends on it):
-19:47:58.780     1>Done building target "ComputeCLCompileGeneratedSbrFiles" in project "CTDL.vcxproj".: (TargetId:90)
-19:47:58.780     1>Target "MakeDirsForBscMake: (TargetId:91)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_BscMake" depends on it):
+02:01:00.746     1>Target "_XdcMake: (TargetId:89)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_BuildLinkAction" depends on it):
+02:01:00.746     1>Done building target "_XdcMake" in project "CTDL.vcxproj".: (TargetId:89)
+02:01:00.747     1>Target "ComputeCLCompileGeneratedSbrFiles: (TargetId:90)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_BscMake" depends on it):
+02:01:00.747     1>Done building target "ComputeCLCompileGeneratedSbrFiles" in project "CTDL.vcxproj".: (TargetId:90)
+02:01:00.747     1>Target "MakeDirsForBscMake: (TargetId:91)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_BscMake" depends on it):
                    Task "MakeDir" (TaskId:36)
                    Done executing task "MakeDir". (TaskId:36)
-19:47:58.780     1>Done building target "MakeDirsForBscMake" in project "CTDL.vcxproj".: (TargetId:91)
+02:01:00.747     1>Done building target "MakeDirsForBscMake" in project "CTDL.vcxproj".: (TargetId:91)
                    Target "BscMake" skipped, due to false condition; ('@(BscMake)' != '') was evaluated as ('' != '').
                    Target "CustomBuildStep" skipped, due to false condition; ('@(CustomBuildStep)' != '' and '$(SelectedFiles)'=='') was evaluated as ('' != '' and ''=='').
-19:47:58.780     1>Target "_BscMake: (TargetId:92)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_BuildLinkAction" depends on it):
-19:47:58.780     1>Done building target "_BscMake" in project "CTDL.vcxproj".: (TargetId:92)
-19:47:58.780     1>Target "_GenerateSatelliteAssemblyInputs: (TargetId:93)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "CreateSatelliteAssemblies" depends on it):
+02:01:00.747     1>Target "_BscMake: (TargetId:92)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_BuildLinkAction" depends on it):
+02:01:00.747     1>Done building target "_BscMake" in project "CTDL.vcxproj".: (TargetId:92)
+02:01:00.747     1>Target "_GenerateSatelliteAssemblyInputs: (TargetId:93)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "CreateSatelliteAssemblies" depends on it):
                    Task "Warning" skipped, due to false condition; ('@(ManifestResourceWithCulture)'!='' and '%(ManifestResourceWithCulture.EmittedForCompatibilityOnly)'=='') was evaluated as (''!='' and ''=='').
                    Task "Warning" skipped, due to false condition; ('@(ManifestNonResxWithCultureOnDisk)'!='' and '%(ManifestNonResxWithCultureOnDisk.EmittedForCompatibilityOnly)'=='') was evaluated as (''!='' and ''=='').
-19:47:58.780     1>Done building target "_GenerateSatelliteAssemblyInputs" in project "CTDL.vcxproj".: (TargetId:93)
+02:01:00.747     1>Done building target "_GenerateSatelliteAssemblyInputs" in project "CTDL.vcxproj".: (TargetId:93)
                    Target "ComputeIntermediateSatelliteAssemblies" skipped, due to false condition; (@(ReferenceSatellitePaths->'%(DestinationSubDirectory)') != '') was evaluated as ( != '').
                    Target "GenerateSatelliteAssemblies" skipped, due to false condition; ('@(_SatelliteAssemblyResourceInputs)' != '') was evaluated as ('' != '').
-19:47:58.780     1>Target "CreateSatelliteAssemblies: (TargetId:94)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_BuildLinkAction" depends on it):
-19:47:58.780     1>Done building target "CreateSatelliteAssemblies" in project "CTDL.vcxproj".: (TargetId:94)
-19:47:58.780     1>Target "_Appverifier: (TargetId:95)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_BuildLinkAction" depends on it):
-19:47:58.780     1>Done building target "_Appverifier" in project "CTDL.vcxproj".: (TargetId:95)
-19:47:58.780     1>Target "_Deploy: (TargetId:96)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_BuildLinkAction" depends on it):
-19:47:58.780     1>Done building target "_Deploy" in project "CTDL.vcxproj".: (TargetId:96)
+02:01:00.747     1>Target "CreateSatelliteAssemblies: (TargetId:94)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_BuildLinkAction" depends on it):
+02:01:00.747     1>Done building target "CreateSatelliteAssemblies" in project "CTDL.vcxproj".: (TargetId:94)
+02:01:00.747     1>Target "_Appverifier: (TargetId:95)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_BuildLinkAction" depends on it):
+02:01:00.747     1>Done building target "_Appverifier" in project "CTDL.vcxproj".: (TargetId:95)
+02:01:00.747     1>Target "_Deploy: (TargetId:96)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_BuildLinkAction" depends on it):
+02:01:00.747     1>Done building target "_Deploy" in project "CTDL.vcxproj".: (TargetId:96)
                    Target "ComputeIntermediateSatelliteAssemblies" skipped, due to false condition; (@(ReferenceSatellitePaths->'%(DestinationSubDirectory)') != '') was evaluated as ( != '').
                    Target "_CopyFilesMarkedCopyLocal" skipped, due to false condition; ('@(ReferenceCopyLocalPaths)' != '') was evaluated as ('' != '').
                    Target "AssignTargetPaths" skipped. Previously built successfully.
                    Target "_SplitProjectReferencesByFileExistence" skipped. Previously built successfully.
                    Target "_GetProjectReferenceTargetFrameworkProperties" skipped. Previously built successfully.
-19:47:58.781     1>Target "GetCopyToOutputDirectoryXamlAppDefs: (TargetId:97)" in file "C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\Microsoft.Xaml.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "GetCopyToOutputDirectoryItems" depends on it):
+02:01:00.748     1>Target "GetCopyToOutputDirectoryXamlAppDefs: (TargetId:97)" in file "C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\Microsoft.Xaml.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "GetCopyToOutputDirectoryItems" depends on it):
                    Task "AssignTargetPath" (TaskId:37)
                      Task Parameter:RootFolder=D:\CTDLGT2019\CTDL (TaskId:37)
                    Done executing task "AssignTargetPath". (TaskId:37)
-19:47:58.781     1>Done building target "GetCopyToOutputDirectoryXamlAppDefs" in project "CTDL.vcxproj".: (TargetId:97)
-19:47:58.781     1>Target "GetCopyToOutputDirectoryItems: (TargetId:98)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_CopySourceItemsToOutputDirectory" depends on it):
+02:01:00.748     1>Done building target "GetCopyToOutputDirectoryXamlAppDefs" in project "CTDL.vcxproj".: (TargetId:97)
+02:01:00.748     1>Target "GetCopyToOutputDirectoryItems: (TargetId:98)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_CopySourceItemsToOutputDirectory" depends on it):
                    Set Property: _GCTODIKeepDuplicates=false
                    Set Property: _GCTODIKeepMetadata=CopyToOutputDirectory;TargetPath
                    Task "MSBuild" skipped, due to false condition; ('@(_MSBuildProjectReferenceExistent)' != '' and '$(_GetChildProjectCopyToOutputDirectoryItems)' == 'true' and '%(_MSBuildProjectReferenceExistent.Private)' != 'false' and '$(UseCommonOutputDirectory)' != 'true') was evaluated as ('' != '' and 'true' == 'true' and '' != 'false' and 'false' != 'true').
                    Task "AssignTargetPath" (TaskId:38)
                      Task Parameter:RootFolder=D:\CTDLGT2019\CTDL (TaskId:38)
                    Done executing task "AssignTargetPath". (TaskId:38)
-19:47:58.781     1>Done building target "GetCopyToOutputDirectoryItems" in project "CTDL.vcxproj".: (TargetId:98)
+02:01:00.748     1>Done building target "GetCopyToOutputDirectoryItems" in project "CTDL.vcxproj".: (TargetId:98)
                    Target "_CopyOutOfDateSourceItemsToOutputDirectory" skipped, due to false condition; ( '@(_SourceItemsToCopyToOutputDirectory)' != '' ) was evaluated as ( '' != '' ).
                    Target "_CopyOutOfDateSourceItemsToOutputDirectoryAlways" skipped, due to false condition; ( '@(_SourceItemsToCopyToOutputDirectoryAlways)' != '' ) was evaluated as ( '' != '' ).
-19:47:58.781     1>Target "_CopySourceItemsToOutputDirectory: (TargetId:99)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "CopyFilesToOutputDirectory" depends on it):
-19:47:58.781     1>Done building target "_CopySourceItemsToOutputDirectory" in project "CTDL.vcxproj".: (TargetId:99)
+02:01:00.748     1>Target "_CopySourceItemsToOutputDirectory: (TargetId:99)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "CopyFilesToOutputDirectory" depends on it):
+02:01:00.748     1>Done building target "_CopySourceItemsToOutputDirectory" in project "CTDL.vcxproj".: (TargetId:99)
                    Target "_CopyAppConfigFile" skipped, due to false condition; ( '@(AppConfigWithTargetPath)' != '' ) was evaluated as ( '' != '' ).
                    Target "_CopyManifestFiles" skipped, due to false condition; ( '$(_DeploymentCopyApplicationManifest)'=='true' or '$(GenerateClickOnceManifests)'=='true' ) was evaluated as ( ''=='true' or ''=='true' ).
-19:47:58.781     1>Target "_CheckForCompileOutputs: (TargetId:100)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "CopyFilesToOutputDirectory" depends on it):
+02:01:00.748     1>Target "_CheckForCompileOutputs: (TargetId:100)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "CopyFilesToOutputDirectory" depends on it):
                    Added Item(s): FileWrites=Debug\CTDL.exe
                    Set Property: _DocumentationFileProduced=false
                    Added Item(s): FileWrites=Debug\CTDL.pdb
-19:47:58.782     1>Done building target "_CheckForCompileOutputs" in project "CTDL.vcxproj".: (TargetId:100)
+02:01:00.749     1>Done building target "_CheckForCompileOutputs" in project "CTDL.vcxproj".: (TargetId:100)
                    Target "_SGenCheckForOutputs" skipped, due to false condition; ('$(_SGenGenerateSerializationAssembliesConfig)' == 'On' or ('@(WebReferenceUrl)'!='' and '$(_SGenGenerateSerializationAssembliesConfig)' == 'Auto')) was evaluated as ('Off' == 'On' or (''!='' and 'Off' == 'Auto')).
-19:47:58.782     1>Target "CopyFilesToOutputDirectory: (TargetId:101)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "PrepareForRun" depends on it):
+02:01:00.749     1>Target "CopyFilesToOutputDirectory: (TargetId:101)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "PrepareForRun" depends on it):
                    Set Property: CreateHardLinksForCopyFilesToOutputDirectoryIfPossible=false
                    Set Property: CreateSymbolicLinksForCopyFilesToOutputDirectoryIfPossible=false
                    Set Property: CopyBuildOutputToOutputDirectory=true
@@ -5833,21 +5826,21 @@ windir = C:\WINDOWS
                    Task "Copy" skipped, due to false condition; ('@(ReferenceComWrappersToCopyLocal)' != '' or '@(ResolvedIsolatedComModules)' != '' or '@(_DeploymentLooseManifestFile)' != '' or '@(NativeReferenceFile)' != '' ) was evaluated as ('' != '' or '' != '' or '' != '' or '' != '' ).
                    Task "Copy" skipped, due to false condition; ('$(SkipCopyWinMDArtifact)' != 'true' and '@(WinMDExpArtifacts)' != '') was evaluated as ('' != 'true' and '' != '').
                    Task "Message" skipped, due to false condition; ('$(SkipCopyWinMDArtifact)' != 'true' and '$(_WindowsMetadataOutputPath)' != '') was evaluated as ('' != 'true' and '' != '').
-19:47:58.783     1>Done building target "CopyFilesToOutputDirectory" in project "CTDL.vcxproj".: (TargetId:101)
-19:47:58.783     1>Target "PrepareForRun: (TargetId:102)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_BuildLinkAction" depends on it):
-19:47:58.783     1>Done building target "PrepareForRun" in project "CTDL.vcxproj".: (TargetId:102)
+02:01:00.750     1>Done building target "CopyFilesToOutputDirectory" in project "CTDL.vcxproj".: (TargetId:101)
+02:01:00.750     1>Target "PrepareForRun: (TargetId:102)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_BuildLinkAction" depends on it):
+02:01:00.750     1>Done building target "PrepareForRun" in project "CTDL.vcxproj".: (TargetId:102)
                    Target "CustomBuildStep" skipped, due to false condition; ('@(CustomBuildStep)' != '' and '$(SelectedFiles)'=='') was evaluated as ('' != '' and ''=='').
-19:47:58.783     1>Target "PostBuildEvent: (TargetId:103)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_BuildLinkAction" depends on it):
+02:01:00.750     1>Target "PostBuildEvent: (TargetId:103)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "_BuildLinkAction" depends on it):
                    Task "Message" skipped, due to false condition; ('%(PostBuildEvent.Message)' != '' and '%(PostBuildEvent.Command)' != '') was evaluated as ('' != '' and '' != '').
                    Task "Exec" skipped, due to false condition; ('%(PostBuildEvent.Command)' != '') was evaluated as ('' != '').
-19:47:58.784     1>Done building target "PostBuildEvent" in project "CTDL.vcxproj".: (TargetId:103)
-19:47:58.784     1>Target "_BuildLinkAction: (TargetId:104)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "BuildLink" depends on it):
-19:47:58.784     1>Done building target "_BuildLinkAction" in project "CTDL.vcxproj".: (TargetId:104)
-19:47:58.784     1>Target "BuildLink: (TargetId:105)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "Build" depends on it):
-19:47:58.785     1>Done building target "BuildLink" in project "CTDL.vcxproj".: (TargetId:105)
-19:47:58.785     1>Target "AfterBuild: (TargetId:106)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.BuildSteps.Targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "Build" depends on it):
-19:47:58.785     1>Done building target "AfterBuild" in project "CTDL.vcxproj".: (TargetId:106)
-19:47:58.785     1>Target "FinalizeBuildStatus: (TargetId:107)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "Build" depends on it):
+02:01:00.750     1>Done building target "PostBuildEvent" in project "CTDL.vcxproj".: (TargetId:103)
+02:01:00.750     1>Target "_BuildLinkAction: (TargetId:104)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "BuildLink" depends on it):
+02:01:00.750     1>Done building target "_BuildLinkAction" in project "CTDL.vcxproj".: (TargetId:104)
+02:01:00.750     1>Target "BuildLink: (TargetId:105)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "Build" depends on it):
+02:01:00.750     1>Done building target "BuildLink" in project "CTDL.vcxproj".: (TargetId:105)
+02:01:00.750     1>Target "AfterBuild: (TargetId:106)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.BuildSteps.Targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "Build" depends on it):
+02:01:00.750     1>Done building target "AfterBuild" in project "CTDL.vcxproj".: (TargetId:106)
+02:01:00.750     1>Target "FinalizeBuildStatus: (TargetId:107)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (target "Build" depends on it):
                    Using "Delete" task from assembly "Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
                    Task "Delete" (TaskId:40)
                      Task Parameter:Files=Debug\CTDL.tlog\unsuccessfulbuild (TaskId:40)
@@ -5857,49 +5850,53 @@ windir = C:\WINDOWS
                      Task Parameter:Files=Debug\CTDL.tlog\CTDL.lastbuildstate (TaskId:41)
                      Touching "Debug\CTDL.tlog\CTDL.lastbuildstate". (TaskId:41)
                    Done executing task "Touch". (TaskId:41)
-19:47:58.790     1>Done building target "FinalizeBuildStatus" in project "CTDL.vcxproj".: (TargetId:107)
+02:01:00.752     1>Done building target "FinalizeBuildStatus" in project "CTDL.vcxproj".: (TargetId:107)
                    Target "_CheckForInvalidConfigurationAndPlatform" skipped. Previously built successfully.
                    Target "_CheckForInvalidConfigurationAndPlatform" skipped. Previously built successfully.
-19:47:58.790     1>Target "Build: (TargetId:108)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.BuildSteps.Targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (entry point):
-19:47:58.790     1>Done building target "Build" in project "CTDL.vcxproj".: (TargetId:108)
-19:47:58.790     1>Done Building Project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (Build target(s)).
+02:01:00.752     1>Target "Build: (TargetId:108)" in file "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.BuildSteps.Targets" from project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (entry point):
+02:01:00.752     1>Done building target "Build" in project "CTDL.vcxproj".: (TargetId:108)
+02:01:00.752     1>Done Building Project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (Build target(s)).
 
 Project Performance Summary:
-     2359 ms  D:\CTDLGT2019\CTDL\CTDL.vcxproj            1 calls
-               2359 ms  Build                                      1 calls
+     3358 ms  D:\CTDLGT2019\CTDL\CTDL.vcxproj            1 calls
+               3358 ms  Build                                      1 calls
 
 Target Performance Summary:
         0 ms  AfterResourceCompile                       1 calls
+        0 ms  ComputeLinkSwitches                        1 calls
         0 ms  PreLinkEvent                               1 calls
         0 ms  PrepareResourceNames                       1 calls
         0 ms  CreateCustomManifestResourceNames          1 calls
-        0 ms  ComputeManifestInputsTargets               1 calls
+        0 ms  ComputeLinkInputsFromProject               1 calls
         0 ms  ComputeCustomBuildOutput                   1 calls
         0 ms  ComputeManifestGeneratedLinkerInputs       1 calls
         0 ms  ComputeRCGeneratedLinkInputs               1 calls
         0 ms  ComputeRCOutputs                           1 calls
         0 ms  BeforeLink                                 1 calls
+        0 ms  ComputeLegacyManifestEmbedding             1 calls
         0 ms  BuildLinkTraverse                          1 calls
         0 ms  BuildCompile                               1 calls
         0 ms  _BuildCompileAction                        1 calls
         0 ms  AfterBuildCompileEvent                     1 calls
         0 ms  _ResourceCompile                           1 calls
+        0 ms  MakeDirsForResourceCompile                 1 calls
         0 ms  BeforeResourceCompile                      1 calls
         0 ms  _ClCompile                                 1 calls
-        0 ms  AfterClCompile                             1 calls
+        0 ms  ComputeLinkImportLibraryOutputsForClean    1 calls
         0 ms  AfterLink                                  1 calls
-        0 ms  SelectCustomBuild                          1 calls
         0 ms  _Link                                      1 calls
-        0 ms  _Manifest                                  1 calls
+        0 ms  _ALink                                     1 calls
         0 ms  AfterBuild                                 1 calls
+        0 ms  BuildLink                                  1 calls
         0 ms  _BuildLinkAction                           1 calls
+        0 ms  PostBuildEvent                             1 calls
         0 ms  PrepareForRun                              1 calls
         0 ms  _CopySourceItemsToOutputDirectory          1 calls
         0 ms  GetCopyToOutputDirectoryItems              1 calls
         0 ms  GetCopyToOutputDirectoryXamlAppDefs        1 calls
         0 ms  _Deploy                                    1 calls
+        0 ms  AfterClCompile                             1 calls
         0 ms  _Appverifier                               1 calls
-        0 ms  CreateSatelliteAssemblies                  1 calls
         0 ms  _GenerateSatelliteAssemblyInputs           1 calls
         0 ms  _BscMake                                   1 calls
         0 ms  MakeDirsForBscMake                         1 calls
@@ -5908,159 +5905,99 @@ Target Performance Summary:
         0 ms  MakeDirsForXdcMake                         1 calls
         0 ms  ComputeCLCompileGeneratedXDCFiles          1 calls
         0 ms  RegisterOutput                             1 calls
-        0 ms  _ALink                                     1 calls
-        0 ms  ComputeReferenceCLInput                    1 calls
+        0 ms  _Manifest                                  1 calls
+        0 ms  CreateSatelliteAssemblies                  1 calls
+        0 ms  SelectClCompile                            1 calls
         0 ms  Build                                      1 calls
-        0 ms  BeforeClCompile                            1 calls
-        0 ms  ResolveSDKReferences                       1 calls
-        0 ms  ExpandSDKReferences                        1 calls
-        0 ms  GetReferenceAssemblyPaths                  1 calls
+        0 ms  BuildGenerateSourcesTraverse               1 calls
+        0 ms  ResolveAssemblyReferences                  1 calls
         0 ms  AfterResolveReferences                     1 calls
         0 ms  ResolveReferences                          1 calls
+        0 ms  ResolveSDKReferences                       1 calls
+        0 ms  SetCABuildNativeEnvironmentVariables       1 calls
+        0 ms  SelectCustomBuild                          1 calls
+        0 ms  BeforeBuildGenerateSources                 1 calls
+        0 ms  PlatformPrepareForBuild                    1 calls
+        0 ms  PreBuildEvent                              1 calls
+        0 ms  _SelectedFiles                             1 calls
+        0 ms  GetFrameworkPaths                          1 calls
         0 ms  PrepareProjectReferences                   1 calls
         0 ms  _SplitProjectReferencesByFileExistence     1 calls
-        0 ms  BuildGenerateSourcesTraverse               1 calls
-        0 ms  BeforeResolveReferences                    1 calls
-        0 ms  BeforeBuildGenerateSources                 1 calls
-        0 ms  SetCABuildNativeEnvironmentVariables       1 calls
-        0 ms  _SelectedFiles                             1 calls
         0 ms  _Xsd                                       1 calls
         0 ms  MakeDirsForMidl                            1 calls
-        0 ms  PreBuildEvent                              1 calls
+        0 ms  ExpandSDKReferences                        1 calls
         0 ms  AfterMidl                                  1 calls
-        0 ms  _PrepareForBuild                           1 calls
         0 ms  _Midl                                      1 calls
         0 ms  AfterBuildGenerateSources                  1 calls
-        0 ms  _PrepareForReferenceResolution             1 calls
         0 ms  AfterBuildGenerateSourcesEvent             1 calls
-        0 ms  BuildCompileTraverse                       1 calls
         0 ms  _BuildGenerateSourcesAction                1 calls
         0 ms  BuildGenerateSources                       1 calls
         0 ms  ComputeMIDLGeneratedCompileInputs          1 calls
-        1 ms  AssignTargetPaths                          1 calls
-        1 ms  SelectClCompile                            1 calls
-        1 ms  CopyFileToFolders                          1 calls
-        1 ms  _HandlePackageFileConflicts                1 calls
-        1 ms  GetFrameworkPaths                          1 calls
-        1 ms  _CheckWindowsSDKInstalled                  1 calls
-        1 ms  PostBuildEvent                             1 calls
-        1 ms  MakeDirsForResourceCompile                 1 calls
-        1 ms  ResolveProjectReferences                   1 calls
-        1 ms  ResolvedXDCMake                            1 calls
-        1 ms  MakeDirsForCl                              1 calls
-        1 ms  ComputeLinkInputsFromProject               1 calls
-        1 ms  ComputeLinkImportLibraryOutputsForClean    1 calls
-        1 ms  _CheckForCompileOutputs                    1 calls
-        1 ms  BuildLink                                  1 calls
-        1 ms  PlatformPrepareForBuild                    1 calls
-        1 ms  CopyFilesToOutputDirectory                 1 calls
-        1 ms  DoLinkOutputFilesMatch                     1 calls
+        0 ms  BuildCompileTraverse                       1 calls
+        0 ms  BeforeClCompile                            1 calls
+        0 ms  AssignProjectConfiguration                 1 calls
+        0 ms  ComputeCLInputPDBName                      1 calls
+        0 ms  BeforeResolveReferences                    1 calls
+        0 ms  _PrepareForBuild                           1 calls
         1 ms  SplitResourcesByCulture                    1 calls
-        1 ms  AssignProjectConfiguration                 1 calls
-        1 ms  ComputeLegacyManifestEmbedding             1 calls
+        1 ms  AssignTargetPaths                          1 calls
+        1 ms  SetTelemetryEnvironmentVariables           1 calls
+        1 ms  GetReferenceAssemblyPaths                  1 calls
+        1 ms  ResolvedXDCMake                            1 calls
+        1 ms  _PrepareForReferenceResolution             1 calls
+        1 ms  _CheckForCompileOutputs                    1 calls
+        1 ms  MakeDirsForCl                              1 calls
+        1 ms  CopyFileToFolders                          1 calls
         1 ms  FixupCLCompileOptions                      1 calls
-        2 ms  GetResolvedWinMD                           1 calls
-        2 ms  SetTelemetryEnvironmentVariables           1 calls
-        2 ms  MakeDirsForLink                            1 calls
-        3 ms  _GetProjectReferenceTargetFrameworkProperties   1 calls
+        1 ms  MakeDirsForLink                            1 calls
+        1 ms  ComputeManifestInputsTargets               1 calls
+        1 ms  _CheckWindowsSDKInstalled                  1 calls
+        1 ms  CopyFilesToOutputDirectory                 1 calls
+        1 ms  _GetProjectReferenceTargetFrameworkProperties   1 calls
+        1 ms  _HandlePackageFileConflicts                1 calls
+        1 ms  ComputeReferenceCLInput                    1 calls
+        1 ms  DoLinkOutputFilesMatch                     1 calls
+        2 ms  FinalizeBuildStatus                        1 calls
+        3 ms  InitializeBuildStatus                      1 calls
         3 ms  _CheckForInvalidConfigurationAndPlatform   1 calls
+        4 ms  WarnCompileDuplicatedFilename              1 calls
         4 ms  PrepareForBuild                            1 calls
-        4 ms  ResolveAssemblyReferences                  1 calls
-        5 ms  ComputeCLGeneratedLinkInputs               1 calls
-        5 ms  FinalizeBuildStatus                        1 calls
-        5 ms  SetBuildDefaultEnvironmentVariables        1 calls
-        8 ms  WarnCompileDuplicatedFilename              1 calls
-        9 ms  InitializeBuildStatus                      1 calls
+        4 ms  ResolveProjectReferences                   1 calls
+        9 ms  GetResolvedWinMD                           1 calls
+       10 ms  SetBuildDefaultEnvironmentVariables        1 calls
        10 ms  ComputeCLOutputs                           1 calls
-       10 ms  ComputeCLInputPDBName                      1 calls
-       12 ms  ComputeLinkSwitches                        1 calls
-      289 ms  Link                                       1 calls
-     1954 ms  ClCompile                                  1 calls
+       11 ms  ComputeCLGeneratedLinkInputs               1 calls
+      566 ms  Link                                       1 calls
+     2704 ms  ClCompile                                  1 calls
 
 Task Performance Summary:
-        0 ms  MakeDir                                    9 calls
+        0 ms  Message                                    3 calls
+        0 ms  AssignProjectConfiguration                 1 calls
+        0 ms  MSBuild                                    1 calls
         0 ms  ReadLinesFromFile                          1 calls
-        1 ms  AssignTargetPath                           6 calls
-        1 ms  ResolvePackageFileConflicts                1 calls
-        1 ms  GetOutOfDateItems                          1 calls
-        1 ms  AssignCulture                              1 calls
-        1 ms  Copy                                       1 calls
-        1 ms  AssignProjectConfiguration                 1 calls
+        0 ms  GetOutOfDateItems                          1 calls
+        0 ms  AssignTargetPath                           6 calls
+        0 ms  AssignCulture                              1 calls
         1 ms  Delete                                     1 calls
-        1 ms  Message                                    3 calls
-        2 ms  MSBuild                                    1 calls
+        1 ms  ResolvePackageFileConflicts                1 calls
+        1 ms  Copy                                       1 calls
         2 ms  WriteLinesToFile                           1 calls
-        4 ms  Touch                                      2 calls
-        5 ms  SetEnv                                     8 calls
-      284 ms  Link                                       1 calls
-     1951 ms  CL                                         2 calls
+        2 ms  Touch                                      2 calls
+        3 ms  MakeDir                                    9 calls
+        7 ms  SetEnv                                     8 calls
+      560 ms  Link                                       1 calls
+     2700 ms  CL                                         2 calls
 
 Build succeeded.
 
                    "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (Build target) (1) ->
                    (ClCompile target) -> 
-<<<<<<< HEAD
-                     d:\ctdlgt2019\ctdl\xulymt.cpp(116): warning C4102: 'label1': unreferenced label
-                     d:\ctdlgt2019\ctdl\xulymt.cpp(84): warning C4101: 'check2': unreferenced local variable
-=======
-Time Elapsed 00:00:02.29
-=======
-﻿Build started 02/08/2019 2:09:59 AM.
->>>>>>> a45163810a05bc349605c5b13d65a3b09187da32
->>>>>>> c4bc09c5d0e8aac5131dca0c7b81d17067d00b77
-     1>Project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"Debug\CTDL.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt DauSach.cpp
-         DauSach.cpp
-     1>d:\ctdlgt2019\ctdl\dausach.cpp(242): warning C4018: '<': signed/unsigned mismatch
-     1>d:\ctdlgt2019\ctdl\dausach.cpp(359): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-         c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\string.h(335): note: see declaration of 'strncpy'
-     1>d:\ctdlgt2019\ctdl\dausach.cpp(361): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-         c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\string.h(335): note: see declaration of 'strncpy'
-     1>d:\ctdlgt2019\ctdl\dausach.cpp(363): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-         c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\string.h(335): note: see declaration of 'strncpy'
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\CTDLGT2019\CTDL\Debug\CTDL.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"D:\CTDLGT2019\CTDL\Debug\CTDL.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\CTDLGT2019\CTDL\Debug\CTDL.lib" /MACHINE:X86 Debug\Check_Input.obj
-         Debug\DauSach.obj
-         Debug\GlobalVariable.obj
-         Debug\main.obj
-         Debug\mylib.obj
-         Debug\Date.obj
-         Debug\RWDauSach.obj
-         Debug\RWDocGia.obj
-         Debug\stdafx.obj
-         Debug\TempDG.obj
-         Debug\welcome.obj
-         Debug\xulyDG.obj
-         Debug\xuLyDS.obj
-         CTDL.vcxproj -> D:\CTDLGT2019\CTDL\Debug\CTDL.exe
-     1>Done Building Project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (Build target(s)).
->>>>>>> cf1fd9289cf62e8f8ed7f93a170d81e9f7f67a72
-=======
-                     d:\ctdlgt2019\ctdl\xulymt.cpp(136): warning C4102: 'label': unreferenced label
-                     d:\ctdlgt2019\ctdl\xulymt.cpp(188): warning C4102: 'label1': unreferenced label
-                     d:\ctdlgt2019\ctdl\xulymt.cpp(298): warning C4102: 'label1': unreferenced label
-                     d:\ctdlgt2019\ctdl\xulymt.cpp(266): warning C4101: 'check2': unreferenced local variable
->>>>>>> 8d2667cd772bd719eedd1ce7c30e5505081eb965
+                     d:\ctdlgt2019\ctdl\xulymt.cpp(303): warning C4102: 'label': unreferenced label
+                     d:\ctdlgt2019\ctdl\xulymt.cpp(356): warning C4102: 'label1': unreferenced label
+                     d:\ctdlgt2019\ctdl\xulymt.cpp(466): warning C4102: 'label1': unreferenced label
+                     d:\ctdlgt2019\ctdl\xulymt.cpp(434): warning C4101: 'check2': unreferenced local variable
 
     4 Warning(s)
     0 Error(s)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-Time Elapsed 00:00:01.73
-=======
-<<<<<<< HEAD
-Time Elapsed 00:00:02.31
-=======
-<<<<<<< HEAD
-Time Elapsed 00:00:02.27
-=======
-Time Elapsed 00:00:01.61
->>>>>>> 7cd80612712b513702bce0a2114f67c028eec7e5
->>>>>>> a45163810a05bc349605c5b13d65a3b09187da32
->>>>>>> cf1fd9289cf62e8f8ed7f93a170d81e9f7f67a72
->>>>>>> c4bc09c5d0e8aac5131dca0c7b81d17067d00b77
-=======
-Time Elapsed 00:00:02.35
->>>>>>> 8d2667cd772bd719eedd1ce7c30e5505081eb965
+Time Elapsed 00:00:03.34

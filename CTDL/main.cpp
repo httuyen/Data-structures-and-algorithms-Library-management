@@ -19,15 +19,7 @@ std::string listMenu[4] = { "QUAN LY DOC GIA",
 void menu(int lc, LIST_DauSach &lds, dauSach dauS, DMS dataDMS, LIST_DMS ldms, pDauSach &pDS);
 void menuDG(int lc);
 int main() {
-
-<<<<<<< HEAD
-	//int flag = 8;
-
-	int flag = 2;
-
-=======
 	int flag = 9;
->>>>>>> c4bc09c5d0e8aac5131dca0c7b81d17067d00b77
 	welcomeConsole();
 	//menuFeature(4, 52, 20, flag,listMenu);
 	dauSach dauS;

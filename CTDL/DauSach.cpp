@@ -485,12 +485,12 @@ void QuicKsortTS(LIST_DauSach &lds, int left, int right) {
 	do {
 		while (lds.nodesDauSach[i]->info.tenSach < key.tenSach)
 			i++;
-		while (lds.nodesDauSach[j]->info.tenSach == key.tenSach)
+		while (lds.nodesDauSach[j]->info.tenSach > key.tenSach)
 			j--;
 		if (i <= j) {
 			if (i < j) {
-			//	SwapTS(ldsTemp.nodesDauSach[i], ldsTemp.nodesDauSach[j]);
-				tempDS = lds.nodesDauSach[i]->info;
+				SwapNodeDS(lds.nodesDauSach[i], lds.nodesDauSach[j]);
+				/*tempDS = lds.nodesDauSach[i]->info;
 				lds.nodesDauSach[i]->info = lds.nodesDauSach[j]->info;
 				lds.nodesDauSach[j]->info = tempDS;
 
@@ -498,7 +498,7 @@ void QuicKsortTS(LIST_DauSach &lds, int left, int right) {
 				//pDSTemp->dms.pHeadDMS = lds.nodesDauSach[i]->dms.pHeadDMS;
 				//pDSTemp->dms.pTailDMS = lds.nodesDauSach[i]->dms.pTailDMS;
 				lds.nodesDauSach[i]->dms = lds.nodesDauSach[j]->dms;
-				lds.nodesDauSach[j]->dms = pDSTemp->dms;
+				lds.nodesDauSach[j]->dms = pDSTemp->dms;*/
 			}
 			i++;
 			j--;
@@ -517,4 +517,11 @@ void SwapTS(LIST_DauSach &a, LIST_DauSach &b) {
 	temp = a;
 	a = b;
 	b = temp;
+}
+
+void SwapNodeDS(DauSach* ds1, DauSach* ds2)
+{
+	DauSach temp = *ds1;
+	*ds1 = *ds2;
+	*ds2 = temp;
 }

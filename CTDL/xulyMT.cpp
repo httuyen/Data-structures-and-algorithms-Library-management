@@ -3,7 +3,7 @@
 #include "Check_Input.h"
 #include "TempDG.h"
 
-int xDisplayDMS[3] = { 7,22,42 };
+int xDisplayDMS[4] = { 7,22,42, 60 };
 
 void drawNhapMaThe()
 {
@@ -86,10 +86,10 @@ void DrawTableDMS()
 	gotoxy(xDisplayDMS[1], yDisplayDG); cout << "TRANG THAI";
 	gotoxy(xDisplayDMS[2], yDisplayDG); cout << "VI TRI";
 
-	for (int i = 0; i < 29; i++) {
+	/*for (int i = 0; i < 29; i++) {
 		gotoxy(xDisplayDMS[0], yDisplayDG + 3 + i);
 		cout << "hoa";
-	}
+	}*/
 }
 
 bool MatSach(ListMT lMT)
@@ -117,6 +117,173 @@ bool CheckTenSach_MT(LIST_DauSach lDS, ListMT lMT, string tenSach)
 	return false;
 }
 
+void DeleteLineTable_DMS(int locate)
+{
+	gotoxy(xDisplayDMS[0], yDisplayDG + 3 + locate);
+	cout << setw(xDisplayDMS[1] - xDisplayDMS[0] - 3) << setfill(' ') << ' ';
+	gotoxy(xDisplayDMS[1], yDisplayDG + 3 + locate);
+	cout << setw(xDisplayDMS[2] - xDisplayDMS[1] - 3) << setfill(' ') << ' ';
+	gotoxy(xDisplayDMS[2], yDisplayDG + 3 + locate);
+	cout << setw(xDisplayDMS[3] - xDisplayDMS[2] - 3) << setfill(' ') << ' ';
+}
+
+void ClearTable_DMS()
+{
+	for (int i = 0; i < NUMBER_LINES; i++)
+	{
+		DeleteLineTable_DMS(i);
+	}
+}
+
+void Output_DMS(DMS dms, int locate)
+{
+	DeleteLineTable_DMS(locate);
+	gotoxy(xDisplayDMS[0], yDisplayDG + 3 + locate);
+	cout << dms.maSach;
+	gotoxy(xDisplayDMS[1], yDisplayDG + 3 + locate);
+	if (dms.trangThai == 0)
+	{
+		cout << "Cho Muon Duoc";
+	}
+	else if (dms.trangThai == 1)
+	{
+		cout << "Da Cho Muon";
+	}
+	else if (dms.trangThai == 2)
+	{
+		cout << "Da Thanh Ly";
+	}
+	gotoxy(xDisplayDMS[2], yDisplayDG + 3 + locate);
+	cout << dms.viTri;
+	locate++;
+}
+
+void OutputDMS_PerPage(pDauSach pDS, int index)
+{
+	ClearTable_DMS();
+	//locate = 0;
+	if (pDS->dms.pHeadDMS == NULL && pDS->dms.pTailDMS == NULL)
+		return;
+	index--;
+	index *= NUMBER_LINES;
+	int count = 0;
+	NODE_DMS * temp = NULL;
+	for (temp = pDS->dms.pHeadDMS; temp != NULL && count < index; temp = temp->pNext)
+	{
+		count++;
+	}
+	for (int i = 0; i < NUMBER_LINES && temp != NULL; i++)
+	{
+		Output_DMS(temp->data, i);
+		temp = temp->pNext;
+	}
+	return;
+}
+
+int ChooseItem_DMS(pDauSach &pDS, int &tttrang, int tongtrang)
+{
+	int pos = 0;
+	int kb_hit;
+	pos = 0;
+
+	gotoxy(xDisplayDMS[0] - 1, yDisplayDG + 3 + pos);
+	cout << "<";
+	gotoxy(xDisplayDMS[0] + 12, yDisplayDG + 3 + pos);
+	cout << ">";
+
+	while (true)
+	{
+		if (_kbhit())
+		{
+			kb_hit = _getch();
+			if (kb_hit == 224 || kb_hit == 0)
+				kb_hit = _getch();
+
+			switch (kb_hit)
+			{
+			case KEY_UP:
+				// xoa muc truoc
+				gotoxy(xDisplayDMS[0] - 1, yDisplayDG + 3 + pos);
+				cout << " ";
+				gotoxy(xDisplayDMS[0] + 12, yDisplayDG + 3 + pos);
+				cout << " ";
+				(pos > 0) ? pos-- : pos = 28;
+
+				// to mau muc moi
+				gotoxy(xDisplayDMS[0] - 1, yDisplayDG + 3 + pos);
+				cout << "<";
+				gotoxy(xDisplayDMS[0] + 12, yDisplayDG + 3 + pos);
+				cout << ">";
+				break;
+
+			case KEY_DOWN:
+
+				// xoa muc truoc
+				gotoxy(xDisplayDMS[0] - 1, yDisplayDG + 3 + pos);
+				cout << " ";
+				gotoxy(xDisplayDMS[0] + 12, yDisplayDG + 3 + pos);
+				cout << " ";
+				(pos < 28) ? pos++ : pos = 0;
+
+				// to mau muc moi
+				gotoxy(xDisplayDMS[0] - 1, yDisplayDG + 3 + pos);
+				cout << "<";
+				gotoxy(xDisplayDMS[0] + 12, yDisplayDG + 3 + pos);
+				cout << ">";
+				break;
+
+			case PAGE_UP:
+				if (tttrang > 1)
+				{
+					tttrang--;
+				}
+				else
+				{
+					tttrang = tongtrang;
+				}
+				ClearTable_DMS();
+				OutputDMS_PerPage(pDS, tttrang);
+
+				pos = 0;
+				gotoxy(xDisplayDMS[0] - 1, yDisplayDG + 3 + pos);
+				cout << "<";
+				gotoxy(xDisplayDMS[0] + 12, yDisplayDG + 3 + pos);
+				cout << ">";
+				break;
+
+			case PAGE_DOWN:
+				if (tttrang < tongtrang)
+				{
+					tttrang++;
+				}
+				else
+				{
+					tttrang = 1;
+				}
+				ClearTable_DMS();
+				OutputDMS_PerPage(pDS, tttrang);
+				pos = 0;
+				gotoxy(xDisplayDMS[0] - 1, yDisplayDG + 3 + pos);
+				cout << "<";
+				gotoxy(xDisplayDMS[0] + 12, yDisplayDG + 3 + pos);
+				cout << ">";
+				break;
+
+			case ENTER:
+				return (pos == 0 && tttrang == 1) ? pos : pos + (tttrang - 1)* NUMBER_LINES;
+
+			case ESC:
+				return -1;
+			}
+		}
+		anConTro();
+		gotoxy(25, 38);
+		cout << "Trang " << tttrang << " / " << tongtrang;
+		gotoxy(12, 40);
+		cout << "KeyUp, KeyDn, Enter - Chon, PgUp, PgDn";
+	}
+}
+
 int TacVuMuonSach(LIST_DauSach lDS , NODE_TREE* dg)
 {
 	int choose1 = 0, choose2 = 0;
@@ -137,7 +304,7 @@ label:
 	do
 	{
 		// hien thi bang chua thong tin dau sach
-		drawTable(lDS, pDS);
+		//drawTable(lDS, pDS);
 
 		//OutputDS_PerPage(lDS, tttrang);
 
@@ -160,7 +327,8 @@ label:
 			continue;
 		}
 
-		pDS = lDS.nodesDauSach[choose1];
+		//pDS = lDS.nodesDauSach[choose1];
+		pDS = lDS.nodesDauSach[0];
 
 		// lay ten sach.
 		//tensach = pDS->info.tenSach;
@@ -193,15 +361,15 @@ label1:
 
 	gotoxy(15, 1);
 	//SetBGColor(GREEN);
-	cout << "CHON 1 CUON SACH DE TIEN HANH MUON SACH";
+	//cout << "CHON 1 CUON SACH DE TIEN HANH MUON SACH";
 	DrawTableDMS();
 	//do
 	//{
 
 		// hien thi bang chua thong tin danh muc sach
 		//();
-		//OutputDMS_PerPage(pDS, tttrang);
-		//choose2 = ChooseItems1(pDS, tttrang, tongtrang);
+		OutputDMS_PerPage(pDS, tttrang);
+		choose2 = ChooseItem_DMS(pDS, tttrang, tongtrang);
 		//if (choose2 == -1)
 		//{
 		//	temp = 1;

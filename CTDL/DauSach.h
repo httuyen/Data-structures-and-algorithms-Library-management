@@ -143,3 +143,4 @@ LIST_DauSach getDSByTL(LIST_DauSach &lds, string theLoai);
 void QuicKsortTS(LIST_DauSach &lds, int left, int right);
 void testDS(LIST_DauSach &lds, string theLoai);
 void SwapTS(LIST_DauSach &a, LIST_DauSach &b);
+void SwapNodeDS(DauSach* ds1, DauSach* ds2);
