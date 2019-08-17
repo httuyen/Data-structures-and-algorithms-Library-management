@@ -111,8 +111,13 @@ typedef NODE_TREE *Tree;
 void initList_DMS(LIST_DMS& l);
 void AddTailList_DMS(LIST_DMS &l, DMS data);
 NODE_DMS* GetNode_DMS(DMS DATA);
-int Full_DauSach(LIST_DauSach  l);
+NODE_DMS* Search_DMS_Pos(NODE_DMS* dms, int pos);
 
+char* getViTri(LIST_DauSach lDS, char* maSach);
+NODE_DMS* getSachByMS(LIST_DauSach lDS, char* maSach);
+DauSach* getSachByName(LIST_DauSach lDS, char* tenSach);
+
+int Full_DauSach(LIST_DauSach  l);
 void initListDS(LIST_DauSach &lds);
 pDauSach searchTen_DS(LIST_DauSach lds, string theLoai);
 int Insert_DauSach(LIST_DauSach &lds, pDauSach &pDS);
@@ -143,3 +148,4 @@ LIST_DauSach getDSByTL(LIST_DauSach &lds, string theLoai);
 void QuicKsortTS(LIST_DauSach &lds, int left, int right);
 void testDS(LIST_DauSach &lds, string theLoai);
 void SwapTS(LIST_DauSach &a, LIST_DauSach &b);
+void SwapNodeDS(DauSach* ds1, DauSach* ds2);

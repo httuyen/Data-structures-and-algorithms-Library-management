@@ -1,3 +1,4 @@
+
 #include "stdafx.h"
 #include "TempDG.h"
 
@@ -200,10 +201,8 @@ SachQuaHan TimSachQuaHan(ListMT lMT, LIST_DauSach lDS)
 				sQH.maSach = p->data.maSach;
 				sQH.ngayMuon = p->data.ngayMuon;
 				sQH.soNgayQuaHan = max - 7; // qua han 7 ngay
-				//sQH.tenSach = p->data.tenSach;
-				//sQH.tenSach = getTenSach(p->data.maSach, lDS);
-				sQH.tenSach = "hoa";
-			}
+				sQH.tenSach = getTenSach(p->data.maSach, lDS);
+			}	
 		}
 	}
 	return sQH;

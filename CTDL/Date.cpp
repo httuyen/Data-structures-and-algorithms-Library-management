@@ -10,7 +10,7 @@ bool namNhuan(int year)
 int DateToNum(Date date)
 {
 	int kc1 = 0, kc2 = date.Ngay;
-	for (int i = 2000; i < date.Nam; i++)
+	for (int i = MIN_YEAR; i < date.Nam; i++)
 	{
 		if (namNhuan(i))
 			kc1 += 366;
@@ -34,7 +34,7 @@ int DateToDate(Date date1, Date date2)
 {
 	int num1 = DateToNum(date1);
 	int num2 = DateToNum(date2);
-	return abs(num1 - num2);
+	return (num1 - num2);
 }
 
 void Today(Date &date)
@@ -47,4 +47,35 @@ void Today(Date &date)
 	date.Ngay = today.tm_mday;
 	date.Thang = today.tm_mon + 1;
 	date.Nam = today.tm_year + 1900;
+}
+
+int ValidDate(Date date)
+{
+	// 2 la nam sai, 1 la thang sai, 0 la ngay sai
+	if (date.Nam < MIN_YEAR || date.Nam > MAX_YEAR)
+		return 2;
+	if (date.Thang < MIN_MONTH || date.Thang > MAX_MONTH)
+		return 1;
+	if (date.Ngay < MIN_DAY || date.Ngay > MAX_DAY)
+		return 0;
+	if (date.Thang == 2)
+	{
+		if (namNhuan(date.Nam))
+		{
+			if (date.Ngay > 29)
+				return 0;
+		}
+		else
+		{
+			if (date.Ngay > 28)
+			{
+				return 0;
+			}
+		}
+	}
+	if ((date.Thang == 4 || date.Thang == 6 || date.Thang == 9 || date.Thang == 11) && (date.Ngay > 30))
+	{
+		return 0;
+	}
+	return 3;
 }
