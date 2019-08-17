@@ -536,7 +536,7 @@ int SoSachDangMuon(ListMT lMT)
 
 bool SearchISBN_DS(LIST_DauSach lds, string ISBN)
 {
-	for (int i = 0; i <= lds.n; i++)
+	for (int i = 0; i < lds.n; i++)
 	{
 		if (lds.nodesDauSach[i]->info.ISBN == ISBN)
 			return true;
@@ -556,29 +556,17 @@ LIST_DauSach getDSByTL(LIST_DauSach &lds, string theLoai) {
 	return ldsTemp;
 }
 void QuicKsortTS(LIST_DauSach &lds, int left, int right) {
-	//ldsTemp.nodesDauSach[1]
 	dauSach key =  lds.nodesDauSach[(left + right) / 2]->info;
 	dauSach tempDS;
-	pDauSach pDSTemp = nullptr;
-	
 	int i = left, j = right;
 	do {
-		while (lds.nodesDauSach[i]->info.tenSach < key.tenSach)
+		while ((string)lds.nodesDauSach[i]->info.tenSach < (string)key.tenSach)
 			i++;
-		while (lds.nodesDauSach[j]->info.tenSach > key.tenSach)
+		while ((string)lds.nodesDauSach[j]->info.tenSach > (string)key.tenSach)
 			j--;
 		if (i <= j) {
 			if (i < j) {
 				SwapNodeDS(lds.nodesDauSach[i], lds.nodesDauSach[j]);
-				/*tempDS = lds.nodesDauSach[i]->info;
-				lds.nodesDauSach[i]->info = lds.nodesDauSach[j]->info;
-				lds.nodesDauSach[j]->info = tempDS;
-
-				pDSTemp->dms= lds.nodesDauSach[i]->dms;
-				//pDSTemp->dms.pHeadDMS = lds.nodesDauSach[i]->dms.pHeadDMS;
-				//pDSTemp->dms.pTailDMS = lds.nodesDauSach[i]->dms.pTailDMS;
-				lds.nodesDauSach[i]->dms = lds.nodesDauSach[j]->dms;
-				lds.nodesDauSach[j]->dms = pDSTemp->dms;*/
 			}
 			i++;
 			j--;
@@ -586,7 +574,6 @@ void QuicKsortTS(LIST_DauSach &lds, int left, int right) {
 	} while (i <= j);
 	if (left < j) QuicKsortTS(lds, left, j);
 	if (right > i) QuicKsortTS(lds, i, right);
-	delete[] pDSTemp;
 }
 void testDS(LIST_DauSach &lds, string theLoai) {
 	LIST_DauSach ldsTemp = getDSByTL(lds, theLoai);
@@ -604,4 +591,49 @@ void SwapNodeDS(DauSach* ds1, DauSach* ds2)
 	DauSach temp = *ds1;
 	*ds1 = *ds2;
 	*ds2 = temp;
+}
+
+bool Check_DMS(NODE_DMS* nDMS)
+{
+	for (NODE_DMS* p = nDMS; p != NULL; p = p->pNext)
+	{
+		// sach da co nguoi muon.
+		if (p->data.trangThai == 1)
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+int Empty_DauSach(LIST_DauSach  l)
+{
+	return l.n == -1;
+}
+
+void DeleteDauSach(LIST_DauSach &lds,pDauSach pDS) {
+	for (int i = 0; i < lds.n; i++) {
+		if ((string)lds.nodesDauSach[i]->info.ISBN == (string)pDS->info.ISBN) {
+			if (i == lds.n - 1) {
+				delete lds.nodesDauSach[lds.n - 1];
+				// tranh tinh trang con tro bi treo...
+				lds.nodesDauSach[--lds.n] = NULL;
+				return;
+			}
+			for (int temp = i + 1; temp <= lds.n; temp++) {
+				lds.nodesDauSach[temp - 1] = lds.nodesDauSach[temp];
+				return;
+			}
+		}
+	}
+	delete lds.nodesDauSach[--lds.n];
+	//lds.n--;
+}
+int getPosByPDS(LIST_DauSach lds,pDauSach pDS) {
+	for (int i = 0; i < lds.n; i++) {
+		if (lds.nodesDauSach[i]->info.ISBN == pDS->info.ISBN) {
+			return i;
+		}
+	}
+	return NULL;
 }

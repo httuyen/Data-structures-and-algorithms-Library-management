@@ -7,10 +7,8 @@ void xuLy(LIST_DauSach &lds, Tree &t)
 		"QUAN LY DAU SACH",
 		"QUAN LY SACH",
 		"THOAT" };
-	int flag = 2;
+	int flag = 0;
 	int lc = 0;
-
-
 	dauSach dauS;
 	DMS dataDMS;
 	LIST_DMS ldms;
@@ -24,7 +22,7 @@ void xuLy(LIST_DauSach &lds, Tree &t)
 
 	clrscr();
 	welcomeConsole();
-	//menuFeature(4, 52, 20, flag, listMenu);
+	menuFeature(4, 52, 20, flag, listMenu);
 	while (true) {
 		switch (flag)
 		{
