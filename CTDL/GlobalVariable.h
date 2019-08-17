@@ -8,3 +8,4 @@ using std::string;
 
 extern int nDG;
 extern char* maSach;
+//string listTL[100] = {};

@@ -127,7 +127,7 @@ void AddTailList_MT(ListMT &l, MuonTra data);
 void AddHeadList_MT(ListMT &l, MuonTra data);
 NODE_MT* GetNode_MT(MuonTra data);
 
-void getTheLoai(LIST_DauSach lds, string listTL[]);
+int getTheLoai(LIST_DauSach lds, string listTL[]);
 
 void InsertDGtoTree(Tree &t, theDocGia dg);
 NODE_TREE* GetNode_DG(theDocGia dg);

@@ -190,7 +190,7 @@ int Insert_DauSach(LIST_DauSach &lds, pDauSach &pDS)
 	return 1;
 }
 
-void getTheLoai(LIST_DauSach lds, string listTL[]) {
+int getTheLoai(LIST_DauSach lds, string listTL[]) {
 	int temp = 0;
 	for (int i = 0; i < lds.n; i++) {
 		for (int j = 0; j <= temp; j++) {
@@ -204,6 +204,7 @@ void getTheLoai(LIST_DauSach lds, string listTL[]) {
 			}
 		}
 	}
+	return temp;
 }
 
 

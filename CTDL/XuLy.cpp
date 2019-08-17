@@ -7,10 +7,10 @@ void xuLy(LIST_DauSach &lds, Tree &t)
 		"QUAN LY DAU SACH",
 		"QUAN LY SACH",
 		"THOAT" };
-	int flag = 0;
+	int flag = 2;
 	int lc = 0;
-	
-	
+
+
 	dauSach dauS;
 	DMS dataDMS;
 	LIST_DMS ldms;
@@ -21,10 +21,10 @@ void xuLy(LIST_DauSach &lds, Tree &t)
 	ListMT lmt;
 	NODE_TREE* temp;
 
-	
+
 	clrscr();
 	welcomeConsole();
-	menuFeature(4, 52, 20, flag, listMenu);
+	//menuFeature(4, 52, 20, flag, listMenu);
 	while (true) {
 		switch (flag)
 		{
@@ -37,7 +37,7 @@ void xuLy(LIST_DauSach &lds, Tree &t)
 		case 2:
 			menuDS(lds, pDS, t);
 			break;
-		case 3: 
+		case 3:
 			clrscr();
 			Update_DG(t, dg, false);
 			break;
@@ -48,7 +48,7 @@ void xuLy(LIST_DauSach &lds, Tree &t)
 		case 5:
 			clrscr();
 			cout << "kiem thu nhap xuat dau sach";
-			cout << "nhap lc: ";cin >> lc; cin.ignore();
+			cout << "nhap lc: "; cin >> lc; cin.ignore();
 			menu(lc, lds, dauS, dataDMS, ldms, pDS);
 			break;
 
