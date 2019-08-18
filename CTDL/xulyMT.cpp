@@ -313,7 +313,12 @@ void OutputDMS_PerPage(pDauSach pDS, int index)
 
 int ChooseItem_DMS(pDauSach &pDS, int &tttrang, int tongtrang)
 {
+loop:
+	clrscr();
+	DrawTableDMS();
 	OutputDMS_PerPage(pDS, tttrang);
+	NODE_DMS *p;
+	int slSach = 0;
 	int pos = 0;
 	int kb_hit;
 	int nDMS = pDS->dms.n;
@@ -336,13 +341,15 @@ int ChooseItem_DMS(pDauSach &pDS, int &tttrang, int tongtrang)
 				// xoa muc truoc
 				setDefaultColor();
 				gotoxy(xDisplayDMS[0], yDisplayDG + 2 + pos);
-				cout << pDS->dms.pHeadDMS->data.maSach;
+				p = Search_DMS_Pos(pDS->dms.pHeadDMS, pos);
+				cout << p->data.maSach;
 				(pos > 0) ? pos-- : pos = nDMS - 1;
 
 				// to mau muc moi
 				setHighLightColor();
 				gotoxy(xDisplayDMS[0], yDisplayDG + 2 + pos);
-				cout << pDS->dms.pHeadDMS->data.maSach;
+				p = Search_DMS_Pos(pDS->dms.pHeadDMS, pos);
+				cout << p->data.maSach;
 				setDefaultColor();
 				break;
 
@@ -351,13 +358,15 @@ int ChooseItem_DMS(pDauSach &pDS, int &tttrang, int tongtrang)
 				// xoa muc truoc
 				setDefaultColor();
 				gotoxy(xDisplayDMS[0], yDisplayDG + 2 + pos);
-				cout << pDS->dms.pHeadDMS->data.maSach;
+				p = Search_DMS_Pos(pDS->dms.pHeadDMS, pos);
+				cout << p->data.maSach;
 				(pos < nDMS - 1) ? pos++ : pos = 0;
 
 				// to mau muc moi
 				setHighLightColor();
 				gotoxy(xDisplayDMS[0], yDisplayDG + 2 + pos);
-				cout << pDS->dms.pHeadDMS->data.maSach;
+				p = Search_DMS_Pos(pDS->dms.pHeadDMS, pos);
+				cout << p->data.maSach;
 				setDefaultColor();
 				break;
 
@@ -376,7 +385,8 @@ int ChooseItem_DMS(pDauSach &pDS, int &tttrang, int tongtrang)
 				pos = 0;
 				setDefaultColor();
 				gotoxy(xDisplayDMS[0], yDisplayDG + 2 + pos);
-				cout << pDS->dms.pHeadDMS->data.maSach;
+				p = Search_DMS_Pos(pDS->dms.pHeadDMS, pos);
+				cout << p->data.maSach;
 				break;
 
 			case PAGE_DOWN:
@@ -393,13 +403,30 @@ int ChooseItem_DMS(pDauSach &pDS, int &tttrang, int tongtrang)
 				pos = 0;
 				setDefaultColor();
 				gotoxy(xDisplayDMS[0], yDisplayDG + 2 + pos);
-				cout << pDS->dms.pHeadDMS->data.maSach;
+				p = Search_DMS_Pos(pDS->dms.pHeadDMS, pos);
+				cout << p->data.maSach;
 				break;
-
-			case ENTER:
+			case KEY_F2:
 				
-				return (pos == 0 && tttrang == 1) ? pos : pos + (tttrang - 1)* NUMBER_LINES;
+				slSach = drawInputSLSach();
+				InputDMS(pDS, slSach);
+				clrscr();
+				DrawTableDMS();
+				ChooseItem_DMS(pDS, tttrang, tongtrang);
+//				NhapSach(pDS);
+				break;
+			case KEY_F3:
+				clrscr();
+				drawInputDMS();
+				if (SuaDanhMucSach(pDS, Search_DMS_Pos(pDS->dms.pHeadDMS, pos)) == 1) {
+					goto loop;
+				}
+			case ENTER:
+				/*if (pDS->dms.) {
 
+				}*/
+				//return (pos == 0 && tttrang == 1) ? pos : pos + (tttrang - 1)* NUMBER_LINES;
+				break;
 			case ESC:
 				return -1;
 			}

@@ -14,6 +14,7 @@ void InputDMS(pDauSach &pDS, int slSach);
 void showListTL(LIST_DauSach lds);
 void drawEditDS(int x, int y);
 void drawNoti(int x, int y);
+void drawInputDMS();
 void clearNoti();
 void inputDS(LIST_DauSach &lds, pDauSach &pDS, bool isEdited);
 void nhapISBN(string &ISBN, int &flag, bool &isSave, bool &isEsc);
