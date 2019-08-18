@@ -67,9 +67,20 @@ int drawInputSLSach() {
 	return sl;
 }
 void InputDMS(pDauSach &pDS, int slSach) {
+	drawInputDMS();
+	int isEsc = 0;
+	for (int i = 0; i < slSach && isEsc != -1; i++) {
+		gotoxy(xDMS + 20,yDMS + 12);
+		cout << slSach;
+		isEsc = NhapSach(pDS);
+		gotoxy(xDMS + 18, yDMS + 14);
+		cout << i+1;
+	}
+}
+void drawInputDMS() {
 	clrscr();
 	setHighLightColor();
-	drawCell(xDMS, xDMS + 70,yDMS, yDMS + 16);
+	drawCell(xDMS, xDMS + 70, yDMS, yDMS + 16);
 	drawCell(xDMS + 15, xDMS + 69, yDMS + 1, yDMS + 3);
 	drawCell(xDMS + 15, xDMS + 69, yDMS + 4, yDMS + 6);
 	drawCell(xDMS + 15, xDMS + 69, yDMS + 7, yDMS + 9);
@@ -94,18 +105,6 @@ void InputDMS(pDauSach &pDS, int slSach) {
 	cout << "TRANG THAI: 0 = CHO MUON DUOC, 1 = DA DUOC MUON, 2 = DA THANH LY";
 	gotoxy(xDMS + 2, yDMS + 23);
 	cout << "VI TRI: TOI DA 20 KY TU, CHI LAY KY TU CHU, SO VA DAY PHAY";
-	//////////////////////////////////////////////////////////////////
-	int isEsc = 0;
-	for (int i = 0; i < slSach && isEsc != -1; i++) {
-		gotoxy(xDMS + 20,yDMS + 12);
-		cout << slSach;
-		isEsc = NhapSach(pDS);
-		gotoxy(xDMS + 18, yDMS + 14);
-		cout << i+1;
-	}
-	
-	//ChooseItem_DMS(pDS,1);
-	
 }
 void drawNoti(int x, int y) {
 	gotoxy(x + 15, y); cout << "NOTIFICATION";
@@ -1281,7 +1280,6 @@ int SuaDanhMucSach(pDauSach &pDS, NODE_DMS* dms)
 	// kiem tra dieu kien.
 	if (dms->data.trangThai == 1)
 		return 2;
-
 	// hien con tro nhap
 	hienConTro();
 	setDefaultColor();
@@ -1297,7 +1295,7 @@ int SuaDanhMucSach(pDauSach &pDS, NODE_DMS* dms)
 	gotoxy(xDMS + 16, yDMS + 2);
 	cout << maSach;
 
-	gotoxy(xDMS + 16, yDMS + 6);
+	gotoxy(xDMS + 16, yDMS + 5);
 	if (ttSach == 0)
 		cout << ttSach << ":   CHO MUON DUOC  ";
 	else if (ttSach == 1)
@@ -1455,8 +1453,10 @@ int ChooseItemTL(LIST_DauSach &lDS, Tree &t, pDauSach &pDS) {
 int ChooseItems_DS(LIST_DauSach &lDS,Tree &t, pDauSach &pDS, string theLoai)
 {
 	LIST_DauSach l = getDSByTL(lDS, theLoai);
+	NODE_DMS *dms;
 	int slSach = 0;
 	int pos = 0;
+	int choose = 0;
 	int kb_hit;
 	int tttrang, tongtrang;
 	tttrang = 1;
@@ -1540,8 +1540,6 @@ loop:
 				slSach = drawInputSLSach();
 				pos = getPosByPDS(lDS, l.nodesDauSach[pos]);
 				InputDMS(lDS.nodesDauSach[pos],slSach);
-				clrscr();
-				DrawTableDMS();
 				ChooseItem_DMS(lDS.nodesDauSach[pos], tttrang, tongtrang);
 				menuDS(lDS, pDS, t);
 			case KEY_F6:
@@ -1556,10 +1554,15 @@ loop:
 					setDefaultColor();
 					goto loop;
 				}
-				clrscr();
-				DrawTableDMS();
-				int choose= ChooseItem_DMS(lDS.nodesDauSach[pos], tttrang, tongtrang);
-				//SuaDanhMucSach(lDS.nodesDauSach[pos])
+				choose= ChooseItem_DMS(lDS.nodesDauSach[pos], tttrang, tongtrang);
+				if (choose == -1) {
+					Xoa_OutDS_29lines();
+					menuDS(lDS, pDS, t);
+					break;
+				}
+				dms = Search_DMS_Pos(lDS.nodesDauSach[pos]->dms.pHeadDMS, choose);
+				drawInputDMS();
+				SuaDanhMucSach(lDS.nodesDauSach[pos],dms);
 				break;
 			case KEY_LEFT:
 				Xoa_OutDS_29lines();

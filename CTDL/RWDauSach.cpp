@@ -66,7 +66,7 @@ void OpenFile(LIST_DauSach &lds) {
 }
 void SaveDS(LIST_DauSach lds) {
 	FILE * f;
-	if ((f = fopen("DauSach.txt", "wb")) == NULL)
+	if ((f = fopen("DauSach2.txt", "wb")) == NULL)
 	{
 		cout << ("Loi mo file de ghi"); return;
 	}
@@ -79,7 +79,7 @@ void SaveDS(LIST_DauSach lds) {
 		}
 	}
 	fclose(f);
-	cout << ("Da ghi xong danh sach vao file");
+	//cout << ("Da ghi xong danh sach vao file");
 }
 
 

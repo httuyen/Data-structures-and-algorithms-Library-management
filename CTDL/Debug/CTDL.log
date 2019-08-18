@@ -1,78 +1,25 @@
-﻿Build started 18/08/2019 8:47:20 PM.
-     1>Project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" on node 2 (Rebuild target(s)).
+﻿Build started 19/08/2019 12:31:08 AM.
+     1>Project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yc"stdafx.h" /Fp"Debug\CTDL.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
-         stdafx.cpp
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"Debug\CTDL.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Check_Input.cpp DauSach.cpp GlobalVariable.cpp main.cpp mylib.cpp Date.cpp RWDauSach.cpp RWDocGia.cpp TempDG.cpp welcome.cpp XuLy.cpp xulyDG.cpp xuLyDS.cpp xulyMT.cpp
-         xulyMT.cpp
-     1>d:\ctdlgt2019\ctdl\xulymt.cpp(755): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-         c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\string.h(129): note: see declaration of 'strcpy'
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"Debug\CTDL.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt xuLyDS.cpp
          xuLyDS.cpp
-     1>d:\ctdlgt2019\ctdl\xulyds.cpp(330): warning C4551: function call missing argument list
+     1>d:\ctdlgt2019\ctdl\xulyds.cpp(329): warning C4551: function call missing argument list
+     1>d:\ctdlgt2019\ctdl\xulyds.cpp(314): warning C4996: 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::copy': Function call with parameters that may be unsafe - this call relies on the caller to check that the passed values are correct. To disable this warning, use -D_SCL_SECURE_NO_WARNINGS. See documentation on how to use Visual C++ 'Checked Iterators'
+         c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(1794): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::copy'
      1>d:\ctdlgt2019\ctdl\xulyds.cpp(315): warning C4996: 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::copy': Function call with parameters that may be unsafe - this call relies on the caller to check that the passed values are correct. To disable this warning, use -D_SCL_SECURE_NO_WARNINGS. See documentation on how to use Visual C++ 'Checked Iterators'
          c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(1794): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::copy'
      1>d:\ctdlgt2019\ctdl\xulyds.cpp(316): warning C4996: 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::copy': Function call with parameters that may be unsafe - this call relies on the caller to check that the passed values are correct. To disable this warning, use -D_SCL_SECURE_NO_WARNINGS. See documentation on how to use Visual C++ 'Checked Iterators'
          c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(1794): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::copy'
      1>d:\ctdlgt2019\ctdl\xulyds.cpp(317): warning C4996: 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::copy': Function call with parameters that may be unsafe - this call relies on the caller to check that the passed values are correct. To disable this warning, use -D_SCL_SECURE_NO_WARNINGS. See documentation on how to use Visual C++ 'Checked Iterators'
          c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(1794): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::copy'
-     1>d:\ctdlgt2019\ctdl\xulyds.cpp(318): warning C4996: 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::copy': Function call with parameters that may be unsafe - this call relies on the caller to check that the passed values are correct. To disable this warning, use -D_SCL_SECURE_NO_WARNINGS. See documentation on how to use Visual C++ 'Checked Iterators'
+     1>d:\ctdlgt2019\ctdl\xulyds.cpp(1265): warning C4996: 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::copy': Function call with parameters that may be unsafe - this call relies on the caller to check that the passed values are correct. To disable this warning, use -D_SCL_SECURE_NO_WARNINGS. See documentation on how to use Visual C++ 'Checked Iterators'
          c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(1794): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::copy'
-     1>d:\ctdlgt2019\ctdl\xulyds.cpp(1266): warning C4996: 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::copy': Function call with parameters that may be unsafe - this call relies on the caller to check that the passed values are correct. To disable this warning, use -D_SCL_SECURE_NO_WARNINGS. See documentation on how to use Visual C++ 'Checked Iterators'
+     1>d:\ctdlgt2019\ctdl\xulyds.cpp(1267): warning C4996: 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::copy': Function call with parameters that may be unsafe - this call relies on the caller to check that the passed values are correct. To disable this warning, use -D_SCL_SECURE_NO_WARNINGS. See documentation on how to use Visual C++ 'Checked Iterators'
          c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(1794): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::copy'
-     1>d:\ctdlgt2019\ctdl\xulyds.cpp(1268): warning C4996: 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::copy': Function call with parameters that may be unsafe - this call relies on the caller to check that the passed values are correct. To disable this warning, use -D_SCL_SECURE_NO_WARNINGS. See documentation on how to use Visual C++ 'Checked Iterators'
+     1>d:\ctdlgt2019\ctdl\xulyds.cpp(1352): warning C4996: 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::copy': Function call with parameters that may be unsafe - this call relies on the caller to check that the passed values are correct. To disable this warning, use -D_SCL_SECURE_NO_WARNINGS. See documentation on how to use Visual C++ 'Checked Iterators'
          c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(1794): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::copy'
      1>d:\ctdlgt2019\ctdl\xulyds.cpp(1354): warning C4996: 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::copy': Function call with parameters that may be unsafe - this call relies on the caller to check that the passed values are correct. To disable this warning, use -D_SCL_SECURE_NO_WARNINGS. See documentation on how to use Visual C++ 'Checked Iterators'
          c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(1794): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::copy'
-     1>d:\ctdlgt2019\ctdl\xulyds.cpp(1356): warning C4996: 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::copy': Function call with parameters that may be unsafe - this call relies on the caller to check that the passed values are correct. To disable this warning, use -D_SCL_SECURE_NO_WARNINGS. See documentation on how to use Visual C++ 'Checked Iterators'
-         c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(1794): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::copy'
-         xulyDG.cpp
-     1>d:\ctdlgt2019\ctdl\xulydg.cpp(652): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-         c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\string.h(90): note: see declaration of 'strcat'
-     1>d:\ctdlgt2019\ctdl\xulydg.cpp(653): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-         c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\string.h(90): note: see declaration of 'strcat'
-         XuLy.cpp
-     1>d:\ctdlgt2019\ctdl\xuly.cpp(20): warning C4101: 'temp': unreferenced local variable
-         welcome.cpp
-         TempDG.cpp
-     1>d:\ctdlgt2019\ctdl\tempdg.cpp(74): warning C4018: '<': signed/unsigned mismatch
-     1>d:\ctdlgt2019\ctdl\tempdg.cpp(152): warning C4018: '<': signed/unsigned mismatch
-         RWDocGia.cpp
-     1>d:\ctdlgt2019\ctdl\rwdocgia.cpp(26): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-         c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
-     1>d:\ctdlgt2019\ctdl\rwdocgia.cpp(42): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-         c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
-         RWDauSach.cpp
-     1>d:\ctdlgt2019\ctdl\rwdausach.cpp(42): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-         c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
-     1>d:\ctdlgt2019\ctdl\rwdausach.cpp(69): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-         c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
-         Date.cpp
-         mylib.cpp
-     1>d:\ctdlgt2019\ctdl\mylib.cpp(1335): warning C4996: 'cprintf': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _cprintf. See online help for details.
-         c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\conio.h(471): note: see declaration of 'cprintf'
-     1>d:\ctdlgt2019\ctdl\mylib.cpp(1337): warning C4996: 'kbhit': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _kbhit. See online help for details.
-         c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\conio.h(458): note: see declaration of 'kbhit'
-     1>d:\ctdlgt2019\ctdl\mylib.cpp(1347): warning C4996: 'cprintf': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _cprintf. See online help for details.
-         c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\conio.h(471): note: see declaration of 'cprintf'
-         main.cpp
-         GlobalVariable.cpp
-         DauSach.cpp
-     1>d:\ctdlgt2019\ctdl\dausach.cpp(67): warning C4018: '<': signed/unsigned mismatch
-     1>d:\ctdlgt2019\ctdl\dausach.cpp(75): warning C4390: ';': empty controlled statement found; is this the intent?
-     1>d:\ctdlgt2019\ctdl\dausach.cpp(105): warning C4018: '<': signed/unsigned mismatch
-     1>d:\ctdlgt2019\ctdl\dausach.cpp(113): warning C4390: ';': empty controlled statement found; is this the intent?
-     1>d:\ctdlgt2019\ctdl\dausach.cpp(331): warning C4018: '<': signed/unsigned mismatch
-     1>d:\ctdlgt2019\ctdl\dausach.cpp(448): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-         c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\string.h(335): note: see declaration of 'strncpy'
-     1>d:\ctdlgt2019\ctdl\dausach.cpp(450): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-         c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\string.h(335): note: see declaration of 'strncpy'
-     1>d:\ctdlgt2019\ctdl\dausach.cpp(452): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-         c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\string.h(335): note: see declaration of 'strncpy'
-         Check_Input.cpp
-     1>d:\ctdlgt2019\ctdl\check_input.cpp(6): warning C4018: '<': signed/unsigned mismatch
-     1>d:\ctdlgt2019\ctdl\check_input.cpp(29): warning C4267: 'initializing': conversion from 'size_t' to 'char', possible loss of data
-     1>d:\ctdlgt2019\ctdl\check_input.cpp(30): warning C4018: '<': signed/unsigned mismatch
-         Generating Code...
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\CTDLGT2019\CTDL\Debug\CTDL.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"D:\CTDLGT2019\CTDL\Debug\CTDL.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\CTDLGT2019\CTDL\Debug\CTDL.lib" /MACHINE:X86 Debug\Check_Input.obj
          Debug\DauSach.obj
@@ -90,8 +37,8 @@
          Debug\xuLyDS.obj
          Debug\xulyMT.obj
          CTDL.vcxproj -> D:\CTDLGT2019\CTDL\Debug\CTDL.exe
-     1>Done Building Project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (Rebuild target(s)).
+     1>Done Building Project "D:\CTDLGT2019\CTDL\CTDL.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:19.16
+Time Elapsed 00:00:01.96
