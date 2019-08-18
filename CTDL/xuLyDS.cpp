@@ -1558,7 +1558,7 @@ loop:
 				}
 				clrscr();
 				DrawTableDMS();
-				int choose= ChooseItem_DMS(lDS.nodesDauSach[pos], tttrang, tongtrang);
+				//int choose= ChooseItem_DMS(lDS.nodesDauSach[pos], tttrang, tongtrang);
 				//SuaDanhMucSach(lDS.nodesDauSach[pos])
 				break;
 			case KEY_LEFT:

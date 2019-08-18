@@ -7,6 +7,9 @@ void xuLy(LIST_DauSach &lds, Tree &t)
 		"QUAN LY DAU SACH",
 		"QUAN LY SACH",
 		"THOAT" };
+	string listMenuDG[3] = { "CAP NHAT DOC GIA",
+		"DANH SACH DOC GIA",
+		"DANH SACH DOC GIA MUON SACH QUA HAN"};
 	int flag = 0;
 	int lc = 0;
 	dauSach dauS;
@@ -20,18 +23,28 @@ void xuLy(LIST_DauSach &lds, Tree &t)
 	NODE_TREE* temp;
 
 
-	clrscr();
+label:	clrscr();
 	welcomeConsole();
 	menuFeature(4, 52, 20, flag, listMenu);
 	while (true) {
 		switch (flag)
 		{
-		case 1:
-			clrscr();
-			cout << "kiem thu nhap xuat doc gia\n";
-			cout << "nhap lc: "; cin >> lc; cin.ignore();
-			//menuDG(lc);
+		case 0: {
+			goto label;
+		}
+		case 1: {
+			int flagDG = 0;
+			gotoxy(94, 21); cout << ">>";
+			menuFeature(3, 97, 20, flagDG, listMenuDG);
+			if (flagDG == 0) goto label;
+			
 			break;
+		}
+			//clrscr();
+			//cout << "kiem thu nhap xuat doc gia\n";
+			//cout << "nhap lc: "; cin >> lc; cin.ignore();
+			////menuDG(lc);
+			//break;
 		case 2:
 			menuDS(lds, pDS, t);
 			break;

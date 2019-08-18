@@ -69,7 +69,10 @@ int selection(int &flag, std::string listMenu[],int slFeature,int xStart, int yS
 				else continue;
 			}
 		}
-	} while (key_press != 13);
+		else if (key_press == ESC) {
+			flag = 0;
+		}
+	} while (key_press != 13 && key_press != ESC);
 	setDefaultColor();
 	return flag;
 }
@@ -83,7 +86,27 @@ void setHighLightColor() {
 }
 void clearHighLight(int &flag, std::string listMenu[], int slFeature, int xStart, int yStartText, int keypress) {
 	if (keypress == 72) {
-		switch (flag)
+		if (flag > 1) {
+			gotoxy(xStart + index(listMenu, flag), yStartText + 4 *(flag - 1));
+			setDefaultColor();
+			std::cout << listMenu[flag - 1];
+
+			flag--;
+			setHighLightColor();
+			gotoxy(xStart + index(listMenu, flag), yStartText + 4 * (flag - 1));
+			std::cout << listMenu[flag - 1];
+		}
+		else {
+			gotoxy(xStart + index(listMenu, flag), yStartText);
+			setDefaultColor();
+			std::cout << listMenu[flag - 1];
+
+			flag = slFeature;
+			setHighLightColor();
+			gotoxy(xStart + index(listMenu, flag), yStartText + 4 * (flag - 1));
+			std::cout << listMenu[flag - 1];
+		}
+		/*switch (flag)
 		{
 		case 1:
 			gotoxy(xStart + index(listMenu, flag), yStartText);
@@ -124,10 +147,30 @@ void clearHighLight(int &flag, std::string listMenu[], int slFeature, int xStart
 			gotoxy(xStart + index(listMenu, flag), yStartText + 8);
 			std::cout << listMenu[flag - 1];
 			break;
-		}
+		}*/
 	}
 	else {
-		switch (flag)
+		if (flag < slFeature) {
+			gotoxy(xStart + index(listMenu, flag), yStartText + 4 * (flag - 1));
+			setDefaultColor();
+			std::cout << listMenu[flag - 1];
+
+			flag++;
+			setHighLightColor();
+			gotoxy(xStart + index(listMenu, flag), yStartText + 4 * (flag - 1));
+			std::cout << listMenu[flag - 1];
+		}
+		else {
+			gotoxy(xStart + index(listMenu, flag), yStartText + 4 * (flag - 1));
+			setDefaultColor();
+			std::cout << listMenu[flag - 1];
+
+			flag = 1;
+			setHighLightColor();
+			gotoxy(xStart + index(listMenu, flag), yStartText + 4 * (flag - 1));
+			std::cout << listMenu[flag - 1];
+		}
+		/*switch (flag)
 		{
 		case 1:
 			gotoxy(xStart + index(listMenu, flag), yStartText);
@@ -166,6 +209,6 @@ void clearHighLight(int &flag, std::string listMenu[], int slFeature, int xStart
 			gotoxy(xStart + index(listMenu, flag), yStartText);
 			std::cout << listMenu[flag - 1];
 			break;
-		}
+		}*/
 	}
 }
