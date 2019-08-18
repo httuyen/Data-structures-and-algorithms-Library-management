@@ -60,13 +60,13 @@ int selection(int &flag, std::string listMenu[],int slFeature,int xStart, int yS
 		if (key_press == 224) {
 			key_press = _getch();
 			if (key_press != 13) {
-				if (key_press == 72) {
+				if (key_press == KEY_UP) {
 					clearHighLight(flag, listMenu, slFeature, xStart, yStartText, key_press);
 				}
-				else if (key_press == 80) {
+				else if (key_press == KEY_DOWN) {
 					clearHighLight(flag, listMenu, slFeature, xStart, yStartText, key_press);
 				}
-				else break;
+				else continue;
 			}
 		}
 	} while (key_press != 13);

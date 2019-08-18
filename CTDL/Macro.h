@@ -21,6 +21,11 @@
 #define KEY_F3 61
 // Hieu chinh
 #define KEY_F4 62
+//Them DMS
+#define KEY_F5 63
+//Chinh sua DMS
+#define KEY_F6 64
+
 // Save
 #define KEY_F10 68
 // Cuon page xuong duoi
@@ -59,13 +64,8 @@
 #define INPUT_PHAI 2
 #define INPUT_TT 3
 
-
- 
-
 #define xD 6
 #define yD 6
-
-
 
 #define MAX_ISBN 6
 #define MAX_THELOAISACH 20
@@ -85,5 +85,6 @@
 #define MIN_DAY 1
 #define MAX_DAY 31
 
-
+#define xDMS 45
+#define yDMS 5
 

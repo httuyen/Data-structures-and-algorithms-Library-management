@@ -2,6 +2,7 @@
 #include "mylib.h"
 #include <iostream>
 #include <string>
+#include "Macro.h"
 #define windowWeight 1300
 #define windowHeight 700
 using namespace std;

@@ -9,6 +9,8 @@
 #include "XuLy.h"
 
 void drawTable();
+int drawInputSLSach();
+void InputDMS(pDauSach &pDS, int slSach);
 void showListTL(LIST_DauSach lds);
 void drawEditDS(int x, int y);
 void drawNoti(int x, int y);
@@ -29,5 +31,9 @@ void XoaMotDong(int width);
 void Xoa1lineDS(int viTri);
 void Xoa_OutDS_29lines();
 void menuDS(LIST_DauSach &lds, pDauSach &pDS, Tree &t);
-int ChooseItems_DS(LIST_DauSach &lDS, pDauSach &pDS, int &tttrang, int tongtrang, string theLoai);
-int ChooseItemTL(LIST_DauSach &lDS,pDauSach &pDS, int &tttrang, int tongtrang);
+int NhapSach(pDauSach &pDS);
+int SuaDanhMucSach(pDauSach &pDS, NODE_DMS* dms);
+void NhapTrangThaiSach(int &result, int &ordinal, bool &isSave, bool &isEscape, int a, int b);
+void NhapViTri(string &result, int &ordinal, bool &isSave, bool &isEscape, int a, int b);
+int ChooseItems_DS(LIST_DauSach &lDS, Tree &t, pDauSach &pDS, string theLoai);
+int ChooseItemTL(LIST_DauSach &lDS,Tree &t,pDauSach &pDS);

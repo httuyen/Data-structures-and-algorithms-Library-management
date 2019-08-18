@@ -112,6 +112,7 @@ void initList_DMS(LIST_DMS& l);
 void AddTailList_DMS(LIST_DMS &l, DMS data);
 NODE_DMS* GetNode_DMS(DMS DATA);
 NODE_DMS* Search_DMS_Pos(NODE_DMS* dms, int pos);
+NODE_DMS* Search_DMS1(pDauSach pDS, string masach);
 
 char* getViTri(LIST_DauSach lDS, char* maSach);
 NODE_DMS* getSachByMS(LIST_DauSach lDS, char* maSach);

@@ -8,6 +8,15 @@ void initList_DMS(LIST_DMS &l)
 	l.n = 0;
 	l.pHeadDMS = l.pTailDMS = nullptr;
 }
+
+NODE_DMS* Search_DMS1(pDauSach pDS, string masach)
+{
+	NODE_DMS* p;
+	p = pDS->dms.pHeadDMS;
+	while (p != NULL && p->data.maSach != masach)
+		p = p->pNext;
+	return (p);
+}
 void AddTailList_DMS(LIST_DMS &l, DMS data)
 {
 	// tao Node
@@ -615,19 +624,18 @@ void DeleteDauSach(LIST_DauSach &lds,pDauSach pDS) {
 	for (int i = 0; i < lds.n; i++) {
 		if ((string)lds.nodesDauSach[i]->info.ISBN == (string)pDS->info.ISBN) {
 			if (i == lds.n - 1) {
-				delete lds.nodesDauSach[lds.n - 1];
+				//delete lds.nodesDauSach[lds.n - 1];
 				// tranh tinh trang con tro bi treo...
-				lds.nodesDauSach[--lds.n] = NULL;
+				lds.nodesDauSach[--lds.n] = nullptr;
 				return;
 			}
 			for (int temp = i + 1; temp <= lds.n; temp++) {
 				lds.nodesDauSach[temp - 1] = lds.nodesDauSach[temp];
-				return;
 			}
+			//delete lds.nodesDauSach[--lds.n];
+			lds.nodesDauSach[--lds.n] = nullptr;
 		}
 	}
-	delete lds.nodesDauSach[--lds.n];
-	//lds.n--;
 }
 int getPosByPDS(LIST_DauSach lds,pDauSach pDS) {
 	for (int i = 0; i < lds.n; i++) {

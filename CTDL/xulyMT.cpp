@@ -126,7 +126,7 @@ void DrawTableDMS()
 {
 	setDefaultColor();
 	gotoxy(5, 2); cout << "                                                                       ";
-	gotoxy(22, 2); cout << "CHON SACH DE MUON";
+	gotoxy(22, 2); cout << "LIST DANH MUC SACH";
 	setHighLightColor();
 	drawCell(5, 60, 3, 5);
 	// ma sach
@@ -269,9 +269,9 @@ void OutputList_MT(ListMT listMT, LIST_DauSach lDS)
 void Output_DMS(DMS dms, int locate)
 {
 	DeleteLineTable_DMS(locate);
-	gotoxy(xDisplayDMS[0], yDisplayDG + 3 + locate);
+	gotoxy(xDisplayDMS[0], yDisplayDG + 2 + locate);
 	cout << dms.maSach;
-	gotoxy(xDisplayDMS[1], yDisplayDG + 3 + locate);
+	gotoxy(xDisplayDMS[1], yDisplayDG + 2 + locate);
 	if (dms.trangThai == 0)
 	{
 		cout << "CHO MUON DUOC";
@@ -284,7 +284,7 @@ void Output_DMS(DMS dms, int locate)
 	{
 		cout << "DA THANH LY";
 	}
-	gotoxy(xDisplayDMS[2], yDisplayDG + 3 + locate);
+	gotoxy(xDisplayDMS[2], yDisplayDG + 2 + locate);
 	cout << dms.viTri;
 	locate++;
 }
@@ -293,35 +293,35 @@ void OutputDMS_PerPage(pDauSach pDS, int index)
 {
 	ClearTable_DMS();
 	//locate = 0;
-	if (pDS->dms.pHeadDMS == NULL && pDS->dms.pTailDMS == NULL)
+
+	if (pDS->dms.pHeadDMS == nullptr && pDS->dms.pTailDMS == nullptr)
 		return;
 	index--;
 	index *= NUMBER_LINES;
 	int count = 0;
-	NODE_DMS * temp = NULL;
-	for (temp = pDS->dms.pHeadDMS; temp != NULL && count < index; temp = temp->pNext)
+	NODE_DMS * temp = nullptr;
+	for (temp = pDS->dms.pHeadDMS; temp != nullptr && count < index; temp = temp->pNext)
 	{
 		count++;
 	}
-	for (int i = 0; i < NUMBER_LINES && temp != NULL; i++)
+	for (int i = 0; i < NUMBER_LINES && temp != nullptr; i++)
 	{
 		Output_DMS(temp->data, i);
 		temp = temp->pNext;
 	}
-	return;
 }
 
 int ChooseItem_DMS(pDauSach &pDS, int &tttrang, int tongtrang)
 {
+	OutputDMS_PerPage(pDS, tttrang);
 	int pos = 0;
 	int kb_hit;
+	int nDMS = pDS->dms.n;
 	pos = 0;
-
-	gotoxy(xDisplayDMS[0] - 1, yDisplayDG + 3 + pos);
-	cout << "<";
-	gotoxy(xDisplayDMS[0] + 12, yDisplayDG + 3 + pos);
-	cout << ">";
-
+	setHighLightColor();
+	gotoxy(xDisplayDMS[0], yDisplayDG + 2 + pos);
+	cout << pDS->dms.pHeadDMS->data.maSach;
+	setDefaultColor();
 	while (true)
 	{
 		if (_kbhit())
@@ -334,33 +334,31 @@ int ChooseItem_DMS(pDauSach &pDS, int &tttrang, int tongtrang)
 			{
 			case KEY_UP:
 				// xoa muc truoc
-				gotoxy(xDisplayDMS[0] - 1, yDisplayDG + 3 + pos);
-				cout << " ";
-				gotoxy(xDisplayDMS[0] + 12, yDisplayDG + 3 + pos);
-				cout << " ";
-				(pos > 0) ? pos-- : pos = 28;
+				setDefaultColor();
+				gotoxy(xDisplayDMS[0], yDisplayDG + 2 + pos);
+				cout << pDS->dms.pHeadDMS->data.maSach;
+				(pos > 0) ? pos-- : pos = nDMS - 1;
 
 				// to mau muc moi
-				gotoxy(xDisplayDMS[0] - 1, yDisplayDG + 3 + pos);
-				cout << "<";
-				gotoxy(xDisplayDMS[0] + 12, yDisplayDG + 3 + pos);
-				cout << ">";
+				setHighLightColor();
+				gotoxy(xDisplayDMS[0], yDisplayDG + 2 + pos);
+				cout << pDS->dms.pHeadDMS->data.maSach;
+				setDefaultColor();
 				break;
 
 			case KEY_DOWN:
 
 				// xoa muc truoc
-				gotoxy(xDisplayDMS[0] - 1, yDisplayDG + 3 + pos);
-				cout << " ";
-				gotoxy(xDisplayDMS[0] + 12, yDisplayDG + 3 + pos);
-				cout << " ";
-				(pos < 28) ? pos++ : pos = 0;
+				setDefaultColor();
+				gotoxy(xDisplayDMS[0], yDisplayDG + 2 + pos);
+				cout << pDS->dms.pHeadDMS->data.maSach;
+				(pos < nDMS - 1) ? pos++ : pos = 0;
 
 				// to mau muc moi
-				gotoxy(xDisplayDMS[0] - 1, yDisplayDG + 3 + pos);
-				cout << "<";
-				gotoxy(xDisplayDMS[0] + 12, yDisplayDG + 3 + pos);
-				cout << ">";
+				setHighLightColor();
+				gotoxy(xDisplayDMS[0], yDisplayDG + 2 + pos);
+				cout << pDS->dms.pHeadDMS->data.maSach;
+				setDefaultColor();
 				break;
 
 			case PAGE_UP:
@@ -376,10 +374,9 @@ int ChooseItem_DMS(pDauSach &pDS, int &tttrang, int tongtrang)
 				OutputDMS_PerPage(pDS, tttrang);
 
 				pos = 0;
-				gotoxy(xDisplayDMS[0] - 1, yDisplayDG + 3 + pos);
-				cout << "<";
-				gotoxy(xDisplayDMS[0] + 12, yDisplayDG + 3 + pos);
-				cout << ">";
+				setDefaultColor();
+				gotoxy(xDisplayDMS[0], yDisplayDG + 2 + pos);
+				cout << pDS->dms.pHeadDMS->data.maSach;
 				break;
 
 			case PAGE_DOWN:
@@ -394,13 +391,13 @@ int ChooseItem_DMS(pDauSach &pDS, int &tttrang, int tongtrang)
 				ClearTable_DMS();
 				OutputDMS_PerPage(pDS, tttrang);
 				pos = 0;
-				gotoxy(xDisplayDMS[0] - 1, yDisplayDG + 3 + pos);
-				cout << "<";
-				gotoxy(xDisplayDMS[0] + 12, yDisplayDG + 3 + pos);
-				cout << ">";
+				setDefaultColor();
+				gotoxy(xDisplayDMS[0], yDisplayDG + 2 + pos);
+				cout << pDS->dms.pHeadDMS->data.maSach;
 				break;
 
 			case ENTER:
+				
 				return (pos == 0 && tttrang == 1) ? pos : pos + (tttrang - 1)* NUMBER_LINES;
 
 			case ESC:
@@ -408,6 +405,7 @@ int ChooseItem_DMS(pDauSach &pDS, int &tttrang, int tongtrang)
 			}
 		}
 		anConTro();
+		setDefaultColor();
 		gotoxy(25, 38);
 		cout << "Trang " << tttrang << " / " << tongtrang;
 		gotoxy(12, 40);
