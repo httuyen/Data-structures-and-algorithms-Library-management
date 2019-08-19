@@ -7,11 +7,12 @@
 #include "GlobalVariable.h"
 #include "Check_Input.h"
 #include "XuLy.h"
+#include "Macro.h"
 
 void drawTable();
 int drawInputSLSach();
 void InputDMS(pDauSach &pDS, int slSach);
-void showListTL(LIST_DauSach lds);
+void showListTL(string listTL[], int tttrangTL, int slTL);
 void drawEditDS(int x, int y);
 void drawNoti(int x, int y);
 void drawInputDMS();
@@ -28,6 +29,7 @@ void Output_DS(dauSach ds, int viTri);
 void XoaMotVung(int x, int y, int ndoc, int width);
 void clearInput();
 void clearTheLoai(int sl);
+void clearTL();
 void XoaMotDong(int width);
 void Xoa1lineDS(int viTri);
 void Xoa_OutDS_29lines();
