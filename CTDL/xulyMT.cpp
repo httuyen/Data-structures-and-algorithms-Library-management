@@ -295,7 +295,10 @@ void OutputDMS_PerPage(pDauSach pDS, int index)
 	//locate = 0;
 
 	if (pDS->dms.pHeadDMS == nullptr && pDS->dms.pTailDMS == nullptr)
+	{
 		return;
+	}
+		
 	index--;
 	index *= NUMBER_LINES;
 	int count = 0;
@@ -510,6 +513,7 @@ int ChooseItem_MT(ListMT lMT)
 
 int TacVuMuonSach(LIST_DauSach lDS , NODE_TREE* dg)
 {
+	Tree t;
 	int choose1 = 0, choose2 = 0;
 	bool check;
 	// nDs : so luong dau sach.
@@ -525,14 +529,17 @@ label:
 	{
 		gotoxy(5, 2);
 		cout << "                                                                   ";
-		// hien thi bang chua thong tin dau sach
-		gotoxy(23, 2);
+		clrscrTableDS();
+		gotoxy(28, 2);
 		cout << "CHON 1 DAU SACH DE TIEN HANH MUON SACH ";
-		//drawTable(lDS, pDS);
-		//OutputDS_PerPage(lDS, tttrang);
-
-		// chon dau sach muon nhap sach vao
-		//choose1 = ChooseItems(lDS, tttrang, tongtrang);
+		drawTableDS();
+		//show hot key
+		gotoxy(28, yHotkey + 3);
+		SetColor(WHITE);
+		cout << "HotKey:  ESC - Thoat, ENTER - Chon, PgUP, PgDn";
+		setDefaultColor();
+		// thu tu trang
+		choose1 = ChooseItemTL_MT(lDS, t, pDS);
 
 		// check cac truong hop ...
 		if (choose1 == -1)
@@ -575,14 +582,20 @@ label1:
 	tttrang = 1;
 	tongtrang = (pDS->dms.n / NUMBER_LINES) + 1;
 
+	clrscrTableDS();
 	DrawTableDMS();
 	do
-	{
-
-		// hien thi bang chua thong tin danh muc sach
-		//();
+	{		
+		// kiem tra dau sach co dms k
+		if (pDS->dms.n == 0) {
+			nhapNhay("DAU SACH NAY CHUA CO DANH MUC SACH !!!", 110, 35);
+			gotoxy(110, 35);
+			cout << "                                     ";
+			setDefaultColor();
+			goto label;
+		}
 		OutputDMS_PerPage(pDS, tttrang);
-		choose2 = ChooseItem_DMS(pDS, tttrang, tongtrang);
+		choose2 = ChooseItem_DMS_MT(pDS, tttrang, tongtrang);
 		if (choose2 == -1)
 		{
 			temp = 1;
@@ -798,7 +811,7 @@ label:
 					else if (check3 == 2)
 					{
 						AddHeadList_MT(temp->data.listMT, mt);
-						saveDG(t);
+						//saveDG(t);
 						goto label1;
 					}
 				} while (check3);

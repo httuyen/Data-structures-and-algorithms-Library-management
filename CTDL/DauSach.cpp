@@ -72,8 +72,8 @@ NODE_DMS* getSachByMS(LIST_DauSach lDS, char* maSach)
 	for (int i = 0; i < lDS.n; i++)
 	{
 		temp = lDS.nodesDauSach[i];
-		if (temp->info.ISBN == maDS);
-		break;
+		if (temp->info.ISBN == maDS)
+			break;
 	}
 
 	for (NODE_DMS* p = temp->dms.pHeadDMS; p != NULL; p = p->pNext)
@@ -341,6 +341,7 @@ bool Check_MaThe(Tree t, unsigned maThe)
 void Update_DG(Tree &t, theDocGia &dg, bool isEdited)
 {
 	hienConTro();
+	setDefaultColor();
 	int ordinal = 0;
 	bool isSave = false;
 	bool isEscape = false;

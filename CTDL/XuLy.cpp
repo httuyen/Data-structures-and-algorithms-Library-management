@@ -3,13 +3,16 @@
 
 void xuLy(LIST_DauSach &lds, Tree &t)
 {
-	string listMenu[4] = { "QUAN LY DOC GIA",
-		"QUAN LY DAU SACH",
-		"QUAN LY SACH",
-		"THOAT" };
-	string listMenuDG[3] = { "CAP NHAT DOC GIA",
-		"DANH SACH DOC GIA",
-		"DANH SACH DOC GIA MUON SACH QUA HAN"};
+	string listMenu[4] = { " QUAN LY DOC GIA ",
+		" QUAN LY DAU SACH ",
+		" QUAN LY MUON TRA ",
+		" THOAT " };
+	string listMenuDG[3] = { " CAP NHAT DOC GIA ",
+		" DANH SACH DOC GIA ",
+		" DANH SACH DOC GIA MUON SACH QUA HAN "};
+	string listMenuS[3] = { " MUON SACH ",
+		" TRA SACH ",
+		" TOP 10 SACH DUOC MUON NHIEU NHAT " };
 	int flag = 0;
 	int lc = 0;
 	dauSach dauS;
@@ -22,38 +25,77 @@ void xuLy(LIST_DauSach &lds, Tree &t)
 	ListMT lmt;
 	NODE_TREE* temp;
 
-
-label:	clrscr();
-	welcomeConsole();
-	menuFeature(4, 52, 20, flag, listMenu);
 	while (true) {
+		clrscr();
+		welcomeConsole();
+		menuFeature(4, 52, 20, flag, listMenu);
 		switch (flag)
 		{
 		case 0: {
-			goto label;
+			break;
 		}
 		case 1: {
 			int flagDG = 0;
-			gotoxy(94, 21); cout << ">>";
-			menuFeature(3, 97, 20, flagDG, listMenuDG);
-			if (flagDG == 0) goto label;
+			setHighLightColor();
+			gotoxy(93, 21); cout << ">>";
+			drawCell(95, 96, 20, 30);
+			drawCell(136, 137, 20, 30);
+			setDefaultColor();
+			menuFeature(3, 96, 20, flagDG, listMenuDG);
 			
+				switch (flagDG)
+				{
+				case 0: 
+					break;
+				
+				case 1: 
+					Menu_DocGia(t);
+					break;
+
+				case 2:
+					InDocGia(t);
+					break;
+				case 3:
+					DanhSachQuaHan(t, lds);
+					break;
+				}
+		
 			break;
 		}
-			//clrscr();
-			//cout << "kiem thu nhap xuat doc gia\n";
-			//cout << "nhap lc: "; cin >> lc; cin.ignore();
-			////menuDG(lc);
-			//break;
 		case 2:
 			menuDS(lds, pDS, t);
 			break;
-		case 3:
-			clrscr();
-			Update_DG(t, dg, false);
+
+		case 3: {
+			int flagS = 0;
+			setHighLightColor();
+			gotoxy(93, 29); cout << ">>";
+			drawCell(95, 96, 24, 34);
+			drawCell(136, 137, 24, 34);
+			setDefaultColor();
+			menuFeature(3, 96, 24, flagS, listMenuS);
+			switch (flagS)
+			{
+			case 0:
+				break;
+
+			case 1:
+				MuonSach(t, lds);
+				break;
+
+			case 2:
+				TraSach(t, lds);
+				break;
+
+			case 3:
+				Top10Sach(lds);
+				break;
+			}
 			break;
+		}
 		case 4:
 			SaveDS(lds);
+			saveDG(t);
 			exit(0);
 			break;
 		case 5:
