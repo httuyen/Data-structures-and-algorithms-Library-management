@@ -4,6 +4,7 @@
 using namespace std;
 
 int xDisplayDS[6] = { 6, 21, 48, 55, 86, 94 };
+//int xDisplayDMS[4] = { 7,22,42, 60 };
 
 void drawTable() {
 	clrscr();
@@ -32,6 +33,32 @@ void drawTable() {
 	drawEditDS(110, 3);
 	drawNoti(110, 24);
 }
+
+void drawTableDS() {
+	setHighLightColor();
+	//The Loai
+	drawCell(5, 20, 3, 36);
+	//ten sach
+	drawCell(20, 47, 3, 36);
+	//ISBN
+	drawCell(47, 54, 3, 36);
+	//tac gia
+	drawCell(54, 85, 3, 36);
+	//soTR
+	drawCell(85, 93, 3, 36);
+	//nam XB
+	drawCell(93, 100, 3, 36);
+	drawCell(5, 100, 3, 5);
+	setDefaultColor();
+	setDefaultColor();
+	gotoxy(6, 4); cout << "THE LOAI";
+	gotoxy(21, 4); cout << "TEN SACH";
+	gotoxy(48, 4); cout << "ISBN";
+	gotoxy(55, 4); cout << "TAC GIA";
+	gotoxy(86, 4); cout << "SO TR";
+	gotoxy(94, 4); cout << "NAM XB";
+}
+
 void drawEditDS(int x, int y) {
 	gotoxy(x + 10, y - 1); cout << "CAP NHAT DAU SACH";
 	setHighLightColor();
@@ -102,7 +129,7 @@ void drawInputDMS() {
 	gotoxy(xDMS + 2, yDMS + 19);
 	cout << "MA SACH DU DANH TU DONG";
 	gotoxy(xDMS + 2, yDMS + 21);
-	cout << "TRANG THAI: 0 = CHO MUON DUOC, 1 = DA DUOC MUON, 2 = DA THANH LY";
+	cout << "TRANG THAI: 0 = CHO MUON DUOC, 2 = DA THANH LY";
 	gotoxy(xDMS + 2, yDMS + 23);
 	cout << "VI TRI: TOI DA 20 KY TU, CHI LAY KY TU CHU, SO VA DAY PHAY";
 }
@@ -138,6 +165,15 @@ void clearNoti() {
 	cout << setw(38) << setfill(' ') << " ";
 	setDefaultColor();
 }
+
+void clrscrTableDS()
+{
+	for (int y = 3; y <= 42; y++) {
+			gotoxy(5, y);
+			cout << setw(96) << setfill(' ') << ' ';
+	}
+}
+
 void clearInput() {
 	int x = XINPUT;
 	int y = YINPUT;
@@ -374,9 +410,11 @@ void inputDS(LIST_DauSach &lds, pDauSach &pDS, bool isEdited) {
 void menuDS(LIST_DauSach &lds, pDauSach &pDS, Tree &t) {
 	drawTable();
 	//show hot key
-	gotoxy(7, yHotkey+1);
+	gotoxy(10, yHotkey + 3);
 	SetColor(WHITE);
-	cout << "HotKey:  ESC - Thoat, F2 - Them, F3 - Sua, F4 - Xoa, F5 - Them DMS, F6-  Cap nhat DMS, F10 - Luu, PgUP, PgDn";
+	cout << "HotKey: F2 - Them, F3 - Sua, F4 - Xoa, F5 - Them DMS, F6 - Cap nhat DMS, F10 - Luu,";
+	gotoxy(10, yHotkey + 4);
+	cout << "                            PgUp, PgDn, ESC - Thoat";
 	setDefaultColor();
 	// thu tu trang
 	ChooseItemTL(lds,t,pDS);
@@ -1019,12 +1057,12 @@ void NhapTrangThaiSach(int &result, int &ordinal, bool &isSave, bool &isEscape, 
 		while (_kbhit())
 		{
 			int kb_hit = _getch();
-			if ((kb_hit == 48 || kb_hit == 49 || kb_hit == 50) && count < 1)
+			if ((kb_hit == 48 || kb_hit == 50) && count < 1)
 			{
 				count++;
 				result = kb_hit - 48;
 				// xoa dong thong bao
-				gotoxy(XTB, YTB);
+				gotoxy(XTB - 52, YTB + 6);
 				cout << setw(49) << setfill(' ') << " ";
 				gotoxy(x, y);
 				if (result == 0)
@@ -1080,9 +1118,9 @@ void NhapTrangThaiSach(int &result, int &ordinal, bool &isSave, bool &isEscape, 
 			}
 			else {
 
-				gotoxy(XTB, YTB);
+				gotoxy(XTB - 52, YTB + 6);
 				SetColor(BLUE);
-				cout << "BAN HAY NHAP 0, 1, 2, HOAC Backspace DE XOA !!!";
+				cout << "BAN HAY NHAP 0, 2, HOAC Backspace DE XOA !!!";
 				setDefaultColor();
 				gotoxy(x, y);
 			}
@@ -1115,7 +1153,7 @@ void NhapViTri(string &result, int &ordinal, bool &isSave, bool &isEscape, int a
 				|| kb_hit == SPACE || kb_hit == 44) && count < MAX_TENTG && count >= 0)
 			{
 				// xoa dong thong bao
-				gotoxy(XTB,YTB);
+				gotoxy(XTB - 52, YTB + 6);
 				cout << setw(48) << setfill(' ') << " ";
 				gotoxy(x, y);
 				// chuan hoa khoang trong
@@ -1178,7 +1216,7 @@ void NhapViTri(string &result, int &ordinal, bool &isSave, bool &isEscape, int a
 				return;
 			}
 			else {// check vi tri a ne.
-				gotoxy(XTB, YTB);
+				gotoxy(XTB - 52, YTB + 6);
 				SetColor(BLUE);
 				cout << "TOI DA 17  KY TU, BAO GOM CHU, SO VA DAU PHAY !";
 				setDefaultColor();
@@ -1445,11 +1483,97 @@ int ChooseItemTL(LIST_DauSach &lDS, Tree &t, pDauSach &pDS) {
 		}
 		anConTro();
 		SetColor(WHITE);
-		gotoxy(33, 36);
+		gotoxy(45, 38);
 		cout << "Trang " << tttrang << " / " << tongtrang;
 		setDefaultColor();
 	}
 }
+
+int ChooseItemTL_MT(LIST_DauSach &lDS, Tree &t, pDauSach &pDS)
+{
+
+	string lTL[100] = {};
+	int slTL = getTheLoai(lDS, lTL) - 1;
+	clearTheLoai(slTL + 2);
+	showListTL(lDS);
+	int pos = 0;
+	int kb_hit;
+	int tttrang, tongtrang;
+	tttrang = 1;
+	tongtrang = (lDS.n / NUMBER_LINES) + 1;
+	pos = 0;
+	SetBGColor(YELLOW);
+	SetColor(BLACK);
+	gotoxy(xD, yD + pos);
+	cout << lTL[0];
+	setDefaultColor();
+	while (true)
+	{
+		if (_kbhit())
+		{
+			kb_hit = _getch();
+			if (kb_hit == 224 || kb_hit == 0)
+				kb_hit = _getch();
+			
+			switch (kb_hit)
+			{
+			case KEY_UP:
+				// xoa muc truoc
+				SetBGColor(BLACK);
+				SetColor(WHITE);
+				gotoxy(xD, yD + pos);
+				cout << lTL[pos];
+				setDefaultColor();
+				(pos > 0) ? pos-- : pos = slTL;
+
+				// to mau muc moi
+				SetBGColor(YELLOW);
+				SetColor(BLACK);
+				gotoxy(xD, yD + pos);
+				cout << lTL[pos];
+				setDefaultColor();
+				break;
+
+			case KEY_DOWN:
+				// xoa muc truoc
+				SetBGColor(BLACK);
+				SetColor(WHITE);
+				gotoxy(xD, yD + pos);
+				cout << lTL[pos];
+				setDefaultColor();
+				(pos < slTL) ? pos++ : pos = 0;
+
+				// to mau muc moi
+				SetBGColor(YELLOW);
+				SetColor(BLACK);
+				gotoxy(xD, yD + pos);
+				cout << lTL[pos];
+				setDefaultColor();
+				break;
+
+			case KEY_F5:
+
+				break;
+			case ENTER:
+				OutputDS_PerPage(lDS, lTL[pos], tttrang);
+				break;
+			case KEY_RIGHT:
+				OutputDS_PerPage(lDS, lTL[pos], tttrang);
+				return ChooseItems_DS_MT(lDS, t, pDS, lTL[pos]);
+				break;
+			case ESC:
+				return -1;
+				break;
+			}
+		}
+		anConTro();
+		SetColor(WHITE);
+		gotoxy(45, 38);
+		cout << "Trang " << tttrang << " / " << tongtrang;
+		setDefaultColor();
+	}
+}
+
 int ChooseItems_DS(LIST_DauSach &lDS,Tree &t, pDauSach &pDS, string theLoai)
 {
 	LIST_DauSach l = getDSByTL(lDS, theLoai);
@@ -1520,7 +1644,7 @@ loop:
 			case KEY_F3:
 				pos = getPosByPDS(lDS, l.nodesDauSach[pos]);
 				inputDS(lDS, lDS.nodesDauSach[pos], true);
-				ChooseItemTL(lDS,t,pDS);
+				ChooseItemTL_MT(lDS,t,pDS);
 				break;
 			case KEY_F4:
 				// neu co nguoi muon thi se khong duoc phep xoa .
@@ -1554,13 +1678,7 @@ loop:
 					setDefaultColor();
 					goto loop;
 				}
-<<<<<<< HEAD
-				clrscr();
-				DrawTableDMS();
-				//int choose= ChooseItem_DMS(lDS.nodesDauSach[pos], tttrang, tongtrang);
-				//SuaDanhMucSach(lDS.nodesDauSach[pos])
-=======
-				choose= ChooseItem_DMS(lDS.nodesDauSach[pos], tttrang, tongtrang);
+				choose = ChooseItem_DMS(lDS.nodesDauSach[pos], tttrang, tongtrang);
 				if (choose == -1) {
 					Xoa_OutDS_29lines();
 					menuDS(lDS, pDS, t);
@@ -1568,8 +1686,7 @@ loop:
 				}
 				dms = Search_DMS_Pos(lDS.nodesDauSach[pos]->dms.pHeadDMS, choose);
 				drawInputDMS();
-				SuaDanhMucSach(lDS.nodesDauSach[pos],dms);
->>>>>>> 81ba0b9508b3abd7be319fafd76ea757acdc75dd
+				SuaDanhMucSach(lDS.nodesDauSach[pos], dms);
 				break;
 			case KEY_LEFT:
 				Xoa_OutDS_29lines();
@@ -1582,8 +1699,206 @@ loop:
 		}
 		anConTro();
 		SetColor(WHITE);
-		gotoxy(33, 36);
+		gotoxy(45, 38);
 		cout << "Trang " << tttrang << " / " << tongtrang;
 		setDefaultColor();
+	}
+}
+
+int ChooseItems_DS_MT(LIST_DauSach &lDS, Tree &t, pDauSach &pDS, string theLoai)
+{
+	LIST_DauSach l = getDSByTL(lDS, theLoai);
+	NODE_DMS *dms;
+	int slSach = 0;
+	int pos = 0;
+	int choose = 0;
+	int kb_hit;
+	int tttrang, tongtrang;
+	tttrang = 1;
+	tongtrang = (lDS.n / NUMBER_LINES) + 1;
+
+loop:
+	pos = 0;
+	SetColor(BLACK);
+	SetBGColor(YELLOW);
+	gotoxy(xDisplayDS[1], yD + pos);
+	cout << l.nodesDauSach[pos]->info.tenSach;
+	setDefaultColor();
+	while (true)
+	{
+		if (_kbhit())
+		{
+			kb_hit = _getch();
+			if (kb_hit == 224 || kb_hit == 0)
+				kb_hit = _getch();
+
+			switch (kb_hit)
+			{
+			case KEY_UP:
+				// xoa muc truoc
+				SetColor(WHITE);
+				SetBGColor(BLACK);
+				gotoxy(xDisplayDS[1], yD + pos);
+				cout << l.nodesDauSach[pos]->info.tenSach;
+				setDefaultColor();
+				(pos > 0) ? pos-- : pos = l.n - 1;
+
+				// to mau muc moi
+				SetBGColor(YELLOW);
+				SetColor(BLACK);
+				gotoxy(xDisplayDS[1], yD + pos);
+				cout << l.nodesDauSach[pos]->info.tenSach;
+				setDefaultColor();
+				break;
+
+			case KEY_DOWN:
+				// xoa muc truoc
+				SetColor(WHITE);
+				SetBGColor(BLACK);
+				gotoxy(xDisplayDS[1], yD + pos);
+				cout << l.nodesDauSach[pos]->info.tenSach;
+				setDefaultColor();
+				(pos < l.n - 1) ? pos++ : pos = 0;
+
+				// to mau muc moi
+				SetBGColor(YELLOW);
+				SetColor(BLACK);
+				gotoxy(xDisplayDS[1], yD + pos);
+				cout << l.nodesDauSach[pos]->info.tenSach;
+				setDefaultColor();
+				break;
+			case ENTER:
+				pos = getPosByPDS(lDS, l.nodesDauSach[pos]);
+				return pos;
+			
+			case KEY_LEFT:
+				Xoa_OutDS_29lines();
+				ChooseItemTL_MT(lDS, t, pDS);
+			case ESC:
+				return -1;
+			}
+		}
+		anConTro();
+		SetColor(WHITE);
+		gotoxy(45, 38);
+		cout << "Trang " << tttrang << " / " << tongtrang;
+		setDefaultColor();
+	}
+}
+
+int ChooseItem_DMS_MT(pDauSach &pDS, int &tttrang, int tongtrang)
+{
+	NODE_DMS *p;
+	int slSach = 0;
+	int pos = 0;
+	int kb_hit;
+	int nDMS = pDS->dms.n;
+	pos = 0;
+
+	setHighLightColor();
+	gotoxy(7, yDisplayDG + 2 + pos);
+	p = Search_DMS_Pos(pDS->dms.pHeadDMS, pos);
+	cout << p->data.maSach;
+
+	while (true)
+	{
+		if (_kbhit())
+		{
+			kb_hit = _getch();
+			if (kb_hit == 224 || kb_hit == 0)
+				kb_hit = _getch();
+
+			switch (kb_hit)
+			{
+			case KEY_UP:
+				// xoa muc truoc
+				setDefaultColor();
+				gotoxy(7, yDisplayDG + 2 + pos);
+				p = Search_DMS_Pos(pDS->dms.pHeadDMS, pos);
+				cout << p->data.maSach;
+				if (nDMS <= NUMBER_LINES)
+					(pos > 0) ? pos-- : pos = nDMS - 1;
+				else (pos > 0) ? pos++ : pos = NUMBER_LINES - 1;
+
+				// to mau muc moi
+				setHighLightColor();
+				gotoxy(7, yDisplayDG + 2 + pos);
+				p = Search_DMS_Pos(pDS->dms.pHeadDMS, pos);
+				cout << p->data.maSach;
+				setDefaultColor();
+				break;
+
+			case KEY_DOWN:
+
+				// xoa muc truoc
+				setDefaultColor();
+				gotoxy(7, yDisplayDG + 2 + pos);
+				p = Search_DMS_Pos(pDS->dms.pHeadDMS, pos);
+				cout << p->data.maSach;
+				if(nDMS <= NUMBER_LINES)
+					(pos < nDMS-1) ? pos++ : pos = 0;
+				else (pos < NUMBER_LINES - 1) ? pos++ : pos = 0;
+
+				// to mau muc moi
+				setHighLightColor();
+				gotoxy(7, yDisplayDG + 2 + pos);
+				p = Search_DMS_Pos(pDS->dms.pHeadDMS, pos);
+				cout << p->data.maSach;
+				setDefaultColor();
+				break;
+
+			case PAGE_UP:
+				if (tttrang > 1)
+				{
+					tttrang--;
+				}
+				else
+				{
+					tttrang = tongtrang;
+				}
+				ClearTable_DMS();
+				OutputDMS_PerPage(pDS, tttrang);
+
+				pos = 0;
+				setDefaultColor();
+				gotoxy(7, yDisplayDG + 2 + pos);
+				p = Search_DMS_Pos(pDS->dms.pHeadDMS, pos);
+				cout << p->data.maSach;
+				break;
+
+			case PAGE_DOWN:
+				if (tttrang < tongtrang)
+				{
+					tttrang++;
+				}
+				else
+				{
+					tttrang = 1;
+				}
+				ClearTable_DMS();
+				OutputDMS_PerPage(pDS, tttrang);
+				pos = 0;
+				setDefaultColor();
+				gotoxy(7, yDisplayDG + 2 + pos);
+				p = Search_DMS_Pos(pDS->dms.pHeadDMS, pos);
+				cout << p->data.maSach;
+				break;
+	
+			case ENTER:
+				/*if (pDS->dms.) {
+
+				}*/
+				return (pos == 0 && tttrang == 1) ? pos : pos + (tttrang - 1)* NUMBER_LINES;
+				break;
+			case ESC:
+				return -1;
+			}
+		}
+		anConTro();
+		setDefaultColor();
+		gotoxy(25, 38);
+		cout << "Trang " << tttrang << " / " << tongtrang;
+		gotoxy(12, 40);
+		cout << "KeyUp, KeyDn, Enter - Chon, PgUp, PgDn";
 	}
 }

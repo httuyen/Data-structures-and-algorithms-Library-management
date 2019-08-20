@@ -205,9 +205,9 @@ int ChooseItems(Tree &t, ListTempDG &l, int tttrang, int tongtrang)
 			}
 		}
 		anConTro();
-		SetColor(WHITE);
+		/*SetColor(WHITE);
 		gotoxy(30, 40);
-		cout << "Trang " << tttrang << " / " << tongtrang;
+		cout << "Trang " << tttrang << " / " << tongtrang;*/
 		//normalBGColor();
 	}
 }
@@ -464,8 +464,10 @@ void ListDG_Sort_MDG(Tree &t, ListTempDG &l, int &tttrang)
 			}
 		}
 		gotoxy(xORDER_DG - 3, yORDER_DG + 2);
-		cout << "<< THEO THU TU MA_DG TANG DAN >>";
+		setHighLightColor();
+		cout << " THEO THU TU MA_DG TANG DAN  ";
 		gotoxy(25, 40);
+		setDefaultColor();
 		cout << "HotKey: PgUp, PgDn, ESC ";
 		gotoxy(30, 38);
 		cout << "Trang " << tttrang << " / " << tongtrang;
@@ -510,8 +512,10 @@ void ListDG_Sort_TenHo(Tree t, TenHo *arr)
 			}
 		}
 		gotoxy(xORDER_DG - 3, yORDER_DG);
-		cout << "<< THEO THU TU TEN_HO TANG DAN >>";
+		setHighLightColor();
+		cout << " THEO THU TU TEN_HO TANG DAN ";
 		gotoxy(25, 40);
+		setDefaultColor();
 		cout << "HotKey: PgUp, PgDn, ESC ";
 		gotoxy(30, 38);
 		cout << "Trang " << tttrang << " / " << tongtrang;
@@ -529,12 +533,16 @@ void InDocGia(Tree t)
 	while (c != ESC)
 	{
 		clrscr();
-		//SetColor(BRIGHT_WHITE);
 		setDefaultColor();
+		drawCell(xORDER_DG - 2, xORDER_DG + 31, yORDER_DG - 2, yORDER_DG + 3);
+		gotoxy(xORDER_DG - 2, yORDER_DG - 2);
+		cout << "~~~~~~~CHON MOT CACH SAP XEP~~~~~~";
 		gotoxy(xORDER_DG, yORDER_DG);
 		cout << " THEO THU TU TEN_HO TANG DAN ";
 		gotoxy(xORDER_DG, yORDER_DG + 2);
 		cout << " THEO THU TU MA_DG TANG DAN  ";
+		gotoxy(xORDER_DG - 2, yORDER_DG + 4);
+		cout << "HotKey: KeyUp, KeyDn, ENTER - Chon";
 		while (c != ENTER)
 		{
 			//SetColor(LIGHT_GREEN);
@@ -699,27 +707,27 @@ void DanhSachQuaHan(Tree t, LIST_DauSach lDS)
 		if (ArrQuaHan[i].sachQuaHan.soNgayQuaHan > 0)
 		{
 			//NODE_TREE* p = Find_DG(t, ArrQuaHan[i].docGia.MADG);
-			gotoxy(12, 6 + j);
+			gotoxy(10, 6 + j);
 			cout << ArrQuaHan[i].docGia.MADG;
 			gotoxy(25, 6 + j);
 			cout << ArrQuaHan[i].docGia.hoten;
-			gotoxy(50, 6 + j);
+			gotoxy(48, 6 + j);
 			cout << ArrQuaHan[i].sachQuaHan.maSach;
-			gotoxy(67, 6 + j);
+			gotoxy(65, 6 + j);
 			cout << ArrQuaHan[i].sachQuaHan.tenSach;
-			gotoxy(82, 6 + j);
+			gotoxy(80, 6 + j);
 			cout << ArrQuaHan[i].sachQuaHan.ngayMuon.Ngay << "/" << ArrQuaHan[i].sachQuaHan.ngayMuon.Thang << "/" << ArrQuaHan[i].sachQuaHan.ngayMuon.Nam;
-			gotoxy(108, 6 + j);
+			gotoxy(100, 6 + j);
 			cout << ArrQuaHan[i].sachQuaHan.soNgayQuaHan;
-			gotoxy(4, 6 + j);
+			gotoxy(3, 6 + j);
 			j++;
 			cout << j;
 		}
 	}
 	if (j == 0)
 	{
-		gotoxy(50, 10); 
-		cout << "KHONG CO DOC GIA NAO MUON SACH QUA HAN";
+		nhapNhay("KHONG CO DOC GIA NAO MUON SACH QUA HAN", 50, 10);
+		setDefaultColor();
 	}
 	_getch();
 	delete[] ArrQuaHan;
