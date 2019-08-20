@@ -107,6 +107,7 @@ int ChooseItems(Tree &t, ListTempDG &l, int tttrang, int tongtrang)
 	int pos = 0;
 	int kb_hit;
 	pos = 0;
+	int nDG = countDG(t);
 	SetColor(YELLOW);
 	gotoxy(xDisplayDG[0] - 1, yDisplayDG + 3 + pos);
 	cout << "<";
@@ -129,7 +130,10 @@ int ChooseItems(Tree &t, ListTempDG &l, int tttrang, int tongtrang)
 				gotoxy(xDisplayDG[0] + 8, yDisplayDG + 3 + pos);
 				cout << " ";
 
-				(pos > 0) ? pos-- : pos = 28;
+				//(pos > 0) ? pos-- : pos = 28;
+				if (nDG <= NUMBER_LINES)
+					(pos > 0) ? pos-- : pos = nDG - 1;
+				else (pos > 0) ? pos-- : pos = NUMBER_LINES - 1;
 
 				// to mau muc moi
 				SetColor(YELLOW);
@@ -146,7 +150,10 @@ int ChooseItems(Tree &t, ListTempDG &l, int tttrang, int tongtrang)
 				gotoxy(xDisplayDG[0] + 8, yDisplayDG + 3 + pos);
 				cout << " ";
 
-				(pos < NUMBER_LINES - 1) ? pos++ : pos = 0;
+				//(pos < NUMBER_LINES - 1) ? pos++ : pos = 0;
+				if (nDG <= NUMBER_LINES)
+					(pos < nDG - 1) ? pos++ : pos = 0;
+				else (pos < NUMBER_LINES - 1) ? pos++ : pos = 0;
 
 				// to mau muc moi
 				SetColor(YELLOW);

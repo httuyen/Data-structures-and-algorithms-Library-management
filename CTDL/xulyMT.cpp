@@ -346,7 +346,10 @@ loop:
 				gotoxy(xDisplayDMS[0], yDisplayDG + 2 + pos);
 				p = Search_DMS_Pos(pDS->dms.pHeadDMS, pos);
 				cout << p->data.maSach;
-				(pos > 0) ? pos-- : pos = nDMS - 1;
+				//(pos > 0) ? pos-- : pos = nDMS - 1;
+				if (nDMS <= NUMBER_LINES)
+					(pos > 0) ? pos-- : pos = nDMS - 1;
+				else (pos > 0) ? pos-- : pos = NUMBER_LINES - 1;
 
 				// to mau muc moi
 				setHighLightColor();
@@ -363,7 +366,10 @@ loop:
 				gotoxy(xDisplayDMS[0], yDisplayDG + 2 + pos);
 				p = Search_DMS_Pos(pDS->dms.pHeadDMS, pos);
 				cout << p->data.maSach;
-				(pos < nDMS - 1) ? pos++ : pos = 0;
+				//(pos < nDMS - 1) ? pos++ : pos = 0;
+				if (nDMS <= NUMBER_LINES)
+					(pos < nDMS - 1) ? pos++ : pos = 0;
+				else (pos < NUMBER_LINES - 1) ? pos++ : pos = 0;
 
 				// to mau muc moi
 				setHighLightColor();
