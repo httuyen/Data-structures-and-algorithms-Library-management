@@ -30,6 +30,7 @@ void OutputDS_PerPage(LIST_DauSach &lDS, string theLoai, int tttrang);
 void Output_DS(dauSach ds, int viTri);
 void XoaMotVung(int x, int y, int ndoc, int width);
 void clearInput();
+void clearInputDMS();
 void clearTheLoai(int sl);
 void clearTL();
 void XoaMotDong(int width);

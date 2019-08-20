@@ -303,14 +303,23 @@ void OutputDMS_PerPage(pDauSach pDS, int index)
 	index *= NUMBER_LINES;
 	int count = 0;
 	NODE_DMS * temp = nullptr;
-	for (temp = pDS->dms.pHeadDMS; temp != nullptr && count < index; temp = temp->pNext)
-	{
-		count++;
+	if (index == 0) {
+		for (temp = pDS->dms.pHeadDMS; temp != nullptr && count < index; temp = temp->pNext)
+		{
+			count++;
+		}
+		for (int i = 0; i < NUMBER_LINES && temp != nullptr; i++)
+		{
+			Output_DMS(temp->data, i);
+			temp = temp->pNext;
+		}
 	}
-	for (int i = 0; i < NUMBER_LINES && temp != nullptr; i++)
-	{
-		Output_DMS(temp->data, i);
-		temp = temp->pNext;
+	else {
+		for (temp = pDS->dms.pHeadDMS; temp != nullptr && count < index; temp = temp->pNext)
+		{
+			Output_DMS(temp->data, count);
+			count++;
+		}
 	}
 }
 
