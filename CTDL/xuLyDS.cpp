@@ -1506,12 +1506,11 @@ int ChooseItems_DS(LIST_DauSach &lDS,Tree &t, pDauSach &pDS, string theLoai)
 	tongtrangDS = (l.n / NUMBER_LINES) + 1;
 loop:
 	pos = 0;
-	Xoa_OutDS_29lines();
 	SetColor(BLACK);
 	SetBGColor(YELLOW);
 	gotoxy(xDisplayDS[1], yD + pos);
 	iDS = (tttrangDS - 1)*(NUMBER_LINES);
-	cout << l.nodesDauSach[iDS]->info.tenSach;
+	cout << l.nodesDauSach[iDS  + pos]->info.tenSach;
 	setDefaultColor();
 	while (true)
 	{
@@ -1526,35 +1525,34 @@ loop:
 			case PAGE_UP:
 				(tttrangDS > 1) ? tttrangDS-- : tttrangDS = tongtrangDS;
 				pos = 0;
+				Xoa_OutDS_29lines();
 				goto loop;
 
 			case PAGE_DOWN:
 				(tttrangDS < tongtrangDS) ? tttrangDS++ : tttrangDS = 1;
 				pos = 0;
+				Xoa_OutDS_29lines();
 				goto loop;
 			case KEY_UP:
 				// xoa muc truoc
 				SetColor(WHITE);
 				SetBGColor(BLACK);
 				gotoxy(xDisplayDS[1], yD + pos);
-				cout << l.nodesDauSach[pos]->info.tenSach;
+				cout << l.nodesDauSach[iDS + pos]->info.tenSach;
 				setDefaultColor();
 				//(pos > 0) ? pos-- : pos = l.n-1;
 				if (pos > 0) pos--;
-				else {
-					if (iDS < NUMBER_LINES) {
-						pos = NUMBER_LINES - 1;
-					}
-					else {
-						pos = l.n - iDS - 1;
-					}
+				else if (tttrangDS == tongtrangDS){
+					pos = l.n - 1;
+				}else {
+					pos = NUMBER_LINES - 1;
 				}
 
 				// to mau muc moi
 				SetBGColor(YELLOW);
 				SetColor(BLACK);
 				gotoxy(xDisplayDS[1], yD + pos);
-				cout << l.nodesDauSach[pos]->info.tenSach;
+				cout << l.nodesDauSach[iDS +pos]->info.tenSach;
 				setDefaultColor();
 				break;
 
@@ -1566,16 +1564,18 @@ loop:
 				cout << l.nodesDauSach[iDS +pos]->info.tenSach;
 				setDefaultColor();
 				//(pos < l.n-1) ? pos++ : pos = 0;
-				if (pos < NUMBER_LINES - 1) {
-					if (iDS < NUMBER_LINES) {
-						pos++;
-					}
-					else if (pos < l.n - iDS - 1) {
+				if (tttrangDS == tongtrangDS) {
+					if (pos < l.n - 1) {
 						pos++;
 					}
 					else pos = 0;
 				}
+				else if (pos < NUMBER_LINES - 1) {
+					pos++;
+				}
 				else pos = 0;
+				
+			
 				// to mau muc moi
 				SetBGColor(YELLOW);
 				SetColor(BLACK);
@@ -1590,7 +1590,7 @@ loop:
 				break;
 			case KEY_F3:
 				pos = getPosByPDS(lDS, l.nodesDauSach[iDS +pos]);
-				inputDS(lDS, lDS.nodesDauSach[pos], true);
+				inputDS(lDS, lDS.nodesDauSach[pos + iDS], true);
 				ChooseItemTL(lDS,t,pDS);
 				break;
 			case KEY_F4:
@@ -1609,7 +1609,7 @@ loop:
 				break;
 			case KEY_F5:
 				slSach = drawInputSLSach();
-				pos = getPosByPDS(lDS, l.nodesDauSach[pos]);
+				pos = getPosByPDS(lDS, l.nodesDauSach[iDS + pos]);
 				InputDMS(lDS.nodesDauSach[pos],slSach);
 				ChooseItem_DMS(lDS.nodesDauSach[pos], tttrangDS, tongtrangDS);
 				menuDS(lDS, pDS, t);
