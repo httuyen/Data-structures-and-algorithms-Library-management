@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 d:\ctdlgt2019\ctdl\debug\ctdl.pch
 d:\ctdlgt2019\ctdl\debug\vc141.pdb
 d:\ctdlgt2019\ctdl\debug\vc141.idb
@@ -27,3 +28,6 @@ d:\ctdlgt2019\ctdl\debug\ctdl.tlog\cl.write.1.tlog
 d:\ctdlgt2019\ctdl\debug\ctdl.tlog\link.command.1.tlog
 d:\ctdlgt2019\ctdl\debug\ctdl.tlog\link.read.1.tlog
 d:\ctdlgt2019\ctdl\debug\ctdl.tlog\link.write.1.tlog
+=======
+d:\ctdlgt2019\ctdl\debug\ctdl.exe
+>>>>>>> ed4ddcff4969f44f8d251fa5a0282c0005aa8d5e
