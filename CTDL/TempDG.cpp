@@ -217,7 +217,8 @@ int soSachMuon(LIST_DMS dms)
 	for (temp = dms.pHeadDMS; temp != NULL; temp = temp->pNext)
 	{
 		//  tinh ca sach da muon va da muon nhung lam mat.
-		if (temp->data.trangThai == 1 || temp->data.trangThai == 2)
+		//if (temp->data.trangThai == 1 || temp->data.trangThai == 2)
+		if (temp->data.trangThai == 1)
 		{
 			dem++;
 		}

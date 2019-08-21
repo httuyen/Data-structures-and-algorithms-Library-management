@@ -690,19 +690,23 @@ void DanhSachQuaHan(Tree t, LIST_DauSach lDS)
 
 	gotoxy(47, 2);
 	cout << "DANH SACH DOC GIA MUON QUA HAN ";
-	gotoxy(3, 5);
+	setHighLightColor();
+	drawCell(5, 138, 4, 6);
+	setDefaultColor();
+
+	gotoxy(7, 5);
 	cout << "STT";
-	gotoxy(10, 5);
+	gotoxy(17, 5);
 	cout << "MA DOC GIA";
-	gotoxy(25, 5);
+	gotoxy(32, 5);
 	cout << "HO TEN DOC GIA";
-	gotoxy(48, 5);
+	gotoxy(55, 5);
 	cout << "MA SACH";
-	gotoxy(65, 5);
+	gotoxy(72, 5);
 	cout << "TEN SACH";
-	gotoxy(80, 5);
+	gotoxy(102, 5);
 	cout << "NGAY MUON";
-	gotoxy(100, 5);
+	gotoxy(117, 5);
 	cout << "TONG SO NGAY QUA HAN";
 	//normalBGColor();
 	//SetColor(WHITE);
@@ -714,24 +718,38 @@ void DanhSachQuaHan(Tree t, LIST_DauSach lDS)
 		if (ArrQuaHan[i].sachQuaHan.soNgayQuaHan > 0)
 		{
 			//NODE_TREE* p = Find_DG(t, ArrQuaHan[i].docGia.MADG);
-			gotoxy(10, 6 + j);
+			gotoxy(17, 8 + j);
 			cout << ArrQuaHan[i].docGia.MADG;
-			gotoxy(25, 6 + j);
+			gotoxy(32, 8 + j);
 			cout << ArrQuaHan[i].docGia.hoten;
-			gotoxy(48, 6 + j);
+			gotoxy(55, 8 + j);
 			cout << ArrQuaHan[i].sachQuaHan.maSach;
-			gotoxy(65, 6 + j);
+			gotoxy(72, 8 + j);
 			cout << ArrQuaHan[i].sachQuaHan.tenSach;
-			gotoxy(80, 6 + j);
+			gotoxy(102, 8 + j);
 			cout << ArrQuaHan[i].sachQuaHan.ngayMuon.Ngay << "/" << ArrQuaHan[i].sachQuaHan.ngayMuon.Thang << "/" << ArrQuaHan[i].sachQuaHan.ngayMuon.Nam;
-			gotoxy(100, 6 + j);
+			gotoxy(117, 8 + j);
 			cout << ArrQuaHan[i].sachQuaHan.soNgayQuaHan;
-			gotoxy(3, 6 + j);
+			gotoxy(7, 8 + j);
 			j++;
 			cout << j;
 		}
 	}
-	if (j == 0)
+	if (j != 0)
+	{
+		setHighLightColor();
+
+		drawCell(5, 15, 4, 8 + j);
+		drawCell(15, 30, 4, 8 + j);
+		drawCell(30, 53, 4, 8 + j);
+		drawCell(53, 70, 4, 8 + j);
+		drawCell(70, 100, 4, 8 + j);
+		drawCell(100, 115, 4, 8 + j);
+		drawCell(115, 138, 4, 8 + j);
+
+		setDefaultColor();
+	}
+	else
 	{
 		nhapNhay("KHONG CO DOC GIA NAO MUON SACH QUA HAN", 50, 10);
 		setDefaultColor();

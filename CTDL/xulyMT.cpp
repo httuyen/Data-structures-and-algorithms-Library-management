@@ -526,9 +526,10 @@ int ChooseItem_MT(ListMT lMT)
 	}
 }
 
-int TacVuMuonSach(LIST_DauSach lDS , NODE_TREE* dg)
+int TacVuMuonSach(LIST_DauSach lDS , NODE_TREE* dg, MuonTra &mt)
 {
 	Tree t;
+	int check3 = 0;
 	int choose1 = 0, choose2 = 0;
 	bool check;
 	// nDs : so luong dau sach.
@@ -605,7 +606,7 @@ label1:
 		if (pDS->dms.n == 0) {
 			nhapNhay("DAU SACH NAY CHUA CO DANH MUC SACH !!!", 110, 35);
 			gotoxy(110, 35);
-			cout << "                                     ";
+			cout << "                                          ";
 			setDefaultColor();
 			goto label;
 		}
@@ -653,14 +654,35 @@ label1:
 
 			else if (dms->data.trangThai == 0)
 			{
-				// lay ma sach muon
-				maSach = dms->data.maSach;
-				// cap nhat trang thai sach
-				dms->data.trangThai = 1;
+				// nap thong tin vao cau truc muon tra
+				strcpy(mt.maSach, dms->data.maSach);
+				mt.ngayTra.Nam = 0;
+				mt.ngayTra.Thang = 0;
+				mt.ngayTra.Ngay = 0;
+				mt.trangThai = 0;
 
+				// nhap thong tin ngay muon va xu ly truong hop nhap ngay muon lon hon ngay he thong;
+				do
+				{
+					gotoxy(104, 35);
+					cout << "NHAP VAO NGAY MUON. NHAN F10 DE LUU, ESC DE HUY!";
+					check3 = InputNgayThang(mt.ngayMuon, 123, 37);
+
+					// check cac truong hop
+					if (check3 == -1)
+					{
+						return -1;
+					}
+					else if (check3 == 2)
+					{
+						// cap nhat trang thai sach
+						dms->data.trangThai = 1;
+						goto label0;
+					}
+				} while (check3);
 			}
 
-			temp = 0;
+label0:			temp = 0;
 		}
 	} while (temp);
 	return 1;
@@ -794,7 +816,7 @@ label:
 			setDefaultColor();
 			
 			// xu ly thao tac muon tra.
-			check2 = TacVuMuonSach(lDS, temp);
+			check2 = TacVuMuonSach(lDS, temp, mt);
 
 			// check cac truong hop
 			if (check2 == -1)
@@ -803,33 +825,36 @@ label:
 			}
 			else if (check2 == 1)
 			{
+				AddHeadList_MT(temp->data.listMT, mt);
+				//saveDG(t);
+				goto label1;
 
-				// nap thong tin vao cau truc muon tra
-				strcpy(mt.maSach, maSach);
-				mt.ngayTra.Nam = 0;
-				mt.ngayTra.Thang = 0;
-				mt.ngayTra.Ngay = 0;
-				mt.trangThai = 0;
+				//// nap thong tin vao cau truc muon tra
+				//strcpy(mt.maSach, maSach);
+				//mt.ngayTra.Nam = 0;
+				//mt.ngayTra.Thang = 0;
+				//mt.ngayTra.Ngay = 0;
+				//mt.trangThai = 0;
 
-				// nhap thong tin ngay muon va xu ly truong hop nhap ngay muon lon hon ngay he thong;
-				do
-				{
-					gotoxy(104, 35);
-					cout << "NHAP VAO NGAY MUON. NHAN F10 DE LUU, ESC DE HUY!";
-					check3 = InputNgayThang(mt.ngayMuon, 123, 37);
+				//// nhap thong tin ngay muon va xu ly truong hop nhap ngay muon lon hon ngay he thong;
+				//do
+				//{
+				//	gotoxy(104, 35);
+				//	cout << "NHAP VAO NGAY MUON. NHAN F10 DE LUU, ESC DE HUY!";
+				//	check3 = InputNgayThang(mt.ngayMuon, 123, 37);
 
-					// check cac truong hop
-					if (check3 == -1)
-					{
-						return;
-					}
-					else if (check3 == 2)
-					{
-						AddHeadList_MT(temp->data.listMT, mt);
-						//saveDG(t);
-						goto label1;
-					}
-				} while (check3);
+				//	// check cac truong hop
+				//	if (check3 == -1)
+				//	{
+				//		return;
+				//	}
+				//	else if (check3 == 2)
+				//	{
+				//		AddHeadList_MT(temp->data.listMT, mt);
+				//		//saveDG(t);
+				//		goto label1;
+				//	}
+				//} while (check3);
 			}
 		}
 	}

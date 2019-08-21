@@ -1,6 +1,2 @@
-<<<<<<< HEAD
 #TargetFrameworkVersion=v4.0:PlatformToolSet=v141:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit:WindowsTargetPlatformVersion=10.0.17763.0
-=======
-#TargetFrameworkVersion=v4.0:PlatformToolSet=v140:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit
->>>>>>> a4583d3bccbb7716aba1b22796c4e0dcedf1149a
 Debug|Win32|D:\CTDLGT2019\CTDL\|

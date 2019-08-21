@@ -10,7 +10,7 @@ void DrawTableDMS();
 
 bool MatSach(ListMT lMT);
 void MuonSach(Tree &t, LIST_DauSach &lDS);
-int TacVuMuonSach(LIST_DauSach lDS, NODE_TREE* dg);
+int TacVuMuonSach(LIST_DauSach lDS, NODE_TREE* dg, MuonTra &mt);
 
 void TraSach(Tree &t, LIST_DauSach &lDS);
 
