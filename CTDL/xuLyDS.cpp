@@ -1465,13 +1465,11 @@ loop:
 				setDefaultColor();
 				//(pos > 0) ? pos-- : pos = NUMBER_LINES;
 				if (pos > 0) pos--;
+				else if (tttrangTL == tongtrangTL) {
+					pos = slTL - iTL - 1;
+				}
 				else {
-					if (iTL < NUMBER_LINES) {
-						pos = NUMBER_LINES - 1;
-					}
-					else {
-						pos = slTL - iTL - 1;
-					}
+					pos = NUMBER_LINES - 1;
 				}
 				// to mau muc moi
 				SetBGColor(YELLOW);
@@ -1489,14 +1487,14 @@ loop:
 				cout << lTL[iTL + pos];
 				setDefaultColor();
 				//(pos < NUMBER_LINES && pos < iTL + pos) ? pos++ : pos = 0;
-				if (pos < NUMBER_LINES - 1) {
-					if (iTL < NUMBER_LINES) {
-						pos++;
-					}
-					else if (pos < slTL - iTL - 1) {
+				if (tttrangTL == tongtrangTL) {
+					if (pos < slTL - iTL - 1) {
 						pos++;
 					}
 					else pos = 0;
+				}
+				else if (pos < NUMBER_LINES - 1) {
+					pos++;
 				}
 				else pos = 0;
 				// to mau muc moi
@@ -1604,9 +1602,13 @@ loop:
 				cout << lTL[pos];
 				setDefaultColor();
 				//(pos > 0) ? pos-- : pos = slTL;
-				if (slTL <= (NUMBER_LINES - 1))
-					(pos > 0) ? pos-- : pos = slTL;
-				else (pos > 0) ? pos-- : pos = NUMBER_LINES - 1;
+				if (pos > 0) pos--;
+				else if (tttrangTL == tongtrangTL) {
+					pos = slTL - iTL - 1;
+				}
+				else {
+					pos = NUMBER_LINES - 1;
+				}
 
 				// to mau muc moi
 				SetBGColor(YELLOW);
@@ -1623,10 +1625,16 @@ loop:
 				gotoxy(xD, yD + pos);
 				cout << lTL[pos];
 				setDefaultColor();
-				//(pos < slTL) ? pos++ : pos = 0;
-				if (slTL <= (NUMBER_LINES - 1))
-					(pos < slTL) ? pos++ : pos = 0;
-				else (pos < NUMBER_LINES - 1) ? pos++ : pos = 0;
+				if (tttrangTL == tongtrangTL) {
+					if (pos < slTL - iTL - 1) {
+						pos++;
+					}
+					else pos = 0;
+				}
+				else if (pos < NUMBER_LINES - 1) {
+					pos++;
+				}
+				else pos = 0;
 
 				// to mau muc moi
 				SetBGColor(YELLOW);
@@ -1742,8 +1750,7 @@ loop:
 				else if (pos < NUMBER_LINES - 1) {
 					pos++;
 				}else pos = 0;
-				
-			
+
 				// to mau muc moi
 				SetBGColor(YELLOW);
 				SetColor(BLACK);

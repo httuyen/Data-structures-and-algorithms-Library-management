@@ -1,9 +1,9 @@
 d:\ctdlgt2019\ctdl\debug\ctdl.pch
 d:\ctdlgt2019\ctdl\debug\vc141.pdb
 d:\ctdlgt2019\ctdl\debug\vc141.idb
-d:\ctdlgt2019\ctdl\debug\stdafx.obj
+d:\ctdlgt2019\ctdl\debug\vc140.pdb
+d:\ctdlgt2019\ctdl\debug\vc140.idb
 d:\ctdlgt2019\ctdl\debug\xulymt.obj
-d:\ctdlgt2019\ctdl\debug\xulyds.obj
 d:\ctdlgt2019\ctdl\debug\xulydg.obj
 d:\ctdlgt2019\ctdl\debug\xuly.obj
 d:\ctdlgt2019\ctdl\debug\welcome.obj
@@ -16,11 +16,10 @@ d:\ctdlgt2019\ctdl\debug\main.obj
 d:\ctdlgt2019\ctdl\debug\globalvariable.obj
 d:\ctdlgt2019\ctdl\debug\dausach.obj
 d:\ctdlgt2019\ctdl\debug\check_input.obj
+d:\ctdlgt2019\ctdl\debug\xulyds.obj
 d:\ctdlgt2019\ctdl\debug\ctdl.exe
 d:\ctdlgt2019\ctdl\debug\ctdl.ilk
 d:\ctdlgt2019\ctdl\debug\ctdl.pdb
-d:\ctdlgt2019\ctdl\debug\vc140.idb
-d:\ctdlgt2019\ctdl\debug\vc140.pdb
 d:\ctdlgt2019\ctdl\debug\ctdl.tlog\cl.command.1.tlog
 d:\ctdlgt2019\ctdl\debug\ctdl.tlog\cl.read.1.tlog
 d:\ctdlgt2019\ctdl\debug\ctdl.tlog\cl.write.1.tlog
