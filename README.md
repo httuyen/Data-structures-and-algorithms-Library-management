@@ -1,4 +1,4 @@
-# CTDLGT2019
+# Cấu trúc dữ liệu và giải thuật 2019
 Quản lý thư viện
 2.	Thư viện: Ta tổ chức các danh sách sau: 
 - Đầu sách : danh sách tuyến tính là 1 mảng con trỏ (ISBN (C6), Tên sách, Số trang, Tác giả, năm xuất bản, thể loại, con trỏ dms): con trỏ sẽ trỏ đến các sách thuộc đầu sách tương ứng
